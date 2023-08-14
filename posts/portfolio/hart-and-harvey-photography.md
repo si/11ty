@@ -12,7 +12,7 @@ layout: layouts/post.njk
 image: "/img/posts/portfolio/hart_and_harvey_photography_website.jpg"
 ---
 
-[![](/img/posts/portfolio/hart_and_harvey_photography_website.jpg "Hart & Harvey Photography website")](http://2017.sijobling.com/wp-content/uploads/2012/06/hart_and_harvey_photography_website.jpg)
+[![](/img/posts/portfolio/hart_and_harvey_photography_website.jpg "Hart & Harvey Photography website")](http://www.hartandharveyphotography.co.uk/)
 
 When [Darren Harvey Photography](http://www.hartandharveyphotography.co.uk/darren-harvey-photography/) and [Matthew Hart Photography](http://www.hartandharveyphotography.co.uk/matthew-hart-photography/) joined forces in May 2009, they approached me to help organise their online campaign, starting with a promotional website.
 
