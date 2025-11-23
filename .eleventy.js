@@ -174,6 +174,8 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByTag("posts");
   });
   eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
+  // Copy migrated assets from src/assets to /assets in the built site.
+  eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
   // We need to copy cached.js only if GA is used
