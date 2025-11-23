@@ -2,6 +2,9 @@
 title: "About Si"
 date: 2011-10-05
 coverImage: "Si-coaching-at-Akkroo-March-2019-16-9.jpg"
+eleventyNavigation:
+  key: About
+  order: 3
 ---
 
 ### **Engineering Manager at ASOS (formerly Ant Group, Yahoo! and UEFA),** **podcast producer & community creator.**

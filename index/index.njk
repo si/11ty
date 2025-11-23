@@ -1,0 +1,46 @@
+---
+layout: layouts/base.njk
+title: Index
+templateClass: tmpl-post
+description: A directory of every page on the site.
+eleventyNavigation:
+  key: Index
+  order: 2
+permalink: /index/
+---
+<p>Browse every published page on the site.</p>
+
+<nav class="page-index__jump">
+  <a href="#pages">Pages</a>
+  <a href="#posts">Posts</a>
+</nav>
+
+{%- set sorted = collections.all | sort(false, false, "data.title") %}
+
+<h2 id="pages">Pages</h2>
+<ul class="page-index">
+{%- for entry in sorted %}
+  {%- if not entry.data.tags or "posts" not in entry.data.tags %}
+    {%- set flattenedUrl = entry.url | replace('/src/pages', '') %}
+    {%- set label = entry.data.title or entry.fileSlug or flattenedUrl %}
+    <li>
+      <a href="{{ flattenedUrl | url }}">{{ label }}</a>
+      <code>{{ flattenedUrl }}</code>
+    </li>
+  {%- endif %}
+{%- endfor %}
+</ul>
+
+<h2 id="posts">Posts</h2>
+<ul class="page-index">
+{%- for entry in sorted %}
+  {%- if entry.data.tags and "posts" in entry.data.tags %}
+    {%- set flattenedUrl = entry.url | replace('/src/pages', '') %}
+    {%- set label = entry.data.title or entry.fileSlug or flattenedUrl %}
+    <li>
+      <a href="{{ flattenedUrl | url }}">{{ label }}</a>
+      <code>{{ flattenedUrl }}</code>
+    </li>
+  {%- endif %}
+{%- endfor %}
+</ul>
