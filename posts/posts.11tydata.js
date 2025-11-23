@@ -14,7 +14,22 @@ module.exports = () => {
     eleventyComputed: {
       eleventyExcludeFromCollections: (data) =>
         showDraft(data) ? data.eleventyExcludeFromCollections : true,
-      permalink: (data) => (showDraft(data) ? data.permalink : false),      
+      permalink: (data) => {
+        if (!showDraft(data)) return false;
+
+        if (data.permalink) return data.permalink;
+
+        const categories = Array.isArray(data.categories) ? data.categories : [];
+        const primaryCategory = data.primaryCategory || categories[0];
+        const slug = data.page && data.page.fileSlug ? data.page.fileSlug : "";
+
+        if (primaryCategory) {
+          return `/${primaryCategory}/${slug}/`;
+        }
+
+        // Default to a flat permalink so posts do not inherit the /posts/ prefix.
+        return `/${slug}/`;
+      },
     },
     tags: ["posts"],
   };
