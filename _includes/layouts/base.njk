@@ -47,7 +47,12 @@
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
 
     <link rel="preconnect" href="/" crossorigin>
-    <link rel="preload" href="/fonts/Inter-3.19.var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    {% set googleFontsHref = "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" %}
+    <link rel="preload" as="style" href="{{ googleFontsHref }}">
+    <link rel="stylesheet" href="{{ googleFontsHref }}" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="{{ googleFontsHref }}"></noscript>
     <script async defer src="{{ "/js/min.js" | addHash }}"
       {% if webvitals %}data-cwv-src="{{ "/js/web-vitals.js" | addHash }}"{% endif %}>
     </script>
