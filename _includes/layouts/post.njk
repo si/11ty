@@ -10,7 +10,7 @@ templateClass: tmpl-post
    {% set wPerMinute = (wc / 240) + 1 %}
    <aside>
      ~{{ wPerMinute | round }} min read 
-
+     <time datetime="{{ page.date | htmlDateString }}">{{ page.date | longPublishedDate }}</time>
    </aside>
 {% endblock %}
 
