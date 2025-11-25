@@ -212,28 +212,6 @@ FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
 
 */
-/* --------------------------------------------------------------------------
-Single variable font.
-
-Note that you may want to do something like this to make sure you're serving
-constant fonts to older browsers:
-html {
-  font-family: 'Inter', sans-serif;
-}
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: 'Inter', sans-serif;
-  }
-}
-*/
-@font-face {
-  font-family: "Inter";
-  font-weight: 100 900;
-  font-style: oblique 0deg 10deg;
-  font-display: swap;
-  src: url("/fonts/Inter-3.19.var.woff2") format("woff2");
-}
-
 /*
 
 The Bahunya CSS framework https://kimeiga.github.io/bahunya/
@@ -649,7 +627,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-family);
+  font-family: var(--heading-family);
 }
 h2,
 h4,
@@ -692,6 +670,7 @@ dt {
 html {
   font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --heading-family: 'Playfair Display', Inter, serif;
 }
 form {
   padding: 1.5em 1.5em 0;
