@@ -1,0 +1,24 @@
+---
+title: Asides
+layout: layouts/base.njk
+templateClass: tmpl-post
+permalink: /asides/
+description: Quick aside posts in one place.
+---
+
+<p>Short updates and links collected from the archive.</p>
+
+{%- set asides = collections.all | sort(false, false, "date") | reverse %}
+
+<ul class="page-index">
+{%- for entry in asides %}
+  {%- if entry.data.categories and "aside" in entry.data.categories %}
+    <li>
+      <a href="{{ entry.url | url }}">{{ entry.data.title }}</a>
+      <small>
+        <time datetime="{{ entry.date | htmlDateString }}">{{ entry.date | readableDate }}</time>
+      </small>
+    </li>
+  {%- endif %}
+{%- endfor %}
+</ul>
