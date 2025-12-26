@@ -58,6 +58,7 @@ const markdownItAnchor = require("markdown-it-anchor");
 const localImages = require("./third_party/eleventy-plugin-local-images/.eleventy.js");
 const CleanCSS = require("clean-css");
 const GA_ID = require("./_data/metadata.json").googleAnalyticsId;
+const youtubeEmbed = require("./_11ty/youtube-embed.js");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
@@ -206,7 +207,8 @@ module.exports = function (eleventyConfig) {
     permalink: true,
     permalinkClass: "direct-link",
     permalinkSymbol: "#",
-  });
+  })
+    .use(youtubeEmbed);
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Browsersync Overrides
