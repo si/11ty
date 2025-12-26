@@ -10,13 +10,13 @@ description: Quick aside posts in one place.
 
 {%- set asides = collections.all | sort(false, false, "date") | reverse %}
 
-<ul class="page-index">
+<ul class="page-index unicode-list">
 {%- for entry in asides %}
   {%- if entry.data.categories and "aside" in entry.data.categories %}
     <li>
       <a href="{{ entry.url | url }}">{{ entry.data.title }}</a>
       <small>
-        <time datetime="{{ entry.date | htmlDateString }}">{{ entry.date | readableDate }}</time>
+        <datetime class="post-date" datetime="{{ entry.date | htmlDateString }}">{{ entry.date | readableDate }}</datetime>
       </small>
     </li>
   {%- endif %}

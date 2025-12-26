@@ -180,6 +180,31 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("posts", function (collectionApi) {
     return collectionApi.getFilteredByTag("posts");
   });
+  eleventyConfig.addCollection("contentPages", function (collectionApi) {
+    return collectionApi
+      .getAll()
+      .filter(
+        (item) =>
+          item.inputPath &&
+          item.inputPath.includes(`${path.sep}src${path.sep}pages${path.sep}`)
+      )
+      .sort((a, b) => {
+        const titleA = a.data.title || "";
+        const titleB = b.data.title || "";
+        return titleA.localeCompare(titleB);
+      });
+  });
+  eleventyConfig.addCollection("postCategories", async function () {
+    const postsDir = path.join(__dirname, "posts");
+    const entries = await readdir(postsDir, { withFileTypes: true });
+    return entries
+      .filter((entry) => entry.isDirectory())
+      .map((entry) => ({
+        name: entry.name,
+        url: `/${entry.name}/`,
+      }))
+      .sort((a, b) => a.name.localeCompare(b.name));
+  });
   eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
   // Copy migrated assets from src/assets to /assets in the built site.
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });

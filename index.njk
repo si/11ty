@@ -12,6 +12,24 @@ date: Last Modified
 </p>
 
 <div id="posts">
+  <h2>Pages</h2>
+  <ul class="unicode-list">
+    {%- for entry in collections.contentPages %}
+      <li>
+        <a href="{{ entry.url | url }}">{{ entry.data.title or entry.fileSlug }}</a>
+      </li>
+    {%- endfor %}
+  </ul>
+
+  <h2>Post Categories</h2>
+  <ul class="unicode-list">
+    {%- for category in collections.postCategories %}
+      <li>
+        <a href="{{ category.url | url }}">{{ category.name }}</a>
+      </li>
+    {%- endfor %}
+  </ul>
+
   <h2>Posts</h2>
   {% set postslist = collections.posts %}
   {% include "postslist.njk" %}

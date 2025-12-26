@@ -863,6 +863,24 @@ ol,
 ul {
   margin-top: 0;
 }
+ul.unicode-list {
+  list-style: none;
+  padding-left: 0;
+}
+ul.unicode-list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+ul.unicode-list li::before {
+  content: "➜";
+  color: #f9c412;
+  font-weight: 600;
+}
+.post-date {
+  opacity: 0.5;
+}
 li dl,
 li ol,
 li ul {
