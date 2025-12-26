@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Si ligature logo</title>
+  <desc id="desc">White Si ligature on a black circle.</desc>
+  <circle cx="256" cy="256" r="240" fill="#000" />
+  <text
+    x="50%"
+    y="54%"
+    fill="#fff"
+    font-family="'Playfair Display', 'Times New Roman', serif"
+    font-size="320"
+    font-style="italic"
+    text-anchor="middle"
+    dominant-baseline="middle"
+  >Si</text>
+</svg>
