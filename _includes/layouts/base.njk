@@ -12,11 +12,7 @@
     Update me: Remove comment if you want a CSP.
     <meta http-equiv="Content-Security-Policy" content="{{ csp.regular | safe }}">
     -->
-    {% if isdevelopment %}
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    {% else %}
-    <link rel="icon" href="{{ '/img/favicon/favicon-192x192.png' | addHash }}" type="image/png">
-    {% endif %}
+    <link rel="icon" href="{{ '/img/si-ligature.svg' | addHash }}" type="image/svg+xml">
     <meta name="theme-color" content="#f9c412">
     <meta name="robots" content="max-snippet:-1, max-image-preview: large, max-video-preview: -1">
     <title>{{ renderData.title or title or metadata.title | escape }}</title>
@@ -68,7 +64,12 @@
     <header>
       <nav>
         <div id="nav">
-          <h1><a href="{{ '/' | url }}" title="Homepage">{{ metadata.title }}</a></h1>
+          <h1>
+            <a href="{{ '/' | url }}" class="site-logo" title="Homepage">
+              <img src="{{ '/img/si-ligature.svg' | addHash }}" alt="" class="site-logo-mark" width="28" height="28" aria-hidden="true">
+              <span>{{ metadata.title }}</span>
+            </a>
+          </h1>
           {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
           {%- for entry in collections.all | eleventyNavigation %}
             <a href="{{ entry.url | url }}">{{ entry.title }}</a>

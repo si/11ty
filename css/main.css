@@ -798,6 +798,20 @@ header nav h1 {
   margin: 0;
   text-align: left;
 }
+header nav a.site-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-left: 0;
+}
+header nav a.site-logo span {
+  display: inline-block;
+}
+header nav img.site-logo-mark {
+  width: 1.75em;
+  height: 1.75em;
+  border-radius: 999px;
+}
 header nav a {
   font-weight: 700;
   text-decoration: none;
@@ -805,10 +819,10 @@ header nav a {
   color: #181818;
   margin-left: 1.5em;
 }
-header nav a:first-of-type {
+header nav #nav > a:first-of-type {
   margin-left: auto;
 }
-header nav a:last-of-type {
+header nav #nav > a:last-of-type {
   margin-right: 1.5em;
 }
 header nav label {
