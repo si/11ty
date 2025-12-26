@@ -1,0 +1,26 @@
+---
+pagination:
+  data: collections.categoryList
+  size: 1
+  alias: category
+layout: layouts/home.njk
+eleventyComputed:
+  title: Category “{{ category }}”
+permalink: /{{ category | slugify }}/
+---
+
+<h1>{{ category }}</h1>
+
+<ul>
+  {%- for post in collections.posts | reverse %}
+    {%- set categories = post.data.categories or [] %}
+    {%- if categories and category in categories %}
+      <li>
+        <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+        <a href="{{ post.url | url }}">
+          {% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}
+        </a>
+      </li>
+    {%- endif %}
+  {%- endfor %}
+</ul>

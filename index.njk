@@ -7,12 +7,46 @@ date: Last Modified
 ---
 
 <p>
-  This is a demo website based on 
-  <a href="https://www.industrialempathy.com/posts/eleventy-high-performance-blog/">eleventy-high-performance-blog</a>.
+  Si Jobling is an engineering manager at ASOS (formerly Ant Group, Yahoo! and UEFA), a
+  podcast producer, and community creator who has spent decades building web experiences
+  and bringing people together around technology.
+</p>
+<p>
+  <a href="{{ '/contact/' | url }}">Connect with Si</a> to share ideas and explore collaborations.
 </p>
 
 <div id="posts">
-  <h2>Posts</h2>
-  {% set postslist = collections.posts %}
-  {% include "postslist.njk" %}
+  <h2>Latest posts</h2>
+  {% set latestPosts = collections.posts | reverse | head(5) %}
+  <ul>
+    {%- for post in latestPosts %}
+      {%- set categories = post.data.categories or [] %}
+      {%- set primaryCategory = post.data.primaryCategory %}
+      {%- if not primaryCategory and "blog" in categories %}
+        {%- set primaryCategory = "blog" %}
+      {%- elseif not primaryCategory %}
+        {%- set primaryCategory = categories[0] %}
+      {%- endif %}
+      <li>
+        <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+        <a href="{{ post.url | url }}">
+          {% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}
+        </a>
+        {%- if primaryCategory %}
+          <a href="{{ ('/' + (primaryCategory | slugify) + '/') | url }}">{{ primaryCategory }}</a>
+        {%- endif %}
+      </li>
+    {%- endfor %}
+  </ul>
+</div>
+
+<div id="categories">
+  <h2>Categories</h2>
+  <ul>
+    {%- for category in collections.categoryList %}
+      <li>
+        <a href="{{ ('/' + (category | slugify) + '/') | url }}">{{ category }}</a>
+      </li>
+    {%- endfor %}
+  </ul>
 </div>
