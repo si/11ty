@@ -11,6 +11,8 @@ function showDraft(data) {
 
 module.exports = () => {
   return {
+    layout: "layouts/post.njk",
+    templateClass: "tmpl-post",
     eleventyComputed: {
       eleventyExcludeFromCollections: (data) =>
         showDraft(data) ? data.eleventyExcludeFromCollections : true,

@@ -6,6 +6,18 @@ image: https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg
 date: Last Modified
 ---
 
+{% set postCount = collections.posts | length %}
+
+<section>
+  <h2>Post directories</h2>
+  <p>{{ postCount }} posts published.</p>
+  <ul>
+    {% for entry in collections.postDirectories %}
+      <li>{{ entry.name }} ({{ entry.count }})</li>
+    {% endfor %}
+  </ul>
+</section>
+
 <p>
   This is a demo website based on 
   <a href="https://www.industrialempathy.com/posts/eleventy-high-performance-blog/">eleventy-high-performance-blog</a>.
