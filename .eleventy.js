@@ -75,6 +75,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(require("./_11ty/img-dim.js"));
   eleventyConfig.addPlugin(require("./_11ty/json-ld.js"));
+  eleventyConfig.addPlugin(require("./_11ty/youtube-html-transform.js"));
   eleventyConfig.addPlugin(require("./_11ty/optimize-html.js"));
   eleventyConfig.addPlugin(require("./_11ty/apply-csp.js"));
   eleventyConfig.setDataDeepMerge(true);
@@ -220,6 +221,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
 
   /* Markdown Overrides */
+  // Configure markdown library with plugins
+  // This applies globally to ALL markdown files (blog, portfolio, aside, weeknotes, etc.)
   let markdownLibrary = markdownIt({
     html: true,
     breaks: true,
@@ -229,7 +232,7 @@ module.exports = function (eleventyConfig) {
     permalinkClass: "direct-link",
     permalinkSymbol: "#",
   })
-    .use(youtubeEmbed);
+    .use(youtubeEmbed); // Automatically converts YouTube URLs to accessible embeds in all posts
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Browsersync Overrides

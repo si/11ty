@@ -19,7 +19,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-module.exports = function youtubeEmbed(md) {
+function youtubeEmbed(md) {
   md.core.ruler.after("linkify", "youtube-unfurl", function (state) {
     const tokens = state.tokens;
     for (let idx = 0; idx < tokens.length; idx++) {
@@ -39,8 +39,22 @@ module.exports = function youtubeEmbed(md) {
         continue;
       }
 
-      const href = getYoutubeHref(token.children);
+      // Try to get YouTube URL from links first, then from plain text
+      const linkHref = getYoutubeHref(token.children);
+      const textHref = getYoutubeUrlFromText(token.children);
+      const href = linkHref || textHref;
       if (!href) {
+        continue;
+      }
+
+      // Only convert if the paragraph contains only the YouTube URL (or whitespace)
+      // If it's a link, we allow it even if the link text is different from the URL
+      const isLink = linkHref !== null;
+      if (!isLink && !isOnlyYoutubeUrl(token.children, href)) {
+        continue;
+      }
+      // For links, check if paragraph only contains the link (possibly with whitespace)
+      if (isLink && !isOnlyLinkInParagraph(token.children)) {
         continue;
       }
 
@@ -62,21 +76,125 @@ function getYoutubeHref(children) {
     return null;
   }
 
-  if (
-    children.length !== 3 ||
-    children[0].type !== "link_open" ||
-    children[1].type !== "text" ||
-    children[2].type !== "link_close"
-  ) {
-    return null;
-  }
-
   const hrefAttr = linkOpenTokens[0].attrs.find((attr) => attr[0] === "href");
   if (!hrefAttr) {
     return null;
   }
 
-  return hrefAttr[1];
+  let href = hrefAttr[1];
+  // Normalize escaped characters in the URL (markdown might escape underscores, etc.)
+  href = href.replace(/\\([_\*\[\]()])/g, "$1");
+  
+  // Verify it's a YouTube URL
+  if (!isYoutubeUrl(href)) {
+    return null;
+  }
+
+  return href;
+}
+
+function getYoutubeUrlFromText(children) {
+  // Check if there's a plain text YouTube URL (for cases where linkify didn't work or URL is escaped)
+  const allText = children
+    .filter((child) => child.type === "text" || child.type === "code_inline")
+    .map((child) => child.content)
+    .join("")
+    .trim();
+
+  if (!allText) {
+    return null;
+  }
+
+  // Normalize escaped characters (markdown might escape underscores, etc.)
+  // Remove backslashes before common URL characters
+  const normalizedText = allText.replace(/\\([_\*\[\]()])/g, "$1");
+
+  // Try to match YouTube URLs in the text
+  // Match full URLs with protocol - updated to handle escaped characters
+  const fullUrlMatch = normalizedText.match(
+    /https?:\/\/(?:www\.)?(?:youtube\.com\/(?:watch\?v=|live\/|embed\/|shorts\/)|youtu\.be\/)[^\s<>"']*/i
+  );
+  if (fullUrlMatch) {
+    // Normalize the matched URL to remove any escape sequences
+    return fullUrlMatch[0].replace(/\\([_\*\[\]()])/g, "$1");
+  }
+
+  // Try to match URLs without protocol (shouldn't happen with linkify, but just in case)
+  const urlMatch = normalizedText.match(
+    /(?:www\.)?(?:youtube\.com\/(?:watch\?v=|live\/|embed\/|shorts\/)|youtu\.be\/)[^\s<>"']*/i
+  );
+  if (urlMatch) {
+    // Normalize the matched URL to remove any escape sequences
+    return "https://" + urlMatch[0].replace(/\\([_\*\[\]()])/g, "$1");
+  }
+
+  return null;
+}
+
+function isYoutubeUrl(url) {
+  if (!url) return false;
+  try {
+    const urlObj = new URL(url);
+    const host = urlObj.hostname.replace(/^www\./, "").toLowerCase();
+    return (
+      host === "youtube.com" ||
+      host === "m.youtube.com" ||
+      host === "youtu.be" ||
+      host === "www.youtube.com"
+    );
+  } catch (e) {
+    return false;
+  }
+}
+
+function isOnlyYoutubeUrl(children, youtubeUrl) {
+  // Check if the paragraph contains only the YouTube URL as plain text (possibly with whitespace)
+  const textParts = [];
+
+  for (const child of children) {
+    if (child.type === "text") {
+      const text = child.content.trim();
+      if (text) {
+        textParts.push(text);
+      }
+    } else if (child.type !== "softbreak" && child.type !== "hardbreak") {
+      // Any other token type (except line breaks) means there's other content
+      return false;
+    }
+  }
+
+  // For plain text URLs, check if the text matches the YouTube URL
+  // Normalize both the text and the URL to handle escaped characters
+  const allText = textParts.join(" ").trim().replace(/\\([_\*\[\]()])/g, "$1");
+  const normalizedUrl = youtubeUrl.replace(/\\([_\*\[\]()])/g, "$1");
+  
+  return allText === normalizedUrl || normalizedUrl.includes(allText) || allText.includes(normalizedUrl);
+}
+
+function isOnlyLinkInParagraph(children) {
+  // Check if the paragraph contains only a single link (possibly with whitespace)
+  let linkCount = 0;
+  let hasOtherContent = false;
+
+  for (const child of children) {
+    if (child.type === "link_open") {
+      linkCount++;
+    } else if (child.type === "link_close") {
+      // Link close is fine
+    } else if (child.type === "text") {
+      const text = child.content.trim();
+      // Whitespace is fine, but other text means there's content outside the link
+      if (text) {
+        hasOtherContent = true;
+      }
+    } else if (child.type !== "softbreak" && child.type !== "hardbreak") {
+      // Any other token type means there's other content
+      hasOtherContent = true;
+    }
+  }
+
+  // Only convert if there's exactly one link and no other content
+  return linkCount === 1 && !hasOtherContent;
 }
 
 function createEmbedHtml(href) {
@@ -85,13 +203,23 @@ function createEmbedHtml(href) {
     return null;
   }
 
-  return `<div class="youtube-embed"><iframe src="${embedUrl}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>`;
+  // Extract video ID for better accessibility
+  const videoIdMatch = embedUrl.match(/\/embed\/([^?&#]+)/);
+  const videoId = videoIdMatch ? videoIdMatch[1] : null;
+  const title = videoId 
+    ? `YouTube video player (Video ID: ${videoId})` 
+    : "YouTube video player";
+
+  return `<div class="youtube-embed"><iframe src="${embedUrl}" title="${title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" aria-label="Embedded YouTube video"></iframe></div>`;
 }
 
 function buildEmbedUrl(rawUrl) {
+  // Normalize escaped characters in the URL before parsing
+  const normalizedUrl = rawUrl.replace(/\\([_\*\[\]()])/g, "$1");
+  
   let url;
   try {
-    url = new URL(rawUrl);
+    url = new URL(normalizedUrl);
   } catch (e) {
     return null;
   }
@@ -105,8 +233,15 @@ function buildEmbedUrl(rawUrl) {
   } else if (host === "youtube.com" || host === "m.youtube.com") {
     if (url.searchParams.has("v")) {
       id = url.searchParams.get("v");
-    } else if (pathParts[0] === "embed" || pathParts[0] === "live" || pathParts[0] === "shorts") {
+    } else if (pathParts[0] === "embed") {
       id = pathParts[1];
+    } else if (pathParts[0] === "live") {
+      // For live URLs, extract the stream ID
+      id = pathParts[1];
+    } else if (pathParts[0] === "shorts") {
+      id = pathParts[1];
+    } else if (pathParts[0] === "watch" && url.searchParams.has("v")) {
+      id = url.searchParams.get("v");
     }
   }
 
@@ -156,3 +291,8 @@ function parseStartTime(searchParams) {
 
   return null;
 }
+
+// Export helper functions for use in HTML transforms
+module.exports.buildEmbedUrl = buildEmbedUrl;
+module.exports.createEmbedHtml = createEmbedHtml;
+module.exports.isYoutubeUrl = isYoutubeUrl;
