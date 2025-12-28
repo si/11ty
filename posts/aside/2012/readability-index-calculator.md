@@ -11,7 +11,7 @@ tags:
 coverImage: "Flesch-Kincaid-readability-formula.png"
 ---
 
-[![](images/Flesch-Kincaid-readability-formula.png "Flesch-Kincaid readability formula")](http://www.standards-schmandards.com/exhibits/rix/index.php)
+[![](/img/assets/2012/09/Flesch-Kincaid-readability-formula.png "Flesch-Kincaid readability formula")](http://www.standards-schmandards.com/exhibits/rix/index.php)
 
 How readable is your copy?Â Apply the Flesch-Kincaid formula to your text with theÂ [Readability Index Calculator](http://www.standards-schmandards.com/exhibits/rix/index.php)Â to find out.
 

@@ -12,7 +12,7 @@ tags:
   - "workshops"
 ---
 
-[![](images/five_simple_step_videos.png "Five Simple Steps videos")](http://videos.fivesimplesteps.com)
+[![](/img/assets/2011/five_simple_step_videos.png "Five Simple Steps videos")](http://videos.fivesimplesteps.com)
 
 Earlier this year, the guys behind [Five Simple Steps](http:/www.fivesimplesteps.com/)Â publications put on a selection of workshops in London to compliment the books, giving the authors a platform to showcase their research and thoughts in more detail whilst improving engagement with their audience.
 

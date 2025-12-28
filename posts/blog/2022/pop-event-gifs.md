@@ -16,7 +16,7 @@ The idea came to me when I was looking at [Football Cal for this year’s World 
 
 <figure>
 
-![](images/EE10E954-2150-4399-9518-E31F6FB20F4D-1024x1024.jpeg)
+![](/img/assets/2022/07/EE10E954-2150-4399-9518-E31F6FB20F4D.jpeg)
 
 <figcaption>
 

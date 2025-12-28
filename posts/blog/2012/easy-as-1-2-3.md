@@ -14,7 +14,7 @@ tags:
 coverImage: "Guess-My-Password.png"
 ---
 
-![](images/Guess-My-Password.png "Guess My Password")
+![](/img/assets/2012/08/Guess-My-Password.png "Guess My Password")
 
 According to leaked data, there's an alarming trend in theÂ [top three passwords](http://www.lukew.com/ff/entry.asp?1590&utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+WebFormDesign+%28Web+Form+Design%29&utm_content=Google+Reader)Â of popular sites.
 

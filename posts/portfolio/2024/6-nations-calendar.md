@@ -12,7 +12,7 @@ coverImage: "6-Nations-Calendar.png"
 
 Following the series of sports calendar projects, [6 Nations Calendar](https://6nationscalendar.com/) provides all the kick off times for the annual 6 Nations competition directly on your own mobile or computer.
 
-![6 Nations Calendar screenshot with all fixtures for 2024](images/6-Nations-Calendar-1024x560.png)
+![6 Nations Calendar screenshot with all fixtures for 2024](/img/assets/2024/02/6-Nations-Calendar.png)
 
 Built in just two evenings using frameworks I've developed in the past, this was a great example to demonstrate the value of reusing tech to get a simple idea live in a short time frame.
 

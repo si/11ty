@@ -10,7 +10,7 @@ tags:
 coverImage: "History-of-World-Wide-Web.png"
 ---
 
-[![](images/History-of-World-Wide-Web.png "History of World Wide Web")](http://webdirections.org/history/)
+[![](/img/assets/2012/09/History-of-World-Wide-Web.png "History of World Wide Web")](http://webdirections.org/history/)
 
 John Allsop has created a beautifully executed [timeline of theÂ Web](http://webdirections.org/history/).
 

@@ -11,7 +11,7 @@ tags:
 coverImage: "Never-Use-Black.png"
 ---
 
-[![](images/Never-Use-Black.png "Never Use Black")](http://2017.sijobling.com/wp-content/uploads/2012/08/Never-Use-Black.png)
+[![](/img/assets/2012/08/Never-Use-Black.png "Never Use Black")](http://2017.sijobling.com/wp-content/uploads/2012/08/Never-Use-Black.png)
 
 Ian Storm Taylor reminds designers why they should [never use black](http://ianstormtaylor.com/design-tip-never-use-black/).
 

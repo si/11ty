@@ -17,7 +17,7 @@ coverImage: "Football-Cal-desktop.png"
 
 [Football Cal](http://footballcal.com) is _another_ sports calendar web app to provide game times directly to device calendars (iOS, macOS, Android, Windows), returning to the original football focus like World Cup Kick Off.
 
-![](images/Football-Cal-desktop-1024x581.png)
+![](/img/assets/2021/06/Football-Cal-desktop.png)
 
 ## Why another football calendar?
 
@@ -44,7 +44,7 @@ coverImage: "Football-Cal-desktop.png"
 
 - <figure>
     
-    ![](images/Football-Cal-Timeline-Mobile.png)
+    ![](/img/assets/2021/06/Football-Cal-Timeline-Mobile.png)
     
     <figcaption>
     
@@ -56,7 +56,7 @@ coverImage: "Football-Cal-desktop.png"
     
 - <figure>
     
-    ![](images/Football-Cal-Event-Mobile.png)
+    ![](/img/assets/2021/06/Football-Cal-Event-Mobile.png)
     
     <figcaption>
     

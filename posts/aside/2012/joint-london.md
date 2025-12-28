@@ -10,7 +10,7 @@ tags:
 coverImage: "Contact-Us-Joint-London.png"
 ---
 
-[![](images/Contact-Us-Joint-London.png "Contact Us - Joint London")](http://www.jointlondon.com/)
+[![](/img/assets/2012/08/Contact-Us-Joint-London.png "Contact Us - Joint London")](http://www.jointlondon.com/)
 
 [Joint London](http://www.jointlondon.com/)Â have created an innovative user experience for their website drawing on the standard "Contact Us" section of websites.
 

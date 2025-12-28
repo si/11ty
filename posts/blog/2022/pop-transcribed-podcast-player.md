@@ -19,7 +19,7 @@ None of the existing native podcast apps I’ve tested support this yet but Blub
 
 <figure>
 
-![](images/E721E58A-33DD-40B4-BBE5-CCD3D3E1C433-1024x1024.jpeg)
+![](/img/assets/2022/08/E721E58A-33DD-40B4-BBE5-CCD3D3E1C433.jpeg)
 
 <figcaption>
 

@@ -14,7 +14,7 @@ tags:
 coverImage: "cherished_vehicle_insurance_header.jpg"
 ---
 
-![](images/cherished_vehicle_insurance_header.jpg "Cherished Vehicle Insurance")As part of the strategy to create and establish niche products atÂ [Premium Choice](http://www.premiumchoice.co.uk), we have recently identified a market for the specialist vehicle insurance range of customers inÂ **Cherished Vehicle Insurance**.
+![](/img/assets/2010/cherished_vehicle_insurance_header.jpg "Cherished Vehicle Insurance")As part of the strategy to create and establish niche products atÂ [Premium Choice](http://www.premiumchoice.co.uk), we have recently identified a market for the specialist vehicle insurance range of customers inÂ **Cherished Vehicle Insurance**.
 
 These insurance packages aren't for your typical run-around car - more theÂ _Pride and Joy_Â you keep in the garage for special occasions. We're talking about original Minis, classic Campers and even tanks - this isÂ **specialist insurance for cherished vehicles.**
 

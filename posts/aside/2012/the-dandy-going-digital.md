@@ -11,7 +11,7 @@ tags:
 coverImage: "Desperate-Dan-Eating-Cow-Pie.jpeg"
 ---
 
-[![](images/Desperate-Dan-Eating-Cow-Pie.jpeg "Desperate Dan Eating Cow Pie")](http://www.creativebloq.com/design/industry-insight-designers-comment-digital-comics-812578)
+[![](/img/assets/2012/08/Desperate-Dan-Eating-Cow-Pie.jpeg "Desperate Dan Eating Cow Pie")](http://www.creativebloq.com/design/industry-insight-designers-comment-digital-comics-812578)
 
 I've returned to my old ways, contributing where I can to Creative Bloq's Industry Insight. This week, the focus is on The Dandy's move to digital and the future of digital comicsâ€¦
 

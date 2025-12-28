@@ -40,7 +40,7 @@ On the days I'm not travelling, I tend to find I'm most productive in the mornin
 
 <figure>
 
-![](images/A5F091E5-ECFA-4259-A1EC-D135D3356094-576x1024.jpeg)
+![](/img/assets/2022/06/A5F091E5-ECFA-4259-A1EC-D135D3356094.jpeg)
 
 <figcaption>
 
@@ -72,7 +72,7 @@ Every week, I set my week goals publicly in our [On The Side Slack community](ht
 
 <figure>
 
-![](images/5A3EA817-9FF5-4A42-A0E0-B635E001034A-1024x1024.jpeg)
+![](/img/assets/2022/06/5A3EA817-9FF5-4A42-A0E0-B635E001034A.jpeg)
 
 <figcaption>
 
@@ -92,7 +92,7 @@ I'm very lucky that ASOS provide one day every month known as **Tech Develops** 
 
 <figure>
 
-![](images/B8C8823B-6556-4B0E-9D49-BC4AEC5855B8-1024x737.jpeg)
+![](/img/assets/2022/06/B8C8823B-6556-4B0E-9D49-BC4AEC5855B8.jpeg)
 
 <figcaption>
 

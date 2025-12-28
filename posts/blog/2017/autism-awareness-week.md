@@ -36,6 +36,6 @@ If you know someone who is autistic or lives with autism, I suggest doing someth
 
 Fundraising is still open as well. If you're feeling generous, please drop a few quid on the JustGiving campaign to contribute towards future projects and support from Autism Concern.
 
-[![Donate now with JustGiving](images/donate-now-with-justgiving-300x75.png)](https://www.justgiving.com/aaw17-oscarj)
+[![Donate now with JustGiving](/img/assets/2015/03/donate-now-with-justgiving.png)](https://www.justgiving.com/aaw17-oscarj)
 
 _(As a side note, we realised after the first few days we started the series a week too early. Rather than halt proceedings, we didn't want to cause any additional stress for Oscar so continued recording and posting the videos. Red Nose Day was also approaching so we thought the public would be a in a more charitable mood to aid fundraising.)_

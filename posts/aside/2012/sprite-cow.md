@@ -12,7 +12,7 @@ tags:
 coverImage: "Sprite-Cow.png"
 ---
 
-[![](images/Sprite-Cow.png "Sprite Cow")](http://2017.sijobling.com/wp-content/uploads/2012/08/Sprite-Cow.png)
+[![](/img/assets/2012/08/Sprite-Cow.png "Sprite Cow")](http://2017.sijobling.com/wp-content/uploads/2012/08/Sprite-Cow.png)
 
 [Sprite Cow](http://www.spritecow.com/) is a really smart web app for generating the necessary CSS for sprite sheets.
 

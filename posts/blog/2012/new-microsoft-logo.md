@@ -12,7 +12,7 @@ tags:
 coverImage: "Microsoft-Metro-Branding.png"
 ---
 
-[![](images/Microsoft-Metro-Branding.png "Microsoft Metro Branding")](http://2017.sijobling.com/wp-content/uploads/2012/08/Microsoft-Metro-Branding.png)
+[![](/img/assets/2012/08/Microsoft-Metro-Branding.png "Microsoft Metro Branding")](http://2017.sijobling.com/wp-content/uploads/2012/08/Microsoft-Metro-Branding.png)
 
 I have a problem with the new Microsoft logo. Let me explainâ€¦
 
@@ -22,15 +22,15 @@ But I have a problem with the icon.
 
 **The lack of depth or perspective Â feels inconsisent with other recent designs by the Redmond giant.**
 
-[![](images/Windows-Metro-Branding.png "Windows Metro Branding")](http://2017.sijobling.com/wp-content/uploads/2012/08/Windows-Metro-Branding.png)
+[![](/img/assets/2012/08/Windows-Metro-Branding.png "Windows Metro Branding")](http://2017.sijobling.com/wp-content/uploads/2012/08/Windows-Metro-Branding.png)
 
 Windows 8 simplified the legacy windows frame into a single-toned icon, skewed along the horizontal axis.
 
-[![](images/Office-Metro-Branding.png "Office Metro Branding")](http://2017.sijobling.com/wp-content/uploads/2012/08/Office-Metro-Branding.png)
+[![](/img/assets/2012/08/Office-Metro-Branding.png "Office Metro Branding")](http://2017.sijobling.com/wp-content/uploads/2012/08/Office-Metro-Branding.png)
 
 Office maintains the skewed appearance, this time creating an "O" from the door and box symbol.
 
-[![](images/Xbox-Metro-Branding.png "Xbox Metro Branding")](http://2017.sijobling.com/wp-content/uploads/2012/08/Xbox-Metro-Branding.png)
+[![](/img/assets/2012/08/Xbox-Metro-Branding.png "Xbox Metro Branding")](http://2017.sijobling.com/wp-content/uploads/2012/08/Xbox-Metro-Branding.png)
 
 The Xbox branding hasn't changed much from the original but maintains the 3D feel with the broken sphere.
 

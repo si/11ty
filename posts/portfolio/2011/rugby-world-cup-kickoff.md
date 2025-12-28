@@ -20,7 +20,7 @@ Working against the clock is normally discouraged, especially when you have more
 
 A classic example of this was building [Rugby World Cup KickOff](http://rugbyworldcupkickoff.com/).
 
-[![Rugby World Cup KickOff](images/rugby_world_cup_kickoff.png "Rugby World Cup KickOff")](http://rugbyworldcupkickoff.com)
+[![Rugby World Cup KickOff](/img/assets/2011/rugby_world_cup_kickoff.png "Rugby World Cup KickOff")](http://rugbyworldcupkickoff.com)
 
 It was only after driving past our local Rugby School (the founding home of the sport) that I realised the Rugby World Cup was fast approaching. I had originally planned to cover the event with the usual KickOff calendar download app earlier in the year but other projects and clients took priority. That didn't phase me though. I had a working framework to reuse so development time was minimal.
 

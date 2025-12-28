@@ -25,7 +25,7 @@ As a thank you for the support so far, I have agreed to join a group of brave i
 
 The big day of the big jump is Saturday 16th May 2015. Please help me smash this goal before the jump and support an important charity for thousands of individuals with special needs.
 
-[![Donate now with JustGiving](images/donate-now-with-justgiving.png)](https://www.justgiving.com/sijobling)
+[![Donate now with JustGiving](/img/assets/2015/03/donate-now-with-justgiving.png)](https://www.justgiving.com/sijobling)
 
 Next week is also [World Autism Awareness Week](http://www.autism.org.uk/get-involved/raise-money/world-autism-awareness-week.aspx) (27th March – 2nd April), concluding with [World Autism Awareness Day](http://www.un.org/en/events/autismday/) organised by the UN. It would be amazing if I could reach the half way mark by then. Surely that's an achievable benchmark to aim for?
 

@@ -11,7 +11,7 @@ tags:
   - "visionary"
 ---
 
-[![](images/steve_jobs_1955_2011.png "Steve Jobs 1955-2011")](http://www.apple.com/stevejobs)
+[![](/img/assets/2011/steve_jobs_1955_2011.png "Steve Jobs 1955-2011")](http://www.apple.com/stevejobs)
 
 Steve Jobs, the co-founder of Apple and Pixar pioneer, sadly passed away yesterday after a number of medical problems.
 

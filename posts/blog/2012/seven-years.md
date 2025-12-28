@@ -12,7 +12,7 @@ tags:
 coverImage: "Multipack.png"
 ---
 
-[![](images/Multipack.png "Multipack")](http://multipack.co.uk)
+[![](/img/assets/2012/10/Multipack.png "Multipack")](http://multipack.co.uk)
 
 This story begins seven years ago, almost to the day, when four enthusiastic Web geeks met at a pub in Walsall.
 

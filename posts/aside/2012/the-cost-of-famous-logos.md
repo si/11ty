@@ -14,7 +14,7 @@ tags:
 coverImage: "coca-cola.png"
 ---
 
-[![](images/coca-cola.png "Coca-Cola")](http://stocklogos.com/topic/famous-logo-designs-and-how-much-did-they-cost)
+[![](/img/assets/2012/08/coca-cola.png "Coca-Cola")](http://stocklogos.com/topic/famous-logo-designs-and-how-much-did-they-cost)
 
 Stock Logos compiled some [famous logos along with their respective costs](http://stocklogos.com/topic/famous-logo-designs-and-how-much-did-they-cost).
 

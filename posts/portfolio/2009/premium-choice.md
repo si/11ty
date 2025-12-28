@@ -12,7 +12,7 @@ layout: layouts/post.njk
 coverImage: "/img/posts/portfolio/premium_choice_website.jpg"
 ---
 
-[![](/img/posts/portfolio/premium_choice_website.jpg "Premium Choice website")](https://www.premiumchoice.co.uk/)
+[![](/img/assets/2012/06/premium_choice_website.jpg "Premium Choice website")](https://www.premiumchoice.co.uk/)
 
 [Premium Choice](http://www.premiumchoice.co.uk/) are a specialist insurance broker based in Birmingham who offer competitive quotes on insurance for high-risk vehicles and drivers.
 

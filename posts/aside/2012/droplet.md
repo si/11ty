@@ -11,7 +11,7 @@ tags:
 coverImage: "Droplet.png"
 ---
 
-[![](images/Droplet.png "Droplet")](http://2017.sijobling.com/wp-content/uploads/2012/08/Droplet.png)
+[![](/img/assets/2012/08/Droplet.png "Droplet")](http://2017.sijobling.com/wp-content/uploads/2012/08/Droplet.png)
 
 [Droplet](https://dropletpay.com/)Â is an interesting concept for sending payments to friends or businesses with your mobile.
 

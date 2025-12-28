@@ -43,7 +43,7 @@ _An emotional time at work, quality family time walking and gaming and getting b
 - Welcomed another Si to [On The Side](http://ontheside.network)
 - Refined the Apple Health to Personal Dash setup, now with a daily chart of movement and exercise
 
-![](images/Apple-Health-chart-in-Personal-Dashboard--1024x465.png)
+![](/img/assets/2022/01/Apple-Health-chart-in-Personal-Dashboard-.png)
 
 ## Watched
 

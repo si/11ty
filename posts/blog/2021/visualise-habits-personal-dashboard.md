@@ -44,7 +44,7 @@ Whilst Zapier is more versatile with the event configurations, you are limited t
 
 Time to demonstrate the configuration of an IFTTT recipe with a dedicated Google Sheet of completed Trello actions.
 
-![](images/Trello-to-Google-Sheet-IFTTT-recipe-1024x828.png)
+![](/img/assets/2021/11/Trello-to-Google-Sheet-IFTTT-recipe.png)
 
 1. Create your [IFTTT](https://ifttt.com/home) account if you haven't already.
 2. Select the Trello service from the **IF** trigger list and connect your account.
@@ -66,7 +66,7 @@ Time to demonstrate the configuration of an IFTTT recipe with a dedicated Google
 
 This one might be more niche but let's go through the configuration of a Strava zap to demonstrate how that works with Google Sheets. You can [copy my Zap](https://zapier.com/shared/61c1ad0450d1729947675c5274145f07d0dc89f3) but it's better to build it yourself to understand what's happening.
 
-![](images/Strava-data-mapping-in-Zapier-955x1024.png)
+![](/img/assets/2021/11/Strava-data-mapping-in-Zapier.png)
 
 1. Create your free [Zapier](https://zapier.com) account if you haven't already
 2. **Create a Zap** from the menu
@@ -110,7 +110,7 @@ Now, let's setup some PivotTables and charts to visualise your data. First up, w
 
 <figure>
 
-![](images/Strava-workout-split-doughnut-chart-1024x651.png)
+![](/img/assets/2021/11/Strava-workout-split-doughnut-chart.png)
 
 <figcaption>
 
@@ -137,7 +137,7 @@ Now let's break down our completed Trello data on a daily basis. First, we need 
 
 <figure>
 
-![](images/Daily-completed-Trello-scorecard-1024x648.png)
+![](/img/assets/2021/11/Daily-completed-Trello-scorecard.png)
 
 <figcaption>
 
@@ -153,7 +153,7 @@ This is an ongoing side project which is constantly growing and refined based on
 
 <figure>
 
-![Personal Dashboard with Trello, Strava, Goodreads, #ArchiveCollection, Tweets](images/Personal-Dashboard-Trello-Strava-Goodreads-ArchiveCollection-Tweets-1024x444.png)
+![Personal Dashboard with Trello, Strava, Goodreads, #ArchiveCollection, Tweets](/img/assets/2021/11/Personal-Dashboard-Trello-Strava-Goodreads-ArchiveCollection-Tweets.png)
 
 <figcaption>
 

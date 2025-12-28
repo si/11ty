@@ -14,6 +14,6 @@ Weston Thayer has gathered together some brilliant insights to the structure of 
 
 I encourage designers and developers alike to understand what it all means.
 
-[![](images/83ebbf80-anatomy.png)](http://westonthayer.com/writing/intro-to-font-metrics/)
+[![](/img/assets/2019/02/83ebbf80-anatomy.png)](http://westonthayer.com/writing/intro-to-font-metrics/)
 
 _🔗_ [Intro to Font Metrics](http://westonthayer.com/writing/intro-to-font-metrics/)

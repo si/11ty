@@ -12,7 +12,7 @@ tags:
 coverImage: "Logotype-p136-137-MoMA.jpeg"
 ---
 
-[![](images/Logotype-p136-137-MoMA.jpeg "Logotype p136-137 - MoMA")](http://2017.sijobling.com/wp-content/uploads/2012/10/Logotype-p136-137-MoMA.jpeg)
+[![](/img/assets/2012/10/Logotype-p136-137-MoMA.jpeg "Logotype p136-137 - MoMA")](http://2017.sijobling.com/wp-content/uploads/2012/10/Logotype-p136-137-MoMA.jpeg)
 
 [Michael Evamy](http://twitter.com/michaelevamy) has published a thoroughly insightful investigation into the art of logotypes.
 

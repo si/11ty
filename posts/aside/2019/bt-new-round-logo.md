@@ -16,6 +16,6 @@ I know plenty work normally goes in to rebrands – especially at the scale of a
 
 It does look particularly similar to a well-known fashion company I'm close to as well…
 
-[![ASOS app icon](images/asos-app-store-icon.png)](https://itunes.apple.com/gb/app/asos/id457876088?mt=8)
+[![ASOS app icon](/img/assets/2019/05/asos-app-store-icon.png)](https://itunes.apple.com/gb/app/asos/id457876088?mt=8)
 
 Source: _[BT unveils new logo after years of work – its name in a circle](https://www.theguardian.com/business/2019/may/16/bt-unveils-new-logo-to-match-transformation-to-national-champion)_

@@ -27,7 +27,7 @@ First off, items can be repeated. This is a big win for me when I have regular t
 
 <figure>
 
-![](images/0bf58510-ticktick-repeat-custom-times.png)
+![](/img/assets/2019/01/0bf58510-ticktick-repeat-custom-times.png)
 
 <figcaption>
 
@@ -41,7 +41,7 @@ Secondly, it’s possible to create nested actions with sub-items. For example, 
 
 <figure>
 
-![](images/195de557-ticktick-macos-nested-sub-items.png)
+![](/img/assets/2018/12/195de557-ticktick-macos-nested-sub-items.png)
 
 <figcaption>
 
@@ -55,7 +55,7 @@ Thirdly, items can be annotated in so many different ways. You can use hashtags 
 
 <figure>
 
-![](images/b84115d5-ticktick-tags-comments-activity-pomodoro.png)
+![](/img/assets/2019/01/b84115d5-ticktick-tags-comments-activity-pomodoro.png)
 
 <figcaption>
 
@@ -78,7 +78,7 @@ There’s plenty of subtle (and untouched) features in [TickTick](https://tickti
 
 <figure>
 
-![](images/3b6691cd-ticktick-lists-with-emojis-and-closed-427x1024.png)
+![](/img/assets/2019/01/3b6691cd-ticktick-lists-with-emojis-and-closed.png)
 
 <figcaption>
 

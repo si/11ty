@@ -12,7 +12,7 @@ tags:
 coverImage: "Creative-Swap.png"
 ---
 
-[![](images/Creative-Swap.png "Creative Swap")](http://creativeswap.com)
+[![](/img/assets/2012/08/Creative-Swap.png "Creative Swap")](http://creativeswap.com)
 
 [Creative Swap](http://www.creativeswap.co/)Â looks like an interesting initiative to inspire creativity between agencies by swapping talent for a week.
 

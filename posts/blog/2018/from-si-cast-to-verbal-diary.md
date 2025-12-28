@@ -16,7 +16,7 @@ Last year, I started producing a fortnightly podcast called [Si ‘Cast](http://
 
 I was fully aware of my limited capacity and how easy it is to burn out with extra commitments from side projects so I time-boxed the project to 3 months and planned to evaluate the situation after that.
 
-![](images/si-8216-cast-4-8211-wellbeing-with-work.jpg)
+![](/img/assets/2017/11/si-8216-cast-4-8211-wellbeing-with-work.jpg)
 
 It was quite satisfying to get back into multimedia production as this was my first foray back into video production since the "noughties". I’ve been producing a house music podcast called [House Finesse](https://housefinesse.com) since 2005 which has been relatively successful in waives and definitely taps in to a niche audience who have loyally followed for all these years, as well as giving myself a platform to share my love for house music when I have a hankering for a mix.
 
@@ -28,7 +28,7 @@ Luckily for me, [James Norton](https://twitter.com/nortools) – a good friend 
 
 (_I actually planned to use the pun on a slightly different side project but it never surfaced so I repurposed it for this one._)
 
-![](images/Verbal-Diary-with-Si-and-James.png)
+![](/img/assets/2018/05/Verbal-Diary-with-Si-and-James.png)
 
 We’re aiming to record our discussions every fortnight talking about a broad range of topics – tech, people, tools… – edited into 30-60 minute episodes. Like _Si ‘Cast_, I’m keen to break the podcast into seasons. We’ll see how the format evolves. So far, we're four episodes in with a mix of topics covered along with the expected “rants and bants” from two opinionated ex-techies.
 

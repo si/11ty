@@ -11,7 +11,7 @@ tags:
   - "one-phat-dj"
 ---
 
-![800 One Phat DJ Facebook Fans](images/800_likes_fb.png "800 Facebook Fans")
+![800 One Phat DJ Facebook Fans](/img/assets/2011/800_likes_fb.png "800 Facebook Fans")
 
 To celebrate hitting 800 fans on the [One Phat DJ Facebook fan page](http://www.facebook.com/onephatdj), I created a special one hour mix. I wanted to give something back to the many loyal followers of the Funky House Finesse podcast, specifically those who show their affection through Facebook "likes".
 

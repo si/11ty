@@ -17,7 +17,7 @@ This first one is an elaboration on a recent blog post I wrote about facilitatin
 
 <figure>
 
-![](images/Product-On-A-Page-Speedback--1024x1006.jpg)
+![](/img/assets/2022/03/Product-On-A-Page-Speedback-.jpg)
 
 <figcaption>
 

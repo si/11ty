@@ -32,7 +32,7 @@ Here’s how those projects have come together — the thinking, the tech, and w
 
 <figure>
 
-![](images/PETALS-flower-example-1024x614.png)
+![](/img/assets/2025/05/PETALS-flower-example.png)
 
 <figcaption>
 
@@ -62,7 +62,7 @@ I’ve also really enjoyed collaborating with other techies again. It’s been a
 
 The result? The [**app is now live**](https://app.petals.team/account/login?next=/), with a couple of teams actively using it in the real world, and we’re already getting positive and useful feedback. It’s not just a nicer form anymore; it’s a tool that encourages better conversations and helps teams see patterns in how they’re working and feeling over time.
 
-[![](images/PETALS-app-snapshot-preview-997x1024.png)](https://app.petals.team/)
+[![](/img/assets/2025/05/PETALS-app-snapshot-preview.png)](https://app.petals.team/)
 
 ## Feedback is hard. AI can help (sometimes)
 

@@ -19,7 +19,7 @@ There are numerous articles out there about the correlation between Lego and wor
 
 <figure>
 
-![](images/Creative-with-colours-1024x576.jpg)
+![](/img/assets/2021/03/Creative-with-colours.jpg)
 
 <figcaption>
 
@@ -43,7 +43,7 @@ There were occasions where my Gen Z daughter's patience was getting the better o
 
 <figure>
 
-![](images/Box-of-Lego-bricks-1024x576.jpg)
+![](/img/assets/2021/03/Box-of-Lego-bricks.jpg)
 
 <figcaption>
 
@@ -69,7 +69,7 @@ Early in the process, I offered to help collect the pieces so that my daughter c
 
 <figure>
 
-![](images/Battered-fingers-1024x576.jpg)
+![](/img/assets/2021/03/Battered-fingers.jpg)
 
 <figcaption>
 

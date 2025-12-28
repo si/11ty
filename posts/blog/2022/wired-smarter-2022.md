@@ -24,7 +24,7 @@ I took notes throughout the day so here are my thoughts and observations across 
 
 ## The Impact of Web 3.0 with Tim Berners-Lee and John Bruce from [Inrupt](https://inrupt.com)
 
-![](images/CB99FCFF-D226-463B-93EF-186E3006719B-768x1024.jpeg)
+![](/img/assets/2022/10/CB99FCFF-D226-463B-93EF-186E3006719B.jpeg)
 
 All about owning your data in Solid Pods which other services can access under your control  
 Solid is not Web3 and Blockchain (as currently hyped)  
@@ -45,7 +45,7 @@ Fascinating woman with such a wealth of knowledge and experience - [get her book
 
 ## Innovation Across Three Dimensions with Werner Vogels, Amazon CTO
 
-![](images/6F94EE44-E70F-4316-B43B-4EFF7D588122-768x1024.jpeg)
+![](/img/assets/2022/10/6F94EE44-E70F-4316-B43B-4EFF7D588122.jpeg)
 
 Think about how the customer experience is currently limited to two dimensions, how can it evolve to 3D  
 References to John Lennon, 3D glasses, VR, AR and all that.  
@@ -61,13 +61,13 @@ Career ladder analogy is limiting and archaic way of thinking
 Career Safari with other teams and places (aka secondments)  
 Job swap should ideally be 3-9 months long
 
-![](images/02D2DEDC-0ADE-4F1F-9317-7F5629505555-scaled.jpeg)
+![](/img/assets/2022/10/02D2DEDC-0ADE-4F1F-9317-7F5629505555.jpeg)
 
 Love the idea of this concept, must check out the book and podcast to think about how it can be applied personally and with my direct reports.
 
 ## Cyber security with Parisa Tabriz, Google Security Princess (and Google Chrome VP)
 
-![](images/CE79AA06-9558-4287-AAD0-14A99D50EF54-574x1024.jpeg)
+![](/img/assets/2022/10/CE79AA06-9558-4287-AAD0-14A99D50EF54.jpeg)
 
 Cybersecurity incidents in Europe increased more than 10x between 2018 and 2021  
 Nearly half of workers spend the majority of their day working in the browser (Forrester)  
@@ -86,7 +86,7 @@ Check Warner - Partner, Ada Ventures
 Omi Bell - CEO, Black Girl Ventures  
 Natasha Bernell - Business editor, Wired
 
-![](images/F3899B9C-996E-43CB-BB72-5437325085B4-1024x768.jpeg)
+![](/img/assets/2022/10/F3899B9C-996E-43CB-BB72-5437325085B4.jpeg)
 
 Shocking 0.02% VC funds go to black women entrepreneurs!  
 Pandemic challenged investment. Upcoming financial crisis likely to be even worse. Rich always get richer - finance system needs addressing (Omi)  
@@ -107,7 +107,7 @@ Author of How The Future Works
 Pandemic, Women leavers, YOLO economy, great resignation  
 94% want flex in when they work, 79% in where
 
-![](images/82F6C236-6CA9-4DE7-8B64-E0190DE8FD5F-768x1024.jpeg)
+![](/img/assets/2022/10/82F6C236-6CA9-4DE7-8B64-E0190DE8FD5F.jpeg)
 
 Focus Friday time - no meetings  
 Only use 4 D's for meetings  
@@ -144,7 +144,7 @@ Bit of a publicity stunt for TikTok but worth recognising the power of the platf
 
 ## From D2C to Connect to Customer with Deann Evans, Shopify
 
-![](images/2373AD99-F4C5-4321-94DD-881013E2DBA9-1024x768.jpeg)
+![](/img/assets/2022/10/2373AD99-F4C5-4321-94DD-881013E2DBA9.jpeg)
 
 Structural shifts affecting the retails landscape (state of economy, the internet, privacy)  
 Apple’s shift to opt out of tracking hampers lead generation  
@@ -171,7 +171,7 @@ Heinin Zhang @ yhangry - 500 chefs like Deliveroo
 Jemma Waters @ Lloyds Bank (host)  
 (Deliberately selected diverse panel)
 
-![](images/15C17992-F1B4-4153-8D55-6698CEEEEC76-1024x768.jpeg)
+![](/img/assets/2022/10/15C17992-F1B4-4153-8D55-6698CEEEEC76.jpeg)
 
 Lean startup - zero budget  
 Listen to customers, know the product and customer base first hand  

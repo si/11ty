@@ -24,7 +24,7 @@ Rather than look back at 2022 with the typical long read, I thought I’d try so
 
 53k downloads
 
-![](images/B8C8823B-6556-4B0E-9D49-BC4AEC5855B8.jpeg)
+![](/img/assets/2022/06/B8C8823B-6556-4B0E-9D49-BC4AEC5855B8.jpeg)
 
 ## **2,256** Make Life Work downloads
 
@@ -56,7 +56,7 @@ Rather than look back at 2022 with the typical long read, I thought I’d try so
 
 **2,817 pushups** in November (126 on 22 Nov)
 
-![](images/Weight-through-2022-1024x635.png)
+![](/img/assets/2023/01/Weight-through-2022.png)
 
 * * *
 

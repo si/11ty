@@ -26,7 +26,7 @@ I caught wind of a ‘_speedback’_ concept last Summer which creates a **spe
 
 <figure>
 
-![](images/Speedback-1024x576.png)
+![](/img/assets/2022/01/Speedback.png)
 
 <figcaption>
 
@@ -54,11 +54,11 @@ With this in mind, here’s how I approached it:
 10. Between each round, the facilitator will have to rearrange the breakout assignments. Propose more banter whilst this is actioned as it can be quite tedious in MS Teams/Zoom and will keep morale high.
 11. At the end of all breakout rounds, make sure everyone had time to give and receive all their feedback. If they ran out of time, suggest using one of the rooms during any remaining buffer time or arrange a follow-up call at a time that’s convenient.
 
-- ![](images/Speedback-time-settings.png)
+- ![](/img/assets/2022/01/Speedback-time-settings.png)
     
-- ![](images/Speedback-simple-rooms.png)
+- ![](/img/assets/2022/01/Speedback-simple-rooms.png)
     
-- ![](images/Speedback-dedicated-rooms.png)
+- ![](/img/assets/2022/01/Speedback-dedicated-rooms.png)
     
 
 ### Observations

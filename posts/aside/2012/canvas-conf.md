@@ -11,7 +11,7 @@ tags:
 coverImage: "Canvas-Conf.png"
 ---
 
-[![](images/Canvas-Conf.png "Canvas Conf")](http://2017.sijobling.com/wp-content/uploads/2012/08/Canvas-Conf.png)
+[![](/img/assets/2012/08/Canvas-Conf.png "Canvas Conf")](http://2017.sijobling.com/wp-content/uploads/2012/08/Canvas-Conf.png)
 
 [Canvas](http://2012.canvasconf.co.uk/)Â â€“ the first proper web development conference in Birmingham by the guys at [383 Project](http://383project.com).
 

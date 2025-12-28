@@ -12,7 +12,7 @@ tags:
 coverImage: "New-Adventures-2013.png"
 ---
 
-[![](images/New-Adventures-2013.png "New Adventures 2013")](http://2013.newadventuresconf.com/)
+[![](/img/assets/2012/08/New-Adventures-2013.png "New Adventures 2013")](http://2013.newadventuresconf.com/)
 
 The amazingÂ [New Adventures In Web Design conference](http://2013.newadventuresconf.com/) returns to Nottingham for 2013.
 

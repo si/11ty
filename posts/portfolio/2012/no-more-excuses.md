@@ -13,7 +13,7 @@ coverImage: "no_more_excuses_top.jpg"
 
 This month, [.net magazine](http://www.netmagazine.com/shop/magazines/april-2012-226) published my thought piece on No More Excuses.
 
-[![](images/no_more_excuses_top.jpg "No More Excuses! top")](http://2017.sijobling.com/wp-content/uploads/2012/03/no_more_excuses_top.jpg)
+[![](/img/assets/2012/03/no_more_excuses_top.jpg "No More Excuses! top")](http://2017.sijobling.com/wp-content/uploads/2012/03/no_more_excuses_top.jpg)
 
 There's a lot of creativity in the web industry, so many people with brilliant ideas, but we're all guilty of making excuses as to why we shouldn't make that website we've been mulling over for too long.
 
@@ -33,4 +33,4 @@ This article seemed like an ideal opportunity to gather all my thoughts and expe
 
 It was also my first official publication in the magazine. For years, I've considered writing for .net but, for one reason or another, I've put it off. What better motivation than to take inspiration from the topic and stop making excuses myself? Hopefully, this is the start of more frequent content. We'll see. It bodes well that it made the cover.
 
-![](images/no_more_excuses_cover_sticker.jpg "No More Excuses! cover sticker")
+![](/img/assets/2012/03/no_more_excuses_cover_sticker.jpg "No More Excuses! cover sticker")

@@ -12,7 +12,7 @@ tags:
 coverImage: "Campaign-Monitor-Responsive-Email-Design.png"
 ---
 
-![](images/Campaign-Monitor-Responsive-Email-Design.png "Campaign Monitor Responsive Email Design")
+![](/img/assets/2012/08/Campaign-Monitor-Responsive-Email-Design.png "Campaign Monitor Responsive Email Design")
 
 Campaign Monitor have compiled a fantastic guide toÂ [responsive email design](http://www.campaignmonitor.com/guides/mobile/).
 

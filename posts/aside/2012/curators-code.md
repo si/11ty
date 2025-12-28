@@ -13,7 +13,7 @@ tags:
 
 I like this idea of introducing dedicated symbols for crediting content; [á”¥](http://www.curatorscode.org) for "via" and [â†¬](http://www.curatorscode.org) for "hat tip".
 
-![](images/curators_code.png "Curator's Code - via and hat-tip")
+![](/img/assets/2012/03/curators_code.png "Curator's Code - via and hat-tip")
 
 With a growing online culture of journalism through blogging, Twitter and beyond, a simplified approach to attributing appropriate sources could help minimise lazy journalism where it is too easy to plagiarise content.
 

@@ -51,7 +51,7 @@ _Busy month of birthdays and parties, communities of practice, hacking for susta
 
 <figure>
 
-![](images/Personal-Dashboard-Trello-Strava-Goodreads-ArchiveCollection-Tweets-1024x444.png)
+![](/img/assets/2021/11/Personal-Dashboard-Trello-Strava-Goodreads-ArchiveCollection-Tweets.png)
 
 <figcaption>
 

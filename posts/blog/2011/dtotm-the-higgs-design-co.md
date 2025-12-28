@@ -16,7 +16,7 @@ tags:
 
 The other week, I kicked off my [Design Tour of The Midlands](http://sijobling.com/blog/design-tour-of-the-midlands/ "Design Tour of The Midlands") with a visit to [The Higgs Design Co](http://higgsdesign.com/).
 
-[![](images/higgs_design_andy_and_dan.jpg "Higgs Design - Andy & Dan")](http://2017.sijobling.com/wp-content/uploads/2011/05/higgs_design_andy_and_dan.jpg)
+[![](/img/assets/2011/higgs_design_andy_and_dan.jpg "Higgs Design - Andy & Dan")](http://2017.sijobling.com/wp-content/uploads/2011/05/higgs_design_andy_and_dan.jpg)
 
 Founded by Andy Higgs in 2006, the studio has quickly gathered a reputable group of clients, ranging from successful local startups to International suppliers.
 

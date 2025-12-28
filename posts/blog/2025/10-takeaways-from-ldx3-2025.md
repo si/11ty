@@ -38,9 +38,9 @@ Ask for a percentage. “How confident are you (%) that we’ll deliver this on 
 **7\. Every output is an input**  
 Every change feeds the next. Don’t wait for perfection; log it, learn from it, iterate. What small loop could you tighten in your team’s workflow today? _([Matt Collier](https://www.linkedin.com/in/matt-collier-3924a128?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAXEYt4BkydwXtiAI4WZiAVowRW1W2Ubtbw&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3B3uFN%2FeWHRPWzbMRAfJZj7Q%3D%3D), Vercel)_
 
-![](images/Audit-one-metric-576x1024.jpeg)
+![](/img/assets/2025/06/Audit-one-metric.jpeg)
 
-![](images/It-could-all-be-so-simple-576x1024.jpeg)
+![](/img/assets/2025/06/It-could-all-be-so-simple.jpeg)
 
 **8\. Not all OKRs should stretch you**  
 Some goals need ambition. Others need focus. Know which is which to avoid burnout. Take a moment to sanity-check your current OKRs; are they all pushing or balancing? _([Neil Vass](https://www.linkedin.com/in/neilvass?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAgsHiwBW1vzkRwmNHxr6FNw6xmXx4w6LrE&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BdQKgNmTARgKuKCmY%2B1S6Ig%3D%3D), Co-op)_
@@ -75,7 +75,7 @@ You’re not the hero – you’re the enabler. Modern engineering leadership is
 
 All in all, it was an interesting few days surrounded by amazingly talented and knowledgeable people, understanding how others work in tech and what we could explore next.
 
-![](images/Pragmatic-Engineer-podcast-1024x576.jpeg)
+![](/img/assets/2025/06/Pragmatic-Engineer-podcast.jpeg)
 
 As an avid podcaster, I was also fascinated to be part of [the Pragmatic Engineer podcast](https://www.pragmaticengineer.com/) recording on the first evening when Farhan was interviewed by Gergely and opened up about some really interesting ideas around embracing AI in the workplace.
 

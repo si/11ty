@@ -16,7 +16,7 @@ Bar the fantastic [New Adventures conference](http://newadventuresconf.com/) in 
 
 Throughout the Summer months, I'll be visiting a variety of design/Web/creative agencies around the West Midlands as part of a **Design Tour of The Midlands** to promote agencies in the region and find out how they work.
 
-![](images/design_tour_of_the_midlands.png "Design Tour of The Midlands")
+![](/img/assets/2011/design_tour_of_the_midlands.png "Design Tour of The Midlands")
 
 There are several reasons for this tour:
 

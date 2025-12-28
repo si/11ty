@@ -22,7 +22,7 @@ March has mostly been about wrapping up handover and preparing peers to take on 
 
 <figure>
 
-![](images/Goodbye-Worldfirst-Zoom-1024x637.jpeg)
+![](/img/assets/2021/03/Goodbye-Worldfirst-Zoom.jpeg)
 
 <figcaption>
 
@@ -38,7 +38,7 @@ As I sent my leaving message to team mates, I decided to mark the moment with an
 
 <figure>
 
-![](images/Linkedin-Worldfirst-ASOS-post.jpg)
+![](/img/assets/2021/03/Linkedin-Worldfirst-ASOS-post.jpg)
 
 <figcaption>
 

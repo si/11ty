@@ -13,7 +13,7 @@ tags:
 coverImage: "SourceTree.png"
 ---
 
-[![](images/SourceTree.png "SourceTree")](http://www.sourcetreeapp.com/)
+[![](/img/assets/2012/08/SourceTree.png "SourceTree")](http://www.sourcetreeapp.com/)
 
 [Atlassian SourceTree](http://www.sourcetreeapp.com/)Â is a fantastic free Mac client for managing Git repositories.
 

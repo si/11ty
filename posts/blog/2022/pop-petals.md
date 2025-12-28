@@ -33,6 +33,6 @@ Groups of PETALS form bunches of flowers, creating a delightfully visual indicat
 
 Over time, we should start to see improvements or, in the case of noticing concerns, acted on sooner rather than later.
 
-![](images/CC47DB32-465C-4AA6-BDD7-D20C1705EFE5-1024x983.jpeg)
+![](/img/assets/2022/05/CC47DB32-465C-4AA6-BDD7-D20C1705EFE5.jpeg)
 
 I like the idea of using a convenient engineering comms tool such as Slack or Teams bots in a group channel. This can be configured for preferred cycle times (e.g. Friday lunch, end of sprint) then compiled into snapshot reports for individuals or teams. Data can also be exported for team reports, leaders and coaches.

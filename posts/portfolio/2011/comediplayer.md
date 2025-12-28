@@ -24,7 +24,7 @@ However, I often found that I would miss some of my favourite shows or, even, on
 
 Enter [ComediPlayer](http://twitter.com/comediplayer).
 
-[![@comediplayer on Twitter](images/comediplayer.png "@comediplayer on Twitter")](http://2017.sijobling.com/wp-content/uploads/2011/07/comediplayer.png)
+[![@comediplayer on Twitter](/img/assets/2011/comediplayer.png "@comediplayer on Twitter")](http://2017.sijobling.com/wp-content/uploads/2011/07/comediplayer.png)
 
 Using the [BBC Comedy Radio RSS feed](http://feeds.bbc.co.uk/iplayer/categories/comedy/radio/list) and a great service called [Twitter Feed](http://twitterfeed.com/), I put together a "twitbot" which automatically tweeted new shows straight to Twitter, allowing anyone following [@comediplayer](http://twitter.com/comediplayer) to be notified of new shows instantly.
 

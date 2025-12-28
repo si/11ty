@@ -17,7 +17,7 @@ coverImage: "tweets_for_balls.png"
 
 Yesterday, I launched a small tongue-in-cheek website called [Tweets for Balls](http://tweetsforballs.org/).
 
-[![](images/tweets_for_balls.png "Tweets for Balls")](http://tweetsforballs.org)
+[![](/img/assets/2011/tweets_for_balls.png "Tweets for Balls")](http://tweetsforballs.org)
 
 The concept is relatively simple - people can donate money towards testicular cancer research by sending a message on Twitter. Online donations are nothing new and, thanks to services like Just Giving and [Plumfund](http://plumfund.com/), have become a familiar method for people to raise money for charity.
 

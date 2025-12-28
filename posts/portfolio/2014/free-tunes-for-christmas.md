@@ -9,7 +9,7 @@ tags:
 coverImage: "FTFC-Home.jpg"
 ---
 
-[![FTFC-Home](images/FTFC-Home-477x1024.jpg)](http://2017.sijobling.com/wp-content/uploads/2014/01/FTFC-Home.jpg)Several years back in 2010, I teamed up with a number of reputable producers from around the house music scene to offer free daily music downloads for the 12 days of Christmas. In return, the artists had the opportunity to build their profiles with accompanying releases, events and online profiles. [Free Tunes for Christmas](http://freetunesforchristmas.com/) was born.
+[![FTFC-Home](/img/assets/2014/01/FTFC-Home.jpg)](http://2017.sijobling.com/wp-content/uploads/2014/01/FTFC-Home.jpg)Several years back in 2010, I teamed up with a number of reputable producers from around the house music scene to offer free daily music downloads for the 12 days of Christmas. In return, the artists had the opportunity to build their profiles with accompanying releases, events and online profiles. [Free Tunes for Christmas](http://freetunesforchristmas.com/) was born.
 
 I collaborated withÂ [Oliver Ker](http://oliverker.co.uk) to create the website, originally built on TextPattern as it was an opportunity for me to experience a new CMS and Oli was already au fait with the infrastructure and templates. It allowed me to focus on the content and marketing whilst Oli was able to implement the desired UI.
 

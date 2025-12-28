@@ -10,7 +10,7 @@ tags:
   - "user-interface"
 ---
 
-![](images/Screen-Shot-2012-05-04-at-13.58.32.png "Angry Birds Space in action")
+![](/img/assets/2012/05/Screen-Shot-2012-05-04-at-13.58.32.png "Angry Birds Space in action")
 
 Love this promotional site for Angry Birds Space. As you scroll, the bird directs you around the content using similar motions from the game. It even senses the scroll motion and changes the orientation of the bird accordingly.
 

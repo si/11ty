@@ -23,7 +23,7 @@ With Coronavirus forcing many of us to find new ways of working, it was an ideal
 
 <figure>
 
-![](images/FunRetro.png)
+![](/img/assets/2020/03/FunRetro.png)
 
 <figcaption>
 
@@ -39,7 +39,7 @@ Simpler faster/slower retro board on FunRetro
 
 <figure>
 
-[![](images/Miro-Retrospective-Board.png)](https://miro.com/)
+[![](/img/assets/2020/03/Miro-Retrospective-Board.png)](https://miro.com/)
 
 <figcaption>
 
@@ -55,7 +55,7 @@ Sample retrospective board on Miro
 
 <figure>
 
-![](images/RemoteRetro-sample-board-good-bad-actions-and-questions.png)
+![](/img/assets/2020/03/RemoteRetro-sample-board-good-bad-actions-and-questions.png)
 
 <figcaption>
 
@@ -69,7 +69,7 @@ RemoteRetro.io sample board
 
 ## [Mural](https://app.mural.co/)
 
-[![](images/Mural-retrospective-board.png)](https://app.mural.co/)
+[![](/img/assets/2020/03/Mural-retrospective-board.png)](https://app.mural.co/)
 
 One team in the office tried using [Mural](https://app.mural.co/) which is another whiteboarding app. There's quite a versatile dot-voting feature integrated with this though, even native timers to ensure the team are focused and timeboxed on each step of the session.
 

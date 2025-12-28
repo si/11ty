@@ -11,7 +11,7 @@ tags:
 coverImage: "phone-photo-hero.jpg"
 ---
 
-[![Ubuntu for phones](images/phone-photo-hero.jpg)](http://www.ubuntu.com/devices/phone)
+[![Ubuntu for phones](/img/assets/2013/01/phone-photo-hero.jpg)](http://www.ubuntu.com/devices/phone)
 
 Not content with servers and desktop, Ubuntu is now available in your pocket with [Ubuntu for phones](http://www.ubuntu.com/devices/phone).
 
