@@ -192,6 +192,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("posts", function (collectionApi) {
     return collectionApi.getFilteredByTag("posts");
   });
+  eleventyConfig.addCollection("podcast", function (collectionApi) {
+    return collectionApi
+      .getFilteredByTag("posts")
+      .filter((post) => post.data?.enclosure?.url);
+  });
   eleventyConfig.addCollection("postDirectories", function (collectionApi) {
     const posts = collectionApi.getFilteredByTag("posts");
     const counts = posts.reduce((acc, post) => {
