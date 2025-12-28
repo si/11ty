@@ -12,7 +12,7 @@ tags:
   - "monthnotes"
   - "personal-dashboard"
   - "podcasts"
-coverImage: "Hot-pretzel-sandwich-shack-at-Birmingham-German-market-scaled.jpg"
+coverImage: "Hot-pretzel-sandwich-shack-at-Birmingham-German-market.jpg"
 ---
 
 **A month of complicated blog migrations, new iPhone 13, plenty decorations, personal training, engineer recognition, Finesse milestone, Personal Dashboard focus, revived 80s movies and dyslexic heroes.**

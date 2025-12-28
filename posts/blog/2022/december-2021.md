@@ -7,7 +7,7 @@ tags:
   - "christmas"
   - "monthlydigest"
   - "monthnotes"
-coverImage: "CCC7E2E7-7F41-44E4-BC9C-F81FB0F93C6D-scaled.jpeg"
+coverImage: "CCC7E2E7-7F41-44E4-BC9C-F81FB0F93C6D.jpeg"
 ---
 
 _Wrapping up the 2021 MonthNotes format with plenty festivities amongst family ailments, busy month with people movements at work, ramping up House Finesse efforts and identifying my audience with a content playing field._

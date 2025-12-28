@@ -6,7 +6,7 @@ categories:
 tags: 
   - "conference"
   - "wired-smarter"
-coverImage: "5F951480-B2DB-4FC0-9DDE-0952054A2000-scaled.jpeg"
+coverImage: "5F951480-B2DB-4FC0-9DDE-0952054A2000.jpeg"
 ---
 
 This week, I attended the [WIRED Smarter conference](https://smarter.wired.com) at Kings Cross in London.

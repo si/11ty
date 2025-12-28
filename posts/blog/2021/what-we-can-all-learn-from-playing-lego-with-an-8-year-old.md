@@ -8,7 +8,7 @@ tags:
   - "learning"
   - "lego"
   - "parenting"
-coverImage: "Box-of-Lego-bricks-scaled.jpg"
+coverImage: "Box-of-Lego-bricks.jpg"
 ---
 
 Earlier this week, I took the chance to spend some quality time with my 8yo daughter and a box full of Lego. It was a rare treat for both of us; not only indulging in the childhood pleasure of a long-beloved toy but also getting to spend decent daddy-daughter time together with no other disruptions.

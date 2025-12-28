@@ -3,7 +3,7 @@ title: "August 2021"
 date: 2021-08-31
 categories: 
   - "blog"
-coverImage: "7202D81D-5E73-423C-AF96-E7C9DB6DC95B-scaled.jpeg"
+coverImage: "7202D81D-5E73-423C-AF96-E7C9DB6DC95B.jpeg"
 ---
 
 A month of holidays, annual performance reviews, STEMettes, wax anniversary, minimal sides, a new TECH session and back to the cinema.

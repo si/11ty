@@ -3,7 +3,7 @@ title: "April 2021"
 date: 2021-05-05
 categories: 
   - "blog"
-coverImage: "95FFF8A3-9402-44E3-AE8A-ADC121338C70-scaled.jpeg"
+coverImage: "95FFF8A3-9402-44E3-AE8A-ADC121338C70.jpeg"
 ---
 
 **A month of a new job, more hospital visits, fresh #FinesseFriday music, another football calendar project and retro vinyl indulgence.**

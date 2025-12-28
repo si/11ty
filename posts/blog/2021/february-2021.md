@@ -3,7 +3,7 @@ title: "February 2021"
 date: 2021-03-01
 categories: 
   - "blog"
-coverImage: "F2588318-F025-49DD-ADFA-4DFEC5251E57-scaled.jpeg"
+coverImage: "F2588318-F025-49DD-ADFA-4DFEC5251E57.jpeg"
 ---
 
 In a month of new jobs, old memories, zero fitness and plenty science fiction.

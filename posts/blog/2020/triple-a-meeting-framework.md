@@ -3,7 +3,7 @@ title: "Triple A (AAA) Meeting framework"
 date: 2020-10-19
 categories: 
   - "blog"
-coverImage: "324F346F-AB91-4731-B9F8-746377A9973D-scaled.jpeg"
+coverImage: "324F346F-AB91-4731-B9F8-746377A9973D.jpeg"
 ---
 
 **Supercharge your meetings with clear outlines, focused audience and structured minutes using the Triple A 🔋 Meeting framework**.

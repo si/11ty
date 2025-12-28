@@ -16,7 +16,7 @@ tags:
   - "monthnotes"
   - "personal-dashboard"
   - "strava"
-coverImage: "ASOS-Reassembles-Party-at-Ally-Pally-scaled.jpg"
+coverImage: "ASOS-Reassembles-Party-at-Ally-Pally.jpg"
 ---
 
 _Busy month of birthdays and parties, communities of practice, hacking for sustainable fashion, concluding Make Life Work S07, another House Finesse mix compilation and celebrating Black History Month with DJ Programma guest mix and some recommended short stories._

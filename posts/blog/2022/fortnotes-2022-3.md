@@ -12,7 +12,7 @@ tags:
   - "make-life-work"
   - "natalie-huitson"
   - "personal-dashboard"
-coverImage: "4408393C-37C3-4D89-B5AB-75DF79E385D8-scaled.jpeg"
+coverImage: "4408393C-37C3-4D89-B5AB-75DF79E385D8.jpeg"
 ---
 
 **Experimenting with different hybrid huddle models, launch Make Life Work S08, loads of TV and books recommendations and Covid finally caught Jobling Manor.**

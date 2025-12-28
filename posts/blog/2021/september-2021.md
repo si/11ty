@@ -14,7 +14,7 @@ tags:
   - "personal-dashboard"
   - "strava"
   - "vinyl"
-coverImage: "F48C0905-8822-4EF7-9184-8DDA12DA19CA-scaled.jpeg"
+coverImage: "F48C0905-8822-4EF7-9184-8DDA12DA19CA.jpeg"
 ---
 
 _In a month full of birthday celebrations, charitable donations, work normality attempts, podcast-specific community, season 7 of Make Life Work, excessive life tracking, my oldest domain, vinyl classics and a new podcast playlist._

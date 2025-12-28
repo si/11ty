@@ -9,7 +9,7 @@ tags:
   - "house-finesse"
   - "make-life-work"
   - "worldfirst"
-coverImage: "March-at-Alibaba-scaled.jpg"
+coverImage: "March-at-Alibaba.jpg"
 ---
 
 _In a month when I change jobs, release two podcast series and get zero fitness._

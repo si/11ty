@@ -5,7 +5,7 @@ categories:
   - "blog"
 tags: 
   - "monthlydigest"
-coverImage: "January-2021-75km-Running-Challenge-for-Maggies-Centres-scaled.jpg"
+coverImage: "January-2021-75km-Running-Challenge-for-Maggies-Centres.jpg"
 ---
 
 Following a year of [WeekNotes](http://sijobling.com/weeknotes/40/), I’ve decided to try a new "monthly digest" format this year. I’ll cover the same topics as before (work, life & health, side projects & entertainment) but this will hopefully lend towards more substantial content, allowing for quieter weeks but still maintain a relatively manageable frequency. Let’s see how things go…
