@@ -65,7 +65,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
 
-  eleventyConfig.addPlugin(localImages, {
+  eleventyConfig.addPlugin(localImages.configFunction, {
     distPath: "_site",
     assetPath: "/img/remote",
     selector:
