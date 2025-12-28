@@ -12,7 +12,7 @@ tags:
   - "web-design-tour"
 ---
 
-Bar the fantastic [New Adventures conference](http://newadventuresconf.com/) in Nottingham in January organised by Â the talented [Simon Collison](http://colly.com/), for some reason, the Midlands often gets overlooked when we talk about the Web industry in the UK.Â The "hottest" places tend to focus around the South (London, Brighton and Bristol) and North (Manchester, Liverpool, Newcastle). Rarely do you hear of large scale eventsÂ occurringÂ in the UK's so-called "Second City" of Birmingham. Why this is, we'll never know but as a creative evangelist of the region (co-founding [the Multipack](http://multipack.co.uk/)), I'm keen to change this and raise the Midlands' digital profile.
+Bar the fantastic [New Adventures conference](http://newadventuresconf.com/) in Nottingham in January organised by  the talented [Simon Collison](http://colly.com/), for some reason, the Midlands often gets overlooked when we talk about the Web industry in the UK. The "hottest" places tend to focus around the South (London, Brighton and Bristol) and North (Manchester, Liverpool, Newcastle). Rarely do you hear of large scale events occurring in the UK's so-called "Second City" of Birmingham. Why this is, we'll never know but as a creative evangelist of the region (co-founding [the Multipack](http://multipack.co.uk/)), I'm keen to change this and raise the Midlands' digital profile.
 
 Throughout the Summer months, I'll be visiting a variety of design/Web/creative agencies around the West Midlands as part of a **Design Tour of The Midlands** to promote agencies in the region and find out how they work.
 
@@ -22,9 +22,9 @@ There are several reasons for this tour:
 
 - raise the profile of local agencies to emphasise the talent in The Midlands
 - ask the agencies how they compete against the bigger agencies in more popular design regions of the UK
-- get out of the isolated office to bounce ideas off peers,Â finding solutions to real-world problems
+- get out of the isolated office to bounce ideas off peers, finding solutions to real-world problems
 
-All the visits will be tweeted (with hashtag [#dtotm](http://twitter.com/search#dodtm)) and summarised in a blog post, promoting the agencies' recent work as well as thoughts on the design problemsÂ discussions.
+All the visits will be tweeted (with hashtag [#dtotm](http://twitter.com/search#dodtm)) and summarised in a blog post, promoting the agencies' recent work as well as thoughts on the design problems discussions.
 
 First stop will be [The Higgs Design Co](http://higgsdesign.com/) on **Tuesday 24th May** where I will be meeting [Andy Higgs](http://twitter.com/aajhiggs) et al, talk about some of their recent work, what's coming up and how to solve an existing design problem I've recently encountered (TBC).
 

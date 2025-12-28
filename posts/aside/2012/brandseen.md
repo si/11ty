@@ -14,7 +14,7 @@ tags:
 coverImage: "Brandseen.png"
 ---
 
-[Brandseen](http://brandseenapp.com/) is a great logo colouring game made byÂ [Kevin Xu](http://imkevinxu.com/)Â ([@imkevinxu](http://twitter.com/imkevinxu)), [Cathy S Lee](http://cathyslee.com/)Â ([@optimisticlee](http://twitter.com/optimisticlee)) andÂ [Ari Weinstein](http://ariweinstein.com/)Â ([@AriX](http://twitter.com/AriX))Â at Greylock Hackfest.
+[Brandseen](http://brandseenapp.com/) is a great logo colouring game made by [Kevin Xu](http://imkevinxu.com/) ([@imkevinxu](http://twitter.com/imkevinxu)), [Cathy S Lee](http://cathyslee.com/) ([@optimisticlee](http://twitter.com/optimisticlee)) and [Ari Weinstein](http://ariweinstein.com/) ([@AriX](http://twitter.com/AriX)) at Greylock Hackfest.
 
 Use the colour swatch to estimate the nearest hue for 9 well-known brands and you are scored on accuracy.
 

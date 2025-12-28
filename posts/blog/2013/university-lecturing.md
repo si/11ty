@@ -16,4 +16,4 @@ When I met [Adam Onishi](https://twitter.com/onishiweb) at [MK Geek Night](http:
 
 Instead, we agreed to focus on the community aspect and how everyone gains from a few hours spent talking at local universities.
 
-You can [read my thoughts](http://12devs.co.uk/thoughts/lecturing/) amongst many other enlightening contributions from the likes of [Keir Whitaker](https://twitter.com/keirwhitaker), [Kat Thompson](https://twitter.com/katskii)Â and [Josh Emerson](http://12devs.co.uk/thoughts/internships/).
+You can [read my thoughts](http://12devs.co.uk/thoughts/lecturing/) amongst many other enlightening contributions from the likes of [Keir Whitaker](https://twitter.com/keirwhitaker), [Kat Thompson](https://twitter.com/katskii) and [Josh Emerson](http://12devs.co.uk/thoughts/internships/).

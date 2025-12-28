@@ -10,9 +10,9 @@ tags:
   - "ux"
 ---
 
-Mark Collins suggests how to make[Â a far better sign-up form](http://pixxel.co/feed/a-better-sign-up-form)Â for your website.
+Mark Collins suggests how to make[ a far better sign-up form](http://pixxel.co/feed/a-better-sign-up-form) for your website.
 
-By reducing the number of required fields such as email and password confirmation â€“ even usernames â€“ the user experience is vastly improved and, consequently, should improve conversions.
+By reducing the number of required fields such as email and password confirmation "“ even usernames "“ the user experience is vastly improved and, consequently, should improve conversions.
 
 Mark uses Twitter as a shining example of these principles. With such a huge audience and user base, they have the statistics to make informed design decisions around these suggestions.
 

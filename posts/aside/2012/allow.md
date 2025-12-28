@@ -16,6 +16,6 @@ coverImage: "Allow.png"
 
 So many of us have online profiles nowadays but with this comes further risk of identity theft.
 
-[ALLOW](https://my.i-allow.com/)Â is a new service setup in an attempt to combat just that. By (ironically) giving ALLOW permission to scan your Facebook page, it will generate a risk report of your personal data with suggestions for protection and elimination.
+[ALLOW](https://my.i-allow.com/) is a new service setup in an attempt to combat just that. By (ironically) giving ALLOW permission to scan your Facebook page, it will generate a risk report of your personal data with suggestions for protection and elimination.
 
 The design is clean and direct (great work from [John Oxton](http://johnoxton.co.uk/) there) plus the service could be invaluable to those less aware of the risks of online profiles.

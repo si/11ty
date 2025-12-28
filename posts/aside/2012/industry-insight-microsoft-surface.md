@@ -21,4 +21,4 @@ Among several others, I had some thoughts on the device and what it means for th
 > 
 > From a design point-of-view, the 16:9 widescreen could throw up some hurdles in web design, further evidence the responsive approach is the way forward. They just need to make sure the cost is competitive and launch is soon.
 
-Read what the others had to say inÂ [Industry Insight: Microsoft Unveils The Surface](http://www.creativebloq.com/industry-trends/industry-insight-microsoft-unveils-its-surface-tablet-612319).
+Read what the others had to say in [Industry Insight: Microsoft Unveils The Surface](http://www.creativebloq.com/industry-trends/industry-insight-microsoft-unveils-its-surface-tablet-612319).

@@ -16,7 +16,7 @@ coverImage: "Guess-My-Password.png"
 
 ![](/img/assets/2012/08/Guess-My-Password.png "Guess My Password")
 
-According to leaked data, there's an alarming trend in theÂ [top three passwords](http://www.lukew.com/ff/entry.asp?1590&utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+WebFormDesign+%28Web+Form+Design%29&utm_content=Google+Reader)Â of popular sites.
+According to leaked data, there's an alarming trend in the [top three passwords](http://www.lukew.com/ff/entry.asp?1590&utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+WebFormDesign+%28Web+Form+Design%29&utm_content=Google+Reader) of popular sites.
 
 On Twitter, the most common passwords of 58,000 leaked accounts were 123456, 123456789 and 102030.
 

@@ -16,4 +16,4 @@ Brian Suda reflects on Apple's design decision to introduce shiny metallic user 
 
 He goes on to discuss the history of skeuomorphs and how human computer interaction has evolved over the years with questionable results.
 
-Read the whole article,Â [Shine-On You Crazy Ones!](http://optional.is/required/2012/06/26/shine-on-you-crazy-ones/)
+Read the whole article, [Shine-On You Crazy Ones!](http://optional.is/required/2012/06/26/shine-on-you-crazy-ones/)

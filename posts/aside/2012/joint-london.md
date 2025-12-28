@@ -12,7 +12,7 @@ coverImage: "Contact-Us-Joint-London.png"
 
 [![](/img/assets/2012/08/Contact-Us-Joint-London.png "Contact Us - Joint London")](http://www.jointlondon.com/)
 
-[Joint London](http://www.jointlondon.com/)Â have created an innovative user experience for their website drawing on the standard "Contact Us" section of websites.
+[Joint London](http://www.jointlondon.com/) have created an innovative user experience for their website drawing on the standard "Contact Us" section of websites.
 
 Rather than just present some standard contact details, they've built their profile around the word "Us", extending into more depth of each founder with biographies and social connections.
 

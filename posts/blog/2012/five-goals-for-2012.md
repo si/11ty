@@ -11,9 +11,9 @@ tags:
   - "portfolio-2"
 ---
 
-It may seem a bit late in the year to be writing such a post about annual goals but it was something I considered last December that I never documented. My thinking is if I formally write them down, I'll be more inclined to attempt them. So, here goesâ€¦
+It may seem a bit late in the year to be writing such a post about annual goals but it was something I considered last December that I never documented. My thinking is if I formally write them down, I'll be more inclined to attempt them. So, here goes…
 
-## 1\. Get an article publishedÂ [âœ”](http://sijobling.com/portfolio/no-more-excuses/ "No More Excuses")
+## 1\. Get an article published [✓](http://sijobling.com/portfolio/no-more-excuses/ "No More Excuses")
 
 I've worked in the web industry for over ten years now learning a lot along the way. I want to share some of that knowledge with my peers, not just on my blog but in a published medium.
 
@@ -21,7 +21,7 @@ I've worked in the web industry for over ten years now learning a lot along the 
 
 I've created many websites in the past but none of them are user generated. I want to address this by making an app for others to use, either in a web or native mobile form (probably the former). I've a few ideas in the pipeline so there's no excuses there.
 
-## 3\. Redesign _and releaseÂ_ this websiteÂ [âœ”](http://sijobling.com/blog/clean-slate/ "A Clean Slate")
+## 3\. Redesign _and release_ this website [✓](http://sijobling.com/blog/clean-slate/ "A Clean Slate")
 
 Like most designers, I redesign and redesign my own website that never get released. This year, I'm determined to release something, even if it starts with a very simple start. I've made good progress on a [logotype-come-ligature concept](http://dribbble.com/sijob/projects/10226-Si) so we'll see where that goes.
 

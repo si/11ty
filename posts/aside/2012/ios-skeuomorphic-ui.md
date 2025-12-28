@@ -24,4 +24,4 @@ In this week's Creative Bloq Industry Insight, a few of us have discussed Apple'
 > 
 > Call me old fashioned but I like my apps to feel like apps and my notepads to feel like notepads.
 
-See what the others have to say inÂ [INDUSTRY INSIGHT: Designers comment on the iOS UI](http://www.creativebloq.com/design/industry-insight-designers-comment-ios-ui-712433).
+See what the others have to say in [INDUSTRY INSIGHT: Designers comment on the iOS UI](http://www.creativebloq.com/design/industry-insight-designers-comment-ios-ui-712433).

@@ -15,7 +15,7 @@ coverImage: "phone-photo-hero.jpg"
 
 Not content with servers and desktop, Ubuntu is now available in your pocket with [Ubuntu for phones](http://www.ubuntu.com/devices/phone).
 
-They're not the first open source framework to venture into the mobile OS realm â€“ [Mozilla](http://www.mozilla.org/en-US/firefoxos/)Â have already made their contributions.
+They're not the first open source framework to venture into the mobile OS realm "“ [Mozilla](http://www.mozilla.org/en-US/firefoxos/) have already made their contributions.
 
 The user experience has certainly lent inspiration from the more popular OS (namely iOS and Android) but that's the one advantage to playing catch up - identifying the qualities and flaws then building on them.
 

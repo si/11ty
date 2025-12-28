@@ -11,7 +11,7 @@ tags:
 coverImage: "Microsoft-Responsive.png"
 ---
 
-It looks like Microsoft are finally moving in the right direction with theÂ [preview of their new website](http://www.microsoft.com/en-us/preview/).
+It looks like Microsoft are finally moving in the right direction with the [preview of their new website](http://www.microsoft.com/en-us/preview/).
 
 The design is clean, focused on their key products with powerful images, inherits their new [Metro house style](http://msdn.microsoft.com/en-US/windows/apps/) (featured in Windows 8). As seems to be de facto now, it has also been designed responsively which makes sense considering their range of mobile devices and recent foray into the tablet market with Surface.
 

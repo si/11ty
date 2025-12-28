@@ -10,7 +10,7 @@ tags:
 coverImage: "logo2.png"
 ---
 
-[Brad Frost](http://twitter.com/brad_frost) has started aÂ [Responsive Web Design Newsletter](http://bradfrostweb.com/responsive-web-design-newsletter/)Â in an attempt to compile useful resources on the heavily recommended technique into a regular email.
+[Brad Frost](http://twitter.com/brad_frost) has started a [Responsive Web Design Newsletter](http://bradfrostweb.com/responsive-web-design-newsletter/) in an attempt to compile useful resources on the heavily recommended technique into a regular email.
 
 The [first edition](http://eepurl.com/mS3cv) includes sections on layout, navigation, typography, process, the ongoing debate over images, testing and some snazzy samples for inspiration.
 

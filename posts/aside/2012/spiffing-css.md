@@ -11,6 +11,6 @@ tags:
   - "visual-idiot"
 ---
 
-If you speak "The Queen's" English (otherwise known as British), you can typeÂ proper spellings of syntax such as _colour_, _centre_ and _transparency_ then apply theÂ [Spiffing CSS](http://spiffingcss.com/)Â pre-processor to convert back to a language browsers understand.
+If you speak "The Queen's" English (otherwise known as British), you can type proper spellings of syntax such as _colour_, _centre_ and _transparency_ then apply the [Spiffing CSS](http://spiffingcss.com/) pre-processor to convert back to a language browsers understand.
 
-Silly but brilliant. Bravo,Â [Visual Idiot](http://visualidiot.com/).
+Silly but brilliant. Bravo, [Visual Idiot](http://visualidiot.com/).

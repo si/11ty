@@ -15,4 +15,4 @@ When I started my current job back in May 2008, I quickly acquired a MacBook Pro
 
 Over 4 years, multiple knocks and 2 repairs on, it's still performing beautifully. In that time, Apple have released four editions of the machine. Every time, I've reviewed the updates, considered the return on investment and let them pass.
 
-Old Faithful continues to look at meÂ adoringly, occasionally struggling under the strain, but she's working. This may be her last year before I pass her on to another owner but she serves me well, allowing me to create valuable tools for the business.
+Old Faithful continues to look at me adoringly, occasionally struggling under the strain, but she's working. This may be her last year before I pass her on to another owner but she serves me well, allowing me to create valuable tools for the business.

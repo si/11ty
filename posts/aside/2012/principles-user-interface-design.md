@@ -9,7 +9,7 @@ tags:
   - "ui"
 ---
 
-[Joshua Porter](http://bokardo.com/) â€“ designer at Hubspot â€“ summarises the twenty principles of good user interface design.
+[Joshua Porter](http://bokardo.com/) "“ designer at Hubspot "“ summarises the twenty principles of good user interface design.
 
 Whilst some may be obvious, it's amazing how many designers overlook these core objectives of design theory, the target audience and how best to engage with them.
 

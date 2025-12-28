@@ -15,13 +15,13 @@ coverImage: "SourceTree.png"
 
 [![](/img/assets/2012/08/SourceTree.png "SourceTree")](http://www.sourcetreeapp.com/)
 
-[Atlassian SourceTree](http://www.sourcetreeapp.com/)Â is a fantastic free Mac client for managing Git repositories.
+[Atlassian SourceTree](http://www.sourcetreeapp.com/) is a fantastic free Mac client for managing Git repositories.
 
 A few weeks back, I decided to take the plunge and start using Git on a new project rather than my humble preference of Subversion.
 
 I've always liked keeping my development workflow tight within Coda but, having heard several suggestions to separate the process between coding and version control, [I asked around](https://twitter.com/Si/status/233502549607604224) for suggestions of free Git tools so I could try before I buy.
 
-[Cole pointed me](https://twitter.com/cole007/status/233503497449009152) to Atlassian's [Bitbucket](https://bitbucket.org/) â€“ a worthy alternative to [Github](http://github.com/)Â which currently charges for private repositories. (I've nothing against Github doing this â€“ I just wanted to test the waters before investing in it). The user experience is extremely straight forward for those relatively new to the workflow. The repository configuration wizard is brilliant and has you setup in minutes.
+[Cole pointed me](https://twitter.com/cole007/status/233503497449009152) to Atlassian's [Bitbucket](https://bitbucket.org/) "“ a worthy alternative to [Github](http://github.com/) which currently charges for private repositories. (I've nothing against Github doing this "“ I just wanted to test the waters before investing in it). The user experience is extremely straight forward for those relatively new to the workflow. The repository configuration wizard is brilliant and has you setup in minutes.
 
 To accompany Bitbucket, Atlassian (naturally) recommend their own free Mac client, [SourceTree](http://www.sourcetreeapp.com/).
 

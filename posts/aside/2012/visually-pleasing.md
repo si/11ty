@@ -13,7 +13,7 @@ coverImage: "Visually-Highlights.png"
 
 [![](images/Visually-Highlights.png "Visually Highlights")](http://visual.ly)
 
-[Visual.ly](http://visual.ly/) â€“ a fantastic startup giving people the tools to create data visualisations â€“ has just launched a redesigned site.
+[Visual.ly](http://visual.ly/) "“ a fantastic startup giving people the tools to create data visualisations "“ has just launched a redesigned site.
 
 The user experience has been thoroughly thought out on this revision, simplifying the main navigation, reorganising homepage content with a stronger focus on the end product and easier discovery of existing content such as the popular topics (with lovely iconography) and elegant filter tools.
 

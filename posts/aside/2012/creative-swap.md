@@ -14,7 +14,7 @@ coverImage: "Creative-Swap.png"
 
 [![](/img/assets/2012/08/Creative-Swap.png "Creative Swap")](http://creativeswap.com)
 
-[Creative Swap](http://www.creativeswap.co/)Â looks like an interesting initiative to inspire creativity between agencies by swapping talent for a week.
+[Creative Swap](http://www.creativeswap.co/) looks like an interesting initiative to inspire creativity between agencies by swapping talent for a week.
 
 Setup by London agency [Sane & Able](http://saneandable.co.uk/), the event intends to break down typical barriers between agencies, sharing skills and learning from others, possibly completely different disciplines. Each placement will picked at random and is available for free to all.
 

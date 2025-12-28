@@ -9,7 +9,7 @@ tags:
   - "web-application"
 ---
 
-[Picozu](http://www.picozu.com/)Â is a smart web application for touching up photographs online (akin to the Flickr UI) using modern HTML5, CSS3 and Canvas techniques.
+[Picozu](http://www.picozu.com/) is a smart web application for touching up photographs online (akin to the Flickr UI) using modern HTML5, CSS3 and Canvas techniques.
 
 The UI is pretty slick with familiar graphic application tools at your disposal.
 

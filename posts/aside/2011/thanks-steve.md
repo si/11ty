@@ -11,7 +11,7 @@ tags:
   - "wallpaper"
 ---
 
-Using [Jonathan Mak Long's original design](http://jmak.tumblr.com/post/9377189056)Â and Apple's iconic Myriad Pro typeface, I've created a simple wallpaper desktop to honour the passing of Steve Jobs.
+Using [Jonathan Mak Long's original design](http://jmak.tumblr.com/post/9377189056) and Apple's iconic Myriad Pro typeface, I've created a simple wallpaper desktop to honour the passing of Steve Jobs.
 
 Every month, I change my desktop wallpaper so it seems fitting to celebrate the man who inspired many creatives for October.
 

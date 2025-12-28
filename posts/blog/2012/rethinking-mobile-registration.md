@@ -22,6 +22,6 @@ Additional to this, most mobile phones also offer the facility to send contact c
 
 If a provider required registration prior to activation, a user should be asked to create a new business card containing all their personal details and send it to a pre-defined point of contact (SMS or email). Not only is this allowing instant activation on a reliable data capture mechanism, it is also minimising chance of error as well as validating the origin (the mobile telephone number).
 
-In a world where mobile apps are fast becoming the norm, it's easy to forget other audiences where new technology is unavailable. However, this simple approachÂ could revolutioniseÂ data capture in a developing world.
+In a world where mobile apps are fast becoming the norm, it's easy to forget other audiences where new technology is unavailable. However, this simple approach could revolutionise data capture in a developing world.
 
 What do you think? Is there potential in this process or is it flawed in some way?

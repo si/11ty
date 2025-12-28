@@ -23,6 +23,6 @@ First up, my thoughts on Quentin Tarantino's Jackie Brown;
 
 Returning to my childhood memories, I then focused on Disney's 101 Dalmations;
 
-> Disney title sequences have always had incredible attention to detailÂ â€“Â a convention that goes right back to the early days of the animation studio. 101 Dalmatians is a prime example of this. The aesthetics of the title sequence are typical of 1961. The retro feel of the typography and illustration, the way the score of the soundtrack audibly matches the animation motion â€“Â it really engages with the audience. It makes typically boring credits exciting, especially with the mood of the music.
+> Disney title sequences have always had incredible attention to detail "“ a convention that goes right back to the early days of the animation studio. 101 Dalmatians is a prime example of this. The aesthetics of the title sequence are typical of 1961. The retro feel of the typography and illustration, the way the score of the soundtrack audibly matches the animation motion "“ it really engages with the audience. It makes typically boring credits exciting, especially with the mood of the music.
 
-See what other designers had to say aboutÂ [20 amazing movie title sequences to inspire you](http://www.creativebloq.com/design/top-movie-title-sequences-10121014).
+See what other designers had to say about [20 amazing movie title sequences to inspire you](http://www.creativebloq.com/design/top-movie-title-sequences-10121014).

@@ -11,7 +11,7 @@ tags:
   - "ux"
 ---
 
-Adrian Short ([@adrianshort](https://twitter.com/adrianshort))Â [suggests how council websites should consider time](http://blog.adrianshort.co.uk/2012/07/14/its-time-to-make-council-websites-more-timely/)Â as part of a responsive strategy but this could apply to many other industries.
+Adrian Short ([@adrianshort](https://twitter.com/adrianshort)) [suggests how council websites should consider time](http://blog.adrianshort.co.uk/2012/07/14/its-time-to-make-council-websites-more-timely/) as part of a responsive strategy but this could apply to many other industries.
 
 Think about context; with device, location and time of day, the content could intelligently respond to the user with much more appropriate information.
 

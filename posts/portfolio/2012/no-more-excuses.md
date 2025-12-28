@@ -27,7 +27,7 @@ My intention was to address five popular excuses with suggestions on how to comb
 
 During my time as a web professional, there have been a number of tools and techniques I've adopted to aid me in creating the many side projects I've built. From project management techniques to online tools, from calling on the active community for help to reusing available resources openly shared and distributed.
 
-Ordinarily, I would just publish the content here but I'd prefer it if you just picked up a copy from your local newsagents ([or online](http://www.myfavouritemagazines.co.uk/design/net-magazine-back-issues/net-apr-12/ "Buy printed .net April 2012 for Â£5.99")) or [download a digital copy from Zinio](http://gb.zinio.com/browse/issues/index.jsp;jsessionid=BC3749D82BDB1711AEAE481EC1C76BCF.prd-main-news4?skuId=416212892 "Buy a digital copy of .net April 2012 for Â£4.16").
+Ordinarily, I would just publish the content here but I'd prefer it if you just picked up a copy from your local newsagents ([or online](http://www.myfavouritemagazines.co.uk/design/net-magazine-back-issues/net-apr-12/ "Buy printed .net April 2012 for £5.99")) or [download a digital copy from Zinio](http://gb.zinio.com/browse/issues/index.jsp;jsessionid=BC3749D82BDB1711AEAE481EC1C76BCF.prd-main-news4?skuId=416212892 "Buy a digital copy of .net April 2012 for £4.16").
 
 This article seemed like an ideal opportunity to gather all my thoughts and experience into a brief guide for others to take on with the intention of motivating others to cut out the excuses and start creating websites.
 

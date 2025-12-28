@@ -18,4 +18,4 @@ Whilst Chrome and Firefox have switched place in popularity in recent months, In
 
 The rapid release model of Firefox and Chrome shows promising penetration yet these users typically understand the differences and show loyalties to their favourite vendors.
 
-It begs the question whether the launch of IE10 along with Windows 8 will buck these trends.Â Now that Google and Microsoft are actively promoting their browsers with high impact TV and cinema adverts, it certainly shows the war hasn't ended.
+It begs the question whether the launch of IE10 along with Windows 8 will buck these trends. Now that Google and Microsoft are actively promoting their browsers with high impact TV and cinema adverts, it certainly shows the war hasn't ended.

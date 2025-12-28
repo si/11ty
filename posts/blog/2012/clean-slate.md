@@ -15,9 +15,9 @@ Redesigns are always tricky, especially when it comes to working on your own sit
 
 Over the last few years, I've had a number of attempts at approaching this. I have waives of inspiration so, naturally, make some sketches to get the ideas down. More often than not, these ideas never manifest, become stagnant and (inevitably) dated.
 
-Recently, I've been thinking more and more about content. Anyone who works in the Web industry has no doubt heard the phrase "content is king" thrown around - and it's true. Without good content, a website serves little purpose other than a hot pot of shiny shiny, attempting to wow visitors. It won't take long for your visitors to realiseÂ there is very little substance behind it.
+Recently, I've been thinking more and more about content. Anyone who works in the Web industry has no doubt heard the phrase "content is king" thrown around - and it's true. Without good content, a website serves little purpose other than a hot pot of shiny shiny, attempting to wow visitors. It won't take long for your visitors to realise there is very little substance behind it.
 
-The talentedÂ [Relly Annett-Baker](http://twitter.com/#!/RellyAB) has been running an online [Creating Web Content](http://www.supernicestudio.com/class/) workshop. She has adopted the personality of school teacher with a friendly classroom attitude. I've found this approach much more engaging and suitable to her style. I digress.
+The talented [Relly Annett-Baker](http://twitter.com/#!/RellyAB) has been running an online [Creating Web Content](http://www.supernicestudio.com/class/) workshop. She has adopted the personality of school teacher with a friendly classroom attitude. I've found this approach much more engaging and suitable to her style. I digress.
 
 The workshop has got me thinking about the importance of relevant content and tone of voice. Personal websites are meant to be just that. It's about you as an individual - it should reflect your personality. It's very easy to "fluff up" your portfolio with all the buzzwords in the world but does it accurately define who you are? Take away the jargon - what are you left with?
 

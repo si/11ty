@@ -13,7 +13,7 @@ coverImage: "Wikipedia-Redefined.png"
 
 [![](/img/assets/2012/08/Wikipedia-Redefined.png "Wikipedia Redefined")](http://www.wikipediaredefined.com)
 
-[Wikipedia Redefined](http://www.wikipediaredefined.com/)Â is an interesting redux of Wikipedia by Lithuanian agency,Â [New Is New](http://newisnew.lt/en).
+[Wikipedia Redefined](http://www.wikipediaredefined.com/) is an interesting redux of Wikipedia by Lithuanian agency, [New Is New](http://newisnew.lt/en).
 
 They took two Spring months to re-imagine Jimmy Wales' popular website with regards to design, usability and focus.
 

@@ -13,7 +13,7 @@ coverImage: "2b892055465a9fe2bed229403b3b29cb-e1348663345880.jpg"
 
 ![](images/2b892055465a9fe2bed229403b3b29cb-1024x576.jpg "Benjamin Button")
 
-Google engineer,Â Andrey Petrov eloquantly epitomisesÂ [Twitter as the Benjamin Button of startups](https://plus.google.com/109834643338395014064/posts/A9Fk7bsCA1B).
+Google engineer, Andrey Petrov eloquantly epitomises [Twitter as the Benjamin Button of startups](https://plus.google.com/109834643338395014064/posts/A9Fk7bsCA1B).
 
 > Born out of wisdom and insight in our daily social behaviour, completely changing the way we communicate. Soon grown into a heroic Atlas, holding up the world of third-party developers on its shoulders, thriving as the platform rises along with thousands of apps and services transforming the experience. Dusk approaches when Twitter sheds its desire to leave a mark on humanity and finds itself destined to die as a single-feature web-based MVP. A sparkle in a developer's eye.
 

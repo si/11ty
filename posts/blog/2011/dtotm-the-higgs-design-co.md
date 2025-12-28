@@ -20,7 +20,7 @@ The other week, I kicked off my [Design Tour of The Midlands](http://sijobling.c
 
 Founded by Andy Higgs in 2006, the studio has quickly gathered a reputable group of clients, ranging from successful local startups to International suppliers.
 
-The Higgs Design Co pride themselves on creating "considered web application and design work" with a heavy emphasis on providing the ultimate user experience, advisingÂ customers on how best to achieve this. There are too many studios in the industry who are "Yes Men", simply ticking the boxes of client's requirements but The Higgs Design Co aim to address that head on by working with customers to think about what it is their customers actually want. Ultimately, they like to work with businesses to grow them, online and offline.
+The Higgs Design Co pride themselves on creating "considered web application and design work" with a heavy emphasis on providing the ultimate user experience, advising customers on how best to achieve this. There are too many studios in the industry who are "Yes Men", simply ticking the boxes of client's requirements but The Higgs Design Co aim to address that head on by working with customers to think about what it is their customers actually want. Ultimately, they like to work with businesses to grow them, online and offline.
 
 This practise is evident from their recent work with [Urban Coffee Co](http://www.urbancoffee.co.uk/) in Birmingham.
 
@@ -32,7 +32,7 @@ Higgs are also currently working on a complete redesign of UK startup [Rate My P
 
 Back in 2006, three (bored) students on placement from Loughborough University realised there wasn't enough information out there for universities to assist placement students so they set out to resolve this.
 
-Fast forward five years and the small startup is now a team of 15 with the goal ofÂ reorientingÂ the product to a web application with more emphasis on the user, expecting to be launched in late part of 2011.
+Fast forward five years and the small startup is now a team of 15 with the goal of reorienting the product to a web application with more emphasis on the user, expecting to be launched in late part of 2011.
 
 The Higgs Design Co are also working closely with a number of other clients, including the world's most prestiges rose suppliers David Austin Roses and racing driver Adam Christodoulou.
 
@@ -42,7 +42,7 @@ I was keen to find out what Andy thought of the Midlands' creative scene, why th
 
 His initial reaction was that many people in the region don't tend to shout about what they do, the good things don't get talked about.
 
-As a whole, people in the Midlands are quite self-deprecating â€“ it seems to be one of our many qualms and we don't defend the area when outsiders say "it's shit". In [a recent article by the Independent](http://www.independent.co.uk/news/uk/this-britain/brum-deal-a-second-city-with-a-thirdrate-reputation-2281115.html), Birmingham â€“ the UK's "second city" â€“Â was classed as a third-rate city, which says a lot about the general consensus of the public, compared to people in Manchester and Liverpool who claim London as the "second city".
+As a whole, people in the Midlands are quite self-deprecating "“ it seems to be one of our many qualms and we don't defend the area when outsiders say "it's shit". In [a recent article by the Independent](http://www.independent.co.uk/news/uk/this-britain/brum-deal-a-second-city-with-a-thirdrate-reputation-2281115.html), Birmingham "“ the UK's "second city" "“ was classed as a third-rate city, which says a lot about the general consensus of the public, compared to people in Manchester and Liverpool who claim London as the "second city".
 
 Another fault seems to show that the city is divided. For example, two of Birmingham's main creative hubs, the Jewellery Quarter and Digbeth, have specific boundaries with little crossover in their communities, yet both have creatively strong communities.
 

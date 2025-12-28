@@ -14,7 +14,7 @@ coverImage: "Wee-Rockets.png"
 
 [![](images/Wee-Rockets.png "Wee Rockets")](http://2017.sijobling.com/wp-content/uploads/2012/07/Wee-Rockets.png)
 
-[Wee Rockets](http://weerockets.com/)Â is a lovely new iPad game designed and created by Paddy Donnelly ([@paddydonnelly](http://twitter.com/paddydonnelly)) and Alain Hufkens ([@hufkens](http://twitter.com/hufkens)).
+[Wee Rockets](http://weerockets.com/) is a lovely new iPad game designed and created by Paddy Donnelly ([@paddydonnelly](http://twitter.com/paddydonnelly)) and Alain Hufkens ([@hufkens](http://twitter.com/hufkens)).
 
 The concept is simple: kids build their own rockets, launch them into space and race through asteroids to rescue aliens.
 

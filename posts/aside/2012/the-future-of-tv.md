@@ -11,4 +11,4 @@ tags:
   - "wiedenkennedy"
 ---
 
-Some interesting thoughts from Dan Wieden of Wieden+Kennedy on the future of television,Â specificallyÂ around product placement, advertising and social interaction.
+Some interesting thoughts from Dan Wieden of Wieden+Kennedy on the future of television, specifically around product placement, advertising and social interaction.

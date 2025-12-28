@@ -14,13 +14,13 @@ coverImage: "Microsoft-Metro-Branding.png"
 
 [![](/img/assets/2012/08/Microsoft-Metro-Branding.png "Microsoft Metro Branding")](http://2017.sijobling.com/wp-content/uploads/2012/08/Microsoft-Metro-Branding.png)
 
-I have a problem with the new Microsoft logo. Let me explainâ€¦
+I have a problem with the new Microsoft logo. Let me explain…
 
 Yes, there are a numer of reasons to condone the redesign, appreciate the injection of colour to reflect the new Metro visual language, respect the modern, elegant feel of the new typeface Segoe.
 
 But I have a problem with the icon.
 
-**The lack of depth or perspective Â feels inconsisent with other recent designs by the Redmond giant.**
+**The lack of depth or perspective  feels inconsisent with other recent designs by the Redmond giant.**
 
 [![](/img/assets/2012/08/Windows-Metro-Branding.png "Windows Metro Branding")](http://2017.sijobling.com/wp-content/uploads/2012/08/Windows-Metro-Branding.png)
 

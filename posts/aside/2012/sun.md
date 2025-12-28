@@ -12,7 +12,7 @@ tags:
 coverImage: "Sun.png"
 ---
 
-[SunÂ](http://pattern.dk/sun/) is a stunning mobile web app by [Jakob Henner](http://twitter.com/jalifax) for checking the weather in any global location.
+[Sun](http://pattern.dk/sun/) is a stunning mobile web app by [Jakob Henner](http://twitter.com/jalifax) for checking the weather in any global location.
 
 It utilises Adam Whitcroft's beautiful [Climacons icon set](http://adamwhitcroft.com/climacons/), mashed up with [Google's (unofficial) Weather API](http://blog.programmableweb.com/2010/02/08/googles-secret-weather-api/) and [Yahoo! PlaceFinder API](http://developer.yahoo.com/geo/placefinder/) to create an elegant pinch-to-zoom user experience.
 

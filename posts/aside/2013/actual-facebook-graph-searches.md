@@ -9,6 +9,6 @@ tags:
   - "tumblr"
 ---
 
-Tumblr of the Week No 4 -Â [Actual Facebook Graph Searches](http://actualfacebookgraphsearches.tumblr.com/).
+Tumblr of the Week No 4 - [Actual Facebook Graph Searches](http://actualfacebookgraphsearches.tumblr.com/).
 
 Compiled by Tom Scott, there are some quite alarming (with an ounce of humour) searches and results presented here.

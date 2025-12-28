@@ -50,7 +50,7 @@ I've recently changed my approach to development by releasing early and releasin
 
 That said, with time against us, I decided to launch the service as early as possible with the basic functionality, enhancing the user experience in a phased approach.
 
-Working like this, we can adapt the roadmap according to user demand. We're monitoring the website traffic using services likeÂ [GoSquared LiveStats](http//www.gosquared.com/livestats/?ref=2396),[Google Analytics](http://www.google.com/analytics/)Â andÂ [Facebook Insights](http://developers.facebook.com/docs/insights/)Â so we have a good idea of what visitors are looking at and for.
+Working like this, we can adapt the roadmap according to user demand. We're monitoring the website traffic using services like [GoSquared LiveStats](http//www.gosquared.com/livestats/?ref=2396),[Google Analytics](http://www.google.com/analytics/) and [Facebook Insights](http://developers.facebook.com/docs/insights/) so we have a good idea of what visitors are looking at and for.
 
 To help manage the project, I started using a few self-hosted open source solutions:
 
@@ -61,7 +61,7 @@ We plan to roll out some Twitter integration shortly after launch as well as som
 
 ## The Next Step
 
-Sport events are socialÂ occasions. They unite people together in a common interest and these people tend to have a lot to say on the matter. This is a perfect time to tap into social media.
+Sport events are social occasions. They unite people together in a common interest and these people tend to have a lot to say on the matter. This is a perfect time to tap into social media.
 
 Twitter has fast become the key communication tool of the internet, bypassing the "walled garden" of Facebook, allowing individuals to have a say in the public forum with ease.
 
@@ -69,4 +69,4 @@ With this in mind, I'm keen to harness the power of Twitter and sport events. Th
 
 The next natural step for the project is to embrace the community, allowing individuals to share their experience of an event, both online and offline.
 
-We'll be experimenting with the Rugby World Cup and Twitter over the next few weeks and, going forward, a few more major sport events such as next year's big event, Olympics 2012 in London (although we have a few hurdles to jump â€“ pardon the pun â€“ regarding event publication).
+We'll be experimenting with the Rugby World Cup and Twitter over the next few weeks and, going forward, a few more major sport events such as next year's big event, Olympics 2012 in London (although we have a few hurdles to jump "“ pardon the pun "“ regarding event publication).

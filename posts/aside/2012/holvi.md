@@ -12,7 +12,7 @@ coverImage: "Holvi.png"
 
 [![](images/Holvi.png "Holvi")](http://2017.sijobling.com/wp-content/uploads/2012/07/Holvi.png)
 
-[Holvi](https://holvi.com/#tour)Â looks like an innovative approach to banking, more geared towards teamwork and collaboration in startups.
+[Holvi](https://holvi.com/#tour) looks like an innovative approach to banking, more geared towards teamwork and collaboration in startups.
 
 Based in Finland, the service offers a full accounting solution like any other online bank, giving you the functionality to set budgets, pay bills and accept payments all through the one account. You can even manage an online store through your account as well as issue invoices.
 

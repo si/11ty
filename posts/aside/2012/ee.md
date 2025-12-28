@@ -15,7 +15,7 @@ coverImage: "EE.png"
 
 [![](images/EE.png "EE")](http://www.ee.co.uk)
 
-EE (formerly known as Everything Everywhere) launched a brand [new website and identity](http://ee.co.uk/)Â Â todayÂ to promote them being at the forefront of the UK's new 4G network.
+EE (formerly known as Everything Everywhere) launched a brand [new website and identity](http://ee.co.uk/)  today to promote them being at the forefront of the UK's new 4G network.
 
 Having recently partnered Orange and T-Mobile into a unified network, EE are now focusing on the emerging 4th generation mobile network which should\* offer super-fast mobile network speeds.
 

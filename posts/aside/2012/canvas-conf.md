@@ -13,7 +13,7 @@ coverImage: "Canvas-Conf.png"
 
 [![](/img/assets/2012/08/Canvas-Conf.png "Canvas Conf")](http://2017.sijobling.com/wp-content/uploads/2012/08/Canvas-Conf.png)
 
-[Canvas](http://2012.canvasconf.co.uk/)Â â€“ the first proper web development conference in Birmingham by the guys at [383 Project](http://383project.com).
+[Canvas](http://2012.canvasconf.co.uk/) "“ the first proper web development conference in Birmingham by the guys at [383 Project](http://383project.com).
 
 The single day event on 7th September 2012 is bringing together some heavyweight names from the Web development scene including [James Whittaker](https://twitter.com/jmwhittaker/ "@jmwhittaker on Twitter") from Twitter, [Chris Mills](http://twitter.com/chrisdavidmills "@chrisdavidmills on Twitter") from Opera and [Harry Roberts](http://twitter.com/csswizardry/ "@csswizardry on Twitter") from BSkyB to talk about building the next generation of websites.
 

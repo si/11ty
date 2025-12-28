@@ -9,6 +9,6 @@ tags:
   - "lifestyle"
 ---
 
-Adopt a personal policy for handling your inbox by applying a limited number of sentences to your responses withÂ [Sentenc.es](http://four.sentenc.es/).
+Adopt a personal policy for handling your inbox by applying a limited number of sentences to your responses with [Sentenc.es](http://four.sentenc.es/).
 
-I personally think two sentences is a little ambitious â€“ four is more realistic andÂ achievable.
+I personally think two sentences is a little ambitious "“ four is more realistic and achievable.

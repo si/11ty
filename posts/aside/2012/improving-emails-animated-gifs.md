@@ -11,11 +11,11 @@ tags:
   - "paul-boag"
 ---
 
-Paul Boag [recently blogged](http://boagworld.com/design/its-time-to-look-at-animated-gifs-again/ "It's time to look at animated GIFs again")Â about reviving the animated GIF for subtle user interface improvements, specifically in web pages. Whilst this is open to much abuse, it is definitely a viable solution when used sparingly and appropriately.
+Paul Boag [recently blogged](http://boagworld.com/design/its-time-to-look-at-animated-gifs-again/ "It's time to look at animated GIFs again") about reviving the animated GIF for subtle user interface improvements, specifically in web pages. Whilst this is open to much abuse, it is definitely a viable solution when used sparingly and appropriately.
 
 Taking this concept forward, it struck me animated GIFs could also work really well for improving the design of HTML emails. Whilst inline videos are difficult to embed in HTML emails, animated GIFs aren't as restrictive.
 
-Take the Kenneth Cole example from Paul's post into considerationâ€¦
+Take the Kenneth Cole example from Paul's post into consideration…
 
 [![](images/awearness_kenneth_cole_foundation_advert.gif "Awearness - The Kenneth Cole Foundation advert")](http://2017.sijobling.com/wp-content/uploads/2012/03/awearness_kenneth_cole_foundation_advert.gif)
 

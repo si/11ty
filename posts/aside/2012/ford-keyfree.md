@@ -12,7 +12,7 @@ tags:
 coverImage: "ford_keyfree.png"
 ---
 
-It's not often I throw around the term "game changer" but this could be one of themâ€¦
+It's not often I throw around the term "game changer" but this could be one of them…
 
 One of the most unlikely candidates, Ford (yep, as in the car manufacturer) have created a secure password system for websites using Near Field Communication (NFC) and BlueTooth called Ford Keyfree.
 
@@ -22,4 +22,4 @@ I've not been able to try this out (the [French landing page](http://www.ford.fr
 
 <iframe src="http://player.vimeo.com/video/43886541" frameborder="0" width="100%" height="300"></iframe>
 
-(viaÂ [Ford Schools Apple With Clever Phone Login App...Wait, What?](http://www.fastcodesign.com/1670097/ford-schools-apple-with-clever-phone-login-appwait-what))
+(via [Ford Schools Apple With Clever Phone Login App...Wait, What?](http://www.fastcodesign.com/1670097/ford-schools-apple-with-clever-phone-login-appwait-what))

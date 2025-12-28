@@ -9,6 +9,6 @@ tags:
   - "profanity"
 ---
 
-[PurgoMalum](http://www.purgomalum.com/)Â is a neat RESTful web service for filtering content for profanity or other unwanted text.
+[PurgoMalum](http://www.purgomalum.com/) is a neat RESTful web service for filtering content for profanity or other unwanted text.
 
 Very handy for ensuring your user-generated content site is free of expletives or trolling.

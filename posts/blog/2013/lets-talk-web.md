@@ -39,6 +39,6 @@ Hosted by [Keir Whitaker](http://twitter.com/keirwhitaker) and [Kieran Masterton
 
 ## [The Businessology Show](http://businessologyshow.biz/)
 
-This podcast, hosted by [Dan Mall](https://twitter.com/danielmall) and [Jason Blumer](https://twitter.com/JasonMBlumer), talks about "the business of design andÂ design of business". Thankfully, both these two have tons of experience in both so you're in for a treat of interesting debate about design theory in the real world.
+This podcast, hosted by [Dan Mall](https://twitter.com/danielmall) and [Jason Blumer](https://twitter.com/JasonMBlumer), talks about "the business of design and design of business". Thankfully, both these two have tons of experience in both so you're in for a treat of interesting debate about design theory in the real world.
 
 [![businessologyshow's podcast](images/badge_itunes-lrg.gif)](http://clk.tradedoubler.com/click?p=23708&a=1254950&url=https%3A%2F%2Fitunes.apple.com%2Fgb%2Fpodcast%2Fbusinessologyshows-podcast%2Fid594854454%3Fmt%3D2%26uo%3D4%26partnerId%3D2003)
