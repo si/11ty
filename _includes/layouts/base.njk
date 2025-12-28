@@ -12,7 +12,7 @@
     Update me: Remove comment if you want a CSP.
     <meta http-equiv="Content-Security-Policy" content="{{ csp.regular | safe }}">
     -->
-    <link rel="icon" href="{{ '/img/si-ligature.svg' | addHash }}" type="image/svg+xml">
+    <link rel="icon" href="{{ '/img/si-disc.svg' | addHash }}" type="image/svg+xml">
     <meta name="theme-color" content="#f9c412">
     <meta name="robots" content="max-snippet:-1, max-image-preview: large, max-video-preview: -1">
     <title>{{ renderData.title or title or metadata.title | escape }}</title>
@@ -66,7 +66,7 @@
         <div id="nav">
           <h1>
             <a href="{{ '/' | url }}" class="site-logo" title="Homepage">
-              <img src="{{ '/img/si-ligature.svg' | addHash }}" alt="" class="site-logo-mark" width="28" height="28" aria-hidden="true">
+              <img src="{{ '/img/si-disc.svg' | addHash }}" alt="" class="site-logo-mark" width="56" height="56" aria-hidden="true">
               <span>{{ metadata.title }}</span>
             </a>
           </h1>
