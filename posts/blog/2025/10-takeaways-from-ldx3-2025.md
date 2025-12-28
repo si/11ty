@@ -8,7 +8,7 @@ tags:
   - "ldx3"
   - "leadership"
   - "tech"
-coverImage: "The-hidden-cost-of-poor-quality-scaled.jpeg"
+coverImage: "The-hidden-cost-of-poor-quality.jpeg"
 ---
 
 This week I had the chance to attend [LDX3](https://leaddev.com/leaddev-london/) (formerly known as LeadDev London), a buzzing two-day conference packed with bite-sized engineering leadership talks, practical insights, and a refreshing mix of inspiration and pragmatism.

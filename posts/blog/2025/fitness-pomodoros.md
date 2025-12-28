@@ -8,7 +8,7 @@ tags:
   - "exercise"
   - "fitness"
   - "pomodoro"
-coverImage: "25min-fitness-pomodoro-on-cross-trainer-scaled.jpeg"
+coverImage: "25min-fitness-pomodoro-on-cross-trainer.jpeg"
 ---
 
 This idea hit me in the gym, then got shaped in the pool. That’s how most of my stuff comes together; push myself physically, then let my head wander until it clicks.
