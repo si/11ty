@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Si Jobling//PETALS Event//EN
+BEGIN:VEVENT
+UID:4fb88298-fe32-47cd-b06b-1d00ae812e6a
+DTSTAMP:20250729T154351Z
+DTSTART;TZID=Europe/London:20250907T150000
+DTEND;TZID=Europe/London:20250907T151500
+SUMMARY:National Emergency Alert test 🚨
+DESCRIPTION:Get ready for another mobile phone emergency test.
+LOCATION:https://www.gov.uk/government/news/national-emergency-alert-test-to-be-held-on-7th-september#:~:text=Mobile%20phones%20in%20the%20UK,to%20strengthen%20the%20country's%20preparedness.
+URL:https://www.gov.uk/government/news/national-emergency-alert-test-to-be-held-on-7th-september#:~:text=Mobile%20phones%20in%20the%20UK,to%20strengthen%20the%20country's%20preparedness.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR
