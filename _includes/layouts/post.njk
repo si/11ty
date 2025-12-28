@@ -27,6 +27,22 @@ templateClass: tmpl-post
 {% set shareUrl = metadata.url + page.url %}
 
 {% block article %}
+{% if enclosure and enclosure.url %}
+  <figure class="enclosure-player">
+    {% if (enclosure.type or '') | slice(0, 6) == 'video/' %}
+      <video controls preload="none" aria-label="Video player for {{ title }}">
+        <source src="{{ enclosure.url }}" type="{{ enclosure.type }}">
+        <p>Your browser does not support embedded video. <a href="{{ enclosure.url }}">Download the media file</a>.</p>
+      </video>
+    {% else %}
+      <audio controls preload="none" aria-label="Audio player for {{ title }}">
+        <source src="{{ enclosure.url }}" type="{{ enclosure.type }}">
+        <p>Your browser does not support embedded audio. <a href="{{ enclosure.url }}">Download the audio file</a>.</p>
+      </audio>
+    {% endif %}
+  </figure>
+{% endif %}
+
 {{ content | safe }}
 
 <share-widget>
