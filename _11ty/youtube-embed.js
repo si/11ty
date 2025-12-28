@@ -292,7 +292,8 @@ function parseStartTime(searchParams) {
   return null;
 }
 
-// Export helper functions for use in HTML transforms
+// Export the markdown-it plugin and helpers for use elsewhere.
+module.exports = youtubeEmbed;
 module.exports.buildEmbedUrl = buildEmbedUrl;
 module.exports.createEmbedHtml = createEmbedHtml;
 module.exports.isYoutubeUrl = isYoutubeUrl;

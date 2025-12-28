@@ -83,7 +83,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksAsyncFilter(
     "addHash",
     function (absolutePath, callback) {
-      readFile(path.join(".", absolutePath), {
+      const resolvedPath = path.join(".", absolutePath);
+      if (!fs.existsSync(resolvedPath)) {
+        // Avoid hard failure for missing assets; keep the original URL.
+        callback(null, absolutePath);
+        return;
+      }
+      readFile(resolvedPath, {
         encoding: "utf-8",
       })
         .then((content) => {
