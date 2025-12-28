@@ -160,6 +160,11 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
   });
 
+  eleventyConfig.addFilter("datePath", (dateObj) => {
+    const dt = DateTime.fromJSDate(dateObj, { zone: "utc" });
+    return dt.toFormat("yyyy/MM");
+  });
+
   eleventyConfig.addFilter("sitemapDateTimeString", (dateObj) => {
     const dt = DateTime.fromJSDate(dateObj, { zone: "utc" });
     if (!dt.isValid) {

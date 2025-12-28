@@ -4,6 +4,16 @@ templateClass: tmpl-post
 ---
 {% extends "layouts/base.njk" %}
 
+{% block coverImage %}
+{% if coverImage %}
+  {% set datePath = page.date | datePath %}
+  {% set coverImagePath = "/img/assets/" + datePath + "/" + coverImage %}
+  <div class="cover-image-header">
+    <img src="{{ coverImagePath | addHash }}" alt="" class="cover-image">
+    <div class="cover-image-overlay"></div>
+  </div>
+{% endif %}
+{% endblock %}
 
 {% block extraArticleHeader %}
    {% set wc = content | striptags | wordcount %}
