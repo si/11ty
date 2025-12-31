@@ -213,6 +213,20 @@ module.exports = function (eleventyConfig) {
       .map(([name, count]) => ({ name, count }))
       .sort((a, b) => a.name.localeCompare(b.name));
   });
+  eleventyConfig.addCollection("homeRecentPosts", function (collectionApi) {
+    const allowedDirectories = new Set(["aside", "blog", "weeknotes"]);
+    const posts = collectionApi.getFilteredByTag("posts");
+
+    return posts
+      .filter((post) => {
+        const inputPath = post.inputPath || "";
+        const normalized = inputPath.replace(/^[.\\/]*posts[\\/]/, "");
+        const directory = normalized.split(/[/\\]/)[0];
+        return allowedDirectories.has(directory);
+      })
+      .sort((a, b) => a.date - b.date)
+      .slice(-5);
+  });
   eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
   // Copy migrated assets from src/assets to /assets in the built site.
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
