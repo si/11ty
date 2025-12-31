@@ -16,6 +16,12 @@
     "path": "/feed/feed.json",
     "url": "https://sijobling.com/feed/feed.json"
   },
+  "podcast": {
+    "title": "Si Jobling Podcast",
+    "subtitle": "Tech leader, community builder",
+    "path": "/feed/podcast.xml",
+    "url": "https://sijobling.com/feed/podcast.xml"
+  },
   "author": {
     "name": "Si Jobling",
     "twitterHandle": "@Si"
