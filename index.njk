@@ -1,30 +1,36 @@
 ---
-title: Si Jobling
+title: "I'm Si Jobling"
 layout: layouts/home.njk
-description: Description. Update me.
-image: https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg
-date: Last Modified
+date: 2021-06-09
+coverImage: "Si-coaching-at-Akkroo-March-2019-16-9.jpg"
 ---
 
-{% set postCount = collections.posts | length %}
+<h2>About Si</h2>
 
-<section>
-  <h2>Post directories</h2>
-  <p>{{ postCount }} posts published.</p>
-  <ul>
-    {% for entry in collections.postDirectories %}
-      <li>{{ entry.name }} ({{ entry.count }})</li>
-    {% endfor %}
-  </ul>
-</section>
+<p>Si Jobling is an engineering manager at ASOS (formerly Ant Group, Yahoo!, and UEFA) with decades of experience in web technology. He has built community and podcast projects such as Derby County fanbase, House Finesse, and Multipack to bring people together around shared passions. Learn more on the <a href="/about/">About page</a>.</p>
 
-<p>
-  This is a demo website based on 
-  <a href="https://www.industrialempathy.com/posts/eleventy-high-performance-blog/">eleventy-high-performance-blog</a>.
-</p>
+<h2>Latest posts</h2>
 
-<div id="posts">
-  <h2>Posts</h2>
-  {% set postslist = collections.posts %}
-  {% include "postslist.njk" %}
-</div>
+{% set recent_posts = collections.homeRecentPosts | reverse %}
+<ul>
+{% for post in recent_posts %}
+  <li>
+    <a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+    <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+  </li>
+{% endfor %}
+</ul>
+
+<h2>Featured projects</h2>
+
+<p><img src="images/PETALS-collection.png" alt="PETALS cover"></p>
+
+<p><a href="/petals/">PETALS</a></p>
+
+<p><img src="images/Make-Life-Work-3000x1000-scaled.png" alt="Make Life Work cover"></p>
+
+<p><a href="/make-life-work/">Make Life Work</a></p>
+
+<p><img src="images/HF24-Opengraph-1024x576.png" alt="House Finesse cover"></p>
+
+<p><a href="https://housefinesse.com/">House Finesse</a></p>
