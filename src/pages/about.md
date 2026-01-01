@@ -7,7 +7,9 @@ eleventyNavigation:
   order: 1
 ---
 
-### **Engineering Manager at ASOS (formerly Ant Group, Yahoo! and UEFA),** **podcast producer & community creator.**
+## Tech leader at multiple international brands
+
+**Engineering Manager at Rightmove (formerly ASOS, Ant Group, Yahoo! and UEFA), podcast producer & community creator.**
 
 Over the past three decades, I’ve found myself absorbed in tech, pushing the boundaries in creative and inspiring ways. Through those years, I’ve worked with some of the world’s biggest brands including [ASOS](http://www.asos.com), [Yahoo](http://www.yahoo.com) and [UEFA](http://www.uefa.com/), focused predominantly on Web technology (but not exclusively).
 
