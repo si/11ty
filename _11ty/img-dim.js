@@ -39,6 +39,10 @@ const processImage = async (img, outputPath) => {
   if (/^(https?\:\/\/|\/\/)/i.test(src)) {
     return;
   }
+  // Strip query string and hash from src (added by addHash filter)
+  if (src.includes("?")) {
+    src = src.split("?")[0];
+  }
   if (/^\.+\//.test(src)) {
     // resolve relative URL
     src =
