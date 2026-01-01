@@ -1,6 +1,9 @@
 ---
 title: "Now"
 date: 2019-12-13
+eleventyNavigation:
+  key: Now
+  order: 3
 ---
 
 ## Working around office hours…

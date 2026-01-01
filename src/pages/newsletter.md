@@ -1,6 +1,9 @@
 ---
 title: "Newsletter"
 date: 2012-07-31
+eleventyNavigation:
+  key: Newsletter
+  order: 4
 ---
 
 For those who [follow me on the socials](http://twitter.com/Si), I've setup a regular newsletter that is sent every Tuesday.

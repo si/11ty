@@ -2,6 +2,9 @@
 title: "PETALS"
 date: 2022-10-05
 coverImage: "PETALS-collection.png"
+eleventyNavigation:
+  key: PETALS
+  order: 2
 ---
 
 > _Measure team health more rapidly and regularly with this simple framework_
