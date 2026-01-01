@@ -150,6 +150,9 @@ header:has(.cover-image-header) .header-content aside {
 #nav {
   z-index: 2;
   position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 #reading-progress {
