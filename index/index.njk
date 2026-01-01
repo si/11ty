@@ -13,7 +13,6 @@ permalink: /index/
 <nav class="page-index__jump">
   <a href="#pages">Pages</a>
   <a href="#posts">Posts</a>
-  <a href="#tags">Tags</a>
 </nav>
 
 {%- set sorted = collections.all | sort(false, false, "data.title") %}
@@ -46,15 +45,3 @@ permalink: /index/
 {%- endfor %}
 </ul>
 
-<h2 id="tags">Tags</h2>
-<ul class="page-index">
-{%- for entry in sorted %}
-  {%- if entry.url and entry.url.indexOf('/tags/') === 0 %}
-    {%- set tagName = entry.data.tag or (entry.fileSlug | replace('tags/', '')) %}
-    <li>
-      <a href="{{ entry.url | url }}">{{ tagName }}</a>
-      <code>{{ entry.url }}</code>
-    </li>
-  {%- endif %}
-{%- endfor %}
-</ul>
