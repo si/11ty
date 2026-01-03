@@ -103,26 +103,38 @@ const processImage = async (img, outputPath) => {
     const avif = doc.createElement("source");
     const webp = doc.createElement("source");
     const jpeg = doc.createElement("source");
-    await setSrcset(avif, src, "avif");
-    avif.setAttribute("type", "image/avif");
-    await setSrcset(webp, src, "webp");
-    webp.setAttribute("type", "image/webp");
     const fallback = await setSrcset(jpeg, src, fallbackType);
+    if (!fallback) {
+      return;
+    }
+    const avifFallback = await setSrcset(avif, src, "avif");
+    if (avifFallback) {
+      avif.setAttribute("type", "image/avif");
+      picture.appendChild(avif);
+    }
+    const webpFallback = await setSrcset(webp, src, "webp");
+    if (webpFallback) {
+      webp.setAttribute("type", "image/webp");
+      picture.appendChild(webp);
+    }
     jpeg.setAttribute("type", `image/${fallbackType}`);
-    picture.appendChild(avif);
-    picture.appendChild(webp);
     picture.appendChild(jpeg);
     img.parentElement.replaceChild(picture, img);
     picture.appendChild(img);
     img.setAttribute("src", fallback);
   } else if (!img.getAttribute("srcset")) {
     const fallback = await setSrcset(img, src, fallbackType);
-    img.setAttribute("src", fallback);
+    if (fallback) {
+      img.setAttribute("src", fallback);
+    }
   }
 };
 
 async function setSrcset(img, src, format) {
   const setInfo = await srcset(src, format);
+  if (!setInfo) {
+    return null;
+  }
   img.setAttribute("srcset", setInfo.srcset);
   img.setAttribute(
     "sizes",

@@ -41,14 +41,37 @@ const quality = {
   default: 60,
 };
 
+const optionalFormats = new Set(["avif", "webp"]);
+
+function supportsOutputFormat(format) {
+  const info = sharp.format[format];
+  return Boolean(info && info.output);
+}
+
 module.exports = async function srcset(filename, format) {
-  const names = await Promise.all(
-    widths.map((w) => resize(filename, w, format))
-  );
-  return {
-    srcset: names.map((n, i) => `${n} ${widths[i]}w`).join(", "),
-    fallback: names[0],
-  };
+  if (!supportsOutputFormat(format)) {
+    if (optionalFormats.has(format)) {
+      return null;
+    }
+    throw new Error(`sharp does not support ${format} output`);
+  }
+  try {
+    const names = await Promise.all(
+      widths.map((w) => resize(filename, w, format))
+    );
+    return {
+      srcset: names.map((n, i) => `${n} ${widths[i]}w`).join(", "),
+      fallback: names[0],
+    };
+  } catch (error) {
+    if (optionalFormats.has(format)) {
+      console.warn(
+        `[srcset] Skipping ${format} for ${filename}: ${error.message}`
+      );
+      return null;
+    }
+    throw error;
+  }
 };
 
 async function resize(filename, width, format) {
