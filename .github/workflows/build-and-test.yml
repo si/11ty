@@ -24,7 +24,7 @@ jobs:
         with:
           path: |
             _site/**/*.blurred
-          key: ${{ runner.os }}-11ty-images-${{ hashFiles('img/**/*', 'posts/**/*', '_includes/**/*', '_data/**/*', '.eleventy.js') }}
+          key: ${{ runner.os }}-11ty-images-${{ hashFiles('img/**/*', 'posts/**/*.{jpg,jpeg,png,gif,webp,svg,avif}', '_includes/**/*', '_11ty/blurry-placeholder.js', '_11ty/img-dim.js', '_11ty/srcset.js', '.eleventy.js') }}
           restore-keys: |
             ${{ runner.os }}-11ty-images-
       - run: npm ci --no-audit --no-fund
