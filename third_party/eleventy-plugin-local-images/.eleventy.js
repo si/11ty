@@ -14,9 +14,12 @@ const downloadImage = async (path) => {
   }
 
   try {
-    const imgBuffer = await fetch(path)
+    const imgBuffer = await fetch(path, { redirect: "follow" })
       .then((res) => {
-        if (res.status == 200) {
+        if (!res.ok) {
+          console.warn(`[local-images] Skipping remote image ${url} — HTTP ${res.status}`);
+          return null;
+        } else if (res.status == 200) {
           return res;
         } else {
           throw new Error(`File "${path}" not found`);
