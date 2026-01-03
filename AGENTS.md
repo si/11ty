@@ -169,7 +169,6 @@ All generated files go to `/_site/` directory (not tracked in repo).
 The site is deployed on **Netlify** (based on the Netlify badge in README).
 
 Configuration files:
-- **`vercel.json`** - Vercel configuration (if using Vercel)
 - **`_headers`** - HTTP headers configuration
 - **`_redirects`** - URL redirect rules
 

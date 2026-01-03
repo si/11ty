@@ -85,7 +85,7 @@ Your content here...
 
 The site is automatically deployed to **Netlify** when changes are pushed to the `main` branch.
 
-- **Configuration**: `vercel.json`, `_headers`, and `_redirects` handle server-side behavior.
+- **Configuration**: `_headers` and `_redirects` handle server-side behavior.
 - **Environment Variables**: Managed in the Netlify dashboard.
 
 ## 📄 License
