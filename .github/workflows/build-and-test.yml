@@ -23,7 +23,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: |
-            _site/img
+            _site/**/*.blurred
           key: ${{ runner.os }}-11ty-images-${{ hashFiles('img/**/*', 'posts/**/*', '_includes/**/*', '_data/**/*', '.eleventy.js') }}
           restore-keys: |
             ${{ runner.os }}-11ty-images-
