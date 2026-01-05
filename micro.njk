@@ -1,0 +1,23 @@
+---
+title: Micro
+layout: layouts/base.njk
+templateClass: tmpl-post
+permalink: /micro/
+description: Short micro posts collected from the archive.
+---
+
+<p>Short micro posts in one place.</p>
+
+{%- set microPosts = collections.micro | sort(false, false, "date") | reverse %}
+
+<ul class="page-index">
+{%- for entry in microPosts %}
+  <li>
+    <a href="{{ entry.url | url }}">{{ entry.data.title }}</a>
+    <small>
+      <time datetime="{{ entry.date | htmlDateString }}">{{ entry.date | readableDate }}</time>
+    </small>
+  </li>
+{%- endfor %}
+</ul>
+
