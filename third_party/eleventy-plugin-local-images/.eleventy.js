@@ -8,21 +8,23 @@ const metadata = require("../../_data/metadata.json");
 
 let config = { distPath: "_site", verbose: false, attribute: "src" };
 
-const downloadImage = async (path) => {
+const downloadImage = async (url) => {
   if (config.verbose) {
-    console.log("eleventy-plugin-local-images: Attempting to copy " + path);
+    console.log("eleventy-plugin-local-images: Attempting to copy " + url);
   }
 
   try {
-    const imgBuffer = await fetch(path, { redirect: "follow" })
+    const imgBuffer = await fetch(url, { redirect: "follow" })
       .then((res) => {
         if (!res.ok) {
-          console.warn(`[local-images] Skipping remote image ${url} — HTTP ${res.status}`);
+          console.warn(
+            `[local-images] Skipping remote image ${url} — HTTP ${res.status}`
+          );
           return null;
         } else if (res.status == 200) {
           return res;
         } else {
-          throw new Error(`File "${path}" not found`);
+          throw new Error(`File "${url}" not found`);
         }
       })
       .then((res) => res.buffer());
