@@ -106,6 +106,8 @@
 
         {% if page.url and page.url.indexOf("/posts/") > -1 %}
           <p>Published <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></p>
+        {% elif page.url and page.url.indexOf("/site-index/") == -1 %}
+          <p class="published-date" style="font-style: italic; opacity: 0.5; text-align: center;">Originally published on <time datetime="{{ page.date | earliestDate(page.inputPath) | htmlDateString }}">{{ page.date | earliestDate(page.inputPath) | readableDate }}</time></p>
         {% endif %}
       </article>
     </main>
