@@ -1,0 +1,1862 @@
+
+> eleventy-high-performance-blog@5.0.2 serve
+> npm run clean && eleventy --serve
+
+
+> eleventy-high-performance-blog@5.0.2 clean
+> rm -Rf ./_site/posts/*
+
+[7mAMP Optimizer AddBlurryImagePlaceholders[0m [33mWARNING jimp and lru-cache need to be installed via `npm install jimp lru-cache` for this transformer to work[0m
+[11ty] Writing _site/favicon.svg from ./favicon.svg.njk
+[11ty] Writing _site/sitemap.xml from ./sitemap.xml.njk
+[11ty] Writing _site/feed/feed.xml from ./feed/feed.njk
+[11ty] Writing _site/feed/.htaccess from ./feed/htaccess.njk
+[11ty] Writing _site/feed/feed.json from ./feed/json.njk
+[11ty] Writing _site/feed/podcast.xml from ./feed/podcast.njk
+[11ty] Writing _site/AGENTS/index.html from ./AGENTS.md (liquid)
+[11ty] Writing _site/src/assets/README/index.html from ./src/assets/README.md (liquid)
+[11ty] Writing _site/src/podcasts/README/index.html from ./src/podcasts/README.md (liquid)
+[11ty] Writing _site/src/posts/README/index.html from ./src/posts/README.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/images/Certified-ScrumMaster-CSM-badge.png' images/Certified-ScrumMaster-CSM-badge.png
+ENOENT: no such file or directory, open '/app/_site/images/kmp-badge.svg' images/kmp-badge.svg
+ENOENT: no such file or directory, open '/app/_site/images/FDBD38E0-FAA0-4A10-96DF-7B547D168F73-300x300.jpeg' images/FDBD38E0-FAA0-4A10-96DF-7B547D168F73-300x300.jpeg
+ENOENT: no such file or directory, open '/app/_site/images/4F1CD6A6-5576-4FEF-BBB5-EEDBB8DEC280-300x300.jpeg' images/4F1CD6A6-5576-4FEF-BBB5-EEDBB8DEC280-300x300.jpeg
+ENOENT: no such file or directory, open '/app/_site/images/3B7A5BB9-EB74-4B3C-8B57-579A39F06FC5-1024x1024.jpeg' images/3B7A5BB9-EB74-4B3C-8B57-579A39F06FC5-1024x1024.jpeg
+ENOENT: no such file or directory, open '/app/_site/images/6033B33B-3AA8-441C-A4A4-B39C548CCD74.jpeg' images/6033B33B-3AA8-441C-A4A4-B39C548CCD74.jpeg
+ENOENT: no such file or directory, open '/app/_site/images/Apple-Podcasts-Listen-Badge-659x160.png' images/Apple-Podcasts-Listen-Badge-659x160.png
+ENOENT: no such file or directory, open '/app/_site/images/spotify-podcast-badge-blk-grn-660x160.png' images/spotify-podcast-badge-blk-grn-660x160.png
+ENOENT: no such file or directory, open '/app/_site/images/Make-Life-Work-Sam-Hardacre-1024x1024.png' images/Make-Life-Work-Sam-Hardacre-1024x1024.png
+ENOENT: no such file or directory, open '/app/_site/images/Make-Life-Work-Dom-Hodgson-1-1024x1024.png' images/Make-Life-Work-Dom-Hodgson-1-1024x1024.png
+ENOENT: no such file or directory, open '/app/_site/images/Make-Life-Work-Rachel-Shillcock-1-1024x1024.png' images/Make-Life-Work-Rachel-Shillcock-1-1024x1024.png
+ENOENT: no such file or directory, open '/app/_site/images/Make-Life-Work-Dan-Blundell-1-1024x1024.png' images/Make-Life-Work-Dan-Blundell-1-1024x1024.png
+ENOENT: no such file or directory, open '/app/_site/images/Make-Life-Work-Mike-Hince-1-1024x1024.png' images/Make-Life-Work-Mike-Hince-1-1024x1024.png
+ENOENT: no such file or directory, open '/app/_site/images/1CD9294F-B184-4A23-8E54-B5FFDB04D33F-1024x1024.jpeg' images/1CD9294F-B184-4A23-8E54-B5FFDB04D33F-1024x1024.jpeg
+ENOENT: no such file or directory, open '/app/_site/images/0DC7FEF1-B36B-4448-BB60-333B94AA6602-1024x1024.png' images/0DC7FEF1-B36B-4448-BB60-333B94AA6602-1024x1024.png
+ENOENT: no such file or directory, open '/app/_site/images/60C6727A-35D8-41C2-B125-B75719BB9D4D-1024x1024.jpeg' images/60C6727A-35D8-41C2-B125-B75719BB9D4D-1024x1024.jpeg
+ENOENT: no such file or directory, open '/app/_site/images/D5052DC5-FB2A-4EE8-AADB-9E84B2571CE0-1024x1024.jpeg' images/D5052DC5-FB2A-4EE8-AADB-9E84B2571CE0-1024x1024.jpeg
+ENOENT: no such file or directory, open '/app/_site/images/C0936596-1A87-45F4-BE69-FB3B0174FE13-1024x1024.jpeg' images/C0936596-1A87-45F4-BE69-FB3B0174FE13-1024x1024.jpeg
+ENOENT: no such file or directory, open '/app/_site/images/D1AE5595-E6BA-4575-8604-55402239CF17-1024x1024.jpeg' images/D1AE5595-E6BA-4575-8604-55402239CF17-1024x1024.jpeg
+ENOENT: no such file or directory, open '/app/_site/images/9CDB6D46-E5B2-41F5-AFBE-5E02EF07C8C3-1024x1024.png' images/9CDB6D46-E5B2-41F5-AFBE-5E02EF07C8C3-1024x1024.png
+ENOENT: no such file or directory, open '/app/_site/images/3B3CE844-80DD-43B4-8928-0EDAFCEA76D4-1024x1024.png' images/3B3CE844-80DD-43B4-8928-0EDAFCEA76D4-1024x1024.png
+ENOENT: no such file or directory, open '/app/_site/images/E923AED3-370E-41C0-A8F1-61BF388BF64D-1024x1024.png' images/E923AED3-370E-41C0-A8F1-61BF388BF64D-1024x1024.png
+ENOENT: no such file or directory, open '/app/_site/images/Make-Life-Work-Run-Dom-Run-1024x1024.jpg' images/Make-Life-Work-Run-Dom-Run-1024x1024.jpg
+ENOENT: no such file or directory, open '/app/_site/images/Liz-Elcoate.png' images/Liz-Elcoate.png
+ENOENT: no such file or directory, open '/app/_site/images/Daniel-Viddicombe.png' images/Daniel-Viddicombe.png
+ENOENT: no such file or directory, open '/app/_site/images/Franca-Hood.png' images/Franca-Hood.png
+ENOENT: no such file or directory, open '/app/_site/images/Rachael-Depp.png' images/Rachael-Depp.png
+ENOENT: no such file or directory, open '/app/_site/images/mind.png' images/mind.png
+ENOENT: no such file or directory, open '/app/_site/images/IMG_9900.jpeg' images/IMG_9900.jpeg
+ENOENT: no such file or directory, open '/app/_site/images/PETALS-icon.png' images/PETALS-icon.png
+ENOENT: no such file or directory, open '/app/_site/images/902DDB4D-3F4B-43F4-AA58-EF76D15AD738.jpeg' images/902DDB4D-3F4B-43F4-AA58-EF76D15AD738.jpeg
+ENOENT: no such file or directory, open '/app/_site/images/HF24-Opengraph-1024x576.png' images/HF24-Opengraph-1024x576.png
+ENOENT: no such file or directory, open '/app/_site/images/On-The-Side-cover-1024x451.png' images/On-The-Side-cover-1024x451.png
+ENOENT: no such file or directory, open '/app/_site/images/PETALS-mobile-form.png' images/PETALS-mobile-form.png
+ENOENT: no such file or directory, open '/app/_site/images/9423AE78-71A3-4481-ACB2-A15C2ABA4E7E.jpeg' images/9423AE78-71A3-4481-ACB2-A15C2ABA4E7E.jpeg
+ENOENT: no such file or directory, open '/app/_site/images/Ticktick-Cross-Devices-1-1024x483.png' images/Ticktick-Cross-Devices-1-1024x483.png
+[11ty] Writing _site/cv/index.html from ./src/pages/cv.md (liquid)
+[11ty] Writing _site/content-playing-field/index.html from ./src/pages/content-playing-field.md (liquid)
+[11ty] Writing _site/duolingo/index.html from ./src/pages/duolingo.njk
+[11ty] Writing _site/funeral-playlist/index.html from ./src/pages/funeral-playlist.md (liquid)
+[11ty] Writing _site/btc/index.html from ./src/pages/btc.md (liquid)
+[11ty] Writing _site/interests/index.html from ./src/pages/interests.md (liquid)
+[11ty] Writing _site/domains/index.html from ./src/pages/domains.md (liquid)
+[11ty] Writing _site/links/index.html from ./src/pages/links.md (liquid)
+[11ty] Writing _site/contact/index.html from ./src/pages/contact.md (liquid)
+[11ty] Writing _site/listening/index.html from ./src/pages/listening.md (liquid)
+[11ty] Writing _site/make-life-work/index.html from ./src/pages/make-life-work.md (liquid)
+[11ty] Writing _site/ontheside/index.html from ./src/pages/ontheside.md (liquid)
+[11ty] Writing _site/now/index.html from ./src/pages/now.md (liquid)
+[11ty] Writing _site/petals/index.html from ./src/pages/petals.md (liquid)
+[11ty] Writing _site/newsletter/index.html from ./src/pages/newsletter.md (liquid)
+[11ty] Writing _site/recommends/index.html from ./src/pages/recommends.md (liquid)
+[11ty] Writing _site/rss-feeds/index.html from ./src/pages/rss-feeds.md (liquid)
+[11ty] Writing _site/wishlist/index.html from ./src/pages/wishlist.md (liquid)
+[11ty] Writing _site/README/index.html from ./src/pages/README.md (liquid)
+[11ty] Writing _site/site-index/index.html from ./index/site-index.njk
+[11ty] Writing _site/asides/index.html from ./asides.njk
+[11ty] Writing _site/ticktick/index.html from ./src/pages/ticktick.md (liquid)
+[11ty] Writing _site/about/index.html from ./src/pages/about.md (liquid)
+[11ty] Writing _site/tags/index.html from ./tags-list.njk
+[11ty] Writing _site/tags/6/index.html from ./tags.njk
+[11ty] Writing _site/tags/582/index.html from ./tags.njk
+[11ty] Writing _site/tags/961/index.html from ./tags.njk
+[11ty] Writing _site/tags/christine-keeler/index.html from ./tags.njk
+[11ty] Writing _site/tags/f1-calendar/index.html from ./tags.njk
+[11ty] Writing _site/tags/house-finesse/index.html from ./tags.njk
+[11ty] Writing _site/tags/disneyland-paris/index.html from ./tags.njk
+[11ty] Writing _site/tags/joe-lycett/index.html from ./tags.njk
+[11ty] Writing _site/tags/make-life-work/index.html from ./tags.njk
+[11ty] Writing _site/tags/rise-of-skywalker/index.html from ./tags.njk
+[11ty] Writing _site/tags/ashley-baxter/index.html from ./tags.njk
+[11ty] Writing _site/tags/bali/index.html from ./tags.njk
+[11ty] Writing _site/tags/coronavirus/index.html from ./tags.njk
+[11ty] Writing _site/tags/red-herrings-white-elephants/index.html from ./tags.njk
+[11ty] Writing _site/tags/disneyplus/index.html from ./tags.njk
+[11ty] Writing _site/tags/green-party/index.html from ./tags.njk
+[11ty] Writing _site/tags/icloud-for-windows/index.html from ./tags.njk
+[11ty] Writing _site/tags/jurassic-coast/index.html from ./tags.njk
+[11ty] Writing _site/tags/i-am-not-okay-with-this/index.html from ./tags.njk
+[11ty] Writing _site/tags/marc-littlemore/index.html from ./tags.njk
+[11ty] Writing _site/tags/mesh-wifi/index.html from ./tags.njk
+[11ty] Writing _site/tags/noughts-crosses/index.html from ./tags.njk
+[11ty] Writing _site/tags/remote-working/index.html from ./tags.njk
+[11ty] Writing _site/tags/video-conferencing/index.html from ./tags.njk
+[11ty] Writing _site/tags/covid-19/index.html from ./tags.njk
+[11ty] Writing _site/tags/dan-davies/index.html from ./tags.njk
+[11ty] Writing _site/tags/defected/index.html from ./tags.njk
+[11ty] Writing _site/tags/euro-2006/index.html from ./tags.njk
+[11ty] Writing _site/tags/fatboy-slim/index.html from ./tags.njk
+[11ty] Writing _site/tags/joe-wicks/index.html from ./tags.njk
+[11ty] Writing _site/tags/ifttt/index.html from ./tags.njk
+[11ty] Writing _site/tags/nowtv/index.html from ./tags.njk
+[11ty] Writing _site/tags/the-gentlemen/index.html from ./tags.njk
+[11ty] Writing _site/tags/6-nations/index.html from ./tags.njk
+[11ty] Writing _site/tags/asos/index.html from ./tags.njk
+[11ty] Writing _site/tags/inside-the-22/index.html from ./tags.njk
+[11ty] Writing _site/tags/diet/index.html from ./tags.njk
+[11ty] Writing _site/tags/ladhood/index.html from ./tags.njk
+[11ty] Writing _site/tags/nhs/index.html from ./tags.njk
+[11ty] Writing _site/tags/rugby-tap/index.html from ./tags.njk
+[11ty] Writing _site/tags/si-cast/index.html from ./tags.njk
+[11ty] Writing _site/tags/nineties/index.html from ./tags.njk
+[11ty] Writing _site/tags/verbal-diary/index.html from ./tags.njk
+[11ty] Writing _site/tags/diy/index.html from ./tags.njk
+[11ty] Writing _site/tags/blue-nation/index.html from ./tags.njk
+[11ty] Writing _site/tags/kukd/index.html from ./tags.njk
+[11ty] Writing _site/tags/weightlifting/index.html from ./tags.njk
+[11ty] Writing _site/tags/dom-hodgson/index.html from ./tags.njk
+[11ty] Writing _site/tags/sush-kelly/index.html from ./tags.njk
+[11ty] Writing _site/tags/andy-yates/index.html from ./tags.njk
+[11ty] Writing _site/tags/glass/index.html from ./tags.njk
+[11ty] Writing _site/tags/macbook-pro/index.html from ./tags.njk
+[11ty] Writing _site/tags/money-scams/index.html from ./tags.njk
+[11ty] Writing _site/tags/sainsburys-bank/index.html from ./tags.njk
+[11ty] Writing _site/tags/jobling/index.html from ./tags.njk
+[11ty] Writing _site/tags/yousician/index.html from ./tags.njk
+[11ty] Writing _site/tags/zoom/index.html from ./tags.njk
+[11ty] Writing _site/tags/bass-guitar/index.html from ./tags.njk
+[11ty] Writing _site/tags/magic-mouse-2/index.html from ./tags.njk
+[11ty] Writing _site/tags/dj-ez/index.html from ./tags.njk
+[11ty] Writing _site/tags/deadwater-fell/index.html from ./tags.njk
+[11ty] Writing _site/tags/food-intolerance/index.html from ./tags.njk
+[11ty] Writing _site/tags/forty-fest/index.html from ./tags.njk
+[11ty] Writing _site/tags/mental-health/index.html from ./tags.njk
+[11ty] Writing _site/tags/hed-kandi/index.html from ./tags.njk
+[11ty] Writing _site/tags/monzo/index.html from ./tags.njk
+[11ty] Writing _site/tags/murmurs/index.html from ./tags.njk
+[11ty] Writing _site/tags/myfitnesspal/index.html from ./tags.njk
+[11ty] Writing _site/tags/paul-velocity/index.html from ./tags.njk
+[11ty] Writing _site/tags/tech-tools/index.html from ./tags.njk
+[11ty] Writing _site/tags/adapt-podcast/index.html from ./tags.njk
+[11ty] Writing _site/tags/holiday/index.html from ./tags.njk
+FetchError: request to https://pbs.twimg.com/media/EUdmvlkWoAARhhb?format=jpg&name=medium failed, reason:
+    at ClientRequest.<anonymous> (/app/node_modules/node-fetch/lib/index.js:1501:11)
+    at ClientRequest.emit (node:events:519:28)
+    at emitErrorEvent (node:_http_client:107:11)
+    at TLSSocket.socketErrorListener (node:_http_client:574:5)
+    at TLSSocket.emit (node:events:519:28)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at runNextTicks (node:internal/process/task_queues:69:3)
+    at listOnTimeout (node:internal/timers:549:9) {
+  type: 'system',
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT'
+}
+FetchError: request to https://pbs.twimg.com/media/EUijNexXYAEbFt8?format=jpg&name=medium failed, reason:
+    at ClientRequest.<anonymous> (/app/node_modules/node-fetch/lib/index.js:1501:11)
+    at ClientRequest.emit (node:events:519:28)
+    at emitErrorEvent (node:_http_client:107:11)
+    at TLSSocket.socketErrorListener (node:_http_client:574:5)
+    at TLSSocket.emit (node:events:519:28)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at runNextTicks (node:internal/process/task_queues:69:3)
+    at listOnTimeout (node:internal/timers:549:9) {
+  type: 'system',
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT'
+}
+FetchError: request to https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s750x750/91889253_682215002545874_4915104928006610304_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=102&_nc_ohc=7XVQ4Pqf5cUAX9djzxU&oh=1c1aee318354d0b777670a62fb795979&oe=5EB3FEA2 failed, reason:
+    at ClientRequest.<anonymous> (/app/node_modules/node-fetch/lib/index.js:1501:11)
+    at ClientRequest.emit (node:events:519:28)
+    at emitErrorEvent (node:_http_client:107:11)
+    at TLSSocket.socketErrorListener (node:_http_client:574:5)
+    at TLSSocket.emit (node:events:519:28)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at runNextTicks (node:internal/process/task_queues:69:3)
+    at listOnTimeout (node:internal/timers:549:9) {
+  type: 'system',
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT'
+}
+[11ty] Writing _site/tags/marko-kloos/index.html from ./tags.njk
+[11ty] Writing _site/tags/mindnodes/index.html from ./tags.njk
+[11ty] Writing _site/tags/kenneth-johnson/index.html from ./tags.njk
+[11ty] Writing _site/tags/rhodes/index.html from ./tags.njk
+[11ty] Writing _site/tags/t3/index.html from ./tags.njk
+[11ty] Writing _site/tags/total-film/index.html from ./tags.njk
+[11ty] Writing _site/tags/wired-podcast/index.html from ./tags.njk
+[11ty] Writing _site/tags/open-source/index.html from ./tags.njk
+[11ty] Writing _site/tags/feverwake/index.html from ./tags.njk
+[11ty] Writing _site/tags/hearables/index.html from ./tags.njk
+[11ty] Writing _site/tags/flippa/index.html from ./tags.njk
+[11ty] Writing _site/tags/i-may-destroy-you/index.html from ./tags.njk
+[11ty] Writing _site/tags/namecheap/index.html from ./tags.njk
+[11ty] Writing _site/tags/michaela-coel/index.html from ./tags.njk
+[11ty] Writing _site/tags/victoria-lee/index.html from ./tags.njk
+[11ty] Writing _site/tags/acceler8-education/index.html from ./tags.njk
+[11ty] Writing _site/tags/guinea-pigs/index.html from ./tags.njk
+[11ty] Writing _site/tags/easywp/index.html from ./tags.njk
+[11ty] Writing _site/tags/liz-elcoate/index.html from ./tags.njk
+[11ty] Writing _site/tags/super-rams/index.html from ./tags.njk
+[11ty] Writing _site/tags/juan-fernandes/index.html from ./tags.njk
+[11ty] Writing _site/tags/mulan/index.html from ./tags.njk
+[11ty] Writing _site/tags/peanut-butter-falcon/index.html from ./tags.njk
+[11ty] Writing _site/tags/jira/index.html from ./tags.njk
+[11ty] Writing _site/tags/there-she-goes/index.html from ./tags.njk
+[11ty] Writing _site/tags/shopify/index.html from ./tags.njk
+[11ty] Writing _site/tags/brew-republic/index.html from ./tags.njk
+[11ty] Writing _site/tags/daniel-vinnicombe/index.html from ./tags.njk
+[11ty] Writing _site/tags/franca-hood/index.html from ./tags.njk
+[11ty] Writing _site/tags/gweilo/index.html from ./tags.njk
+[11ty] Writing _site/tags/wordpress/index.html from ./tags.njk
+[11ty] Writing _site/tags/kettering/index.html from ./tags.njk
+[11ty] Writing _site/tags/kino-lounge/index.html from ./tags.njk
+[11ty] Writing _site/tags/mike-hince/index.html from ./tags.njk
+[11ty] Writing _site/tags/rushton-hall/index.html from ./tags.njk
+[11ty] Writing _site/tags/naomi-white/index.html from ./tags.njk
+[11ty] Writing _site/tags/teach-mugs/index.html from ./tags.njk
+[11ty] Writing _site/tags/brian-suda/index.html from ./tags.njk
+[11ty] Writing _site/tags/david-attenborough/index.html from ./tags.njk
+[11ty] Writing _site/tags/linksys-velop/index.html from ./tags.njk
+[11ty] Writing _site/tags/sam-mendes/index.html from ./tags.njk
+[11ty] Writing _site/tags/souljackerz/index.html from ./tags.njk
+[11ty] Writing _site/tags/jurassic-grill/index.html from ./tags.njk
+[11ty] Writing _site/tags/the-white-stripes/index.html from ./tags.njk
+[11ty] Writing _site/tags/the-vision/index.html from ./tags.njk
+[11ty] Writing _site/tags/jaz-ampaw-farr/index.html from ./tags.njk
+[11ty] Writing _site/tags/multipack/index.html from ./tags.njk
+[11ty] Writing _site/tags/roadkill/index.html from ./tags.njk
+[11ty] Writing _site/tags/the-shining/index.html from ./tags.njk
+[11ty] Writing _site/tags/sports/index.html from ./tags.njk
+[11ty] Writing _site/tags/elizabeth-day/index.html from ./tags.njk
+[11ty] Writing _site/tags/jingle-jangle/index.html from ./tags.njk
+[11ty] Writing _site/tags/truth-seekers/index.html from ./tags.njk
+[11ty] Writing _site/tags/apple-express-transit/index.html from ./tags.njk
+[11ty] Writing _site/tags/agile-northants/index.html from ./tags.njk
+[11ty] Writing _site/tags/byte/index.html from ./tags.njk
+[11ty] Writing _site/tags/gaming/index.html from ./tags.njk
+[11ty] Writing _site/tags/shrill/index.html from ./tags.njk
+[11ty] Writing _site/tags/agile/index.html from ./tags.njk
+[11ty] Writing _site/tags/collaboration/index.html from ./tags.njk
+[11ty] Writing _site/tags/company-culture/index.html from ./tags.njk
+[11ty] Writing _site/tags/ghostbusters/index.html from ./tags.njk
+[11ty] Writing _site/tags/home-alone/index.html from ./tags.njk
+[11ty] Writing _site/tags/man-like-mobeen/index.html from ./tags.njk
+[11ty] Writing _site/tags/purple-disco-machine/index.html from ./tags.njk
+[11ty] Writing _site/tags/swimming/index.html from ./tags.njk
+[11ty] Writing _site/tags/christmas/index.html from ./tags.njk
+[11ty] Writing _site/tags/tfl/index.html from ./tags.njk
+[11ty] Writing _site/tags/windows/index.html from ./tags.njk
+[11ty] Writing _site/tags/curve-bank/index.html from ./tags.njk
+[11ty] Writing _site/tags/ding-talk/index.html from ./tags.njk
+[11ty] Writing _site/tags/harley-quinn/index.html from ./tags.njk
+[11ty] Writing _site/tags/line-management/index.html from ./tags.njk
+[11ty] Writing _site/tags/on-the-side/index.html from ./tags.njk
+[11ty] Writing _site/tags/valentines/index.html from ./tags.njk
+[11ty] Writing _site/tags/xercise4less/index.html from ./tags.njk
+[11ty] Writing _site/tags/chris-ramsay/index.html from ./tags.njk
+[11ty] Writing _site/tags/agile-delivery/index.html from ./tags.njk
+[11ty] Writing _site/tags/cycling/index.html from ./tags.njk
+[11ty] Writing _site/tags/house-music/index.html from ./tags.njk
+[11ty] Writing _site/tags/middle-age/index.html from ./tags.njk
+[11ty] Writing _site/tags/publishing/index.html from ./tags.njk
+[11ty] Writing _site/tags/gym-memberships/index.html from ./tags.njk
+[11ty] Writing _site/tags/nicholas-parsons/index.html from ./tags.njk
+[11ty] Writing _site/tags/reading/index.html from ./tags.njk
+[11ty] Writing _site/tags/team-away-days/index.html from ./tags.njk
+[11ty] Writing _site/tags/descript/index.html from ./tags.njk
+[11ty] Writing _site/tags/mike-street/index.html from ./tags.njk
+[11ty] Writing _site/tags/ticktick/index.html from ./tags.njk
+[11ty] Writing _site/tags/sam-hardacre/index.html from ./tags.njk
+[11ty] Writing _site/tags/apple/index.html from ./tags.njk
+[11ty] Writing _site/tags/podcasting/index.html from ./tags.njk
+[11ty] Writing _site/tags/the-stranger/index.html from ./tags.njk
+[11ty] Writing _site/tags/domains/index.html from ./tags.njk
+[11ty] Writing _site/tags/petals/index.html from ./tags.njk
+[11ty] Writing _site/tags/hellofresh/index.html from ./tags.njk
+[11ty] Writing _site/tags/kanban/index.html from ./tags.njk
+[11ty] Writing _site/tags/lyp/index.html from ./tags.njk
+[11ty] Writing _site/tags/marshall/index.html from ./tags.njk
+[11ty] Writing _site/tags/ferrite/index.html from ./tags.njk
+[local-images] Skipping remote image https://i1.wp.com/sijobling.com/wp-content/uploads/2020/04/Annie-Atkins-Lockdown-Poster-Worth.jpg?fit=740%2C740&ssl=1 — HTTP 400
+TypeError: Cannot read properties of null (reading 'buffer')
+    at /app/third_party/eleventy-plugin-local-images/.eleventy.js:30:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async downloadImage (/app/third_party/eleventy-plugin-local-images/.eleventy.js:17:23)
+    at async processImageAttr (/app/third_party/eleventy-plugin-local-images/.eleventy.js:87:25)
+    at async Promise.all (index 0)
+    at async processImage (/app/third_party/eleventy-plugin-local-images/.eleventy.js:52:3)
+    at async Promise.all (index 3)
+    at async Object.grabRemoteImages (/app/third_party/eleventy-plugin-local-images/.eleventy.js:130:7)
+    at async Template.runTransforms (/app/node_modules/@11ty/eleventy/src/Template.js:558:15)
+    at async Template.renderPageEntry (/app/node_modules/@11ty/eleventy/src/Template.js:859:15)
+[local-images] Skipping remote image https://i2.wp.com/sijobling.com/wp-content/uploads/2020/04/Annie-Atkins-Lockdown-Poster-Keep-Apart-2020.jpg?fit=740%2C740&ssl=1 — HTTP 404
+TypeError: Cannot read properties of null (reading 'buffer')
+    at /app/third_party/eleventy-plugin-local-images/.eleventy.js:30:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async downloadImage (/app/third_party/eleventy-plugin-local-images/.eleventy.js:17:23)
+    at async processImageAttr (/app/third_party/eleventy-plugin-local-images/.eleventy.js:87:25)
+    at async Promise.all (index 0)
+    at async processImage (/app/third_party/eleventy-plugin-local-images/.eleventy.js:52:3)
+    at async Promise.all (index 4)
+    at async Object.grabRemoteImages (/app/third_party/eleventy-plugin-local-images/.eleventy.js:130:7)
+    at async Template.runTransforms (/app/node_modules/@11ty/eleventy/src/Template.js:558:15)
+    at async Template.renderPageEntry (/app/node_modules/@11ty/eleventy/src/Template.js:859:15)
+[local-images] Skipping remote image https://i2.wp.com/sijobling.com/wp-content/uploads/2020/04/Annie-Atkins-Lockdown-Poster-King-Lear.jpg?fit=740%2C740&ssl=1 — HTTP 400
+TypeError: Cannot read properties of null (reading 'buffer')
+    at /app/third_party/eleventy-plugin-local-images/.eleventy.js:30:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async downloadImage (/app/third_party/eleventy-plugin-local-images/.eleventy.js:17:23)
+    at async processImageAttr (/app/third_party/eleventy-plugin-local-images/.eleventy.js:87:25)
+    at async Promise.all (index 0)
+    at async processImage (/app/third_party/eleventy-plugin-local-images/.eleventy.js:52:3)
+    at async Promise.all (index 5)
+    at async Object.grabRemoteImages (/app/third_party/eleventy-plugin-local-images/.eleventy.js:130:7)
+    at async Template.runTransforms (/app/node_modules/@11ty/eleventy/src/Template.js:558:15)
+    at async Template.renderPageEntry (/app/node_modules/@11ty/eleventy/src/Template.js:859:15)
+[11ty] Writing _site/index.html from ./index.njk
+[11ty] Writing _site/tags/neurodiversity/index.html from ./tags.njk
+[11ty] Writing _site/tags/tech-blog/index.html from ./tags.njk
+[11ty] Writing _site/tags/tech-podcast/index.html from ./tags.njk
+[11ty] Writing _site/tags/adrian-lansdown/index.html from ./tags.njk
+[11ty] Writing _site/tags/blinkist/index.html from ./tags.njk
+[11ty] Writing _site/tags/blogging/index.html from ./tags.njk
+[11ty] Writing _site/tags/faith-metobo/index.html from ./tags.njk
+[11ty] Writing _site/tags/funky-house-finesse/index.html from ./tags.njk
+[11ty] Writing _site/tags/geofencing/index.html from ./tags.njk
+[11ty] Writing _site/tags/chippendales/index.html from ./tags.njk
+[11ty] Writing _site/tags/huddles/index.html from ./tags.njk
+[11ty] Writing _site/tags/london/index.html from ./tags.njk
+[11ty] Writing _site/tags/newsletter/index.html from ./tags.njk
+[11ty] Writing _site/tags/smart-tech/index.html from ./tags.njk
+[11ty] Writing _site/tags/weekly/index.html from ./tags.njk
+[11ty] Writing _site/tags/whitney-houston/index.html from ./tags.njk
+[11ty] Writing _site/tags/inner-source/index.html from ./tags.njk
+[11ty] Writing _site/tags/mars/index.html from ./tags.njk
+[11ty] Writing _site/tags/ken-warner/index.html from ./tags.njk
+[11ty] Writing _site/tags/icloud/index.html from ./tags.njk
+[11ty] Writing _site/tags/notion/index.html from ./tags.njk
+[11ty] Writing _site/tags/nathan-hystad/index.html from ./tags.njk
+[11ty] Writing _site/tags/personal-development-plans/index.html from ./tags.njk
+[11ty] Writing _site/tags/meetings/index.html from ./tags.njk
+[11ty] Writing _site/tags/rode-nt-usb/index.html from ./tags.njk
+[11ty] Writing _site/tags/simon-dunmore/index.html from ./tags.njk
+[11ty] Writing _site/tags/little-warden/index.html from ./tags.njk
+[11ty] Writing _site/tags/facebook/index.html from ./tags.njk
+[11ty] Writing _site/tags/milestone/index.html from ./tags.njk
+[11ty] Writing _site/tags/one-phat-dj/index.html from ./tags.njk
+[11ty] Writing _site/tags/an-event-apart/index.html from ./tags.njk
+[11ty] Writing _site/tags/education/index.html from ./tags.njk
+[11ty] Writing _site/tags/history/index.html from ./tags.njk
+[11ty] Writing _site/tags/infographic/index.html from ./tags.njk
+[11ty] Writing _site/tags/mix/index.html from ./tags.njk
+[11ty] Writing _site/tags/vitamin-talent/index.html from ./tags.njk
+[11ty] Writing _site/tags/des-traynor/index.html from ./tags.njk
+[11ty] Writing _site/tags/features/index.html from ./tags.njk
+[11ty] Writing _site/tags/icebergs/index.html from ./tags.njk
+[11ty] Writing _site/tags/development/index.html from ./tags.njk
+[11ty] Writing _site/tags/intercom/index.html from ./tags.njk
+[11ty] Writing _site/tags/coca-cola/index.html from ./tags.njk
+[11ty] Writing _site/tags/daft-punk/index.html from ./tags.njk
+[11ty] Writing _site/tags/product-design/index.html from ./tags.njk
+[11ty] Writing _site/tags/channel-4/index.html from ./tags.njk
+[11ty] Writing _site/tags/downing-street/index.html from ./tags.njk
+[11ty] Writing _site/tags/livity/index.html from ./tags.njk
+[11ty] Writing _site/tags/somewhereto/index.html from ./tags.njk
+[11ty] Writing _site/tags/content/index.html from ./tags.njk
+[11ty] Writing _site/tags/youth/index.html from ./tags.njk
+[11ty] Writing _site/tags/five-simple-steps/index.html from ./tags.njk
+[11ty] Writing _site/tags/design/index.html from ./tags.njk
+[11ty] Writing _site/tags/video-2/index.html from ./tags.njk
+[11ty] Writing _site/tags/ux/index.html from ./tags.njk
+[11ty] Writing _site/tags/workshops/index.html from ./tags.njk
+[11ty] Writing _site/tags/coda/index.html from ./tags.njk
+[11ty] Writing _site/tags/git/index.html from ./tags.njk
+[11ty] Writing _site/tags/justin-hileman/index.html from ./tags.njk
+[11ty] Writing _site/tags/web-standards/index.html from ./tags.njk
+[11ty] Writing _site/tags/plugin/index.html from ./tags.njk
+[11ty] Writing _site/tags/application/index.html from ./tags.njk
+[11ty] Writing _site/tags/css3/index.html from ./tags.njk
+[11ty] Writing _site/tags/gradients/index.html from ./tags.njk
+[11ty] Writing _site/tags/jump-zero/index.html from ./tags.njk
+[11ty] Writing _site/tags/mac/index.html from ./tags.njk
+[11ty] Writing _site/tags/audio-2/index.html from ./tags.njk
+[11ty] Writing _site/tags/house/index.html from ./tags.njk
+[11ty] Writing _site/tags/music/index.html from ./tags.njk
+[11ty] Writing _site/tags/production/index.html from ./tags.njk
+[11ty] Writing _site/tags/samples/index.html from ./tags.njk
+[11ty] Writing _site/tags/cameron-moll/index.html from ./tags.njk
+[11ty] Writing _site/tags/brainstorming/index.html from ./tags.njk
+[11ty] Writing _site/tags/anton-jankovoy/index.html from ./tags.njk
+[11ty] Writing _site/tags/guardian/index.html from ./tags.njk
+[11ty] Writing _site/tags/magnets/index.html from ./tags.njk
+[11ty] Writing _site/tags/himalayas/index.html from ./tags.njk
+[11ty] Writing _site/tags/milky-way/index.html from ./tags.njk
+[11ty] Writing _site/tags/nepal/index.html from ./tags.njk
+[11ty] Writing _site/tags/photography/index.html from ./tags.njk
+[11ty] Writing _site/tags/animation/index.html from ./tags.njk
+[11ty] Writing _site/tags/disney/index.html from ./tags.njk
+[11ty] Writing _site/tags/google/index.html from ./tags.njk
+[11ty] Writing _site/tags/legacy-trust-uk/index.html from ./tags.njk
+[11ty] Writing _site/tags/legend/index.html from ./tags.njk
+[11ty] Writing _site/tags/mary-blair/index.html from ./tags.njk
+[11ty] Writing _site/tags/anna-debenham/index.html from ./tags.njk
+[11ty] Writing _site/tags/flexbox/index.html from ./tags.njk
+[11ty] Writing _site/tags/prototypes/index.html from ./tags.njk
+[11ty] Writing _site/tags/framework/index.html from ./tags.njk
+[11ty] Writing _site/tags/mobile/index.html from ./tags.njk
+[11ty] Writing _site/tags/menu-bar/index.html from ./tags.njk
+[11ty] Writing _site/tags/web/index.html from ./tags.njk
+[11ty] Writing _site/tags/realign/index.html from ./tags.njk
+[11ty] Writing _site/tags/user-interface/index.html from ./tags.njk
+[11ty] Writing _site/tags/javascript/index.html from ./tags.njk
+[11ty] Writing _site/tags/user-experience/index.html from ./tags.njk
+[11ty] Writing _site/tags/modularisation/index.html from ./tags.njk
+[11ty] Writing _site/tags/advertising/index.html from ./tags.njk
+[11ty] Writing _site/tags/mental-model/index.html from ./tags.njk
+[11ty] Writing _site/tags/responsive-adverts/index.html from ./tags.njk
+[local-images] Skipping remote image http://sijobling.com/wp-content/uploads/2020/11/Teach-Mugs-cup.jpg — HTTP 404
+TypeError: Cannot read properties of null (reading 'buffer')
+    at /app/third_party/eleventy-plugin-local-images/.eleventy.js:30:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async downloadImage (/app/third_party/eleventy-plugin-local-images/.eleventy.js:17:23)
+    at async processImageAttr (/app/third_party/eleventy-plugin-local-images/.eleventy.js:87:25)
+    at async Promise.all (index 0)
+    at async processImage (/app/third_party/eleventy-plugin-local-images/.eleventy.js:52:3)
+    at async Promise.all (index 2)
+    at async Object.grabRemoteImages (/app/third_party/eleventy-plugin-local-images/.eleventy.js:130:7)
+    at async Template.runTransforms (/app/node_modules/@11ty/eleventy/src/Template.js:558:15)
+    at async Template.renderPageEntry (/app/node_modules/@11ty/eleventy/src/Template.js:859:15)
+[local-images] Skipping remote image http://sijobling.com/wp-content/uploads/2020/02/4CBA2018-8CF3-4314-A8B8-BC4AA315D67A.png — HTTP 404
+TypeError: Cannot read properties of null (reading 'buffer')
+    at /app/third_party/eleventy-plugin-local-images/.eleventy.js:30:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async downloadImage (/app/third_party/eleventy-plugin-local-images/.eleventy.js:17:23)
+    at async processImageAttr (/app/third_party/eleventy-plugin-local-images/.eleventy.js:87:25)
+    at async Promise.all (index 0)
+    at async processImage (/app/third_party/eleventy-plugin-local-images/.eleventy.js:52:3)
+    at async Promise.all (index 1)
+    at async Object.grabRemoteImages (/app/third_party/eleventy-plugin-local-images/.eleventy.js:130:7)
+    at async Template.runTransforms (/app/node_modules/@11ty/eleventy/src/Template.js:558:15)
+    at async Template.renderPageEntry (/app/node_modules/@11ty/eleventy/src/Template.js:859:15)
+[local-images] Skipping remote image http://sijobling.com/wp-content/uploads/2020/11/Teach-Mugs-text.jpg — HTTP 404
+TypeError: Cannot read properties of null (reading 'buffer')
+    at /app/third_party/eleventy-plugin-local-images/.eleventy.js:30:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async downloadImage (/app/third_party/eleventy-plugin-local-images/.eleventy.js:17:23)
+    at async processImageAttr (/app/third_party/eleventy-plugin-local-images/.eleventy.js:87:25)
+    at async Promise.all (index 0)
+    at async processImage (/app/third_party/eleventy-plugin-local-images/.eleventy.js:52:3)
+    at async Promise.all (index 1)
+    at async Object.grabRemoteImages (/app/third_party/eleventy-plugin-local-images/.eleventy.js:130:7)
+    at async Template.runTransforms (/app/node_modules/@11ty/eleventy/src/Template.js:558:15)
+    at async Template.renderPageEntry (/app/node_modules/@11ty/eleventy/src/Template.js:859:15)
+[11ty] Writing _site/tags/nathan-ford/index.html from ./tags.njk
+[11ty] Writing _site/tags/responsive-web-design/index.html from ./tags.njk
+[11ty] Writing _site/tags/mark-boulton/index.html from ./tags.njk
+[11ty] Writing _site/tags/copywriting/index.html from ./tags.njk
+[11ty] Writing _site/tags/generator/index.html from ./tags.njk
+[11ty] Writing _site/tags/humour/index.html from ./tags.njk
+[11ty] Writing _site/tags/lorem-ipsum/index.html from ./tags.njk
+[11ty] Writing _site/tags/samuel-l-jackson/index.html from ./tags.njk
+[11ty] Writing _site/tags/matt-gemmell/index.html from ./tags.njk
+[11ty] Writing _site/tags/relevance/index.html from ./tags.njk
+[11ty] Writing _site/tags/seo/index.html from ./tags.njk
+[11ty] Writing _site/tags/branding/index.html from ./tags.njk
+[11ty] Writing _site/tags/revolutionary/index.html from ./tags.njk
+[11ty] Writing _site/tags/simple/index.html from ./tags.njk
+[11ty] Writing _site/tags/central-office-of-design/index.html from ./tags.njk
+[11ty] Writing _site/tags/creative-commons/index.html from ./tags.njk
+[11ty] Writing _site/tags/design-process/index.html from ./tags.njk
+[11ty] Writing _site/tags/damien-newman/index.html from ./tags.njk
+[11ty] Writing _site/tags/squiggle/index.html from ./tags.njk
+[11ty] Writing _site/tags/online-banking/index.html from ./tags.njk
+[11ty] Writing _site/tags/steve-jobs/index.html from ./tags.njk
+[11ty] Writing _site/tags/rest-in-peace/index.html from ./tags.njk
+[11ty] Writing _site/tags/jonathan-mak-long/index.html from ./tags.njk
+[local-images] Skipping remote image http://sijobling.com/wp-content/uploads/2020/01/IMG_0442-1024x1024.png — HTTP 404
+TypeError: Cannot read properties of null (reading 'buffer')
+    at /app/third_party/eleventy-plugin-local-images/.eleventy.js:30:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async downloadImage (/app/third_party/eleventy-plugin-local-images/.eleventy.js:17:23)
+    at async processImageAttr (/app/third_party/eleventy-plugin-local-images/.eleventy.js:87:25)
+    at async Promise.all (index 0)
+    at async processImage (/app/third_party/eleventy-plugin-local-images/.eleventy.js:52:3)
+    at async Promise.all (index 2)
+    at async Object.grabRemoteImages (/app/third_party/eleventy-plugin-local-images/.eleventy.js:130:7)
+    at async Template.runTransforms (/app/node_modules/@11ty/eleventy/src/Template.js:558:15)
+    at async Template.renderPageEntry (/app/node_modules/@11ty/eleventy/src/Template.js:859:15)
+[local-images] Skipping remote image http://sijobling.com/wp-content/uploads/2020/09/Acceler8-Education-MVP-1024x537.png — HTTP 404
+TypeError: Cannot read properties of null (reading 'buffer')
+    at /app/third_party/eleventy-plugin-local-images/.eleventy.js:30:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async downloadImage (/app/third_party/eleventy-plugin-local-images/.eleventy.js:17:23)
+    at async processImageAttr (/app/third_party/eleventy-plugin-local-images/.eleventy.js:87:25)
+    at async Promise.all (index 0)
+    at async processImage (/app/third_party/eleventy-plugin-local-images/.eleventy.js:52:3)
+    at async Promise.all (index 1)
+    at async Object.grabRemoteImages (/app/third_party/eleventy-plugin-local-images/.eleventy.js:130:7)
+    at async Template.runTransforms (/app/node_modules/@11ty/eleventy/src/Template.js:558:15)
+    at async Template.renderPageEntry (/app/node_modules/@11ty/eleventy/src/Template.js:859:15)
+[local-images] Skipping remote image http://sijobling.com/wp-content/uploads/2020/04/image-1.png — HTTP 404
+TypeError: Cannot read properties of null (reading 'buffer')
+    at /app/third_party/eleventy-plugin-local-images/.eleventy.js:30:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async downloadImage (/app/third_party/eleventy-plugin-local-images/.eleventy.js:17:23)
+    at async processImageAttr (/app/third_party/eleventy-plugin-local-images/.eleventy.js:87:25)
+    at async Promise.all (index 0)
+    at async processImage (/app/third_party/eleventy-plugin-local-images/.eleventy.js:52:3)
+    at async Promise.all (index 2)
+    at async Object.grabRemoteImages (/app/third_party/eleventy-plugin-local-images/.eleventy.js:130:7)
+    at async Template.runTransforms (/app/node_modules/@11ty/eleventy/src/Template.js:558:15)
+    at async Template.renderPageEntry (/app/node_modules/@11ty/eleventy/src/Template.js:859:15)
+[11ty] Writing _site/tags/visionary/index.html from ./tags.njk
+[11ty] Writing _site/tags/wallpaper/index.html from ./tags.njk
+[11ty] Writing _site/tags/engagement/index.html from ./tags.njk
+[11ty] Writing _site/tags/desktop/index.html from ./tags.njk
+[11ty] Writing _site/tags/gamification/index.html from ./tags.njk
+[11ty] Writing _site/tags/george/index.html from ./tags.njk
+[11ty] Writing _site/tags/lego/index.html from ./tags.njk
+[11ty] Writing _site/tags/iphone/index.html from ./tags.njk
+[11ty] Writing _site/tags/toys/index.html from ./tags.njk
+[11ty] Writing _site/tags/lamp/index.html from ./tags.njk
+[11ty] Writing _site/tags/toggle/index.html from ./tags.njk
+[11ty] Writing _site/tags/yonggo-du/index.html from ./tags.njk
+[11ty] Writing _site/tags/legacy/index.html from ./tags.njk
+[11ty] Writing _site/tags/audience/index.html from ./tags.njk
+[11ty] Writing _site/tags/promotional/index.html from ./tags.njk
+[11ty] Writing _site/tags/stories/index.html from ./tags.njk
+[11ty] Writing _site/tags/twitter/index.html from ./tags.njk
+[11ty] Writing _site/tags/focus/index.html from ./tags.njk
+[11ty] Writing _site/tags/minimalist/index.html from ./tags.njk
+[11ty] Writing _site/tags/productivity/index.html from ./tags.njk
+[11ty] Writing _site/tags/tasks/index.html from ./tags.njk
+[11ty] Writing _site/tags/time-management/index.html from ./tags.njk
+[11ty] Writing _site/tags/usability/index.html from ./tags.njk
+[11ty] Writing _site/tags/dustin-curtis/index.html from ./tags.njk
+[11ty] Writing _site/tags/rounded-corners/index.html from ./tags.njk
+[11ty] Writing _site/tags/ux-movement/index.html from ./tags.njk
+[11ty] Writing _site/tags/hack/index.html from ./tags.njk
+[11ty] Writing _site/tags/buffer/index.html from ./tags.njk
+[11ty] Writing _site/tags/opinion/index.html from ./tags.njk
+[11ty] Writing _site/tags/steven-bradley/index.html from ./tags.njk
+[11ty] Writing _site/tags/applicaiton/index.html from ./tags.njk
+[11ty] Writing _site/tags/identity-theft/index.html from ./tags.njk
+[11ty] Writing _site/tags/john-oxton/index.html from ./tags.njk
+[11ty] Writing _site/tags/social/index.html from ./tags.njk
+[11ty] Writing _site/tags/angry-birds/index.html from ./tags.njk
+[11ty] Writing _site/tags/online-privacy/index.html from ./tags.njk
+[11ty] Writing _site/tags/games/index.html from ./tags.njk
+[11ty] Writing _site/tags/promotion/index.html from ./tags.njk
+[11ty] Writing _site/tags/business/index.html from ./tags.njk
+[11ty] Writing _site/tags/dalton-caldwell/index.html from ./tags.njk
+[11ty] Writing _site/tags/derek-powazek/index.html from ./tags.njk
+[11ty] Writing _site/tags/digg/index.html from ./tags.njk
+[11ty] Writing _site/tags/maciej-ceglowski/index.html from ./tags.njk
+[11ty] Writing _site/tags/pinboard/index.html from ./tags.njk
+[11ty] Writing _site/tags/ui/index.html from ./tags.njk
+[11ty] Writing _site/tags/social-networks/index.html from ./tags.njk
+[11ty] Writing _site/tags/augmented-reality/index.html from ./tags.njk
+[11ty] Writing _site/tags/industry-insights/index.html from ./tags.njk
+[11ty] Writing _site/tags/data/index.html from ./tags.njk
+[11ty] Writing _site/tags/writing/index.html from ./tags.njk
+[11ty] Writing _site/tags/bem/index.html from ./tags.njk
+[11ty] Writing _site/tags/api/index.html from ./tags.njk
+[11ty] Writing _site/tags/fleve/index.html from ./tags.njk
+[11ty] Writing _site/tags/identity/index.html from ./tags.njk
+[11ty] Writing _site/tags/gusto/index.html from ./tags.njk
+[11ty] Writing _site/tags/imockups/index.html from ./tags.njk
+[11ty] Writing _site/tags/ipad/index.html from ./tags.njk
+[11ty] Writing _site/tags/brands/index.html from ./tags.njk
+[11ty] Writing _site/tags/ari-weinstein/index.html from ./tags.njk
+[11ty] Writing _site/tags/cathy-s-lee/index.html from ./tags.njk
+[11ty] Writing _site/tags/game/index.html from ./tags.njk
+[11ty] Writing _site/tags/tumblr/index.html from ./tags.njk
+[11ty] Writing _site/tags/creative-bloq/index.html from ./tags.njk
+[11ty] Writing _site/tags/kevin-xu/index.html from ./tags.njk
+[11ty] Writing _site/tags/browsers/index.html from ./tags.njk
+[11ty] Writing _site/tags/statistics/index.html from ./tags.njk
+[11ty] Writing _site/tags/software/index.html from ./tags.njk
+[11ty] Writing _site/tags/trends/index.html from ./tags.njk
+[11ty] Writing _site/tags/383-project/index.html from ./tags.njk
+[11ty] Writing _site/tags/conference/index.html from ./tags.njk
+[11ty] Writing _site/tags/birmingham/index.html from ./tags.njk
+[11ty] Writing _site/tags/app/index.html from ./tags.njk
+[11ty] Writing _site/tags/html5/index.html from ./tags.njk
+[11ty] Writing _site/tags/web-development/index.html from ./tags.njk
+[11ty] Writing _site/tags/experiments/index.html from ./tags.njk
+[11ty] Writing _site/tags/google-chrome/index.html from ./tags.njk
+[11ty] Writing _site/tags/deployment/index.html from ./tags.njk
+[local-images] Skipping remote image http://sijobling.com/wp-content/uploads/2020/01/IMG_0406.png — HTTP 404
+TypeError: Cannot read properties of null (reading 'buffer')
+    at /app/third_party/eleventy-plugin-local-images/.eleventy.js:30:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async downloadImage (/app/third_party/eleventy-plugin-local-images/.eleventy.js:17:23)
+    at async processImageAttr (/app/third_party/eleventy-plugin-local-images/.eleventy.js:87:25)
+    at async Promise.all (index 0)
+    at async processImage (/app/third_party/eleventy-plugin-local-images/.eleventy.js:52:3)
+    at async Promise.all (index 1)
+    at async Object.grabRemoteImages (/app/third_party/eleventy-plugin-local-images/.eleventy.js:130:7)
+    at async Template.runTransforms (/app/node_modules/@11ty/eleventy/src/Template.js:558:15)
+    at async Template.renderPageEntry (/app/node_modules/@11ty/eleventy/src/Template.js:859:15)
+[local-images] Skipping remote image http://sijobling.com/wp-content/uploads/2020/04/image.png — HTTP 404
+TypeError: Cannot read properties of null (reading 'buffer')
+    at /app/third_party/eleventy-plugin-local-images/.eleventy.js:30:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async downloadImage (/app/third_party/eleventy-plugin-local-images/.eleventy.js:17:23)
+    at async processImageAttr (/app/third_party/eleventy-plugin-local-images/.eleventy.js:87:25)
+    at async Promise.all (index 0)
+    at async processImage (/app/third_party/eleventy-plugin-local-images/.eleventy.js:52:3)
+    at async Promise.all (index 1)
+    at async Object.grabRemoteImages (/app/third_party/eleventy-plugin-local-images/.eleventy.js:130:7)
+    at async Template.runTransforms (/app/node_modules/@11ty/eleventy/src/Template.js:558:15)
+    at async Template.renderPageEntry (/app/node_modules/@11ty/eleventy/src/Template.js:859:15)
+[11ty] Writing _site/tags/gustavs-cirulis/index.html from ./tags.njk
+[11ty] Writing _site/tags/british/index.html from ./tags.njk
+[11ty] Writing _site/tags/mini/index.html from ./tags.njk
+[11ty] Writing _site/tags/colour/index.html from ./tags.njk
+[11ty] Writing _site/tags/testing/index.html from ./tags.njk
+[11ty] Writing _site/tags/david-parsons/index.html from ./tags.njk
+[11ty] Writing _site/tags/dublin/index.html from ./tags.njk
+[11ty] Writing _site/tags/crayola/index.html from ./tags.njk
+[11ty] Writing _site/tags/meetup/index.html from ./tags.njk
+[11ty] Writing _site/tags/creative/index.html from ./tags.njk
+[11ty] Writing _site/tags/daniel-mall/index.html from ./tags.njk
+[11ty] Writing _site/tags/redesign/index.html from ./tags.njk
+[11ty] Writing _site/tags/initiative/index.html from ./tags.njk
+[11ty] Writing _site/tags/inspiration-2/index.html from ./tags.njk
+[11ty] Writing _site/tags/sane-able/index.html from ./tags.njk
+[11ty] Writing _site/tags/atribution/index.html from ./tags.njk
+[11ty] Writing _site/tags/london-science-museum/index.html from ./tags.njk
+[11ty] Writing _site/tags/curators-code/index.html from ./tags.njk
+[11ty] Writing _site/tags/standardisation/index.html from ./tags.njk
+[11ty] Writing _site/tags/symbols/index.html from ./tags.njk
+[11ty] Writing _site/tags/net-magazine/index.html from ./tags.njk
+[11ty] Writing _site/tags/contribution/index.html from ./tags.njk
+[11ty] Writing _site/tags/ipo/index.html from ./tags.njk
+[11ty] Writing _site/tags/pixar/index.html from ./tags.njk
+[11ty] Writing _site/tags/wall-e/index.html from ./tags.njk
+[11ty] Writing _site/tags/commerce/index.html from ./tags.njk
+[11ty] Writing _site/tags/stef-lewandowski/index.html from ./tags.njk
+[11ty] Writing _site/tags/4g/index.html from ./tags.njk
+[11ty] Writing _site/tags/ee/index.html from ./tags.njk
+[11ty] Writing _site/tags/orange/index.html from ./tags.njk
+[11ty] Writing _site/tags/t-mobile/index.html from ./tags.njk
+[11ty] Writing _site/tags/telecommunication/index.html from ./tags.njk
+[11ty] Writing _site/tags/visualisation/index.html from ./tags.njk
+[11ty] Writing _site/tags/ford/index.html from ./tags.njk
+[11ty] Writing _site/tags/chrome/index.html from ./tags.njk
+[11ty] Writing _site/tags/ios/index.html from ./tags.njk
+[11ty] Writing _site/tags/security/index.html from ./tags.njk
+[11ty] Writing _site/tags/collaborative/index.html from ./tags.njk
+[11ty] Writing _site/tags/startup/index.html from ./tags.njk
+[11ty] Writing _site/tags/cameron-chittock/index.html from ./tags.njk
+[11ty] Writing _site/tags/bottle-top-bill/index.html from ./tags.njk
+[11ty] Writing _site/tags/flight-of-the-navigator/index.html from ./tags.njk
+[11ty] Writing _site/tags/banking/index.html from ./tags.njk
+[11ty] Writing _site/tags/minority-report/index.html from ./tags.njk
+[11ty] Writing _site/tags/iconic/index.html from ./tags.njk
+[11ty] Writing _site/tags/the-matrix/index.html from ./tags.njk
+[11ty] Writing _site/tags/alexander-kahlkopf/index.html from ./tags.njk
+[11ty] Writing _site/tags/icons/index.html from ./tags.njk
+[11ty] Writing _site/tags/animated-gifs/index.html from ./tags.njk
+[11ty] Writing _site/tags/email/index.html from ./tags.njk
+[11ty] Writing _site/tags/paul-boag/index.html from ./tags.njk
+[11ty] Writing _site/tags/kenneth-cole-foundation/index.html from ./tags.njk
+[11ty] Writing _site/tags/retention-rate/index.html from ./tags.njk
+[11ty] Writing _site/tags/instagram/index.html from ./tags.njk
+[11ty] Writing _site/tags/return-visitors/index.html from ./tags.njk
+[11ty] Writing _site/tags/statigram/index.html from ./tags.njk
+[11ty] Writing _site/tags/industry-insight/index.html from ./tags.njk
+[11ty] Writing _site/tags/brad-frost/index.html from ./tags.njk
+[11ty] Writing _site/tags/microsoft-surface/index.html from ./tags.njk
+[11ty] Writing _site/tags/movies/index.html from ./tags.njk
+[11ty] Writing _site/tags/craftsmanship/index.html from ./tags.njk
+[11ty] Writing _site/tags/jeffrey-zeldman/index.html from ./tags.njk
+[11ty] Writing _site/tags/leiden/index.html from ./tags.njk
+[11ty] Writing _site/tags/jackie-brown/index.html from ./tags.njk
+[11ty] Writing _site/tags/skeuomorphism/index.html from ./tags.njk
+[11ty] Writing _site/tags/title-sequence/index.html from ./tags.njk
+[11ty] Writing _site/tags/joint-london/index.html from ./tags.njk
+[11ty] Writing _site/tags/chris-coyier/index.html from ./tags.njk
+[11ty] Writing _site/tags/101-dalmations/index.html from ./tags.njk
+[11ty] Writing _site/tags/inspirational/index.html from ./tags.njk
+[11ty] Writing _site/tags/andy-clarke/index.html from ./tags.njk
+[11ty] Writing _site/tags/web-design/index.html from ./tags.njk
+[11ty] Writing _site/tags/contract/index.html from ./tags.njk
+[11ty] Writing _site/tags/projects/index.html from ./tags.njk
+[11ty] Writing _site/tags/backbone-js/index.html from ./tags.njk
+[11ty] Writing _site/tags/code-school/index.html from ./tags.njk
+[11ty] Writing _site/tags/chris-shiflett/index.html from ./tags.njk
+[11ty] Writing _site/tags/coderwall/index.html from ./tags.njk
+[11ty] Writing _site/tags/node-js/index.html from ./tags.njk
+[11ty] Writing _site/tags/offer/index.html from ./tags.njk
+[11ty] Writing _site/tags/peepcode/index.html from ./tags.njk
+[11ty] Writing _site/tags/women-in-tech/index.html from ./tags.njk
+[11ty] Writing _site/tags/user-interactions/index.html from ./tags.njk
+[11ty] Writing _site/tags/books/index.html from ./tags.njk
+[11ty] Writing _site/tags/input-device/index.html from ./tags.njk
+[11ty] Writing _site/tags/typography/index.html from ./tags.njk
+[11ty] Writing _site/tags/ios6/index.html from ./tags.njk
+[11ty] Writing _site/tags/metallic/index.html from ./tags.njk
+[11ty] Writing _site/tags/skeuopmorph/index.html from ./tags.njk
+[11ty] Writing _site/tags/engineering/index.html from ./tags.njk
+[11ty] Writing _site/tags/nicholas-c-zakas/index.html from ./tags.njk
+[11ty] Writing _site/tags/logo/index.html from ./tags.njk
+[11ty] Writing _site/tags/michael-evamy/index.html from ./tags.njk
+[11ty] Writing _site/tags/time/index.html from ./tags.njk
+[11ty] Writing _site/tags/context/index.html from ./tags.njk
+[11ty] Writing _site/tags/karen-mcgrane/index.html from ./tags.njk
+[11ty] Writing _site/tags/local/index.html from ./tags.njk
+[11ty] Writing _site/tags/culture/index.html from ./tags.njk
+[11ty] Writing _site/tags/nerd/index.html from ./tags.njk
+[11ty] Writing _site/tags/venn-diagram/index.html from ./tags.njk
+[11ty] Writing _site/tags/black/index.html from ./tags.njk
+[11ty] Writing _site/tags/leap-motion/index.html from ./tags.njk
+[11ty] Writing _site/tags/ian-storm-taylor/index.html from ./tags.njk
+[11ty] Writing _site/tags/greg-wood/index.html from ./tags.njk
+[11ty] Writing _site/tags/nottingham/index.html from ./tags.njk
+[11ty] Writing _site/tags/simon-collison/index.html from ./tags.njk
+[11ty] Writing _site/tags/web-application/index.html from ./tags.njk
+[11ty] Writing _site/tags/joshua-porter/index.html from ./tags.njk
+[11ty] Writing _site/tags/online/index.html from ./tags.njk
+[11ty] Writing _site/tags/flesch-kincaid/index.html from ./tags.njk
+[11ty] Writing _site/tags/readability/index.html from ./tags.njk
+[11ty] Writing _site/tags/marketing/index.html from ./tags.njk
+[11ty] Writing _site/tags/brighton/index.html from ./tags.njk
+[11ty] Writing _site/tags/campaign-monitor/index.html from ./tags.njk
+[11ty] Writing _site/tags/rebrand/index.html from ./tags.njk
+[11ty] Writing _site/tags/responsive/index.html from ./tags.njk
+[11ty] Writing _site/tags/client/index.html from ./tags.njk
+[11ty] Writing _site/tags/microsoft/index.html from ./tags.njk
+[11ty] Writing _site/tags/website/index.html from ./tags.njk
+[11ty] Writing _site/tags/icon-eye/index.html from ./tags.njk
+[11ty] Writing _site/tags/rail/index.html from ./tags.njk
+[11ty] Writing _site/tags/retina/index.html from ./tags.njk
+[11ty] Writing _site/tags/technology/index.html from ./tags.njk
+[11ty] Writing _site/tags/marco-arment/index.html from ./tags.njk
+[11ty] Writing _site/tags/rosie-lee/index.html from ./tags.njk
+[11ty] Writing _site/tags/quality/index.html from ./tags.njk
+[11ty] Writing _site/tags/networking/index.html from ./tags.njk
+[11ty] Writing _site/tags/tobias-van-schneider/index.html from ./tags.njk
+[11ty] Writing _site/tags/registration/index.html from ./tags.njk
+[11ty] Writing _site/tags/novelty/index.html from ./tags.njk
+[11ty] Writing _site/tags/simplicity/index.html from ./tags.njk
+[11ty] Writing _site/tags/pre-process/index.html from ./tags.njk
+[11ty] Writing _site/tags/visual-idiot/index.html from ./tags.njk
+[11ty] Writing _site/tags/mark-otto/index.html from ./tags.njk
+[11ty] Writing _site/tags/sprites/index.html from ./tags.njk
+[11ty] Writing _site/tags/the-team/index.html from ./tags.njk
+[11ty] Writing _site/tags/off-canvas/index.html from ./tags.njk
+[11ty] Writing _site/tags/data-analysis/index.html from ./tags.njk
+[11ty] Writing _site/tags/jakob-henner/index.html from ./tags.njk
+[11ty] Writing _site/tags/magazine/index.html from ./tags.njk
+[11ty] Writing _site/tags/weather/index.html from ./tags.njk
+[11ty] Writing _site/tags/12-devs-of-xmas/index.html from ./tags.njk
+[11ty] Writing _site/tags/suit-up-or-die/index.html from ./tags.njk
+[11ty] Writing _site/tags/tool/index.html from ./tags.njk
+[11ty] Writing _site/tags/article/index.html from ./tags.njk
+[11ty] Writing _site/tags/bp/index.html from ./tags.njk
+[11ty] Writing _site/tags/logos/index.html from ./tags.njk
+[11ty] Writing _site/tags/web-professional/index.html from ./tags.njk
+[11ty] Writing _site/tags/simon-oxley/index.html from ./tags.njk
+[11ty] Writing _site/tags/the-dandy/index.html from ./tags.njk
+[11ty] Writing _site/tags/showreel/index.html from ./tags.njk
+[11ty] Writing _site/tags/pentigram/index.html from ./tags.njk
+[11ty] Writing _site/tags/dan-wieden/index.html from ./tags.njk
+[11ty] Writing _site/tags/television/index.html from ./tags.njk
+[11ty] Writing _site/tags/social-media/index.html from ./tags.njk
+[11ty] Writing _site/tags/wiedenkennedy/index.html from ./tags.njk
+[11ty] Writing _site/tags/adrian-short/index.html from ./tags.njk
+[11ty] Writing _site/tags/digital-comics/index.html from ./tags.njk
+[11ty] Writing _site/tags/john-allsop/index.html from ./tags.njk
+[11ty] Writing _site/tags/timeline/index.html from ./tags.njk
+[11ty] Writing _site/tags/world-wide-web/index.html from ./tags.njk
+[11ty] Writing _site/tags/trainspotting/index.html from ./tags.njk
+[11ty] Writing _site/tags/government/index.html from ./tags.njk
+[11ty] Writing _site/tags/andrey-petrov/index.html from ./tags.njk
+[11ty] Writing _site/tags/infographics/index.html from ./tags.njk
+[11ty] Writing _site/tags/moneysupermarket/index.html from ./tags.njk
+[11ty] Writing _site/tags/visually/index.html from ./tags.njk
+[11ty] Writing _site/tags/kyan/index.html from ./tags.njk
+[11ty] Writing _site/tags/alain-hufkens/index.html from ./tags.njk
+[11ty] Writing _site/tags/kids/index.html from ./tags.njk
+[11ty] Writing _site/tags/new-is-new/index.html from ./tags.njk
+[11ty] Writing _site/tags/redux/index.html from ./tags.njk
+[11ty] Writing _site/tags/paddy-donnelly/index.html from ./tags.njk
+[11ty] Writing _site/tags/text-editor/index.html from ./tags.njk
+[11ty] Writing _site/tags/wikipedia/index.html from ./tags.njk
+[11ty] Writing _site/tags/speech/index.html from ./tags.njk
+[11ty] Writing _site/tags/xing/index.html from ./tags.njk
+[11ty] Writing _site/tags/open-graph/index.html from ./tags.njk
+[11ty] Writing _site/tags/fictive-kin/index.html from ./tags.njk
+[11ty] Writing _site/tags/wysywig/index.html from ./tags.njk
+[11ty] Writing _site/tags/gtd/index.html from ./tags.njk
+[11ty] Writing _site/tags/lifestyle/index.html from ./tags.njk
+[11ty] Writing _site/tags/fan-art/index.html from ./tags.njk
+[11ty] Writing _site/tags/minimal/index.html from ./tags.njk
+[11ty] Writing _site/tags/seb-lester/index.html from ./tags.njk
+[11ty] Writing _site/tags/profanity/index.html from ./tags.njk
+[11ty] Writing _site/tags/calligraphy/index.html from ./tags.njk
+[11ty] Writing _site/tags/canonical/index.html from ./tags.njk
+[11ty] Writing _site/tags/os/index.html from ./tags.njk
+[11ty] Writing _site/tags/ubuntu/index.html from ./tags.njk
+[11ty] Writing _site/tags/github/index.html from ./tags.njk
+[11ty] Writing _site/tags/markup/index.html from ./tags.njk
+[11ty] Writing _site/tags/checkbox/index.html from ./tags.njk
+[11ty] Writing _site/tags/motioninthebrowser/index.html from ./tags.njk
+[11ty] Writing _site/tags/mastercard/index.html from ./tags.njk
+[11ty] Writing _site/tags/career/index.html from ./tags.njk
+[11ty] Writing _site/tags/todo/index.html from ./tags.njk
+[11ty] Writing _site/tags/guest-post/index.html from ./tags.njk
+[11ty] Writing _site/tags/society/index.html from ./tags.njk
+[11ty] Writing _site/tags/accessibility/index.html from ./tags.njk
+[11ty] Writing _site/tags/design-trends/index.html from ./tags.njk
+[11ty] Writing _site/tags/inclusive-design/index.html from ./tags.njk
+[11ty] Writing _site/tags/webflow/index.html from ./tags.njk
+[11ty] Writing _site/tags/claire-lew/index.html from ./tags.njk
+[11ty] Writing _site/tags/leadership/index.html from ./tags.njk
+[11ty] Writing _site/tags/wootumblog/index.html from ./tags.njk
+[11ty] Writing _site/tags/management/index.html from ./tags.njk
+[11ty] Writing _site/tags/google-maps/index.html from ./tags.njk
+[11ty] Writing _site/tags/colour-theory/index.html from ./tags.njk
+[11ty] Writing _site/tags/nicole-zonnenberg/index.html from ./tags.njk
+[11ty] Writing _site/tags/bt/index.html from ./tags.njk
+[11ty] Writing _site/tags/jpeg/index.html from ./tags.njk
+[11ty] Writing _site/tags/reference/index.html from ./tags.njk
+[11ty] Writing _site/tags/lena-forsen/index.html from ./tags.njk
+[11ty] Writing _site/tags/sean-adams/index.html from ./tags.njk
+[11ty] Writing _site/tags/fonts/index.html from ./tags.njk
+[11ty] Writing _site/tags/tools-2/index.html from ./tags.njk
+[11ty] Writing _site/tags/slack/index.html from ./tags.njk
+[11ty] Writing _site/tags/domain-names/index.html from ./tags.njk
+[11ty] Writing _site/tags/side-projects/index.html from ./tags.njk
+[11ty] Writing _site/tags/josh-hadik/index.html from ./tags.njk
+[11ty] Writing _site/tags/cloud-computing/index.html from ./tags.njk
+[11ty] Writing _site/tags/inspect-and-adapt/index.html from ./tags.njk
+[11ty] Writing _site/tags/santa-tracker/index.html from ./tags.njk
+[11ty] Writing _site/tags/html/index.html from ./tags.njk
+[11ty] Writing _site/tags/bluetooth/index.html from ./tags.njk
+[11ty] Writing _site/tags/pwa/index.html from ./tags.njk
+[11ty] Writing _site/tags/classics/index.html from ./tags.njk
+[11ty] Writing _site/tags/fiction/index.html from ./tags.njk
+[11ty] Writing _site/tags/george-orwell/index.html from ./tags.njk
+[11ty] Writing _site/tags/hosting/index.html from ./tags.njk
+[11ty] Writing _site/tags/andy-weir/index.html from ./tags.njk
+[11ty] Writing _site/tags/non-fiction/index.html from ./tags.njk
+[11ty] Writing _site/tags/lee-child/index.html from ./tags.njk
+[11ty] Writing _site/tags/dystopia/index.html from ./tags.njk
+[11ty] Writing _site/tags/a-g-riddle/index.html from ./tags.njk
+[11ty] Writing _site/tags/chad-hall/index.html from ./tags.njk
+[11ty] Writing _site/tags/patricia-cornwell/index.html from ./tags.njk
+[11ty] Writing _site/tags/kim-malone-scott/index.html from ./tags.njk
+[11ty] Writing _site/tags/forward-collection/index.html from ./tags.njk
+[11ty] Writing _site/tags/sci-fi/index.html from ./tags.njk
+[11ty] Writing _site/tags/blake-crouch/index.html from ./tags.njk
+[11ty] Writing _site/tags/paul-tremblay/index.html from ./tags.njk
+[11ty] Writing _site/tags/andrew-mayne/index.html from ./tags.njk
+[11ty] Writing _site/tags/hg-wells/index.html from ./tags.njk
+[11ty] Writing _site/tags/jess-walter/index.html from ./tags.njk
+[11ty] Writing _site/tags/warmer/index.html from ./tags.njk
+[11ty] Writing _site/tags/edan-lepucki/index.html from ./tags.njk
+[11ty] Writing _site/tags/amor-towles/index.html from ./tags.njk
+[11ty] Writing _site/tags/magic-2-0/index.html from ./tags.njk
+[11ty] Writing _site/tags/the-kwan-thrillers/index.html from ./tags.njk
+[11ty] Writing _site/tags/meera-kothand/index.html from ./tags.njk
+[11ty] Writing _site/tags/content-strategy/index.html from ./tags.njk
+[11ty] Writing _site/tags/short-story/index.html from ./tags.njk
+[11ty] Writing _site/tags/black-stars/index.html from ./tags.njk
+[11ty] Writing _site/tags/clare-littlemore/index.html from ./tags.njk
+[11ty] Writing _site/tags/the-bellator-chronicles/index.html from ./tags.njk
+[11ty] Writing _site/tags/bitcoin/index.html from ./tags.njk
+[11ty] Writing _site/tags/finance/index.html from ./tags.njk
+[11ty] Writing _site/tags/startups/index.html from ./tags.njk
+[11ty] Writing _site/tags/biography/index.html from ./tags.njk
+[11ty] Writing _site/tags/southern-belle-insults/index.html from ./tags.njk
+[11ty] Writing _site/tags/nick-spalding/index.html from ./tags.njk
+[11ty] Writing _site/tags/the-bridge-sequence/index.html from ./tags.njk
+[11ty] Writing _site/tags/web3/index.html from ./tags.njk
+[11ty] Writing _site/tags/metaverse/index.html from ./tags.njk
+[11ty] Writing _site/tags/the-survivors-series/index.html from ./tags.njk
+[11ty] Writing _site/tags/rating3/index.html from ./tags.njk
+[11ty] Writing _site/tags/rating4/index.html from ./tags.njk
+[11ty] Writing _site/tags/influencer/index.html from ./tags.njk
+[11ty] Writing _site/tags/wellbeing/index.html from ./tags.njk
+[11ty] Writing _site/tags/george-green/index.html from ./tags.njk
+[11ty] Writing _site/tags/west-midlands/index.html from ./tags.njk
+[11ty] Writing _site/tags/west-midlands-fire-service/index.html from ./tags.njk
+[11ty] Writing _site/tags/hart-and-harvey/index.html from ./tags.njk
+[11ty] Writing _site/tags/strategy/index.html from ./tags.njk
+[11ty] Writing _site/tags/brochure/index.html from ./tags.njk
+[11ty] Writing _site/tags/microformats/index.html from ./tags.njk
+[11ty] Writing _site/tags/premium-choice/index.html from ./tags.njk
+[11ty] Writing _site/tags/rich-data/index.html from ./tags.njk
+[11ty] Writing _site/tags/uefa/index.html from ./tags.njk
+[11ty] Writing _site/tags/calendars/index.html from ./tags.njk
+[11ty] Writing _site/tags/insurance/index.html from ./tags.njk
+[11ty] Writing _site/tags/niche/index.html from ./tags.njk
+[11ty] Writing _site/tags/comedy/index.html from ./tags.njk
+[11ty] Writing _site/tags/iplayer/index.html from ./tags.njk
+[11ty] Writing _site/tags/paul-robert-lloyd/index.html from ./tags.njk
+[11ty] Writing _site/tags/prototype/index.html from ./tags.njk
+[11ty] Writing _site/tags/twitterfeed/index.html from ./tags.njk
+[11ty] Writing _site/tags/rss/index.html from ./tags.njk
+[11ty] Writing _site/tags/web-service/index.html from ./tags.njk
+[11ty] Writing _site/tags/daniel-newns/index.html from ./tags.njk
+[11ty] Writing _site/tags/kickoff/index.html from ./tags.njk
+[11ty] Writing _site/tags/rugby/index.html from ./tags.njk
+[11ty] Writing _site/tags/rugby-world-cup/index.html from ./tags.njk
+[11ty] Writing _site/tags/sport/index.html from ./tags.njk
+[11ty] Writing _site/tags/web-typography/index.html from ./tags.njk
+[11ty] Writing _site/tags/anthony-killeen/index.html from ./tags.njk
+[11ty] Writing _site/tags/charity/index.html from ./tags.njk
+[11ty] Writing _site/tags/everyman/index.html from ./tags.njk
+[11ty] Writing _site/tags/giv2it/index.html from ./tags.njk
+[11ty] Writing _site/tags/testicular-cancer/index.html from ./tags.njk
+[11ty] Writing _site/tags/no-more-excuses/index.html from ./tags.njk
+[11ty] Writing _site/tags/cakephp/index.html from ./tags.njk
+[11ty] Writing _site/tags/side-project/index.html from ./tags.njk
+[11ty] Writing _site/tags/web-app/index.html from ./tags.njk
+[11ty] Writing _site/tags/ben-russell/index.html from ./tags.njk
+[11ty] Writing _site/tags/euro-2020/index.html from ./tags.njk
+[11ty] Writing _site/tags/football/index.html from ./tags.njk
+[11ty] Writing _site/tags/gatsby/index.html from ./tags.njk
+[11ty] Writing _site/tags/experimentation/index.html from ./tags.njk
+[11ty] Writing _site/tags/snapshots/index.html from ./tags.njk
+[11ty] Writing _site/tags/evo-inspires/index.html from ./tags.njk
+[11ty] Writing _site/tags/interview/index.html from ./tags.njk
+[11ty] Writing _site/tags/linkedin/index.html from ./tags.njk
+[11ty] Writing _site/tags/autotrader/index.html from ./tags.njk
+[11ty] Writing _site/tags/podcast/index.html from ./tags.njk
+[11ty] Writing _site/tags/ideasofmarch/index.html from ./tags.njk
+[11ty] Writing _site/tags/bbc/index.html from ./tags.njk
+[11ty] Writing _site/tags/agency/index.html from ./tags.njk
+[11ty] Writing _site/tags/dtotm/index.html from ./tags.njk
+[11ty] Writing _site/tags/community/index.html from ./tags.njk
+[11ty] Writing _site/tags/undesign/index.html from ./tags.njk
+[11ty] Writing _site/tags/web-design-tour/index.html from ./tags.njk
+[11ty] Writing _site/tags/higgs-design/index.html from ./tags.njk
+[11ty] Writing _site/tags/andy-higgs/index.html from ./tags.njk
+[11ty] Writing _site/tags/grid-systems/index.html from ./tags.njk
+[11ty] Writing _site/tags/jewellery-quarter/index.html from ./tags.njk
+[11ty] Writing _site/tags/responsive-grid/index.html from ./tags.njk
+[11ty] Writing _site/tags/behaviour/index.html from ./tags.njk
+[11ty] Writing _site/tags/website-traffic/index.html from ./tags.njk
+[11ty] Writing _site/tags/privacy/index.html from ./tags.njk
+[11ty] Writing _site/tags/buy-online/index.html from ./tags.njk
+[11ty] Writing _site/tags/derbycounty/index.html from ./tags.njk
+[11ty] Writing _site/tags/free-tunes-for-christmas/index.html from ./tags.njk
+[11ty] Writing _site/tags/oliver-ker/index.html from ./tags.njk
+[11ty] Writing _site/tags/tweets-for-balls/index.html from ./tags.njk
+[11ty] Writing _site/tags/retrospective/index.html from ./tags.njk
+[11ty] Writing _site/tags/motor-trade/index.html from ./tags.njk
+[11ty] Writing _site/tags/iconography/index.html from ./tags.njk
+[11ty] Writing _site/tags/noun-project/index.html from ./tags.njk
+[11ty] Writing _site/tags/portfolio-2/index.html from ./tags.njk
+[11ty] Writing _site/tags/relly-annett-baker/index.html from ./tags.njk
+[11ty] Writing _site/tags/computing/index.html from ./tags.njk
+[11ty] Writing _site/tags/commodore-64/index.html from ./tags.njk
+[11ty] Writing _site/tags/memories/index.html from ./tags.njk
+[11ty] Writing _site/tags/luke-wroblewski/index.html from ./tags.njk
+[11ty] Writing _site/tags/yahoo/index.html from ./tags.njk
+[11ty] Writing _site/tags/goals/index.html from ./tags.njk
+[11ty] Writing _site/tags/atlassian/index.html from ./tags.njk
+[11ty] Writing _site/tags/bitbucket/index.html from ./tags.njk
+[11ty] Writing _site/tags/passwords/index.html from ./tags.njk
+[11ty] Writing _site/tags/css/index.html from ./tags.njk
+[11ty] Writing _site/tags/version-control/index.html from ./tags.njk
+[11ty] Writing _site/tags/goshawk/index.html from ./tags.njk
+[11ty] Writing _site/tags/deadly-60/index.html from ./tags.njk
+[11ty] Writing _site/tags/numeracy/index.html from ./tags.njk
+[11ty] Writing _site/tags/observation/index.html from ./tags.njk
+[11ty] Writing _site/tags/brand/index.html from ./tags.njk
+[11ty] Writing _site/tags/khoi-vinh/index.html from ./tags.njk
+[11ty] Writing _site/tags/uk/index.html from ./tags.njk
+[11ty] Writing _site/tags/metro/index.html from ./tags.njk
+[11ty] Writing _site/tags/contacts/index.html from ./tags.njk
+[11ty] Writing _site/tags/the-midlands/index.html from ./tags.njk
+[11ty] Writing _site/tags/literacy/index.html from ./tags.njk
+[11ty] Writing _site/tags/apps/index.html from ./tags.njk
+[11ty] Writing _site/tags/echofon/index.html from ./tags.njk
+[11ty] Writing _site/tags/lil-man/index.html from ./tags.njk
+[11ty] Writing _site/tags/atebits/index.html from ./tags.njk
+[11ty] Writing _site/tags/hibari/index.html from ./tags.njk
+[11ty] Writing _site/tags/osfoora/index.html from ./tags.njk
+[11ty] Writing _site/tags/twitterrific/index.html from ./tags.njk
+[11ty] Writing _site/tags/ben-darlow/index.html from ./tags.njk
+[11ty] Writing _site/tags/english/index.html from ./tags.njk
+[11ty] Writing _site/tags/mark-collins/index.html from ./tags.njk
+[11ty] Writing _site/tags/kiwi/index.html from ./tags.njk
+[11ty] Writing _site/tags/buzz-anderson/index.html from ./tags.njk
+[11ty] Writing _site/tags/neil-crosby/index.html from ./tags.njk
+[11ty] Writing _site/tags/robert-anderson/index.html from ./tags.njk
+[11ty] Writing _site/tags/12-devs/index.html from ./tags.njk
+[11ty] Writing _site/tags/lecturing/index.html from ./tags.njk
+[11ty] Writing _site/tags/eric-meyer/index.html from ./tags.njk
+[11ty] Writing _site/tags/663399becca-2/index.html from ./tags.njk
+[11ty] Writing _site/tags/rebecca-alison-meyer/index.html from ./tags.njk
+[11ty] Writing _site/tags/entertainment/index.html from ./tags.njk
+[11ty] Writing _site/tags/cancer-research/index.html from ./tags.njk
+[11ty] Writing _site/tags/andy-matthews/index.html from ./tags.njk
+[11ty] Writing _site/tags/payday-pennies/index.html from ./tags.njk
+[11ty] Writing _site/tags/book-review/index.html from ./tags.njk
+[11ty] Writing _site/tags/jquery/index.html from ./tags.njk
+[11ty] Writing _site/tags/raymond-camden/index.html from ./tags.njk
+[11ty] Writing _site/tags/mac-format/index.html from ./tags.njk
+[11ty] Writing _site/tags/mac-pro/index.html from ./tags.njk
+[11ty] Writing _site/tags/configuration/index.html from ./tags.njk
+[11ty] Writing _site/tags/tips-2/index.html from ./tags.njk
+[11ty] Writing _site/tags/ecommerce/index.html from ./tags.njk
+[11ty] Writing _site/tags/autism/index.html from ./tags.njk
+[11ty] Writing _site/tags/asperger-syndrome/index.html from ./tags.njk
+[11ty] Writing _site/tags/ffsjfdiud/index.html from ./tags.njk
+[11ty] Writing _site/tags/skydive/index.html from ./tags.njk
+[11ty] Writing _site/tags/google-chromecast/index.html from ./tags.njk
+[11ty] Writing _site/tags/geek-mental-health/index.html from ./tags.njk
+[11ty] Writing _site/tags/icebucketchallenge/index.html from ./tags.njk
+[11ty] Writing _site/tags/imposter-syndrome/index.html from ./tags.njk
+[11ty] Writing _site/tags/personal-development/index.html from ./tags.njk
+[11ty] Writing _site/tags/health/index.html from ./tags.njk
+[11ty] Writing _site/tags/careers/index.html from ./tags.njk
+[11ty] Writing _site/tags/autism-awareness-week/index.html from ./tags.njk
+[11ty] Writing _site/tags/youtube/index.html from ./tags.njk
+[11ty] Writing _site/tags/newsletters/index.html from ./tags.njk
+[11ty] Writing _site/tags/jfdi/index.html from ./tags.njk
+[11ty] Writing _site/tags/ipad-pro/index.html from ./tags.njk
+[11ty] Writing _site/tags/logitech-create/index.html from ./tags.njk
+[11ty] Writing _site/tags/review/index.html from ./tags.njk
+[11ty] Writing _site/tags/outrunmay/index.html from ./tags.njk
+[11ty] Writing _site/tags/macmillan-cancer-support/index.html from ./tags.njk
+[11ty] Writing _site/tags/cro/index.html from ./tags.njk
+[11ty] Writing _site/tags/split-test/index.html from ./tags.njk
+[11ty] Writing _site/tags/james-norton/index.html from ./tags.njk
+[11ty] Writing _site/tags/cloudflare/index.html from ./tags.njk
+[11ty] Writing _site/tags/strava/index.html from ./tags.njk
+[11ty] Writing _site/tags/linode/index.html from ./tags.njk
+[11ty] Writing _site/tags/site-migration/index.html from ./tags.njk
+[11ty] Writing _site/tags/fitness/index.html from ./tags.njk
+[11ty] Writing _site/tags/team-building/index.html from ./tags.njk
+[11ty] Writing _site/tags/macos/index.html from ./tags.njk
+[11ty] Writing _site/tags/jomo/index.html from ./tags.njk
+[11ty] Writing _site/tags/web-apps/index.html from ./tags.njk
+[11ty] Writing _site/tags/just-a-minute/index.html from ./tags.njk
+[11ty] Writing _site/tags/retrospectives/index.html from ./tags.njk
+[11ty] Writing _site/tags/audio-production/index.html from ./tags.njk
+[11ty] Writing _site/tags/lightning-talk/index.html from ./tags.njk
+[11ty] Writing _site/tags/holidays/index.html from ./tags.njk
+[11ty] Writing _site/tags/stereo/index.html from ./tags.njk
+[11ty] Writing _site/tags/tattoo/index.html from ./tags.njk
+[11ty] Writing _site/tags/worldfirst/index.html from ./tags.njk
+[11ty] Writing _site/tags/dyslexia/index.html from ./tags.njk
+[11ty] Writing _site/tags/monthnotes/index.html from ./tags.njk
+[11ty] Writing _site/tags/personal-dashboard/index.html from ./tags.njk
+[11ty] Writing _site/tags/blackpool/index.html from ./tags.njk
+[11ty] Writing _site/tags/community-of-practice/index.html from ./tags.njk
+[11ty] Writing _site/tags/google-sheets/index.html from ./tags.njk
+[11ty] Writing _site/tags/apple-podcasts/index.html from ./tags.njk
+[11ty] Writing _site/tags/hackathon/index.html from ./tags.njk
+[11ty] Writing _site/tags/code/index.html from ./tags.njk
+[11ty] Writing _site/tags/database/index.html from ./tags.njk
+[11ty] Writing _site/tags/sqlite/index.html from ./tags.njk
+[11ty] Writing _site/tags/data-visualisation/index.html from ./tags.njk
+[11ty] Writing _site/tags/personal-improvement/index.html from ./tags.njk
+[11ty] Writing _site/tags/comedy-pods/index.html from ./tags.njk
+[11ty] Writing _site/tags/zapier/index.html from ./tags.njk
+[11ty] Writing _site/tags/vinyl/index.html from ./tags.njk
+[11ty] Writing _site/tags/learning/index.html from ./tags.njk
+[11ty] Writing _site/tags/parenting/index.html from ./tags.njk
+[11ty] Writing _site/tags/monthlydigest/index.html from ./tags.njk
+[11ty] Writing _site/tags/exercise/index.html from ./tags.njk
+[11ty] Writing _site/tags/fundraising/index.html from ./tags.njk
+[11ty] Writing _site/tags/life-goals/index.html from ./tags.njk
+[11ty] Writing _site/tags/push-ups/index.html from ./tags.njk
+[11ty] Writing _site/tags/fortnotes/index.html from ./tags.njk
+[11ty] Writing _site/tags/archive-collection/index.html from ./tags.njk
+[11ty] Writing _site/tags/hybrid-meetings/index.html from ./tags.njk
+[11ty] Writing _site/tags/dustin-miller/index.html from ./tags.njk
+[11ty] Writing _site/tags/natalie-huitson/index.html from ./tags.njk
+[11ty] Writing _site/tags/trello/index.html from ./tags.njk
+[11ty] Writing _site/tags/comedypods/index.html from ./tags.njk
+[11ty] Writing _site/tags/derby-county/index.html from ./tags.njk
+[11ty] Writing _site/tags/performance-reviews/index.html from ./tags.njk
+[11ty] Writing _site/tags/football-cal/index.html from ./tags.njk
+[11ty] Writing _site/tags/angie-brown/index.html from ./tags.njk
+[11ty] Writing _site/tags/speedback/index.html from ./tags.njk
+[11ty] Writing _site/tags/chatbots/index.html from ./tags.njk
+[11ty] Writing _site/tags/photos/index.html from ./tags.njk
+[11ty] Writing _site/tags/metrics/index.html from ./tags.njk
+[11ty] Writing _site/tags/wired-smarter/index.html from ./tags.njk
+[11ty] Writing _site/tags/kindness/index.html from ./tags.njk
+[11ty] Writing _site/tags/product-on-a-page/index.html from ./tags.njk
+[11ty] Writing _site/tags/streaming/index.html from ./tags.njk
+[11ty] Writing _site/tags/trevor-morris/index.html from ./tags.njk
+[11ty] Writing _site/tags/enjoyment/index.html from ./tags.njk
+[11ty] Writing _site/tags/career-progression/index.html from ./tags.njk
+[11ty] Writing _site/tags/sharing/index.html from ./tags.njk
+[11ty] Writing _site/tags/ldx3/index.html from ./tags.njk
+[11ty] Writing _site/tags/sam-king/index.html from ./tags.njk
+[11ty] Writing _site/tags/tech/index.html from ./tags.njk
+[11ty] Writing _site/tags/ai/index.html from ./tags.njk
+[11ty] Writing _site/tags/sam-altman/index.html from ./tags.njk
+[11ty] Writing _site/tags/chatgpt/index.html from ./tags.njk
+[11ty] Writing _site/tags/team-health/index.html from ./tags.njk
+[11ty] Writing _site/tags/creativity/index.html from ./tags.njk
+[11ty] Writing _site/tags/pomodoro/index.html from ./tags.njk
+[11ty] Writing _site/tags/milton-keynes/index.html from ./tags.njk
+[11ty] Writing _site/tags/protospace/index.html from ./tags.njk
+[11ty] Writing _site/tags/recruitment/index.html from ./tags.njk
+[11ty] Writing _site/tags/round-table/index.html from ./tags.njk
+[11ty] Writing _site/tags/stemx/index.html from ./tags.njk
+[11ty] Writing _site/tags/housemusicalldaylong/index.html from ./tags.njk
+[11ty] Writing _site/tags/neurospicy/index.html from ./tags.njk
+[11ty] Writing _site/tags/endometriosis/index.html from ./tags.njk
+[11ty] Writing _site/tags/calendar/index.html from ./tags.njk
+ENOENT: no such file or directory, open '/app/_site/images/resize_image' images/resize_image
+ENOENT: no such file or directory, open '/app/_site/images/Iceberg-650.jpg' images/Iceberg-650.jpg
+ENOENT: no such file or directory, open '/app/_site/images/HedKandi_DiscoHouse_Packshot_3D.jpg' images/HedKandi_DiscoHouse_Packshot_3D.jpg
+ENOENT: no such file or directory, open '/app/_site/images/simple-branding-post.png' images/simple-branding-post.png
+[11ty] Writing _site/tags/psychologicalsafety/index.html from ./tags.njk
+[11ty] Writing _site/tags/filmora9/index.html from ./tags.njk
+[11ty] Writing _site/tags/my-left-nut/index.html from ./tags.njk
+[11ty] Writing _site/tags/friday-night-dinner/index.html from ./tags.njk
+[11ty] Writing _site/tags/killing-eve/index.html from ./tags.njk
+[11ty] Writing _site/tags/pedro-carrasco/index.html from ./tags.njk
+[11ty] Writing _site/tags/wireless-chargers/index.html from ./tags.njk
+[11ty] Writing _site/tags/screensaver/index.html from ./tags.njk
+[11ty] Writing _site/tags/ms-teams/index.html from ./tags.njk
+[11ty] Writing _site/tags/glitterbox/index.html from ./tags.njk
+[11ty] Writing _site/tags/postdirectories/index.html from ./tags.njk
+ENOENT: no such file or directory, open '/app/_site/images/ir' images/ir
+[11ty] Writing _site/tags/homerecentposts/index.html from ./tags.njk
+[11ty] Writing _site/404.html from ./404.md (liquid)
+[11ty] Writing _site/posts/index.html from ./archive.njk
+[11ty] Writing _site/tags/podcasts/index.html from ./tags.njk
+[11ty] Writing _site/tags/midlands/index.html from ./tags.njk
+[11ty] Writing _site/weeknotes/1/index.html from ./posts/weeknotes/1.md (liquid)
+[11ty] Writing _site/weeknotes/10/index.html from ./posts/weeknotes/10.md (liquid)
+[11ty] Writing _site/weeknotes/12/index.html from ./posts/weeknotes/12.md (liquid)
+[11ty] Writing _site/weeknotes/11/index.html from ./posts/weeknotes/11.md (liquid)
+[11ty] Writing _site/weeknotes/18/index.html from ./posts/weeknotes/18.md (liquid)
+[11ty] Writing _site/weeknotes/2/index.html from ./posts/weeknotes/2.md (liquid)
+[11ty] Writing _site/weeknotes/19/index.html from ./posts/weeknotes/19.md (liquid)
+[11ty] Writing _site/weeknotes/20/index.html from ./posts/weeknotes/20.md (liquid)
+[11ty] Writing _site/weeknotes/21/index.html from ./posts/weeknotes/21.md (liquid)
+[11ty] Writing _site/weeknotes/23/index.html from ./posts/weeknotes/23.md (liquid)
+[11ty] Writing _site/weeknotes/22/index.html from ./posts/weeknotes/22.md (liquid)
+[11ty] Writing _site/weeknotes/24/index.html from ./posts/weeknotes/24.md (liquid)
+[11ty] Writing _site/weeknotes/25/index.html from ./posts/weeknotes/25.md (liquid)
+[11ty] Writing _site/weeknotes/13/index.html from ./posts/weeknotes/13.md (liquid)
+[11ty] Writing _site/weeknotes/28/index.html from ./posts/weeknotes/28.md (liquid)
+[11ty] Writing _site/weeknotes/26/index.html from ./posts/weeknotes/26.md (liquid)
+[11ty] Writing _site/weeknotes/30/index.html from ./posts/weeknotes/30.md (liquid)
+[11ty] Writing _site/weeknotes/34/index.html from ./posts/weeknotes/34.md (liquid)
+[11ty] Writing _site/weeknotes/31/index.html from ./posts/weeknotes/31.md (liquid)
+[11ty] Writing _site/weeknotes/32/index.html from ./posts/weeknotes/32.md (liquid)
+[11ty] Writing _site/weeknotes/33/index.html from ./posts/weeknotes/33.md (liquid)
+[11ty] Writing _site/weeknotes/35/index.html from ./posts/weeknotes/35.md (liquid)
+[11ty] Writing _site/weeknotes/29/index.html from ./posts/weeknotes/29.md (liquid)
+[11ty] Writing _site/weeknotes/37/index.html from ./posts/weeknotes/37.md (liquid)
+[11ty] Writing _site/weeknotes/39/index.html from ./posts/weeknotes/39.md (liquid)
+[11ty] Writing _site/weeknotes/38/index.html from ./posts/weeknotes/38.md (liquid)
+[11ty] Writing _site/weeknotes/4/index.html from ./posts/weeknotes/4.md (liquid)
+[11ty] Writing _site/weeknotes/41/index.html from ./posts/weeknotes/41.md (liquid)
+[11ty] Writing _site/weeknotes/42/index.html from ./posts/weeknotes/42.md (liquid)
+[11ty] Writing _site/weeknotes/44/index.html from ./posts/weeknotes/44.md (liquid)
+[11ty] Writing _site/weeknotes/40/index.html from ./posts/weeknotes/40.md (liquid)
+[11ty] Writing _site/weeknotes/43/index.html from ./posts/weeknotes/43.md (liquid)
+[11ty] Writing _site/weeknotes/45/index.html from ./posts/weeknotes/45.md (liquid)
+[11ty] Writing _site/weeknotes/48/index.html from ./posts/weeknotes/48.md (liquid)
+[11ty] Writing _site/weeknotes/49/index.html from ./posts/weeknotes/49.md (liquid)
+[11ty] Writing _site/weeknotes/47/index.html from ./posts/weeknotes/47.md (liquid)
+[11ty] Writing _site/weeknotes/50/index.html from ./posts/weeknotes/50.md (liquid)
+[11ty] Writing _site/weeknotes/51/index.html from ./posts/weeknotes/51.md (liquid)
+[11ty] Writing _site/weeknotes/52/index.html from ./posts/weeknotes/52.md (liquid)
+[11ty] Writing _site/weeknotes/8/index.html from ./posts/weeknotes/8.md (liquid)
+[11ty] Writing _site/weeknotes/6/index.html from ./posts/weeknotes/6.md (liquid)
+[11ty] Writing _site/weeknotes/9/index.html from ./posts/weeknotes/9.md (liquid)
+[11ty] Writing _site/weeknotes/weekly-2023-01/index.html from ./posts/weeknotes/weekly-2023-01.md (liquid)
+[11ty] Writing _site/weeknotes/weekly-2023-02/index.html from ./posts/weeknotes/weekly-2023-02.md (liquid)
+[11ty] Writing _site/weeknotes/weekly-2023-03/index.html from ./posts/weeknotes/weekly-2023-03.md (liquid)
+[11ty] Writing _site/weeknotes/weekly-2023-05/index.html from ./posts/weeknotes/weekly-2023-05.md (liquid)
+[11ty] Writing _site/weeknotes/5/index.html from ./posts/weeknotes/5.md (liquid)
+[11ty] Writing _site/weeknotes/weekly-2023-04/index.html from ./posts/weeknotes/weekly-2023-04.md (liquid)
+[11ty] Writing _site/weeknotes/weekly-2023-06/index.html from ./posts/weeknotes/weekly-2023-06.md (liquid)
+[11ty] Writing _site/weeknotes/weekly-2023-08/index.html from ./posts/weeknotes/weekly-2023-08.md (liquid)
+[11ty] Writing _site/weeknotes/weekly-2023-07/index.html from ./posts/weeknotes/weekly-2023-07.md (liquid)
+[11ty] Writing _site/weeknotes/weekly-2023-09/index.html from ./posts/weeknotes/weekly-2023-09.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/images/Screen%20Shot%202011-10-05%20at%2013.50.39.png' images/Screen%20Shot%202011-10-05%20at%2013.50.39.png
+[11ty] Writing _site/weeknotes/weekly-2023-11/index.html from ./posts/weeknotes/weekly-2023-11.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/images/iphone_galaxy_s_ii.png' images/iphone_galaxy_s_ii.png
+[11ty] Writing _site/weeknotes/weekly-2023-12/index.html from ./posts/weeknotes/weekly-2023-12.md (liquid)
+[11ty] Writing _site/weeknotes/weekly-2023-13/index.html from ./posts/weeknotes/weekly-2023-13.md (liquid)
+[11ty] Writing _site/weeknotes/weekly-2023-10/index.html from ./posts/weeknotes/weekly-2023-10.md (liquid)
+[11ty] Writing _site/weeknotes/weekly-2023-14/index.html from ./posts/weeknotes/weekly-2023-14.md (liquid)
+[11ty] Writing _site/weeknotes/weekly-2023-15/index.html from ./posts/weeknotes/weekly-2023-15.md (liquid)
+[11ty] Writing _site/weeknotes/weeknotes-27/index.html from ./posts/weeknotes/weeknotes-27.md (liquid)
+[11ty] Writing _site/aside/a-brief-history-of-web-standards/index.html from ./posts/aside/2011/a-brief-history-of-web-standards.md (liquid)
+[11ty] Writing _site/aside/daft-coke/index.html from ./posts/aside/2011/daft-coke.md (liquid)
+[11ty] Writing _site/aside/beware-of-icebergs/index.html from ./posts/aside/2011/beware-of-icebergs.md (liquid)
+[11ty] Writing _site/aside/downing-street-is-somewhere-to/index.html from ./posts/aside/2011/downing-street-is-somewhere-to.md (liquid)
+[11ty] Writing _site/weeknotes/15/index.html from ./posts/weeknotes/15.md (liquid)
+[11ty] Writing _site/aside/git-plugin-for-coda/index.html from ./posts/aside/2011/git-plugin-for-coda.md (liquid)
+[11ty] Writing _site/aside/gradient-app-for-mac/index.html from ./posts/aside/2011/gradient-app-for-mac.md (liquid)
+[11ty] Writing _site/aside/hed-kandi-disco-samples/index.html from ./posts/aside/2011/hed-kandi-disco-samples.md (liquid)
+[11ty] Writing _site/aside/intergalactic/index.html from ./posts/aside/2011/intergalactic.md (liquid)
+[11ty] Writing _site/aside/realigned-google-bar/index.html from ./posts/aside/2011/realigned-google-bar.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/4jeuom1uum39cv8rrebp.png' /img/assets/2012/07/4jeuom1uum39cv8rrebp.png
+[11ty] Writing _site/aside/mary-blair/index.html from ./posts/aside/2011/mary-blair.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/images/4jeuom1uum39cv8rrebp.png' images/4jeuom1uum39cv8rrebp.png
+[11ty] Writing _site/aside/rapid-mobile-apps-with-mulberry/index.html from ./posts/aside/2011/rapid-mobile-apps-with-mulberry.md (liquid)
+[11ty] Writing _site/aside/responsive-ad-ranges/index.html from ./posts/aside/2011/responsive-ad-ranges.md (liquid)
+[11ty] Writing _site/aside/requirejs/index.html from ./posts/aside/2011/requirejs.md (liquid)
+[11ty] Writing _site/aside/responsive-advertising/index.html from ./posts/aside/2011/responsive-advertising.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/Pepsi-Cola-Cop.jpeg' /img/assets/2012/07/Pepsi-Cola-Cop.jpeg
+ENOENT: no such file or directory, open '/app/_site/images/Pepsi-Cola-Cop.jpeg' images/Pepsi-Cola-Cop.jpeg
+[11ty] Writing _site/aside/seo-for-non-dicks/index.html from ./posts/aside/2011/seo-for-non-dicks.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/Allow.png' /img/assets/2012/07/Allow.png
+ENOENT: no such file or directory, open '/app/_site/images/Allow.png' images/Allow.png
+[11ty] Writing _site/aside/prototyping-with-css3-flexbox/index.html from ./posts/aside/2011/prototyping-with-css3-flexbox.md (liquid)
+[11ty] Writing _site/aside/samuel-l-ipsum/index.html from ./posts/aside/2011/samuel-l-ipsum.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/BEM-Comic-Characters.jpeg' /img/assets/2012/07/BEM-Comic-Characters.jpeg
+ENOENT: no such file or directory, open '/app/_site/images/BEM-Comic-Characters.jpeg' images/BEM-Comic-Characters.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/Dalton-Caldwell-explaining-app.net_.png' /img/assets/2012/07/Dalton-Caldwell-explaining-app.net_.png
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/Brandseen.png' /img/assets/2012/07/Brandseen.png
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/Characters-for-Mac.png' /img/assets/2012/07/Characters-for-Mac.png
+ENOENT: no such file or directory, open '/app/_site/images/Characters-for-Mac.png' images/Characters-for-Mac.png
+ENOENT: no such file or directory, open '/app/_site/images/desktop-trends-2012-09-640x480.png' images/desktop-trends-2012-09-640x480.png
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/09/CircleCi.png' /img/assets/2012/09/CircleCi.png
+ENOENT: no such file or directory, open '/app/_site/images/CircleCi.png' images/CircleCi.png
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/Chrome-Web-Lab.png' /img/assets/2012/07/Chrome-Web-Lab.png
+ENOENT: no such file or directory, open '/app/_site/images/Chrome-Web-Lab.png' images/Chrome-Web-Lab.png
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/Crafthouse-Dublin.png' /img/assets/2012/07/Crafthouse-Dublin.png
+ENOENT: no such file or directory, open '/app/_site/images/Crafthouse-Dublin.png' images/Crafthouse-Dublin.png
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/10/Data-Necklace.png' /img/assets/2012/10/Data-Necklace.png
+ENOENT: no such file or directory, open '/app/_site/images/Data-Necklace.png' images/Data-Necklace.png
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/Wall-E-and-Eva.jpeg' /img/assets/2012/07/Wall-E-and-Eva.jpeg
+ENOENT: no such file or directory, open '/app/_site/images/Wall-E-and-Eva.jpeg' images/Wall-E-and-Eva.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/09/EE.png' /img/assets/2012/09/EE.png
+ENOENT: no such file or directory, open '/app/_site/images/EE.png' images/EE.png
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/06/ford_keyfree.png' /img/assets/2012/06/ford_keyfree.png
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/04/minority_report_user_interface.jpeg' /img/assets/2012/04/minority_report_user_interface.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/doodads.jpeg' /img/assets/2012/07/doodads.jpeg
+ENOENT: no such file or directory, open '/app/_site/images/doodads.jpeg' images/doodads.jpeg
+ENOENT: no such file or directory, open '/app/_site/images/statigram_email.png' images/statigram_email.png
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/Holvi.png' /img/assets/2012/07/Holvi.png
+ENOENT: no such file or directory, open '/app/_site/images/Holvi.png' images/Holvi.png
+ENOENT: no such file or directory, open '/app/_site/images/awearness_kenneth_cole_foundation_advert.gif' images/awearness_kenneth_cole_foundation_advert.gif
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/iconmonstr.png' /img/assets/2012/07/iconmonstr.png
+ENOENT: no such file or directory, open '/app/_site/images/iconmonstr.png' images/iconmonstr.png
+[11ty] Writing _site/aside/simple-branding/index.html from ./posts/aside/2011/simple-branding.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/Inspire-Conference.png' /img/assets/2012/07/Inspire-Conference.png
+ENOENT: no such file or directory, open '/app/_site/images/Inspire-Conference.png' images/Inspire-Conference.png
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/10/Jackie-Brown.png' /img/assets/2012/10/Jackie-Brown.png
+ENOENT: no such file or directory, open '/app/_site/images/Jackie-Brown.png' images/Jackie-Brown.png
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/Futureal-Bundle.png' /img/assets/2012/07/Futureal-Bundle.png
+[11ty] Writing _site/aside/html5-whiteboard-magnets-2/index.html from ./posts/aside/2011/html5-whiteboard-magnets-2.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/images/Futureal-Bundle.png' images/Futureal-Bundle.png
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/06/surface_05.jpg' /img/assets/2012/06/surface_05.jpg
+ENOENT: no such file or directory, open '/app/_site/images/surface_05-1024x576.jpg' images/surface_05-1024x576.jpg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/shinny-button.gif' /img/assets/2012/07/shinny-button.gif
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/ibook.jpeg' /img/assets/2012/07/ibook.jpeg
+ENOENT: no such file or directory, open '/app/_site/images/ibook.jpeg' images/ibook.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/campaign_monitor_marque.gif' /img/assets/2012/07/campaign_monitor_marque.gif
+ENOENT: no such file or directory, open '/app/_site/images/campaign_monitor_marque.gif' images/campaign_monitor_marque.gif
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/Reasons-to-be-Creative.png' /img/assets/2012/07/Reasons-to-be-Creative.png
+ENOENT: no such file or directory, open '/app/_site/images/Reasons-to-be-Creative.png' images/Reasons-to-be-Creative.png
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/Mail-Action-Steps.png-.png' /img/assets/2012/07/Mail-Action-Steps.png-.png
+ENOENT: no such file or directory, open '/app/_site/images/Mail-Action-Steps.png-.png' images/Mail-Action-Steps.png-.png
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/06/logo2.png' /img/assets/2012/06/logo2.png
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/06/Microsoft-Responsive.png' /img/assets/2012/06/Microsoft-Responsive.png
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/06/image5_copy_copy.jpg' /img/assets/2012/06/image5_copy_copy.jpg
+ENOENT: no such file or directory, open '/app/_site/images/image5_copy_copy.jpg' images/image5_copy_copy.jpg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/retina_one_screen.jpeg' /img/assets/2012/07/retina_one_screen.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/09/Statwing.png' /img/assets/2012/09/Statwing.png
+ENOENT: no such file or directory, open '/app/_site/images/Statwing.png' images/Statwing.png
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/Sun.png' /img/assets/2012/07/Sun.png
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/09/2b892055465a9fe2bed229403b3b29cb-e1348663345880.jpg' /img/assets/2012/09/2b892055465a9fe2bed229403b3b29cb-e1348663345880.jpg
+ENOENT: no such file or directory, open '/app/_site/images/2b892055465a9fe2bed229403b3b29cb-1024x576.jpg' images/2b892055465a9fe2bed229403b3b29cb-1024x576.jpg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/Web-Expo-Guildford.png' /img/assets/2012/07/Web-Expo-Guildford.png
+ENOENT: no such file or directory, open '/app/_site/images/Web-Expo-Guildford.png' images/Web-Expo-Guildford.png
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/Wee-Rockets.png' /img/assets/2012/07/Wee-Rockets.png
+ENOENT: no such file or directory, open '/app/_site/images/Wee-Rockets.png' images/Wee-Rockets.png
+ENOENT: no such file or directory, open '/app/_site/img/assets/2012/07/Visually-Highlights.png' /img/assets/2012/07/Visually-Highlights.png
+ENOENT: no such file or directory, open '/app/_site/images/Visually-Highlights.png' images/Visually-Highlights.png
+ENOENT: no such file or directory, open '/app/_site/img/assets/2020/11/37797266._SX50_-GSPnkE.jpeg' /img/assets/2020/11/37797266._SX50_-GSPnkE.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2020/11/38330784._SY75_-wRVbT0.jpeg' /img/assets/2020/11/38330784._SY75_-wRVbT0.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2020/12/15782646._SY75_-9TRs26.jpeg' /img/assets/2020/12/15782646._SY75_-9TRs26.jpeg
+[11ty] Writing _site/aside/the-life-of-lego-george/index.html from ./posts/aside/2011/the-life-of-lego-george.md (liquid)
+[11ty] Writing _site/aside/twitter-stories/index.html from ./posts/aside/2011/twitter-stories.md (liquid)
+[11ty] Writing _site/aside/toggle-light/index.html from ./posts/aside/2011/toggle-light.md (liquid)
+[11ty] Writing _site/aside/unitasking/index.html from ./posts/aside/2011/unitasking.md (liquid)
+[11ty] Writing _site/aside/why-the-iphone-screen-is-3-5/index.html from ./posts/aside/2011/why-the-iphone-screen-is-3-5.md (liquid)
+[11ty] Writing _site/aside/squiggle-of-the-design-process/index.html from ./posts/aside/2011/squiggle-of-the-design-process.md (liquid)
+[11ty] Writing _site/aside/thanks-steve/index.html from ./posts/aside/2011/thanks-steve.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/02/56557080._SX50_-DVnmrM.jpeg' /img/assets/2021/02/56557080._SX50_-DVnmrM.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/03/50812451._SY75_-d6Tr73.jpeg' /img/assets/2021/03/50812451._SY75_-d6Tr73.jpeg
+[11ty] Writing _site/aside/a-younger-me/index.html from ./posts/aside/2012/a-younger-me.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/09/50262048._SY75_-rDXCTI.jpeg' /img/assets/2021/09/50262048._SY75_-rDXCTI.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/06/41839754._SY75_-yuImrX.jpeg' /img/assets/2021/06/41839754._SY75_-yuImrX.jpeg
+[11ty] Writing _site/aside/advertising-responsive-world/index.html from ./posts/aside/2012/advertising-responsive-world.md (liquid)
+[11ty] Writing _site/aside/allow/index.html from ./posts/aside/2012/allow.md (liquid)
+[11ty] Writing _site/aside/are-social-networks-profitable/index.html from ./posts/aside/2012/are-social-networks-profitable.md (liquid)
+[11ty] Writing _site/aside/augmented-reality-design/index.html from ./posts/aside/2012/augmented-reality-design.md (liquid)
+[11ty] Writing _site/aside/bem-identity/index.html from ./posts/aside/2012/bem-identity.md (liquid)
+[11ty] Writing _site/aside/app-net/index.html from ./posts/aside/2012/app-net.md (liquid)
+[11ty] Writing _site/aside/best-ipad-apps-for-design/index.html from ./posts/aside/2012/best-ipad-apps-for-design.md (liquid)
+[11ty] Writing _site/aside/brandseen/index.html from ./posts/aside/2012/brandseen.md (liquid)
+[11ty] Writing _site/aside/characters-for-mac/index.html from ./posts/aside/2012/characters-for-mac.md (liquid)
+[11ty] Writing _site/aside/browser-trends-flatlining/index.html from ./posts/aside/2012/browser-trends-flatlining.md (liquid)
+[11ty] Writing _site/aside/circle/index.html from ./posts/aside/2012/circle.md (liquid)
+[11ty] Writing _site/aside/classic-british-design/index.html from ./posts/aside/2012/classic-british-design.md (liquid)
+[11ty] Writing _site/aside/chrome-web-lab/index.html from ./posts/aside/2012/chrome-web-lab.md (liquid)
+[11ty] Writing _site/aside/crafthouse-dublin/index.html from ./posts/aside/2012/crafthouse-dublin.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2020/11/7624._SY75_-0NHHjp.jpeg' /img/assets/2020/11/7624._SY75_-0NHHjp.jpeg
+[11ty] Writing _site/aside/data-necklace/index.html from ./posts/aside/2012/data-necklace.md (liquid)
+[11ty] Writing _site/aside/design-challenges-of-facebook-ipo/index.html from ./posts/aside/2012/design-challenges-of-facebook-ipo.md (liquid)
+[11ty] Writing _site/aside/design-excuses-how-to-beat-them/index.html from ./posts/aside/2012/design-excuses-how-to-beat-them.md (liquid)
+[11ty] Writing _site/aside/design-thoughts-on-wall-e/index.html from ./posts/aside/2012/design-thoughts-on-wall-e.md (liquid)
+[11ty] Writing _site/aside/ee/index.html from ./posts/aside/2012/ee.md (liquid)
+[11ty] Writing _site/aside/ford-keyfree/index.html from ./posts/aside/2012/ford-keyfree.md (liquid)
+[11ty] Writing _site/aside/iconic-designs-in-sci-fi-movies/index.html from ./posts/aside/2012/iconic-designs-in-sci-fi-movies.md (liquid)
+[11ty] Writing _site/aside/crayola/index.html from ./posts/aside/2012/crayola.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/06/11517032._SY75_-DCDosI.jpeg' /img/assets/2021/06/11517032._SY75_-DCDosI.jpeg
+[11ty] Writing _site/aside/incentivising-return-visitors/index.html from ./posts/aside/2012/incentivising-return-visitors.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/08/36241715._SY75_-wyhx9L.jpeg' /img/assets/2021/08/36241715._SY75_-wyhx9L.jpeg
+[11ty] Writing _site/aside/holvi/index.html from ./posts/aside/2012/holvi.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/01/11156820._SY75_-u4KILi.jpeg' /img/assets/2021/01/11156820._SY75_-u4KILi.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/05/57053158._SY75_-qwV65z.jpeg' /img/assets/2021/05/57053158._SY75_-qwV65z.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/05/32331896._SY75_-wkq6Ua.jpeg' /img/assets/2021/05/32331896._SY75_-wkq6Ua.jpeg
+[11ty] Writing _site/aside/why-use-rounded-corners/index.html from ./posts/aside/2011/why-use-rounded-corners.md (liquid)
+[11ty] Writing _site/aside/improving-emails-animated-gifs/index.html from ./posts/aside/2012/improving-emails-animated-gifs.md (liquid)
+[11ty] Writing _site/aside/iconmonstr/index.html from ./posts/aside/2012/iconmonstr.md (liquid)
+[11ty] Writing _site/aside/inspire-conference/index.html from ./posts/aside/2012/inspire-conference.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/01/55196968._SY75_-XdXF5W.jpeg' /img/assets/2021/01/55196968._SY75_-XdXF5W.jpeg
+[11ty] Writing _site/aside/jackie-brown-to-101-dalmations/index.html from ./posts/aside/2012/jackie-brown-to-101-dalmations.md (liquid)
+[11ty] Writing _site/aside/just-build-websites/index.html from ./posts/aside/2012/just-build-websites.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/09/58713729._SX50_-Ikx31Q.jpeg' /img/assets/2021/09/58713729._SX50_-Ikx31Q.jpeg
+[11ty] Writing _site/aside/learn-javascript-with-futureal/index.html from ./posts/aside/2012/learn-javascript-with-futureal.md (liquid)
+[11ty] Writing _site/aside/leap-motion/index.html from ./posts/aside/2012/leap-motion.md (liquid)
+[11ty] Writing _site/aside/killer-contract/index.html from ./posts/aside/2012/killer-contract.md (liquid)
+[11ty] Writing _site/aside/industry-insight-microsoft-surface/index.html from ./posts/aside/2012/industry-insight-microsoft-surface.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/01/20648343._SY75_-ktSsiD.jpeg' /img/assets/2021/01/20648343._SY75_-ktSsiD.jpeg
+[11ty] Writing _site/aside/look-at-the-shiny-shiny/index.html from ./posts/aside/2012/look-at-the-shiny-shiny.md (liquid)
+[11ty] Writing _site/aside/making-a-baby/index.html from ./posts/aside/2012/making-a-baby.md (liquid)
+[11ty] Writing _site/aside/principles-user-interface-design/index.html from ./posts/aside/2012/principles-user-interface-design.md (liquid)
+[11ty] Writing _site/aside/picozu/index.html from ./posts/aside/2012/picozu.md (liquid)
+[11ty] Writing _site/aside/project-rebrief/index.html from ./posts/aside/2012/project-rebrief.md (liquid)
+[11ty] Writing _site/aside/ios-skeuomorphic-ui/index.html from ./posts/aside/2012/ios-skeuomorphic-ui.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/10/34811896._SY75_-pcndqc.jpeg' /img/assets/2021/10/34811896._SY75_-pcndqc.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/06/45020301._SX50_-k7HjQo.jpeg' /img/assets/2021/06/45020301._SX50_-k7HjQo.jpeg
+[11ty] Writing _site/aside/rebranding-campaign-monitor/index.html from ./posts/aside/2012/rebranding-campaign-monitor.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/01/50699720._SY75_-htMhSm.jpeg' /img/assets/2021/01/50699720._SY75_-htMhSm.jpeg
+[11ty] Writing _site/aside/reasons-to-be-creative/index.html from ./posts/aside/2012/reasons-to-be-creative.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/04/40211891._SY75_-7XTY1K.jpeg' /img/assets/2021/04/40211891._SY75_-7XTY1K.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/07/49425845._SX50_SY75_-ryZj3o.jpeg' /img/assets/2021/07/49425845._SX50_SY75_-ryZj3o.jpeg
+[11ty] Writing _site/aside/redesigning-mail/index.html from ./posts/aside/2012/redesigning-mail.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/05/34451267._SY75_-WMcXJn.jpeg' /img/assets/2021/05/34451267._SY75_-WMcXJn.jpeg
+[11ty] Writing _site/aside/responsive-web-design-newsletter/index.html from ./posts/aside/2012/responsive-web-design-newsletter.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/03/49661162._SX50_SY75_-mXVc1x.jpeg' /img/assets/2021/03/49661162._SX50_SY75_-mXVc1x.jpeg
+[11ty] Writing _site/aside/responsive-microsoft/index.html from ./posts/aside/2012/responsive-microsoft.md (liquid)
+[11ty] Writing _site/aside/rethink-rail-tickets-interface/index.html from ./posts/aside/2012/rethink-rail-tickets-interface.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/03/49985253._SX50_SY75_-HKnKba.jpeg' /img/assets/2021/03/49985253._SX50_SY75_-HKnKba.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/06/33780690._SY75_-6rEwSy.jpeg' /img/assets/2021/06/33780690._SY75_-6rEwSy.jpeg
+[11ty] Writing _site/aside/retina-responsively/index.html from ./posts/aside/2012/retina-responsively.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/03/36684893._SY75_-GR0zCd.jpeg' /img/assets/2021/03/36684893._SY75_-GR0zCd.jpeg
+[11ty] Writing _site/aside/simpler/index.html from ./posts/aside/2012/simpler.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/08/55275928._SX50_-vFVpMY.jpeg' /img/assets/2021/08/55275928._SX50_-vFVpMY.jpeg
+[11ty] Writing _site/aside/spiffing-css/index.html from ./posts/aside/2012/spiffing-css.md (liquid)
+[11ty] Writing _site/aside/simplified-sign-up/index.html from ./posts/aside/2012/simplified-sign-up.md (liquid)
+[11ty] Writing _site/aside/statwing/index.html from ./posts/aside/2012/statwing.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/04/30517378._SY75_-zWVRTm.jpeg' /img/assets/2021/04/30517378._SY75_-zWVRTm.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/02/48526390._SY75_-U2Qg8V.jpeg' /img/assets/2021/02/48526390._SY75_-U2Qg8V.jpeg
+[11ty] Writing _site/aside/suit-up-or-die/index.html from ./posts/aside/2012/suit-up-or-die.md (liquid)
+[11ty] Writing _site/aside/ten-faces-of-a-web-professional/index.html from ./posts/aside/2012/ten-faces-of-a-web-professional.md (liquid)
+[11ty] Writing _site/aside/the-forty-story/index.html from ./posts/aside/2012/the-forty-story.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/09/41542595._SY75_-Ncs9pY.jpeg' /img/assets/2021/09/41542595._SY75_-Ncs9pY.jpeg
+[11ty] Writing _site/aside/time-responsive-content/index.html from ./posts/aside/2012/time-responsive-content.md (liquid)
+[11ty] Writing _site/aside/the-future-of-tv/index.html from ./posts/aside/2012/the-future-of-tv.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/08/18073307._SX50_-eUIJOd.jpeg' /img/assets/2021/08/18073307._SX50_-eUIJOd.jpeg
+[11ty] Writing _site/aside/sun/index.html from ./posts/aside/2012/sun.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/03/49674113._SX50_SY75_-ps8uM3.jpeg' /img/assets/2021/03/49674113._SX50_SY75_-ps8uM3.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/08/50190168._SX50_SY75_-DbhO8D.jpeg' /img/assets/2021/08/50190168._SX50_SY75_-DbhO8D.jpeg
+[11ty] Writing _site/aside/twitter-is-the-benjamin-button-of-startups/index.html from ./posts/aside/2012/twitter-is-the-benjamin-button-of-startups.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/01/55474331._SY75_-FnS3zu.jpeg' /img/assets/2021/01/55474331._SY75_-FnS3zu.jpeg
+[11ty] Writing _site/aside/web-expo-guildford/index.html from ./posts/aside/2012/web-expo-guildford.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/07/49973863._SX50_SY75_-4OjHVb.jpeg' /img/assets/2021/07/49973863._SX50_SY75_-4OjHVb.jpeg
+[11ty] Writing _site/aside/user-friendly-ipad-text-editing/index.html from ./posts/aside/2012/user-friendly-ipad-text-editing.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/07/40616564._SY75_-58b2kG.jpeg' /img/assets/2021/07/40616564._SY75_-58b2kG.jpeg
+[11ty] Writing _site/aside/wee-rockets/index.html from ./posts/aside/2012/wee-rockets.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/04/35650531._SX50_-bIoWeF.jpeg' /img/assets/2021/04/35650531._SX50_-bIoWeF.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/02/49676965._SX50_SY75_-IyJ3fb.jpeg' /img/assets/2021/02/49676965._SX50_SY75_-IyJ3fb.jpeg
+[11ty] Writing _site/aside/visually-pleasing/index.html from ./posts/aside/2012/visually-pleasing.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/03/41945326._SY75_-V0QLv5.jpeg' /img/assets/2021/03/41945326._SY75_-V0QLv5.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/09/35468453._SY75_-It8yYO.jpeg' /img/assets/2021/09/35468453._SY75_-It8yYO.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/06/43720168._SY75_-QBTM3k.jpeg' /img/assets/2021/06/43720168._SY75_-QBTM3k.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/09/57024448._SY75_-z4wOJb.jpeg' /img/assets/2021/09/57024448._SY75_-z4wOJb.jpeg
+[11ty] Writing _site/aside/done-not-done/index.html from ./posts/aside/2013/done-not-done.md (liquid)
+[11ty] Writing _site/aside/four-sentences/index.html from ./posts/aside/2013/four-sentences.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/05/41859285._SY75_-JfAt8k.jpeg' /img/assets/2021/05/41859285._SY75_-JfAt8k.jpeg
+[11ty] Writing _site/aside/wysihtml5/index.html from ./posts/aside/2012/wysihtml5.md (liquid)
+[11ty] Writing _site/aside/purgomalum/index.html from ./posts/aside/2013/purgomalum.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/06/17115359._SX50_-eVPt7U.jpeg' /img/assets/2022/06/17115359._SX50_-eVPt7U.jpeg
+[11ty] Writing _site/aside/material-motion/index.html from ./posts/aside/2016/material-motion.md (liquid)
+[11ty] Writing _site/aside/animated-css3-checkboxes/index.html from ./posts/aside/2016/animated-css3-checkboxes.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/09/60890844._SX50_-I3zyxE.jpeg' /img/assets/2022/09/60890844._SX50_-I3zyxE.jpeg
+[11ty] Writing _site/aside/actual-facebook-graph-searches/index.html from ./posts/aside/2013/actual-facebook-graph-searches.md (liquid)
+[11ty] Writing _site/aside/express-for-wordpress/index.html from ./posts/aside/2011/express-for-wordpress.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/06/23249416._SX50_-BGtVbr.jpeg' /img/assets/2022/06/23249416._SX50_-BGtVbr.jpeg
+[11ty] Writing _site/aside/motion-in-the-browser/index.html from ./posts/aside/2016/motion-in-the-browser.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/01/42266454._SY75_-1QgsnJ.jpeg' /img/assets/2022/01/42266454._SY75_-1QgsnJ.jpeg
+[11ty] Writing _site/aside/notes-on-a-nervous-planet/index.html from ./posts/aside/2020/notes-on-a-nervous-planet.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/01/58643129._SY75_-nCygzt.jpeg' /img/assets/2022/01/58643129._SY75_-nCygzt.jpeg
+[11ty] Writing _site/aside/the-psychology-of-time-travel/index.html from ./posts/aside/2020/the-psychology-of-time-travel.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/01/60231118._SY75_-ZRuMZ8.jpeg' /img/assets/2022/01/60231118._SY75_-ZRuMZ8.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/01/53598223._SX50_-aX8osl.jpeg' /img/assets/2022/01/53598223._SX50_-aX8osl.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/07/29744770._SX50_-ThoutD.jpeg' /img/assets/2022/07/29744770._SX50_-ThoutD.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/01/55625572._SY75_-TLNaKy.jpeg' /img/assets/2022/01/55625572._SY75_-TLNaKy.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/08/36372116._SY75_-m0LytD.jpeg' /img/assets/2022/08/36372116._SY75_-m0LytD.jpeg
+[11ty] Writing _site/aside/the-woman-who-went-to-bed-for-a-year/index.html from ./posts/aside/2020/the-woman-who-went-to-bed-for-a-year.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/03/49665863._SX50_SY75_-7WW1eM.jpeg' /img/assets/2021/03/49665863._SX50_SY75_-7WW1eM.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/05/25126499._SY75_-lFlFZb.jpeg' /img/assets/2022/05/25126499._SY75_-lFlFZb.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/02/59535795._SY75_-SUoLiP.jpeg' /img/assets/2022/02/59535795._SY75_-SUoLiP.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/07/23952281._SY75_-iEXQkK.jpeg' /img/assets/2022/07/23952281._SY75_-iEXQkK.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/02/56785296._SX50_-tfg1jv.jpeg' /img/assets/2022/02/56785296._SX50_-tfg1jv.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/02/57514796._SX50_-YcHLl1.jpeg' /img/assets/2022/02/57514796._SX50_-YcHLl1.jpeg
+[11ty] Writing _site/aside/1984-amazon-classics-edition/index.html from ./posts/aside/2021/1984-amazon-classics-edition.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/04/18859783._SY75_-rIDnT1.jpeg' /img/assets/2022/04/18859783._SY75_-rIDnT1.jpeg
+[11ty] Writing _site/aside/artemis/index.html from ./posts/aside/2021/artemis.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/03/57036748._SY75_-3t2b1e.jpeg' /img/assets/2022/03/57036748._SY75_-3t2b1e.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/03/57512339._SX50_-8IFNuL.jpeg' /img/assets/2022/03/57512339._SX50_-8IFNuL.jpeg
+[11ty] Writing _site/aside/before-and-after/index.html from ./posts/aside/2021/before-and-after.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/03/57036749._SX50_-7zgQf4.jpeg' /img/assets/2022/03/57036749._SX50_-7zgQf4.jpeg
+[11ty] Writing _site/blog/boca-raton-warmer-2/index.html from ./posts/aside/2021/boca-raton-warmer-2.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/01/56619051._SX50_-pyF8jG.jpeg' /img/assets/2022/01/56619051._SX50_-pyF8jG.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/02/59535729._SY75_-hsQxlH.jpeg' /img/assets/2022/02/59535729._SY75_-hsQxlH.jpeg
+[11ty] Writing _site/aside/lord-of-the-flies/index.html from ./posts/aside/2020/lord-of-the-flies.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/02/60150803._SX50_-bYSTPw.jpeg' /img/assets/2022/02/60150803._SX50_-bYSTPw.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/07/38734134._SY75_-HHsQJH.jpeg' /img/assets/2022/07/38734134._SY75_-HHsQJH.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/05/32858845._SX50_-mClRhI.jpeg' /img/assets/2022/05/32858845._SX50_-mClRhI.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/11/43158037._SY75_-oC7b8h.jpeg' /img/assets/2022/11/43158037._SY75_-oC7b8h.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/10/55472477._SY75_-D1zxRt.jpeg' /img/assets/2022/10/55472477._SY75_-D1zxRt.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/09/49689607._SX50_SY75_-TFQtNh.jpeg' /img/assets/2022/09/49689607._SX50_SY75_-TFQtNh.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/06/20883025._SX50_-ODlrZQ.jpeg' /img/assets/2022/06/20883025._SX50_-ODlrZQ.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/09/33622266._SY75_-vr7S68.jpeg' /img/assets/2022/09/33622266._SY75_-vr7S68.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/02/57299422._SY75_-ohWMLd.jpeg' /img/assets/2022/02/57299422._SY75_-ohWMLd.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/04/58616287._SX50_-xjwhZX.jpeg' /img/assets/2022/04/58616287._SX50_-xjwhZX.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/04/40733063._SY75_-QTdvWP.jpeg' /img/assets/2022/04/40733063._SY75_-QTdvWP.jpeg
+[11ty] Writing _site/aside/brave-new-world/index.html from ./posts/aside/2021/brave-new-world.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/12/58751313._SY75_-V6kYqn.jpeg' /img/assets/2022/12/58751313._SY75_-V6kYqn.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/03/57306070._SX50_-KZJ6s1.jpeg' /img/assets/2022/03/57306070._SX50_-KZJ6s1.jpeg
+[11ty] Writing _site/aside/broadcast/index.html from ./posts/aside/2021/broadcast.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/05/54659290._SY75_-E53Q3F.jpeg' /img/assets/2022/05/54659290._SY75_-E53Q3F.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/03/36119521._SY75_-dxRztN.jpeg' /img/assets/2022/03/36119521._SY75_-dxRztN.jpeg
+[11ty] Writing _site/aside/first-thrills-high-octane-stories-from-the-hottest-thriller-authors/index.html from ./posts/aside/2021/first-thrills-high-octane-stories-from-the-hottest-thriller-authors.md (liquid)
+[11ty] Writing _site/aside/down-and-out-in-paris-and-london/index.html from ./posts/aside/2021/down-and-out-in-paris-and-london.md (liquid)
+[11ty] Writing _site/aside/coach-the-person-not-the-problem-a-simple-guide-to-coaching-for-transformation/index.html from ./posts/aside/2021/coach-the-person-not-the-problem-a-simple-guide-to-coaching-for-transformation.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/02/58647675._SX50_-3dQuBj.jpeg' /img/assets/2022/02/58647675._SX50_-3dQuBj.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/04/26128570._SY75_-MDNXgI.jpeg' /img/assets/2022/04/26128570._SY75_-MDNXgI.jpeg
+[11ty] Writing _site/aside/going-green/index.html from ./posts/aside/2021/going-green.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/04/38493924._SY75_-DjRX8b.jpeg' /img/assets/2022/04/38493924._SY75_-DjRX8b.jpeg
+[11ty] Writing _site/aside/deploy-empathy-a-practical-guide-to-interviewing-customers/index.html from ./posts/aside/2021/deploy-empathy-a-practical-guide-to-interviewing-customers.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/09/36269613._SY75_-HnfrSA.jpeg' /img/assets/2022/09/36269613._SY75_-HnfrSA.jpeg
+[11ty] Writing _site/aside/master-your-time-in-10-minutes-a-day-time-management-tips-for-anyone-struggling-with-work-life-balance-how-to-change-your-life-in-10-minutes-a-day/index.html from ./posts/aside/2021/master-your-time-in-10-minutes-a-day-time-management-tips-for-anyone-struggling-with-work-life-balance-how-to-change-your-life-in-10-minutes-a-day.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/11/57322705._SX50_-j3ROo8.jpeg' /img/assets/2022/11/57322705._SX50_-j3ROo8.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/12/61214971._SY75_-bvtren.jpeg' /img/assets/2022/12/61214971._SY75_-bvtren.jpeg
+[11ty] Writing _site/aside/pandemic-the-extinction-files-1/index.html from ./posts/aside/2021/pandemic-the-extinction-files-1.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/10/36164105._SY75_-aqpZ9g.jpeg' /img/assets/2022/10/36164105._SY75_-aqpZ9g.jpeg
+[11ty] Writing _site/blog/perfect-startup-a-complete-system-for-becoming-a-successful-entrepreneur/index.html from ./posts/aside/2021/perfect-startup-a-complete-system-for-becoming-a-successful-entrepreneur.md (liquid)
+[11ty] Writing _site/aside/no-filter-the-inside-story-of-how-instagram-transformed-business-celebrity-and-our-culture/index.html from ./posts/aside/2021/no-filter-the-inside-story-of-how-instagram-transformed-business-celebrity-and-our-culture.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/12/53893173._SY75_-pHzINJ.jpeg' /img/assets/2022/12/53893173._SY75_-pHzINJ.jpeg
+[11ty] Writing _site/aside/quantum-captain-chase-1/index.html from ./posts/aside/2021/quantum-captain-chase-1.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/02/57149613._SY75_-I1DjW2.jpeg' /img/assets/2022/02/57149613._SY75_-I1DjW2.jpeg
+[11ty] Writing _site/aside/new-eden/index.html from ./posts/aside/2021/new-eden.md (liquid)
+[11ty] Writing _site/aside/radical-candor-how-to-be-a-great-boss-without-losing-your-humanity/index.html from ./posts/aside/2021/radical-candor-how-to-be-a-great-boss-without-losing-your-humanity.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/03/57294682._SX50_-zJ8hbk.jpeg' /img/assets/2022/03/57294682._SX50_-zJ8hbk.jpeg
+[11ty] Writing _site/aside/randomize/index.html from ./posts/aside/2021/randomize.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2023/01/43921042._SX50_-RgzrZD.jpeg' /img/assets/2023/01/43921042._SX50_-RgzrZD.jpeg
+[11ty] Writing _site/aside/spin-captain-chase-2/index.html from ./posts/aside/2021/spin-captain-chase-2.md (liquid)
+[11ty] Writing _site/aside/fast-focus-a-quick-start-guide-to-mastering-your-attention-ignoring-distractions-and-getting-more-done-in-less-time/index.html from ./posts/aside/2021/fast-focus-a-quick-start-guide-to-mastering-your-attention-ignoring-distractions-and-getting-more-done-in-less-time.md (liquid)
+[11ty] Writing _site/aside/the-coaching-habit-say-less-ask-more-change-the-way-you-lead-forever/index.html from ./posts/aside/2021/the-coaching-habit-say-less-ask-more-change-the-way-you-lead-forever.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2023/03/63017943._SX50_-xeJEXq.jpeg' /img/assets/2023/03/63017943._SX50_-xeJEXq.jpeg
+[11ty] Writing _site/aside/the-arachnid-new-eden-2/index.html from ./posts/aside/2021/the-arachnid-new-eden-2.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2023/02/36112645._SY75_-HZHv0s.jpeg' /img/assets/2023/02/36112645._SY75_-HZHv0s.jpeg
+[11ty] Writing _site/aside/the-atlantis-gene-the-origin-mystery-1/index.html from ./posts/aside/2021/the-atlantis-gene-the-origin-mystery-1.md (liquid)
+[11ty] Writing _site/aside/the-girl-beneath-the-sea-underwater-investigation-unit-1/index.html from ./posts/aside/2021/the-girl-beneath-the-sea-underwater-investigation-unit-1.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2023/01/61204044._SX50_-PF17z6.jpeg' /img/assets/2023/01/61204044._SX50_-PF17z6.jpeg
+[11ty] Writing _site/aside/the-language-of-life-and-business-coaching-advanced-coaching-skills-that-will-help-your-clients-flourish/index.html from ./posts/aside/2021/the-language-of-life-and-business-coaching-advanced-coaching-skills-that-will-help-your-clients-flourish.md (liquid)
+[11ty] Writing _site/aside/five-simple-steps-videos/index.html from ./posts/aside/2011/five-simple-steps-videos.md (liquid)
+[11ty] Writing _site/aside/800-likes/index.html from ./posts/aside/2011/800-likes.md (liquid)
+[11ty] Writing _site/aside/the-humans/index.html from ./posts/aside/2021/the-humans.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2023/03/25163383._SY75_-SZLYs3.jpeg' /img/assets/2023/03/25163383._SY75_-SZLYs3.jpeg
+[11ty] Writing _site/aside/the-last-conversation/index.html from ./posts/aside/2021/the-last-conversation.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2023/02/61473489._SX50_-UwrTJ8.jpeg' /img/assets/2023/02/61473489._SX50_-UwrTJ8.jpeg
+[11ty] Writing _site/aside/the-lost-colony-the-long-winter-3/index.html from ./posts/aside/2021/the-lost-colony-the-long-winter-3.md (liquid)
+[11ty] Writing _site/aside/the-stars-and-everything-in-between/index.html from ./posts/aside/2021/the-stars-and-everything-in-between.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2023/01/59700974._SY75_-hgrWLK.jpeg' /img/assets/2023/01/59700974._SY75_-hgrWLK.jpeg
+[11ty] Writing _site/aside/the-solar-war-the-long-winter-2/index.html from ./posts/aside/2021/the-solar-war-the-long-winter-2.md (liquid)
+[11ty] Writing _site/aside/the-primer-goal-setting-method-the-only-goal-achievement-guide-youll-ever-need/index.html from ./posts/aside/2021/the-primer-goal-setting-method-the-only-goal-achievement-guide-youll-ever-need.md (liquid)
+[11ty] Writing _site/aside/the-time-machine/index.html from ./posts/aside/2021/the-time-machine.md (liquid)
+[11ty] Writing _site/aside/summer-frost/index.html from ./posts/aside/2021/summer-frost.md (liquid)
+[11ty] Writing _site/aside/the-way-the-world-ends-warmer-1/index.html from ./posts/aside/2021/the-way-the-world-ends-warmer-1.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2009/07/img/posts/portfolio/premium_choice_website.jpg' /img/assets/2009/07//img/posts/portfolio/premium_choice_website.jpg
+[11ty] Writing _site/aside/who-the-fck-am-i-to-be-a-coach-a-warriors-guide-to-building-a-wildly-successful-coaching-business-from-the-inside-out/index.html from ./posts/aside/2021/who-the-fck-am-i-to-be-a-coach-a-warriors-guide-to-building-a-wildly-successful-coaching-business-from-the-inside-out.md (liquid)
+[11ty] Writing _site/aside/winter-world-the-long-winter-1/index.html from ./posts/aside/2021/winter-world-the-long-winter-1.md (liquid)
+[11ty] Writing _site/aside/you-again/index.html from ./posts/aside/2021/you-again.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/05/55313155._SY75_-UX4ahs.jpeg' /img/assets/2021/05/55313155._SY75_-UX4ahs.jpeg
+[11ty] Writing _site/aside/theres-no-place-like-home-warmer-4/index.html from ./posts/aside/2021/theres-no-place-like-home-warmer-4.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2023/01/60241034._SX50_-YDNvlQ.jpeg' /img/assets/2023/01/60241034._SX50_-YDNvlQ.jpeg
+[11ty] Writing _site/aside/500-social-media-marketing-tips-essential-advice-hints-and-strategy/index.html from ./posts/aside/2022/500-social-media-marketing-tips-essential-advice-hints-and-strategy.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2023/01/61070978._SX50_-ZwhmRb.jpeg' /img/assets/2023/01/61070978._SX50_-ZwhmRb.jpeg
+[11ty] Writing _site/aside/101-podcast-episode-templates-powerful-done-for-you-episode-templates-to-grow-your-podcast-audience-big-podcast/index.html from ./posts/aside/2022/101-podcast-episode-templates-powerful-done-for-you-episode-templates-to-grow-your-podcast-audience-big-podcast.md (liquid)
+[11ty] Writing _site/aside/an-unwelcome-quest/index.html from ./posts/aside/2022/an-unwelcome-quest.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2011/07/comediplayer.png' /img/assets/2011/07/comediplayer.png
+[11ty] Writing _site/aside/but-im-not-an-expert/index.html from ./posts/aside/2022/but-im-not-an-expert.md (liquid)
+[11ty] Writing _site/aside/clap-back/index.html from ./posts/aside/2022/clap-back.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2011/09/rugby_world_cup_kickoff.png' /img/assets/2011/09/rugby_world_cup_kickoff.png
+[11ty] Writing _site/aside/compliance/index.html from ./posts/aside/2022/compliance.md (liquid)
+[11ty] Writing _site/aside/crypto-profit/index.html from ./posts/aside/2022/crypto-profit.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2010/03/cherished_vehicle_insurance_header.jpg' /img/assets/2010/03/cherished_vehicle_insurance_header.jpg
+[11ty] Writing _site/aside/disrupted/index.html from ./posts/aside/2022/disrupted.md (liquid)
+[11ty] Writing _site/aside/abducted/index.html from ./posts/aside/2022/abducted.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2011/11/tweets_for_balls.png' /img/assets/2011/11/tweets_for_balls.png
+[11ty] Writing _site/aside/fight-and-flight-magic-2-0-4/index.html from ./posts/aside/2022/fight-and-flight-magic-2-0-4.md (liquid)
+[11ty] Writing _site/aside/you-have-arrived-at-your-destination/index.html from ./posts/aside/2021/you-have-arrived-at-your-destination.md (liquid)
+[11ty] Writing _site/aside/getting-things-done/index.html from ./posts/aside/2022/getting-things-done.md (liquid)
+[11ty] Writing _site/aside/from-the-desk-of-lady-miss/index.html from ./posts/aside/2022/from-the-desk-of-lady-miss.md (liquid)
+[11ty] Writing _site/aside/gtd-in-15-minutes/index.html from ./posts/aside/2022/gtd-in-15-minutes.md (liquid)
+[11ty] Writing _site/aside/kwan-thrillers-4/index.html from ./posts/aside/2022/kwan-thrillers-4.md (liquid)
+[11ty] Writing _site/aside/cryptocurrency-1x1/index.html from ./posts/aside/2022/cryptocurrency-1x1.md (liquid)
+[11ty] Writing _site/aside/life-with-no-breaks/index.html from ./posts/aside/2022/life-with-no-breaks.md (liquid)
+[11ty] Writing _site/aside/lost-contact/index.html from ./posts/aside/2022/lost-contact.md (liquid)
+[11ty] Writing _site/aside/lost-hope/index.html from ./posts/aside/2022/lost-hope.md (liquid)
+[11ty] Writing _site/aside/lost-time/index.html from ./posts/aside/2022/lost-time.md (liquid)
+[11ty] Writing _site/aside/mars-enigma/index.html from ./posts/aside/2022/mars-enigma.md (liquid)
+[11ty] Writing _site/aside/my-dear-friend-janet/index.html from ./posts/aside/2022/my-dear-friend-janet.md (liquid)
+[11ty] Writing _site/aside/metaverse/index.html from ./posts/aside/2022/metaverse.md (liquid)
+[11ty] Writing _site/aside/new-threat/index.html from ./posts/aside/2022/new-threat.md (liquid)
+[11ty] Writing _site/aside/off-to-be-the-wizard-magic-2-0-1/index.html from ./posts/aside/2022/off-to-be-the-wizard-magic-2-0-1.md (liquid)
+[11ty] Writing _site/aside/out-of-spite-out-of-mind-magic-2-0-book-5/index.html from ./posts/aside/2022/out-of-spite-out-of-mind-magic-2-0-book-5.md (liquid)
+[11ty] Writing _site/aside/podcasting-made-simple/index.html from ./posts/aside/2022/podcasting-made-simple.md (liquid)
+[11ty] Writing _site/aside/radio-secrets-an-insiders-guide-to-producing-powerful-content-for-broadcast-and-podcast/index.html from ./posts/aside/2022/radio-secrets-an-insiders-guide-to-producing-powerful-content-for-broadcast-and-podcast.md (liquid)
+[11ty] Writing _site/aside/spell-or-high-water/index.html from ./posts/aside/2022/spell-or-high-water.md (liquid)
+[11ty] Writing _site/aside/run-program/index.html from ./posts/aside/2022/run-program.md (liquid)
+[11ty] Writing _site/aside/selling-the-intangible/index.html from ./posts/aside/2022/selling-the-intangible.md (liquid)
+[11ty] Writing _site/aside/strategic-mindset/index.html from ./posts/aside/2022/strategic-mindset.md (liquid)
+[11ty] Writing _site/aside/the-5-minute-to-do-list-formula/index.html from ./posts/aside/2022/the-5-minute-to-do-list-formula.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/01/49680556._SX50_SY75_-DSZ18y.jpeg' /img/assets/2021/01/49680556._SX50_SY75_-DSZ18y.jpeg
+[11ty] Writing _site/aside/the-anunnaki-mystery-the-kwan-thrillers-6/index.html from ./posts/aside/2022/the-anunnaki-mystery-the-kwan-thrillers-6.md (liquid)
+[11ty] Writing _site/aside/the-art-of-influencing-people/index.html from ./posts/aside/2022/the-art-of-influencing-people.md (liquid)
+[11ty] Writing _site/aside/gtd-with-the-bullet-journal/index.html from ./posts/aside/2022/gtd-with-the-bullet-journal.md (liquid)
+[11ty] Writing _site/aside/the-art-of-saying-no/index.html from ./posts/aside/2022/the-art-of-saying-no.md (liquid)
+[11ty] Writing _site/aside/the-black-pages/index.html from ./posts/aside/2022/the-black-pages.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/images/gov_uk.png' images/gov_uk.png
+[11ty] Writing _site/aside/the-coaching-mindset-8-ways-to-think-like-a-coach/index.html from ./posts/aside/2022/the-coaching-mindset-8-ways-to-think-like-a-coach.md (liquid)
+[11ty] Writing _site/aside/the-event/index.html from ./posts/aside/2022/the-event.md (liquid)
+[11ty] Writing _site/aside/steve-jobs/index.html from ./posts/aside/2011/steve-jobs.md (liquid)
+[11ty] Writing _site/aside/the-invisible-man/index.html from ./posts/aside/2022/the-invisible-man.md (liquid)
+[11ty] Writing _site/aside/the-riddle-of-the-sphinx-the-kwan-thrillers-5/index.html from ./posts/aside/2022/the-riddle-of-the-sphinx-the-kwan-thrillers-5.md (liquid)
+[11ty] Writing _site/aside/the-very-best-of-fesshole/index.html from ./posts/aside/2022/the-very-best-of-fesshole.md (liquid)
+[11ty] Writing _site/aside/the-war-of-the-worlds/index.html from ./posts/aside/2022/the-war-of-the-worlds.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/images/badge_itunes-lrg.gif' images/badge_itunes-lrg.gif
+[11ty] Writing _site/aside/work-together-anywhere-a-handbook-on-working-remotely-successfully-for-individuals-teams-and-managers/index.html from ./posts/aside/2022/work-together-anywhere-a-handbook-on-working-remotely-successfully-for-individuals-teams-and-managers.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/images/badge_itunes-lrg.gif' images/badge_itunes-lrg.gif
+[11ty] Writing _site/aside/the-only-bitcoin-investing-book-youll-ever-need/index.html from ./posts/aside/2022/the-only-bitcoin-investing-book-youll-ever-need.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/images/badge_itunes-lrg.gif' images/badge_itunes-lrg.gif
+[11ty] Writing _site/aside/the-art-of-positive-thinking/index.html from ./posts/aside/2022/the-art-of-positive-thinking.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/images/badge_itunes-lrg.gif' images/badge_itunes-lrg.gif
+[11ty] Writing _site/aside/big-podcast-grow-your-podcast-audience-build-listener-loyalty-and-get-everybody-talking-about-your-show/index.html from ./posts/aside/2023/big-podcast-grow-your-podcast-audience-build-listener-loyalty-and-get-everybody-talking-about-your-show.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2014/08/boston-ice-bucket-challenge.jpg' /img/assets/2014/08/boston-ice-bucket-challenge.jpg
+[11ty] Writing _site/aside/enki-the-kwan-thrillers-9/index.html from ./posts/aside/2023/enki-the-kwan-thrillers-9.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2014/01/jquery-mobile-web-development-essentials.jpg' /img/assets/2014/01/jquery-mobile-web-development-essentials.jpg
+[11ty] Writing _site/aside/journey-to-the-center-of-the-earth/index.html from ./posts/aside/2023/journey-to-the-center-of-the-earth.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2014/05/macpro_00090.jpg' /img/assets/2014/05/macpro_00090.jpg
+[11ty] Writing _site/aside/the-hidden-space-the-glass-2-352/index.html from ./posts/aside/2023/the-hidden-space-the-glass-2-352.md (liquid)
+[11ty] Writing _site/aside/delta-paradox-the-kwan-thrillers-8/index.html from ./posts/aside/2023/delta-paradox-the-kwan-thrillers-8.md (liquid)
+[11ty] Writing _site/aside/the-little-book-of-big-coaching-models-83-ways-to-help-managers-get-the-best-out-of-people/index.html from ./posts/aside/2023/the-little-book-of-big-coaching-models-83-ways-to-help-managers-get-the-best-out-of-people.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2014/04/google-chromecast.jpg' /img/assets/2014/04/google-chromecast.jpg
+[11ty] Writing _site/aside/the-other-place-the-glass-1/index.html from ./posts/aside/2023/the-other-place-the-glass-1.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/images/817L4SMD2LL._SL1500_.jpg' images/817L4SMD2LL._SL1500_.jpg
+[11ty] Writing _site/aside/why-75-of-podcasts-fail-and-how-you-can-avoid-it/index.html from ./posts/aside/2023/why-75-of-podcasts-fail-and-how-you-can-avoid-it.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/images/ir' images/ir
+ENOENT: no such file or directory, open '/app/_site/images/6379277589_8b72e7b610.jpg' images/6379277589_8b72e7b610.jpg
+[11ty] Writing _site/aside/project-hail-mary/index.html from ./posts/aside/2021/project-hail-mary.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2014/06/si_663399.jpg' /img/assets/2014/06/si_663399.jpg
+[11ty] Writing _site/aside/shifted-the-kwan-thrillers-7/index.html from ./posts/aside/2023/shifted-the-kwan-thrillers-7.md (liquid)
+[11ty] Writing _site/aside/remote-not-distant-design-a-company-culture-that-will-help-you-thrive-in-a-hybrid-workplace/index.html from ./posts/aside/2023/remote-not-distant-design-a-company-culture-that-will-help-you-thrive-in-a-hybrid-workplace.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/05/40873547._SY75_-26Tjy3.jpeg' /img/assets/2021/05/40873547._SY75_-26Tjy3.jpeg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2020/11/53738576._SY75_-qTHrLn.jpeg' /img/assets/2020/11/53738576._SY75_-qTHrLn.jpeg
+[11ty] Writing _site/aside/angry-birds-space/index.html from ./posts/aside/2012/angry-birds-space.md (liquid)
+[11ty] Writing _site/aside/curators-code/index.html from ./posts/aside/2012/curators-code.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/img/assets/2021/12/Personal-Dashboard-Trello-Strava-Goodreads-ArchiveCollection-Tweets.png' /img/assets/2021/12/Personal-Dashboard-Trello-Strava-Goodreads-ArchiveCollection-Tweets.png
+ENOENT: no such file or directory, open '/app/_site/img/assets/2009/09/uefa_calendars.jpg' /img/assets/2009/09/uefa_calendars.jpg
+ENOENT: no such file or directory, open '/app/_site/img/assets/2022/07/B8C8823B-6556-4B0E-9D49-BC4AEC5855B8.jpeg' /img/assets/2022/07/B8C8823B-6556-4B0E-9D49-BC4AEC5855B8.jpeg
+[11ty] Writing _site/aside/ark/index.html from ./posts/aside/2021/ark.md (liquid)
+[11ty] Writing _site/blog/back-once-again/index.html from ./posts/blog/2011/back-once-again.md (liquid)
+[11ty] Writing _site/blog/facebook-likes-you/index.html from ./posts/blog/2011/facebook-likes-you.md (liquid)
+[11ty] Writing _site/blog/that-was-2011/index.html from ./posts/blog/2011/that-was-2011.md (liquid)
+[11ty] Writing _site/blog/five-goals-for-2012/index.html from ./posts/blog/2012/five-goals-for-2012.md (liquid)
+[11ty] Writing _site/blog/goshawk/index.html from ./posts/blog/2012/goshawk.md (liquid)
+[11ty] Writing _site/blog/gov-uk/index.html from ./posts/blog/2012/gov-uk.md (liquid)
+[11ty] Writing _site/blog/old-faithful/index.html from ./posts/blog/2012/old-faithful.md (liquid)
+[11ty] Writing _site/blog/rethinking-mobile-registration/index.html from ./posts/blog/2012/rethinking-mobile-registration.md (liquid)
+[11ty] Writing _site/blog/twitter-apps-mac-comparison/index.html from ./posts/blog/2012/twitter-apps-mac-comparison.md (liquid)
+[11ty] Writing _site/blog/the-origin-of-at-replies/index.html from ./posts/blog/2013/the-origin-of-at-replies.md (liquid)
+[11ty] Writing _site/blog/university-lecturing/index.html from ./posts/blog/2013/university-lecturing.md (liquid)
+[11ty] Writing _site/blog/give-and-tell-challenge/index.html from ./posts/blog/2014/give-and-tell-challenge.md (liquid)
+[11ty] Writing _site/blog/jquery-mobile-web-development-essentials/index.html from ./posts/blog/2014/jquery-mobile-web-development-essentials.md (liquid)
+[11ty] Writing _site/blog/mac-pro/index.html from ./posts/blog/2014/mac-pro.md (liquid)
+[11ty] Writing _site/blog/beating-imposter-syndrome/index.html from ./posts/blog/2016/beating-imposter-syndrome.md (liquid)
+[11ty] Writing _site/blog/aghast-chromecast/index.html from ./posts/blog/2014/aghast-chromecast.md (liquid)
+[11ty] Writing _site/blog/reboot-your-life/index.html from ./posts/blog/2016/reboot-your-life.md (liquid)
+[11ty] Writing _site/blog/goals-for-2016/index.html from ./posts/blog/2016/goals-for-2016.md (liquid)
+[11ty] Writing _site/blog/the-importance-of-icons/index.html from ./posts/blog/2011/the-importance-of-icons.md (liquid)
+[11ty] Writing _site/blog/inbox-inspiration/index.html from ./posts/blog/2017/inbox-inspiration.md (liquid)
+[11ty] Writing _site/blog/663399becca/index.html from ./posts/blog/2014/663399becca.md (liquid)
+[11ty] Writing _site/blog/seo-implications-of-website-testing/index.html from ./posts/blog/2017/seo-implications-of-website-testing.md (liquid)
+[11ty] Writing _site/blog/moving-wordpress-to-linode/index.html from ./posts/blog/2018/moving-wordpress-to-linode.md (liquid)
+[11ty] Writing _site/blog/a-letter-to-hey-com/index.html from ./posts/blog/2020/a-letter-to-hey-com.md (liquid)
+[11ty] Writing _site/aside/animal-farm/index.html from ./posts/aside/2021/animal-farm.md (liquid)
+[11ty] Writing _site/aside/failosophy-a-handbook-for-when-things-go-wrong/index.html from ./posts/aside/2020/failosophy-a-handbook-for-when-things-go-wrong.md (liquid)
+[11ty] Writing _site/blog/tibialis-posterior-tendon-dysfunction/index.html from ./posts/blog/2021/tibialis-posterior-tendon-dysfunction.md (liquid)
+[11ty] Writing _site/blog/2021-retro/index.html from ./posts/blog/2022/2021-retro.md (liquid)
+[11ty] Writing _site/blog/jfdi/index.html from ./posts/blog/2017/jfdi.md (liquid)
+[11ty] Writing _site/portfolio/uefa-calendars/index.html from ./posts/portfolio/2009/uefa-calendars.md (liquid)
+[11ty] Writing _site/blog/podcast-kit-2022/index.html from ./posts/blog/2022/podcast-kit-2022.md (liquid)
+[11ty] Writing _site/aside/facebook-photos-dwarfs/index.html from ./posts/aside/2011/facebook-photos-dwarfs.md (liquid)
+[11ty] Writing _site/blog/dont-be-arthur/index.html from ./posts/blog/2023/dont-be-arthur.md (liquid)
+[11ty] Writing _site/blog/product-on-a-podcast-agile-therapy-workshops/index.html from ./posts/blog/2024/product-on-a-podcast-agile-therapy-workshops.md (liquid)
+[11ty] Writing _site/blog/public-bookmarks/index.html from ./posts/blog/2024/public-bookmarks.md (liquid)
+[11ty] Writing _site/blog/find-your-own-pace/index.html from ./posts/blog/2025/find-your-own-pace.md (liquid)
+[11ty] Writing _site/weeknotes/16/index.html from ./posts/weeknotes/16.md (liquid)
+[11ty] Writing _site/blog/100-push-up-challenge-cancer-research-uk/index.html from ./posts/blog/2022/100-push-up-challenge-cancer-research-uk.md (liquid)
+[11ty] Writing _site/weeknotes/14/index.html from ./posts/weeknotes/14.md (liquid)
+[11ty] Writing _site/portfolio/west-midlands-prepared/index.html from ./posts/portfolio/2007/west-midlands-prepared.md (liquid)
+[11ty] Writing _site/portfolio/hart-and-harvey-photography/index.html from ./posts/portfolio/2009/hart-and-harvey-photography.md (liquid)
+[11ty] Writing _site/portfolio/premium-choice/index.html from ./posts/portfolio/2009/premium-choice.md (liquid)
+[11ty] Writing _site/portfolio/comediplayer/index.html from ./posts/portfolio/2011/comediplayer.md (liquid)
+[11ty] Writing _site/portfolio/rugby-world-cup-kickoff/index.html from ./posts/portfolio/2011/rugby-world-cup-kickoff.md (liquid)
+[11ty] Writing _site/portfolio/cherished-vehicle-insurance/index.html from ./posts/portfolio/2010/cherished-vehicle-insurance.md (liquid)
+[11ty] Writing _site/portfolio/tweets-for-balls/index.html from ./posts/portfolio/2011/tweets-for-balls.md (liquid)
+[11ty] Writing _site/portfolio/make-life-work-with-elizabeth-elcoate/index.html from ./posts/portfolio/2020/make-life-work-with-elizabeth-elcoate.md (liquid)
+[11ty] Writing _site/portfolio/make-life-work-with-brian-suda/index.html from ./posts/portfolio/2020/make-life-work-with-brian-suda.md (liquid)
+[11ty] Writing _site/portfolio/make-life-work-with-dan-vinnicombe/index.html from ./posts/portfolio/2020/make-life-work-with-dan-vinnicombe.md (liquid)
+[11ty] Writing _site/portfolio/make-life-work-with-franca-hood/index.html from ./posts/portfolio/2020/make-life-work-with-franca-hood.md (liquid)
+[11ty] Writing _site/portfolio/collaborate-or-go-solo/index.html from ./posts/portfolio/2021/collaborate-or-go-solo.md (liquid)
+[11ty] Writing _site/portfolio/making-fesshole-with-rob-manuel/index.html from ./posts/portfolio/2021/making-fesshole-with-rob-manuel.md (liquid)
+[11ty] Writing _site/portfolio/make-life-work-with-naomi-white-revisited/index.html from ./posts/portfolio/2020/make-life-work-with-naomi-white-revisited.md (liquid)
+[11ty] Writing _site/portfolio/making-ladies-that-ux-meetup-with-mt-mccann/index.html from ./posts/portfolio/2021/making-ladies-that-ux-meetup-with-mt-mccann.md (liquid)
+[11ty] Writing _site/portfolio/making-sharing-with-lorna-mitchell/index.html from ./posts/portfolio/2021/making-sharing-with-lorna-mitchell.md (liquid)
+[11ty] Writing _site/portfolio/making-remote-work-with-chris-heilmann/index.html from ./posts/portfolio/2021/making-remote-work-with-chris-heilmann.md (liquid)
+[11ty] Writing _site/portfolio/selfish-problem-solving/index.html from ./posts/portfolio/2021/selfish-problem-solving.md (liquid)
+[11ty] Writing _site/portfolio/should-side-projects-be-a-job-requirement/index.html from ./posts/portfolio/2021/should-side-projects-be-a-job-requirement.md (liquid)
+[11ty] Writing _site/portfolio/tingle-of-completion/index.html from ./posts/portfolio/2021/tingle-of-completion.md (liquid)
+[11ty] Writing _site/portfolio/making-school-of-design-with-chris-murphy/index.html from ./posts/portfolio/2021/making-school-of-design-with-chris-murphy.md (liquid)
+[11ty] Writing _site/portfolio/on-the-side-takeover-pilot/index.html from ./posts/portfolio/2021/on-the-side-takeover-pilot.md (liquid)
+[11ty] Writing _site/aside/nerd-venn-diagram/index.html from ./posts/aside/2012/nerd-venn-diagram.md (liquid)
+[11ty] Writing _site/blog/dtotm-the-higgs-design-co/index.html from ./posts/blog/2011/dtotm-the-higgs-design-co.md (liquid)
+[11ty] Writing _site/blog/design-tour-of-the-midlands/index.html from ./posts/blog/2011/design-tour-of-the-midlands.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/images/badge10.gif' images/badge10.gif
+[11ty] Writing _site/blog/lets-talk-web/index.html from ./posts/blog/2013/lets-talk-web.md (liquid)
+ENOENT: no such file or directory, open '/app/_site/images/HF275_with_Andi_King.jpg' images/HF275_with_Andi_King.jpg
+ENOENT: no such file or directory, open '/app/_site/images/HF276_with_Disco77.jpg' images/HF276_with_Disco77.jpg
+ENOENT: no such file or directory, open '/app/_site/images/HF277_with_LYP.jpg' images/HF277_with_LYP.jpg
+ENOENT: no such file or directory, open '/app/_site/images/HF278_with_One_Phat_DJ.jpg' images/HF278_with_One_Phat_DJ.jpg
+ENOENT: no such file or directory, open '/app/_site/images/HF279_with_Andi_King.jpg' images/HF279_with_Andi_King.jpg
+ENOENT: no such file or directory, open '/app/_site/images/HF281_with_DJ_Programma.jpg' images/HF281_with_DJ_Programma.jpg
+ENOENT: no such file or directory, open '/app/_site/images/HF282_with_LYP.jpg' images/HF282_with_LYP.jpg
+ENOENT: no such file or directory, open '/app/_site/images/HF283_with_Taylan.jpg' images/HF283_with_Taylan.jpg
+ENOENT: no such file or directory, open '/app/_site/images/HF284_with_DJ_Tai.jpg' images/HF284_with_DJ_Tai.jpg
+ENOENT: no such file or directory, open '/app/_site/images/HF285_with_Disco77.jpg' images/HF285_with_Disco77.jpg
+ENOENT: no such file or directory, open '/app/_site/images/HF286_Love_Sensation_Live_with_Andi_King.jpg' images/HF286_Love_Sensation_Live_with_Andi_King.jpg
+[11ty] Writing _site/blog/remote-retrospectives/index.html from ./posts/blog/2020/remote-retrospectives.md (liquid)
+[11ty] Writing _site/blog/visualise-habits-personal-dashboard/index.html from ./posts/blog/2021/visualise-habits-personal-dashboard.md (liquid)
+[11ty] Writing _site/blog/2022-in-numbers/index.html from ./posts/blog/2023/2022-in-numbers.md (liquid)
+[11ty] Writing _site/aside/creative-swap/index.html from ./posts/aside/2012/creative-swap.md (liquid)
+[11ty] Writing _site/aside/droplet/index.html from ./posts/aside/2012/droplet.md (liquid)
+[11ty] Writing _site/aside/canvas-conf/index.html from ./posts/aside/2012/canvas-conf.md (liquid)
+[11ty] Writing _site/aside/evolution-of-the-web/index.html from ./posts/aside/2012/evolution-of-the-web.md (liquid)
+[11ty] Writing _site/aside/how-is-bottle-top-bill-made/index.html from ./posts/aside/2012/how-is-bottle-top-bill-made.md (liquid)
+[11ty] Writing _site/aside/logotype-michael-evamy/index.html from ./posts/aside/2012/logotype-michael-evamy.md (liquid)
+[11ty] Writing _site/aside/mobile-local/index.html from ./posts/aside/2012/mobile-local.md (liquid)
+[11ty] Writing _site/aside/never-use-black/index.html from ./posts/aside/2012/never-use-black.md (liquid)
+[11ty] Writing _site/aside/new-adventures-2013/index.html from ./posts/aside/2012/new-adventures-2013.md (liquid)
+[11ty] Writing _site/aside/readability-index-calculator/index.html from ./posts/aside/2012/readability-index-calculator.md (liquid)
+[11ty] Writing _site/aside/responsive-email-design/index.html from ./posts/aside/2012/responsive-email-design.md (liquid)
+[11ty] Writing _site/aside/sprite-cow/index.html from ./posts/aside/2012/sprite-cow.md (liquid)
+[11ty] Writing _site/aside/the-cost-of-famous-logos/index.html from ./posts/aside/2012/the-cost-of-famous-logos.md (liquid)
+[11ty] Writing _site/aside/the-dandy-going-digital/index.html from ./posts/aside/2012/the-dandy-going-digital.md (liquid)
+[11ty] Writing _site/aside/timeline-of-the-web/index.html from ./posts/aside/2012/timeline-of-the-web.md (liquid)
+[11ty] Writing _site/aside/wikipedia-redefined/index.html from ./posts/aside/2012/wikipedia-redefined.md (liquid)
+[11ty] Writing _site/aside/minimal-movie-posters/index.html from ./posts/aside/2013/minimal-movie-posters.md (liquid)
+[11ty] Writing _site/aside/nice-arse/index.html from ./posts/aside/2013/nice-arse.md (liquid)
+[11ty] Writing _site/aside/ubuntu-for-phones/index.html from ./posts/aside/2013/ubuntu-for-phones.md (liquid)
+[11ty] Writing _site/aside/whats-coming-in-html-5-1/index.html from ./posts/aside/2014/whats-coming-in-html-5-1.md (liquid)
+[11ty] Writing _site/aside/take-weather/index.html from ./posts/aside/2013/take-weather.md (liquid)
+[11ty] Writing _site/aside/mastercard-rebranded/index.html from ./posts/aside/2016/mastercard-rebranded.md (liquid)
+[11ty] Writing _site/aside/web-design-trends-for-2019/index.html from ./posts/aside/2018/web-design-trends-for-2019.md (liquid)
+[11ty] Writing _site/aside/how-to-power-down-and-find-your-jomo-flow-this-year/index.html from ./posts/aside/2018/how-to-power-down-and-find-your-jomo-flow-this-year.md (liquid)
+[11ty] Writing _site/aside/basic-color-theory-for-web-developers/index.html from ./posts/aside/2019/basic-color-theory-for-web-developers.md (liquid)
+[11ty] Writing _site/aside/am-i-micromanaging-my-team/index.html from ./posts/aside/2019/am-i-micromanaging-my-team.md (liquid)
+[11ty] Writing _site/aside/designing-accessible-maps/index.html from ./posts/aside/2019/designing-accessible-maps.md (liquid)
+[11ty] Writing _site/aside/bt-new-round-logo/index.html from ./posts/aside/2019/bt-new-round-logo.md (liquid)
+[11ty] Writing _site/aside/finding-lena-patron-saint-of-jpeg/index.html from ./posts/aside/2019/finding-lena-patron-saint-of-jpeg.md (liquid)
+[11ty] Writing _site/aside/dimensions-guide/index.html from ./posts/aside/2019/dimensions-guide.md (liquid)
+[11ty] Writing _site/aside/intro-to-font-metrics/index.html from ./posts/aside/2019/intro-to-font-metrics.md (liquid)
+[11ty] Writing _site/aside/lego-mini-figure-in-css/index.html from ./posts/aside/2019/lego-mini-figure-in-css.md (liquid)
+[11ty] Writing _site/aside/joint-london/index.html from ./posts/aside/2012/joint-london.md (liquid)
+[11ty] Writing _site/aside/new-slack-logo/index.html from ./posts/aside/2019/new-slack-logo.md (liquid)
+[11ty] Writing _site/aside/over-instagram/index.html from ./posts/aside/2019/over-instagram.md (liquid)
+[11ty] Writing _site/aside/history-of-five-classic-typefaces/index.html from ./posts/aside/2019/history-of-five-classic-typefaces.md (liquid)
+[11ty] Writing _site/aside/one-domain-for-all-your-side-projects/index.html from ./posts/aside/2019/one-domain-for-all-your-side-projects.md (liquid)
+[11ty] Writing _site/aside/the-anti-mentor/index.html from ./posts/aside/2019/the-anti-mentor.md (liquid)
+[11ty] Writing _site/aside/pi-cubed/index.html from ./posts/aside/2019/pi-cubed.md (liquid)
+[11ty] Writing _site/aside/unpopular-html-elements/index.html from ./posts/aside/2019/unpopular-html-elements.md (liquid)
+[11ty] Writing _site/aside/web-bluetooth/index.html from ./posts/aside/2019/web-bluetooth.md (liquid)
+[11ty] Writing _site/aside/how-to-build-trust-as-a-leader/index.html from ./posts/aside/2019/how-to-build-trust-as-a-leader.md (liquid)
+[11ty] Writing _site/portfolio/no-more-excuses/index.html from ./posts/portfolio/2012/no-more-excuses.md (liquid)
+[11ty] Writing _site/portfolio/rugby-world-cup-times/index.html from ./posts/portfolio/2019/rugby-world-cup-times.md (liquid)
+[11ty] Writing _site/portfolio/commuting-costs/index.html from ./posts/portfolio/2016/commuting-costs.md (liquid)
+[11ty] Writing _site/portfolio/on-the-side/index.html from ./posts/portfolio/2019/on-the-side.md (liquid)
+[11ty] Writing _site/portfolio/football-cal/index.html from ./posts/portfolio/2021/football-cal.md (liquid)
+[11ty] Writing _site/portfolio/what-is-a-side-project-if-not-a-safe-place-to-get-imposter-syndrome/index.html from ./posts/portfolio/2021/what-is-a-side-project-if-not-a-safe-place-to-get-imposter-syndrome.md (liquid)
+[11ty] Writing _site/portfolio/petals-snapshot-1/index.html from ./posts/portfolio/2023/petals-snapshot-1.md (liquid)
+[11ty] Writing _site/portfolio/petals-snapshot-2-launch-feedback-personalised-scores-with-brian-suda/index.html from ./posts/portfolio/2023/petals-snapshot-2-launch-feedback-personalised-scores-with-brian-suda.md (liquid)
+[11ty] Writing _site/portfolio/petals-snapshot-3-google-toolkit-wheres-your-happy-place/index.html from ./posts/portfolio/2023/petals-snapshot-3-google-toolkit-wheres-your-happy-place.md (liquid)
+[11ty] Writing _site/portfolio/petals-snapshot-4-content-updates-and-observing-trends-with-myles-sanigar/index.html from ./posts/portfolio/2023/petals-snapshot-4-content-updates-and-observing-trends-with-myles-sanigar.md (liquid)
+[11ty] Writing _site/portfolio/learning-design-systems-for-petals/index.html from ./posts/portfolio/2023/learning-design-systems-for-petals.md (liquid)
+[11ty] Writing _site/portfolio/petals-snapshot-5-google-toolkit-fixes-with-mike-street-wireframing-with-brian/index.html from ./posts/portfolio/2023/petals-snapshot-5-google-toolkit-fixes-with-mike-street-wireframing-with-brian.md (liquid)
+[11ty] Writing _site/portfolio/petals-snapshot-9-petals-coaching-google-sheet-filter-fixes/index.html from ./posts/portfolio/2023/petals-snapshot-9-petals-coaching-google-sheet-filter-fixes.md (liquid)
+[11ty] Writing _site/portfolio/petals-snapshot-6-microsoft-forms-google-slack-automation/index.html from ./posts/portfolio/2023/petals-snapshot-6-microsoft-forms-google-slack-automation.md (liquid)
+[11ty] Writing _site/portfolio/petals-snapshot-7-all-the-toolkits-okrs-leaving-asos/index.html from ./posts/portfolio/2023/petals-snapshot-7-all-the-toolkits-okrs-leaving-asos.md (liquid)
+[11ty] Writing _site/portfolio/6-nations-calendar/index.html from ./posts/portfolio/2024/6-nations-calendar.md (liquid)
+[11ty] Writing _site/portfolio/apps-experimentation-asos/index.html from ./posts/portfolio/2024/apps-experimentation-asos.md (liquid)
+[11ty] Writing _site/portfolio/how-to-measure-team-health-and-culture/index.html from ./posts/portfolio/2024/how-to-measure-team-health-and-culture.md (liquid)
+[11ty] Writing _site/blog/clean-slate/index.html from ./posts/blog/2012/clean-slate.md (liquid)
+[11ty] Writing _site/blog/git-bitbucket-sourcetree/index.html from ./posts/blog/2012/git-bitbucket-sourcetree.md (liquid)
+[11ty] Writing _site/blog/easy-as-1-2-3/index.html from ./posts/blog/2012/easy-as-1-2-3.md (liquid)
+[11ty] Writing _site/blog/new-microsoft-logo/index.html from ./posts/blog/2012/new-microsoft-logo.md (liquid)
+[11ty] Writing _site/blog/seven-years/index.html from ./posts/blog/2012/seven-years.md (liquid)
+[11ty] Writing _site/portfolio/petals-snapshot-8-sharing-at-manageops-and-team-trust-with-laura-annabel/index.html from ./posts/portfolio/2023/petals-snapshot-8-sharing-at-manageops-and-team-trust-with-laura-annabel.md (liquid)
+[11ty] Writing _site/blog/asos/index.html from ./posts/blog/2013/asos.md (liquid)
+[11ty] Writing _site/blog/jumping-for-autism/index.html from ./posts/blog/2015/jumping-for-autism.md (liquid)
+[11ty] Writing _site/blog/bag-basket/index.html from ./posts/blog/2015/bag-basket.md (liquid)
+[11ty] Writing _site/blog/6-wordpress-defaults-you-dont-need/index.html from ./posts/blog/2015/6-wordpress-defaults-you-dont-need.md (liquid)
+[11ty] Writing _site/blog/commodore-64-turns-30/index.html from ./posts/blog/2012/commodore-64-turns-30.md (liquid)
+[11ty] Writing _site/blog/team-building-workouts/index.html from ./posts/blog/2019/team-building-workouts.md (liquid)
+[11ty] Writing _site/blog/ticktick-ing-the-boxes/index.html from ./posts/blog/2019/ticktick-ing-the-boxes.md (liquid)
+[11ty] Writing _site/weeknotes/7/index.html from ./posts/weeknotes/7.md (liquid)
+[11ty] Writing _site/blog/nicholas-parsons-technique/index.html from ./posts/blog/2020/nicholas-parsons-technique.md (liquid)
+[11ty] Writing _site/weeknotes/46/index.html from ./posts/weeknotes/46.md (liquid)
+[11ty] Writing _site/blog/outrunmay-macmillan/index.html from ./posts/blog/2017/outrunmay-macmillan.md (liquid)
+[11ty] Writing _site/blog/2021-goals/index.html from ./posts/blog/2021/2021-goals.md (liquid)
+[11ty] Writing _site/weeknotes/36/index.html from ./posts/weeknotes/36.md (liquid)
+[11ty] Writing _site/blog/july-2021/index.html from ./posts/blog/2021/july-2021.md (liquid)
+[11ty] Writing _site/portfolio/evo-inspires/index.html from ./posts/portfolio/2024/evo-inspires.md (liquid)
+[11ty] Writing _site/weeknotes/3/index.html from ./posts/weeknotes/3.md (liquid)
+[11ty] Writing _site/weeknotes/17/index.html from ./posts/weeknotes/17.md (liquid)
+[11ty] Writing _site/blog/finding-time-for-side-projects/index.html from ./posts/blog/2022/finding-time-for-side-projects.md (liquid)
+[11ty] Writing _site/aside/brooklyn/index.html from ./posts/aside/2019/brooklyn.md (liquid)
+[11ty] Writing _site/blog/fortnotes-2022-4/index.html from ./posts/blog/2022/fortnotes-2022-4.md (liquid)
+[11ty] Writing _site/blog/fortnotes-2022-6/index.html from ./posts/blog/2022/fortnotes-2022-6.md (liquid)
+[11ty] Writing _site/blog/april-2022/index.html from ./posts/blog/2022/april-2022.md (liquid)
+[11ty] Writing _site/blog/fortnotes-2022-2/index.html from ./posts/blog/2022/fortnotes-2022-2.md (liquid)
+[11ty] Writing _site/blog/october-2022/index.html from ./posts/blog/2022/october-2022.md (liquid)
+[11ty] Writing _site/blog/may-2022/index.html from ./posts/blog/2022/may-2022.md (liquid)
+[11ty] Writing _site/blog/pop-em-bot/index.html from ./posts/blog/2022/pop-em-bot.md (liquid)
+[11ty] Writing _site/blog/building-tools-for-healthier-teams/index.html from ./posts/blog/2025/building-tools-for-healthier-teams.md (liquid)
+[11ty] Writing _site/blog/the-love-of-records/index.html from ./posts/blog/2023/the-love-of-records.md (liquid)
+[11ty] Writing _site/blog/q3-2025/index.html from ./posts/blog/2025/q3-2025.md (liquid)
+[11ty] Writing _site/blog/how-can-mk-become-a-tech-hub/index.html from ./posts/blog/2025/how-can-mk-become-a-tech-hub.md (liquid)
+[11ty] Writing _site/blog/wheres-your-happy-place/index.html from ./posts/blog/2023/wheres-your-happy-place.md (liquid)
+[11ty] Writing _site/blog/speedback/index.html from ./posts/blog/2022/speedback.md (liquid)
+[11ty] Writing _site/blog/november-2022/index.html from ./posts/blog/2022/november-2022.md (liquid)
+[11ty] Writing _site/aside/trainspotting-iconic-movie-poster/index.html from ./posts/aside/2012/trainspotting-iconic-movie-poster.md (liquid)
+[11ty] Writing _site/portfolio/free-tunes-for-christmas/index.html from ./posts/portfolio/2014/free-tunes-for-christmas.md (liquid)
+[11ty] Writing _site/blog/august-2022/index.html from ./posts/blog/2022/august-2022.md (liquid)
+[11ty] Writing _site/portfolio/house-finesse-2024/index.html from ./posts/portfolio/2024/house-finesse-2024.md (liquid)
+[11ty] Writing _site/aside/5-years-at-asos/index.html from ./posts/aside/2018/5-years-at-asos.md (liquid)
+[11ty] Writing _site/blog/one-year-at-asos/index.html from ./posts/blog/2014/one-year-at-asos.md (liquid)
+[11ty] Writing _site/blog/5-trends-i-dont-want-to-see-in-2014/index.html from ./posts/blog/2014/5-trends-i-dont-want-to-see-in-2014.md (liquid)
+[11ty] Writing _site/blog/may-2021/index.html from ./posts/blog/2021/may-2021.md (liquid)
+[11ty] Writing _site/blog/recently-played-episodes-data-from-apple-podcasts/index.html from ./posts/blog/2021/recently-played-episodes-data-from-apple-podcasts.md (liquid)
+[11ty] Writing _site/blog/the-joy-of-missing-out/index.html from ./posts/blog/2019/the-joy-of-missing-out.md (liquid)
+[11ty] Writing _site/blog/pop-speedback/index.html from ./posts/blog/2022/pop-speedback.md (liquid)
+[11ty] Writing _site/blog/finding-creativity-in-the-pool/index.html from ./posts/blog/2025/finding-creativity-in-the-pool.md (liquid)
+[11ty] Writing _site/blog/make-life-work/index.html from ./posts/blog/2023/make-life-work.md (liquid)
+[11ty] Writing _site/blog/q2-2025/index.html from ./posts/blog/2025/q2-2025.md (liquid)
+[11ty] Writing _site/blog/fortnotes-2022-5/index.html from ./posts/blog/2022/fortnotes-2022-5.md (liquid)
+[11ty] Writing _site/blog/pop-event-gifs/index.html from ./posts/blog/2022/pop-event-gifs.md (liquid)
+[11ty] Writing _site/blog/vulnerability-safety-but-it-can-be/index.html from ./posts/blog/2025/vulnerability-safety-but-it-can-be.md (liquid)
+[11ty] Writing _site/blog/logitech-create/index.html from ./posts/blog/2017/logitech-create.md (liquid)
+[11ty] Writing _site/blog/pop-transcribed-podcast-player/index.html from ./posts/blog/2022/pop-transcribed-podcast-player.md (liquid)
+[11ty] Writing _site/blog/pop-petals/index.html from ./posts/blog/2022/pop-petals.md (liquid)
+[11ty] Writing _site/aside/the-gift-of-giving-up/index.html from ./posts/aside/2019/the-gift-of-giving-up.md (liquid)
+[11ty] Writing _site/blog/autism-awareness-week/index.html from ./posts/blog/2017/autism-awareness-week.md (liquid)
+[11ty] Writing _site/blog/october-2021/index.html from ./posts/blog/2021/october-2021.md (liquid)
+[11ty] Writing _site/blog/june-2021/index.html from ./posts/blog/2021/june-2021.md (liquid)
+[11ty] Writing _site/blog/january-2021/index.html from ./posts/blog/2021/january-2021.md (liquid)
+[11ty] Writing _site/blog/fortnotes-2022-1/index.html from ./posts/blog/2022/fortnotes-2022-1.md (liquid)
+[11ty] Writing _site/blog/random-acts-of-kindness/index.html from ./posts/blog/2023/random-acts-of-kindness.md (liquid)
+[11ty] Writing _site/blog/10-takeaways-from-ldx3-2025/index.html from ./posts/blog/2025/10-takeaways-from-ldx3-2025.md (liquid)
+[11ty] Writing _site/blog/april-2021/index.html from ./posts/blog/2021/april-2021.md (liquid)
+[11ty] Writing _site/blog/triple-a-meeting-framework/index.html from ./posts/blog/2020/triple-a-meeting-framework.md (liquid)
+[11ty] Writing _site/blog/february-2021/index.html from ./posts/blog/2021/february-2021.md (liquid)
+[11ty] Writing _site/blog/december-2021/index.html from ./posts/blog/2022/december-2021.md (liquid)
+[11ty] Writing _site/blog/july-2022/index.html from ./posts/blog/2022/july-2022.md (liquid)
+[11ty] Writing _site/blog/fitness-pomodoros/index.html from ./posts/blog/2025/fitness-pomodoros.md (liquid)
+[11ty] Writing _site/blog/august-2021/index.html from ./posts/blog/2021/august-2021.md (liquid)
+[11ty] Writing _site/blog/march-2021/index.html from ./posts/blog/2021/march-2021.md (liquid)
+[11ty] Writing _site/blog/november-2021/index.html from ./posts/blog/2021/november-2021.md (liquid)
+[11ty] Writing _site/blog/what-we-can-all-learn-from-playing-lego-with-an-8-year-old/index.html from ./posts/blog/2021/what-we-can-all-learn-from-playing-lego-with-an-8-year-old.md (liquid)
+[11ty] Writing _site/blog/september-2021/index.html from ./posts/blog/2021/september-2021.md (liquid)
+[11ty] Writing _site/blog/from-si-cast-to-verbal-diary/index.html from ./posts/blog/2018/from-si-cast-to-verbal-diary.md (liquid)
+[11ty] Writing _site/blog/wired-smarter-2022/index.html from ./posts/blog/2022/wired-smarter-2022.md (liquid)
+[11ty] Writing _site/blog/fortnotes-2022-3/index.html from ./posts/blog/2022/fortnotes-2022-3.md (liquid)
+[11ty] Writing _site/blog/june-2022/index.html from ./posts/blog/2022/june-2022.md (liquid)
+[11ty] Writing _site/blog/how-to-encourage-accountability-in-one-to-ones/index.html from ./posts/blog/2022/how-to-encourage-accountability-in-one-to-ones.md (liquid)
+[11ty] Copied 899 files / Wrote 1399 files in 189.38 seconds (135.4ms each, v1.0.2)
+[11ty] Watching…
+[Browsersync] Access URLs:
+ ---------------------------------
+    Local: http://localhost:8080
+ External: http://192.168.0.2:8080
+ ---------------------------------
+[Browsersync] Serving files from: _site
+[11ty] File added: src/pages/duolingo.md
+[11ty] Problem writing Eleventy templates: (more in DEBUG output)
+[11ty] Output conflict: multiple input files are writing to `_site/duolingo/index.html`. Use distinct `permalink` values to resolve this conflict.
+[11ty]   1. ./src/pages/duolingo.md
+[11ty]   2. ./src/pages/duolingo.njk (via DuplicatePermalinkOutputError)
+[11ty]
+[11ty] Original error stack trace: (Repeated output has been truncated…)
+[11ty]     at TemplateMap.checkForDuplicatePermalinks (/app/node_modules/@11ty/eleventy/src/TemplateMap.js:656:13)
+[11ty]     at TemplateMap.cache (/app/node_modules/@11ty/eleventy/src/TemplateMap.js:365:10)
+[11ty]     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[11ty]     at async TemplateWriter._createTemplateMap (/app/node_modules/@11ty/eleventy/src/TemplateWriter.js:244:5)
+[11ty]     at async TemplateWriter.generateTemplates (/app/node_modules/@11ty/eleventy/src/TemplateWriter.js:277:5)
+[11ty]     at async TemplateWriter.write (/app/node_modules/@11ty/eleventy/src/TemplateWriter.js:323:23)
+[11ty]     at async Eleventy.executeBuild (/app/node_modules/@11ty/eleventy/src/Eleventy.js:1003:13)
+[11ty]     at async Eleventy._watch (/app/node_modules/@11ty/eleventy/src/Eleventy.js:670:5)
+[11ty]     at async watchRun (/app/node_modules/@11ty/eleventy/src/Eleventy.js:877:9)
+[11ty]     at async FSWatcher.<anonymous> (/app/node_modules/@11ty/eleventy/src/Eleventy.js:900:7)
+[11ty] Benchmark   2187ms  25%  3542× (Configuration) "slugify" Nunjucks Filter
+[11ty] Copied 899 files / Wrote 0 files in 8.69 seconds (v1.0.2)
+[7mAMP Optimizer AddBlurryImagePlaceholders[0m [33mWARNING jimp and lru-cache need to be installed via `npm install jimp lru-cache` for this transformer to work[0m
+[11ty] Watching…
+[Browsersync] Reloading Browsers...
