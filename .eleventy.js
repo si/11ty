@@ -142,6 +142,40 @@ module.exports = function (eleventyConfig) {
     }
   );
 
+  eleventyConfig.addNunjucksAsyncFilter(
+    "latestDate",
+    function (dateObj, filename, callback) {
+      const call = (result) => {
+        result.then((modifiedDate) => {
+          let latest = dateObj;
+          if (modifiedDate instanceof Date && !isNaN(modifiedDate)) {
+            // Compare timestamps
+            if (latest instanceof Date && !isNaN(latest)) {
+               if (modifiedDate.getTime() > latest.getTime()) {
+                  latest = modifiedDate;
+               }
+            } else {
+               latest = modifiedDate;
+            }
+          }
+          callback(null, latest);
+        });
+        result.catch((error) => {
+          // If retrieving last modified date fails, fall back to the provided date
+          callback(null, dateObj);
+        });
+      };
+
+      const cached = lastModifiedDateCache.get(filename);
+      if (cached) {
+        return call(cached);
+      }
+      const promise = lastModifiedDate(filename);
+      lastModifiedDateCache.set(filename, promise);
+      call(promise);
+    }
+  );
+
   eleventyConfig.addFilter("encodeURIComponent", function (str) {
     return encodeURIComponent(str);
   });
