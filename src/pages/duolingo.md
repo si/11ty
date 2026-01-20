@@ -65,12 +65,14 @@ templateEngineOverride: njk,md
             return data;
         } catch (error) {
             console.error('Error fetching data:', error);
-            document.querySelector('#dataTable tbody').innerHTML = '<tr><td colspan="5">Error loading data. Ensure DATABASE_URL is set.</td></tr>';
-            return [];
+            document.querySelector('#dataTable tbody').innerHTML = '<tr><td colspan="5">Error loading data. Ensure NETLIFY_DATABASE_URL is set.</td></tr>';
+            return null; // Return null to indicate error
         }
     }
 
     function renderTable(data) {
+        if (data === null) return; // Do not render if there was an error
+
         const tbody = document.querySelector('#dataTable tbody');
         if (data.length === 0) {
             tbody.innerHTML = '<tr><td colspan="5">No data available.</td></tr>';
@@ -89,6 +91,8 @@ templateEngineOverride: njk,md
     }
 
     function renderChart(data) {
+        if (data === null) return;
+
         const ctx = document.getElementById('progressChart').getContext('2d');
 
         // Sort by date ascending for chart
@@ -153,7 +157,7 @@ templateEngineOverride: njk,md
     (async () => {
         const data = await fetchData();
         renderTable(data);
-        if (data.length > 0) {
+        if (data && data.length > 0) {
             renderChart(data);
         }
     })();

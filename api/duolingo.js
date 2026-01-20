@@ -19,15 +19,15 @@ export default async function (req, event) {
     });
   }
 
-  if (!process.env.DATABASE_URL) {
-    console.error("DATABASE_URL not set");
+  if (!process.env.NETLIFY_DATABASE_URL) {
+    console.error("NETLIFY_DATABASE_URL not set");
     return new Response(JSON.stringify({ error: "Server configuration error" }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' }
     });
   }
 
-  const client = new Client(process.env.DATABASE_URL);
+  const client = new Client(process.env.NETLIFY_DATABASE_URL);
 
   try {
     await client.connect();
