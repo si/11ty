@@ -17,7 +17,7 @@ permalink: /site-index/
 <h2 id="pages">Pages</h2>
 <ul class="page-index">
 {%- for entry in sorted %}
-  {%- if (not entry.data.tags or "posts" not in entry.data.tags) and (not entry.url or entry.url.indexOf('/tags/') !== 0) %}
+  {%- if (not entry.data.tags or "posts" not in entry.data.tags) and (not entry.url or entry.url.indexOf('/tags/') !== 0) and (entry.inputPath.indexOf('README.md') == -1) and (entry.inputPath.indexOf('AGENTS.md') == -1) %}
     {%- set flattenedUrl = entry.url | replace('/src/pages', '') %}
     {%- set label = entry.data.title or entry.fileSlug or flattenedUrl %}
     <li>
