@@ -1,8 +1,10 @@
 # Si on 11ty
 
+Now hosted on Netlify
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e4905586-88ab-457b-8a0e-0df3542ad315/deploy-status)](https://app.netlify.com/projects/sijobling/deploys)
 
-This is the source code for [sijobling.com](https://sijobling.com), a personal website and blog built with [Eleventy (11ty)](https://www.11ty.dev/). It is based on the [eleventy-high-performance-blog](https://github.com/11ty/eleventy-base-blog) starter.
+This is the source code for [sijobling.com](https://sijobling.com), a personal website and blog built with [Eleventy (11ty)](https://www.11ty.dev/). It is based on the [eleventy-high-performance-blog](https://github.com/11ty/eleventy-base-blog) starter kit.
 
 ## 🚀 Getting Started
 
