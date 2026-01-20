@@ -4035,6 +4035,32 @@
             "position": 112,
             "last_access": "18 December 2025",
             "enabled": true
+        },
+        {
+            "id": 158,
+            "url": "/index",
+            "match_url": "/index",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/site-index/"
+            },
+            "match_type": "url",
+            "title": "Site Index",
+            "hits": 0,
+            "regex": false,
+            "group_id": 1,
+            "position": 154,
+            "last_access": "-",
+            "enabled": true
         }
     ]
 }
