@@ -5,25 +5,13 @@ date: 2021-06-09
 coverImage: "Si-coaching-at-Akkroo-March-2019-16-9.jpg"
 ---
 
-<h2>Innovator. Podcaster. Speaker. Leader. Organiser.</h2>
+<h2>Podcaster. Speaker. Leader. Organiser.</h2>
 
-<p>Over the past 30 years, I've honed my craft with digital products, now an experienced leader in tech having worked with international brands like Rightmove, ASOS, Ant Group, UEFA and Yahoo!.</p>
+<p>Over the past 30 years, I've honed my craft with digital products, now an experienced leader in tech having worked with international brands like <a href="https://rightmove.co.uk/">Rightmove</a>, <a href="https://asos.com/">ASOS</a>, <a href="https://www.alibabagroup.com/">Alibaba Group</a>, <a href="https://www.uefa.com/">UEFA</a> and <a href="https://www.yahoo.com">Yahoo!</a>.</p>
 <p>I've also continued to create growing community and podcast products around shared passions such as House Finesse, Multipack and On The Side.</p>
 <p>Find out more on my <a href="/about/">About page</a></p>
 
-<h2>Latest posts</h2>
-
-{% set recent_posts = collections.homeRecentPosts | reverse %}
-<ul>
-{% for post in recent_posts %}
-  <li>
-    <a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-    <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-  </li>
-{% endfor %}
-</ul>
-
-<h2>Featured projects</h2>
+<h2>You might know me from…</h2>
 
 <div>
   <a href="https://usepetals.com/">
@@ -45,3 +33,15 @@ coverImage: "Si-coaching-at-Akkroo-March-2019-16-9.jpg"
   <img src="/assets/images/HF24-Opengraph-1024x576.png" alt="House Finesse cover">
   </a>
 </div>
+
+<h2>Latest posts</h2>
+
+{% set recent_posts = collections.homeRecentPosts | reverse %}
+<ul>
+{% for post in recent_posts %}
+  <li>
+    <a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+    <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+  </li>
+{% endfor %}
+</ul>
