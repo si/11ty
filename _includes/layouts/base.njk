@@ -15,8 +15,8 @@
     <link rel="icon" href="{{ '/img/si-disc.svg' | addHash }}" type="image/svg+xml">
     <meta name="theme-color" content="#f9c412">
     <meta name="robots" content="max-snippet:-1, max-image-preview: large, max-video-preview: -1">
-    <title>{{ renderData.title or title or metadata.title | escape }}</title>
-    <meta property="og:title" content="{{ renderData.title or title or metadata.title | escape  }}">
+    <title>{% if renderData.title or title %}{{ (renderData.title or title) | escape }}{% if page.url != '/' %} • {{ metadata.title | escape }}{% endif %}{% else %}{{ metadata.title | escape }}{% endif %}</title>
+    <meta property="og:title" content="{% if renderData.title or title %}{{ (renderData.title or title) | escape }}{% if page.url != '/' %} • {{ metadata.title | escape }}{% endif %}{% else %}{{ metadata.title | escape }}{% endif %}">
     {% set desc = renderData.description or description %}
     {% if not desc %}
       {% set desc = content | striptags | truncate(140) %}
