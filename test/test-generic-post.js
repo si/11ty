@@ -44,7 +44,7 @@ describe("check build output for a generic post", () => {
     });
 
     it("should have metadata", () => {
-      assert.equal(select("title"), "ASOS");
+      assert.equal(select("title"), "ASOS • Si Jobling");
       assert.equal(select("link[rel='canonical']", "href"), POST_URL);
     });
 
