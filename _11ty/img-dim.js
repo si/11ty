@@ -19,7 +19,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-const { JSDOM } = require("jsdom");
+const { parse } = require("node-html-parser");
 const { promisify } = require("util");
 const sizeOf = promisify(require("image-size"));
 const blurryPlaceholder = require("./blurry-placeholder");
@@ -69,13 +69,14 @@ const processImage = async (img, outputPath) => {
   }
   if (inputType == "gif") {
     const videoSrc = await gif2mp4(src);
-    const video = img.ownerDocument.createElement(
-      /AMP/i.test(img.tagName) ? "amp-video" : "video"
-    );
-    [...img.attributes].map(({ name, value }) => {
+    const tagName = /AMP/i.test(img.tagName) ? "amp-video" : "video";
+    const video = parse(`<${tagName}></${tagName}>`).firstChild;
+
+    Object.entries(img.attributes).forEach(([name, value]) => {
       video.setAttribute(name, value);
     });
-    video.src = videoSrc;
+
+    video.setAttribute("src", videoSrc);
     video.setAttribute("autoplay", "");
     video.setAttribute("muted", "");
     video.setAttribute("loop", "");
@@ -83,7 +84,7 @@ const processImage = async (img, outputPath) => {
       video.setAttribute("aria-label", img.getAttribute("alt"));
       video.removeAttribute("alt");
     }
-    img.parentElement.replaceChild(video, img);
+    img.replaceWith(video);
     return;
   }
   // When the input is a PNG, we keep the fallback image a PNG because JPEG does
@@ -98,28 +99,30 @@ const processImage = async (img, outputPath) => {
       `background-size:cover;` +
         `background-image:url("${await blurryPlaceholder(src)}")`
     );
-    const doc = img.ownerDocument;
-    const picture = doc.createElement("picture");
-    const avif = doc.createElement("source");
-    const webp = doc.createElement("source");
-    const jpeg = doc.createElement("source");
-    const fallback = await setSrcset(jpeg, src, fallbackType);
+
+    const picture = parse("<picture></picture>").firstChild;
+    const avifNode = parse("<source>").firstChild;
+    const webpNode = parse("<source>").firstChild;
+    const jpegNode = parse("<source>").firstChild;
+
+    const fallback = await setSrcset(jpegNode, src, fallbackType);
     if (!fallback) {
       return;
     }
-    const avifFallback = await setSrcset(avif, src, "avif");
+    const avifFallback = await setSrcset(avifNode, src, "avif");
     if (avifFallback) {
-      avif.setAttribute("type", "image/avif");
-      picture.appendChild(avif);
+      avifNode.setAttribute("type", "image/avif");
+      picture.appendChild(avifNode);
     }
-    const webpFallback = await setSrcset(webp, src, "webp");
+    const webpFallback = await setSrcset(webpNode, src, "webp");
     if (webpFallback) {
-      webp.setAttribute("type", "image/webp");
-      picture.appendChild(webp);
+      webpNode.setAttribute("type", "image/webp");
+      picture.appendChild(webpNode);
     }
-    jpeg.setAttribute("type", `image/${fallbackType}`);
-    picture.appendChild(jpeg);
-    img.parentElement.replaceChild(picture, img);
+    jpegNode.setAttribute("type", `image/${fallbackType}`);
+    picture.appendChild(jpegNode);
+
+    img.replaceWith(picture);
     picture.appendChild(img);
     img.setAttribute("src", fallback);
   } else if (!img.getAttribute("srcset")) {
@@ -149,12 +152,12 @@ const dimImages = async (rawContent, outputPath) => {
   let content = rawContent;
 
   if (outputPath && outputPath.endsWith(".html")) {
-    const dom = new JSDOM(content);
-    const images = [...dom.window.document.querySelectorAll("img,amp-img")];
+    const root = parse(content);
+    const images = root.querySelectorAll("img,amp-img");
 
     if (images.length > 0) {
       await Promise.all(images.map((i) => processImage(i, outputPath)));
-      content = dom.serialize();
+      content = root.toString();
     }
   }
 
