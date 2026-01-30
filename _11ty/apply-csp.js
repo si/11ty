@@ -45,13 +45,9 @@ function quote(str) {
   return `'${str}'`;
 }
 
-const addCspHash = async (rawContent, outputPath) => {
-  let content = rawContent;
-
-  if (outputPath && outputPath.endsWith(".html")) {
-    const dom = new JSDOM(content);
+const processCsp = (document) => {
     const cspAble = [
-      ...dom.window.document.querySelectorAll("script[csp-hash]"),
+      ...document.querySelectorAll("script[csp-hash]"),
     ];
 
     const hashes = cspAble.map((element) => {
@@ -63,17 +59,24 @@ const addCspHash = async (rawContent, outputPath) => {
       hashes.push.apply(hashes, AUTO_RELOAD_SCRIPTS);
     }
 
-    const csp = dom.window.document.querySelector(
+    const csp = document.querySelector(
       "meta[http-equiv='Content-Security-Policy']"
     );
     if (!csp) {
-      return content;
+      return;
     }
     csp.setAttribute(
       "content",
       csp.getAttribute("content").replace("HASHES", hashes.join(" "))
     );
+}
 
+const addCspHash = async (rawContent, outputPath) => {
+  let content = rawContent;
+
+  if (outputPath && outputPath.endsWith(".html")) {
+    const dom = new JSDOM(content);
+    processCsp(dom.window.document);
     content = dom.serialize();
   }
 
@@ -102,6 +105,7 @@ module.exports = {
   configFunction: async (eleventyConfig, pluginOptions = {}) => {
     eleventyConfig.addTransform("csp", addCspHash);
   },
+  processCsp, // Exporting for reuse
 };
 
 function isDevelopmentMode() {

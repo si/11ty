@@ -145,17 +145,21 @@ async function setSrcset(img, src, format) {
   return setInfo.fallback;
 }
 
+const processImages = async (document, outputPath) => {
+  const images = [...document.querySelectorAll("img,amp-img")];
+
+  if (images.length > 0) {
+    await Promise.all(images.map((i) => processImage(i, outputPath)));
+  }
+};
+
 const dimImages = async (rawContent, outputPath) => {
   let content = rawContent;
 
   if (outputPath && outputPath.endsWith(".html")) {
     const dom = new JSDOM(content);
-    const images = [...dom.window.document.querySelectorAll("img,amp-img")];
-
-    if (images.length > 0) {
-      await Promise.all(images.map((i) => processImage(i, outputPath)));
-      content = dom.serialize();
-    }
+    await processImages(dom.window.document, outputPath);
+    content = dom.serialize();
   }
 
   return content;
@@ -166,4 +170,5 @@ module.exports = {
   configFunction: async (eleventyConfig, pluginOptions = {}) => {
     eleventyConfig.addTransform("imgDim", dimImages);
   },
+  processImages, // Exporting for reuse
 };
