@@ -37,6 +37,8 @@ const csso = require("csso");
  * Optimizes AMP
  */
 
+let cachedCss = null;
+
 const purifyCss = async (rawContent, outputPath) => {
   let content = rawContent;
   if (
@@ -45,14 +47,18 @@ const purifyCss = async (rawContent, outputPath) => {
     !isAmp(content) &&
     !/data-style-override/.test(content)
   ) {
-    let before = require("fs").readFileSync("css/main.css", {
-      encoding: "utf-8",
-    });
+    if (!cachedCss) {
+      cachedCss = require("fs").readFileSync("css/main.css", {
+        encoding: "utf-8",
+      });
 
-    before = before.replace(
-      /@font-face {/g,
-      "@font-face {font-display:optional;"
-    );
+      cachedCss = cachedCss.replace(
+        /@font-face {/g,
+        "@font-face {font-display:optional;"
+      );
+    }
+
+    let before = cachedCss;
 
     const purged = await new PurgeCSS().purge({
       content: [
