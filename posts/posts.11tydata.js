@@ -1,12 +1,21 @@
 const todaysDate = new Date();
 const isDev = require("../_data/isdevelopment")();
 
-function showDraft(data) {
+function isPublished(data) {
   if (isDev) return true;
   const isDraft = "draft" in data && data.draft !== false;
-  const isPostInFuture =
-    "scheduled" in data ? data.scheduled > todaysDate : false;
-  return !isDraft && !isPostInFuture;
+  return !isDraft;
+}
+
+function isCollectionVisible(data) {
+  if (!isPublished(data)) return false;
+
+  if (isDev) return true;
+
+  const isScheduledInFuture = "scheduled" in data ? data.scheduled > todaysDate : false;
+  const isPostInFuture = data.date > todaysDate;
+
+  return !isScheduledInFuture && !isPostInFuture;
 }
 
 module.exports = () => {
@@ -15,9 +24,9 @@ module.exports = () => {
     templateClass: "tmpl-post",
     eleventyComputed: {
       eleventyExcludeFromCollections: (data) =>
-        showDraft(data) ? data.eleventyExcludeFromCollections : true,
+        isCollectionVisible(data) ? data.eleventyExcludeFromCollections : true,
       permalink: (data) => {
-        if (!showDraft(data)) return false;
+        if (!isPublished(data)) return false;
 
         if (data.permalink) return data.permalink;
 
