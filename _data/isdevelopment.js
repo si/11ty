@@ -20,6 +20,9 @@
  */
 
 module.exports = function () {
-  // YOLO.
+  // Check if process exists before accessing it (safe for Cloudflare Workers etc)
+  if (typeof process === "undefined" || !process.argv) {
+    return false;
+  }
   return /serve|watch/.test(process.argv.join());
 };

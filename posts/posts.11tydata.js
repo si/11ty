@@ -12,8 +12,12 @@ function isCollectionVisible(data) {
 
   if (isDev) return true;
 
-  const isScheduledInFuture = "scheduled" in data ? data.scheduled > todaysDate : false;
-  const isPostInFuture = data.date > todaysDate;
+  // Robustly handle dates, defaulting to today if missing (shouldn't happen for posts)
+  const scheduledDate = "scheduled" in data ? new Date(data.scheduled) : null;
+  const postDate = data.date ? new Date(data.date) : todaysDate;
+
+  const isScheduledInFuture = scheduledDate ? scheduledDate > todaysDate : false;
+  const isPostInFuture = postDate > todaysDate;
 
   return !isScheduledInFuture && !isPostInFuture;
 }
@@ -24,7 +28,7 @@ module.exports = () => {
     templateClass: "tmpl-post",
     eleventyComputed: {
       eleventyExcludeFromCollections: (data) =>
-        isCollectionVisible(data) ? data.eleventyExcludeFromCollections : true,
+        isCollectionVisible(data) ? (data.eleventyExcludeFromCollections || false) : true,
       permalink: (data) => {
         if (!isPublished(data)) return false;
 
