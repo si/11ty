@@ -2,22 +2,24 @@ const todaysDate = new Date();
 const isDev = require("../_data/isdevelopment")();
 
 function isPublished(data) {
+  if (!data) return true; // Default to published if data missing (unlikely)
   if (isDev) return true;
   const isDraft = "draft" in data && data.draft !== false;
   return !isDraft;
 }
 
 function isCollectionVisible(data) {
+  if (!data) return false;
   if (!isPublished(data)) return false;
 
   if (isDev) return true;
 
   // Robustly handle dates, defaulting to today if missing (shouldn't happen for posts)
-  const scheduledDate = "scheduled" in data ? new Date(data.scheduled) : null;
+  const scheduledDate = "scheduled" in data && data.scheduled ? new Date(data.scheduled) : null;
   const postDate = data.date ? new Date(data.date) : todaysDate;
 
-  const isScheduledInFuture = scheduledDate ? scheduledDate > todaysDate : false;
-  const isPostInFuture = postDate > todaysDate;
+  const isScheduledInFuture = scheduledDate && !isNaN(scheduledDate.getTime()) ? scheduledDate > todaysDate : false;
+  const isPostInFuture = postDate && !isNaN(postDate.getTime()) ? postDate > todaysDate : false;
 
   return !isScheduledInFuture && !isPostInFuture;
 }
@@ -28,9 +30,9 @@ module.exports = () => {
     templateClass: "tmpl-post",
     eleventyComputed: {
       eleventyExcludeFromCollections: (data) =>
-        isCollectionVisible(data) ? (data.eleventyExcludeFromCollections || false) : true,
+        data && isCollectionVisible(data) ? (data.eleventyExcludeFromCollections || false) : true,
       permalink: (data) => {
-        if (!isPublished(data)) return false;
+        if (!data || !isPublished(data)) return false;
 
         if (data.permalink) return data.permalink;
 
