@@ -1,9 +1,21 @@
 const todaysDate = new Date();
-const isDev = require("../_data/isdevelopment")();
+
+function isDev() {
+  try {
+    if (typeof process === "undefined" || !process || !process.argv || !Array.isArray(process.argv)) {
+      return false;
+    }
+    return /serve|watch/.test(process.argv.join());
+  } catch (e) {
+    return false;
+  }
+}
+
+const isDevEnv = isDev();
 
 function isPublished(data) {
-  if (!data) return true; // Default to published if data missing (unlikely)
-  if (isDev) return true;
+  if (!data) return true;
+  if (isDevEnv) return true;
   const isDraft = "draft" in data && data.draft !== false;
   return !isDraft;
 }
@@ -12,9 +24,9 @@ function isCollectionVisible(data) {
   if (!data) return false;
   if (!isPublished(data)) return false;
 
-  if (isDev) return true;
+  if (isDevEnv) return true;
 
-  // Robustly handle dates, defaulting to today if missing (shouldn't happen for posts)
+  // Robustly handle dates
   const scheduledDate = "scheduled" in data && data.scheduled ? new Date(data.scheduled) : null;
   const postDate = data.date ? new Date(data.date) : todaysDate;
 
