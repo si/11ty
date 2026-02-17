@@ -20,8 +20,17 @@
  */
 
 const { promisify } = require("util");
-const exists = promisify(require("fs").exists);
-const sharp = require("sharp");
+let exists;
+let sharp;
+
+function ensureDependencies() {
+  if (!exists) {
+    exists = promisify(require("fs").exists);
+  }
+  if (!sharp) {
+    sharp = require("sharp");
+  }
+}
 
 /**
  * Generates sensible sizes for each image for use in a srcset.
@@ -44,11 +53,13 @@ const quality = {
 const optionalFormats = new Set(["avif", "webp"]);
 
 function supportsOutputFormat(format) {
+  ensureDependencies();
   const info = sharp.format[format];
   return Boolean(info && info.output);
 }
 
 module.exports = async function srcset(filename, format) {
+  ensureDependencies();
   if (!supportsOutputFormat(format)) {
     if (optionalFormats.has(format)) {
       return null;
