@@ -74,21 +74,34 @@ module.exports = async function srcset(filename, format) {
   }
 };
 
+const inFlight = new Map();
+
 async function resize(filename, width, format) {
   const out = sizedName(filename, width, format);
   if (await exists("_site" + out)) {
     return out;
   }
-  await sharp("_site" + filename)
-    .rotate() // Manifest rotation from metadata
-    .resize(width)
-    [format]({
-      quality: quality[format] || quality.default,
-      reductionEffort: 6,
-    })
-    .toFile("_site" + out);
 
-  return out;
+  if (inFlight.has(out)) {
+    return inFlight.get(out);
+  }
+
+  const promise = (async () => {
+    await sharp("_site" + filename)
+      .rotate() // Manifest rotation from metadata
+      .resize(width)
+      [format]({
+        quality: quality[format] || quality.default,
+        reductionEffort: 6,
+      })
+      .toFile("_site" + out);
+    return out;
+  })().finally(() => {
+    inFlight.delete(out);
+  });
+
+  inFlight.set(out, promise);
+  return promise;
 }
 
 function sizedName(filename, width, format) {
