@@ -25,10 +25,21 @@ let sharp;
 
 function ensureDependencies() {
   if (!exists) {
-    exists = promisify(require("fs").exists);
+    try {
+      // Use eval("require") to prevent bundlers from statically analyzing and bundling fs
+      const fs = eval("require")("fs");
+      exists = promisify(fs.exists);
+    } catch (e) {
+      // fs not available
+    }
   }
   if (!sharp) {
-    sharp = require("sharp");
+    try {
+      // Use eval("require") to prevent bundlers from statically analyzing and bundling sharp
+      sharp = eval("require")("sharp");
+    } catch (e) {
+      // sharp not available
+    }
   }
 }
 
@@ -54,12 +65,19 @@ const optionalFormats = new Set(["avif", "webp"]);
 
 function supportsOutputFormat(format) {
   ensureDependencies();
+  if (!sharp) return false;
   const info = sharp.format[format];
   return Boolean(info && info.output);
 }
 
 module.exports = async function srcset(filename, format) {
   ensureDependencies();
+  if (!sharp) {
+    // If sharp is not available (e.g. in Cloudflare Worker), we can't process images.
+    // Return null or handle gracefully.
+    console.warn(`[srcset] sharp module not available, skipping ${filename}`);
+    return null;
+  }
   if (!supportsOutputFormat(format)) {
     if (optionalFormats.has(format)) {
       return null;
@@ -89,7 +107,7 @@ const inFlight = new Map();
 
 async function resize(filename, width, format) {
   const out = sizedName(filename, width, format);
-  if (await exists("_site" + out)) {
+  if (exists && await exists("_site" + out)) {
     return out;
   }
 
