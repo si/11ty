@@ -20,8 +20,28 @@
  */
 
 const { promisify } = require("util");
-const exists = promisify(require("fs").exists);
-const sharp = require("sharp");
+let exists;
+let sharp;
+
+function ensureDependencies() {
+  if (!exists) {
+    try {
+      // Use eval("require") to prevent bundlers from statically analyzing and bundling fs
+      const fs = eval("require")("fs");
+      exists = promisify(fs.exists);
+    } catch (e) {
+      // fs not available
+    }
+  }
+  if (!sharp) {
+    try {
+      // Use eval("require") to prevent bundlers from statically analyzing and bundling sharp
+      sharp = eval("require")("sharp");
+    } catch (e) {
+      // sharp not available
+    }
+  }
+}
 
 /**
  * Generates sensible sizes for each image for use in a srcset.
@@ -44,11 +64,20 @@ const quality = {
 const optionalFormats = new Set(["avif", "webp"]);
 
 function supportsOutputFormat(format) {
+  ensureDependencies();
+  if (!sharp) return false;
   const info = sharp.format[format];
   return Boolean(info && info.output);
 }
 
 module.exports = async function srcset(filename, format) {
+  ensureDependencies();
+  if (!sharp) {
+    // If sharp is not available (e.g. in Cloudflare Worker), we can't process images.
+    // Return null or handle gracefully.
+    console.warn(`[srcset] sharp module not available, skipping ${filename}`);
+    return null;
+  }
   if (!supportsOutputFormat(format)) {
     if (optionalFormats.has(format)) {
       return null;
@@ -74,21 +103,34 @@ module.exports = async function srcset(filename, format) {
   }
 };
 
+const inFlight = new Map();
+
 async function resize(filename, width, format) {
   const out = sizedName(filename, width, format);
-  if (await exists("_site" + out)) {
+  if (exists && await exists("_site" + out)) {
     return out;
   }
-  await sharp("_site" + filename)
-    .rotate() // Manifest rotation from metadata
-    .resize(width)
-    [format]({
-      quality: quality[format] || quality.default,
-      reductionEffort: 6,
-    })
-    .toFile("_site" + out);
 
-  return out;
+  if (inFlight.has(out)) {
+    return inFlight.get(out);
+  }
+
+  const promise = (async () => {
+    await sharp("_site" + filename)
+      .rotate() // Manifest rotation from metadata
+      .resize(width)
+      [format]({
+        quality: quality[format] || quality.default,
+        reductionEffort: 6,
+      })
+      .toFile("_site" + out);
+    return out;
+  })().finally(() => {
+    inFlight.delete(out);
+  });
+
+  inFlight.set(out, promise);
+  return promise;
 }
 
 function sizedName(filename, width, format) {
