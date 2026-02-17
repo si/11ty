@@ -37,7 +37,7 @@ Driver of Change (DoC) model for Si
 
 ### James
 
-![James's avatar](images/FDBD38E0-FAA0-4A10-96DF-7B547D168F73-300x300.jpeg)
+![James's avatar](/assets/images/FDBD38E0-FAA0-4A10-96DF-7B547D168F73-300x300.jpeg)
 
 30something male from UK, 2 kids (boy 7, girl 2), married, web developer for a small company, mostly remote. More of a night owl than a morning person. 
 
@@ -53,7 +53,7 @@ James values giving back to society, special time with his family and learning n
 
 ### Antonia
 
-![Antonia's avatar](images/4F1CD6A6-5576-4FEF-BBB5-EEDBB8DEC280-300x300.jpeg)
+![Antonia's avatar](/assets/images/4F1CD6A6-5576-4FEF-BBB5-EEDBB8DEC280-300x300.jpeg)
 
 20something female from US, single with no kids, freelance designer, works from home or co-working spaces. Generally up early except weekends. 
 
@@ -88,8 +88,23 @@ ADDE Examples for Si
 
 ### Assets
 
-![Mini Coops in house style duotone](images/3B7A5BB9-EB74-4B3C-8B57-579A39F06FC5-1024x1024.jpeg)
+![Mini Coops in house style duotone](/assets/images/3B7A5BB9-EB74-4B3C-8B57-579A39F06FC5-1024x1024.jpeg)
 
 ## Content Tilt 👓
 
-\[**TODO**: _Competitor analysis to identify any unique angles from the side project community_\]
+The side project community is bustling, but often polarized:
+
+*   **The Hustlers 💸**: "Ship fast," "MRR," and "Sleep when you're dead." Inspiring, but often leads to burnout and feelings of inadequacy for those with limited time.
+*   **The Techies 💻**: Deep dives into code, frameworks, and "How to build X." Essential for *building*, but lacks the structural advice to *finish* or stay motivated.
+*   **The Makers 🎨**: Focused on the craft and design. Often missing the pragmatic project management needed to ship.
+
+**My unique angle:**
+**Sustainable Side Projects for the Rest of Us.**
+
+This publication sits at the intersection of **Agile Project Management** and **Personal Well-being**. It treats a side project not as a lottery ticket, but as a fulfilling creative outlet that must coexist with a career and family.
+
+I apply professional leadership and delivery methodologies (usually reserved for enterprise teams) to the chaotic, emotional world of the solo creator.
+
+*   **Less** "How to make $10k/month" → **More** "How to find 2 hours a week without guilt."
+*   **Less** "Best React Framework" → **More** "Best framework for decision making."
+*   **Less** "Success Stories" → **More** "Honest Retrospectives on Failure."
