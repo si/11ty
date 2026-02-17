@@ -120,10 +120,6 @@ module.exports = function (eleventyConfig) {
     }
   );
 
-  eleventyConfig.on("eleventy.beforeWatch", () => {
-    addHashCache.clear();
-  });
-
   async function lastModifiedDate(filename) {
     try {
       const { stdout } = await execFile("git", [
