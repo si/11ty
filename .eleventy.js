@@ -120,7 +120,7 @@ module.exports = function (eleventyConfig) {
     }
   );
 
-  eleventyConfig.on("beforeBuild", () => {
+  eleventyConfig.on("eleventy.before", () => {
     addHashCache.clear();
   });
 
