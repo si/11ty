@@ -103,14 +103,14 @@ const processImage = async (img, outputPath) => {
     const avif = doc.createElement("source");
     const webp = doc.createElement("source");
     const jpeg = doc.createElement("source");
-    const [fallback, avifFallback, webpFallback] = await Promise.all([
-      setSrcset(jpeg, src, fallbackType),
-      setSrcset(avif, src, "avif"),
-      setSrcset(webp, src, "webp"),
-    ]);
+    const fallback = await setSrcset(jpeg, src, fallbackType);
     if (!fallback) {
       return;
     }
+    const [avifFallback, webpFallback] = await Promise.all([
+      setSrcset(avif, src, "avif"),
+      setSrcset(webp, src, "webp"),
+    ]);
     if (avifFallback) {
       avif.setAttribute("type", "image/avif");
       picture.appendChild(avif);
