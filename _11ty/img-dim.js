@@ -21,6 +21,7 @@
 
 const { JSDOM } = require("jsdom");
 const { promisify } = require("util");
+const fs = require("fs");
 const sizeOf = promisify(require("image-size"));
 const blurryPlaceholder = require("./blurry-placeholder");
 const srcset = require("./srcset");
@@ -54,7 +55,11 @@ const processImage = async (img, outputPath) => {
   }
   let dimensions;
   try {
-    dimensions = await sizeOf("_site/" + src);
+    let inputPath = "_site/" + src;
+    if (!fs.existsSync(inputPath) && src.startsWith("/assets/")) {
+      inputPath = "src" + src;
+    }
+    dimensions = await sizeOf(inputPath);
   } catch (e) {
     console.warn(e.message, src);
     return;
