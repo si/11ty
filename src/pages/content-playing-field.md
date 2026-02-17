@@ -92,4 +92,19 @@ ADDE Examples for Si
 
 ## Content Tilt 👓
 
-\[**TODO**: _Competitor analysis to identify any unique angles from the side project community_\]
+The side project community is bustling, but often polarized:
+
+*   **The Hustlers 💸**: "Ship fast," "MRR," and "Sleep when you're dead." Inspiring, but often leads to burnout and feelings of inadequacy for those with limited time.
+*   **The Techies 💻**: Deep dives into code, frameworks, and "How to build X." Essential for *building*, but lacks the structural advice to *finish* or stay motivated.
+*   **The Makers 🎨**: Focused on the craft and design. Often missing the pragmatic project management needed to ship.
+
+**My unique angle:**
+**Sustainable Side Projects for the Rest of Us.**
+
+This publication sits at the intersection of **Agile Project Management** and **Personal Well-being**. It treats a side project not as a lottery ticket, but as a fulfilling creative outlet that must coexist with a career and family.
+
+I apply professional leadership and delivery methodologies (usually reserved for enterprise teams) to the chaotic, emotional world of the solo creator.
+
+*   **Less** "How to make $10k/month" → **More** "How to find 2 hours a week without guilt."
+*   **Less** "Best React Framework" → **More** "Best framework for decision making."
+*   **Less** "Success Stories" → **More** "Honest Retrospectives on Failure."
