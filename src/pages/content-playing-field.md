@@ -37,7 +37,7 @@ Driver of Change (DoC) model for Si
 
 ### James
 
-![James's avatar](images/FDBD38E0-FAA0-4A10-96DF-7B547D168F73-300x300.jpeg)
+![James's avatar](/assets/images/FDBD38E0-FAA0-4A10-96DF-7B547D168F73-300x300.jpeg)
 
 30something male from UK, 2 kids (boy 7, girl 2), married, web developer for a small company, mostly remote. More of a night owl than a morning person. 
 
@@ -53,7 +53,7 @@ James values giving back to society, special time with his family and learning n
 
 ### Antonia
 
-![Antonia's avatar](images/4F1CD6A6-5576-4FEF-BBB5-EEDBB8DEC280-300x300.jpeg)
+![Antonia's avatar](/assets/images/4F1CD6A6-5576-4FEF-BBB5-EEDBB8DEC280-300x300.jpeg)
 
 20something female from US, single with no kids, freelance designer, works from home or co-working spaces. Generally up early except weekends. 
 
@@ -88,7 +88,7 @@ ADDE Examples for Si
 
 ### Assets
 
-![Mini Coops in house style duotone](images/3B7A5BB9-EB74-4B3C-8B57-579A39F06FC5-1024x1024.jpeg)
+![Mini Coops in house style duotone](/assets/images/3B7A5BB9-EB74-4B3C-8B57-579A39F06FC5-1024x1024.jpeg)
 
 ## Content Tilt 👓
 
