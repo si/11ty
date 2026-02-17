@@ -155,7 +155,7 @@ const dimImages = async (rawContent, outputPath) => {
     const images = [...dom.window.document.querySelectorAll("img,amp-img")];
 
     if (images.length > 0) {
-      const concurrencyLimit = 10;
+      const concurrencyLimit = 1;
       for (let i = 0; i < images.length; i += concurrencyLimit) {
         const chunk = images.slice(i, i + concurrencyLimit);
         await Promise.all(chunk.map((img) => processImage(img, outputPath)));
