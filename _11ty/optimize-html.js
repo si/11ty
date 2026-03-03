@@ -19,6 +19,8 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+const { promisify } = require("util");
+const readFile = promisify(require("fs").readFile);
 const minify = require("html-minifier").minify;
 const AmpOptimizer = require("@ampproject/toolbox-optimizer");
 const ampOptimizer = AmpOptimizer.create({
@@ -45,9 +47,7 @@ const purifyCss = async (rawContent, outputPath) => {
     !isAmp(content) &&
     !/data-style-override/.test(content)
   ) {
-    let before = await require("fs").promises.readFile("css/main.css", {
-      encoding: "utf-8",
-    });
+    let before = await readFile("css/main.css", "utf-8");
 
     before = before.replace(
       /@font-face {/g,
