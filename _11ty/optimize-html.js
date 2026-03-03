@@ -29,8 +29,6 @@ const ampOptimizer = AmpOptimizer.create({
 const PurgeCSS = require("purgecss").PurgeCSS;
 const csso = require("csso");
 
-let cssContentCache = null;
-
 /**
  * Inlines the CSS.
  * Makes font display display-optional
@@ -47,12 +45,9 @@ const purifyCss = async (rawContent, outputPath) => {
     !isAmp(content) &&
     !/data-style-override/.test(content)
   ) {
-    if (!cssContentCache) {
-      cssContentCache = await require("fs").promises.readFile("css/main.css", {
-        encoding: "utf-8",
-      });
-    }
-    let before = cssContentCache;
+    let before = await require("fs").promises.readFile("css/main.css", {
+      encoding: "utf-8",
+    });
 
     before = before.replace(
       /@font-face {/g,
