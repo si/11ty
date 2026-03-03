@@ -45,9 +45,11 @@ const purifyCss = async (rawContent, outputPath) => {
     !isAmp(content) &&
     !/data-style-override/.test(content)
   ) {
-    let before = require("fs").readFileSync("css/main.css", {
-      encoding: "utf-8",
-    });
+    const fs = require("fs");
+    const util = require("util");
+    const readFile = util.promisify(fs.readFile);
+
+    let before = await readFile("css/main.css", "utf-8");
 
     before = before.replace(
       /@font-face {/g,
