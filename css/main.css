@@ -612,6 +612,32 @@ h6 {
   font-style: italic;
 }
 
+/* Article headings: centred with a subtle rule spanning the content width */
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 0.75em;
+  padding-top: 1.25em;
+  padding-bottom: 0.25em;
+}
+article h1::before, article h1::after,
+article h2::before, article h2::after,
+article h3::before, article h3::after,
+article h4::before, article h4::after,
+article h5::before, article h5::after,
+article h6::before, article h6::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.12);
+}
+
 a {
   color: #f9c412;
   text-decoration: none;
