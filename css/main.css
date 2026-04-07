@@ -1,7 +1,7 @@
 /* Color customization */
 :root {
-  --primary: #89986D;
-  --primary-dark: #C5D89D;
+  --primary: #3D8A5E;
+  --primary-dark: #85C9A0;
   --font-family-base: "Inter", "Inter UI", -apple-system, sans-serif;
   --font-family-heading: "Playfair Display", serif,
     serif;
@@ -790,7 +790,7 @@ video {
 }
 body {
   font-family: var(--font-family-base);
-  background: #F6F0D7;
+  background: #F0FAF4;
   color: #111111;
 }
 section {
