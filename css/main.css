@@ -31,7 +31,7 @@ article * {
 /* "Content-visibility: auto" move the images over the other elements
    Set z-index to keep the nav over the rasterized images */
 header nav {
-  z-index: 1;
+  z-index: 1000;
 }
 
 /*! purgecss start ignore */
@@ -946,7 +946,7 @@ header nav a {
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
-  z-index: 99;
+  z-index: 500;
   transform: translateY(-100%);
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;

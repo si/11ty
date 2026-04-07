@@ -199,38 +199,6 @@ addEventListener(
   true
 );
 
-// Burger menu
-const burgerBtn = document.getElementById("burger-btn");
-const navMenu = document.getElementById("nav-menu");
-if (burgerBtn && navMenu) {
-  // Sync --nav-height with the actual rendered nav height
-  const navEl = document.querySelector("header nav");
-  if (navEl) {
-    document.documentElement.style.setProperty(
-      "--nav-height",
-      navEl.offsetHeight + "px"
-    );
-  }
-
-  function toggleMenu(open) {
-    burgerBtn.setAttribute("aria-expanded", String(open));
-    navMenu.classList.toggle("open", open);
-    navMenu.setAttribute("aria-hidden", String(!open));
-  }
-  burgerBtn.addEventListener("click", () => {
-    toggleMenu(burgerBtn.getAttribute("aria-expanded") !== "true");
-  });
-  navMenu.querySelectorAll("a").forEach((a) =>
-    a.addEventListener("click", () => toggleMenu(false))
-  );
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && navMenu.classList.contains("open")) {
-      toggleMenu(false);
-      burgerBtn.focus();
-    }
-  });
-}
-
 if (window.ResizeObserver && document.querySelector("header nav #nav")) {
   var progress = document.getElementById("reading-progress");
 

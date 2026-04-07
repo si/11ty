@@ -85,11 +85,6 @@
           </button>
         </div>
         <div id="reading-progress" aria-hidden="true"></div>
-        <div id="nav-menu" aria-hidden="true">
-          {%- for entry in collections.all | eleventyNavigation %}
-            <a href="{{ entry.url | url }}">{{ entry.title }}</a>
-          {%- endfor %}
-        </div>
       </nav>
       {% block coverImage %}{% endblock %}
       <div class="header-content">
@@ -123,6 +118,44 @@
       <a href="/site-index/">Index</a>
     </footer>
 
+    <div id="nav-menu" aria-hidden="true">
+      {%- for entry in collections.all | eleventyNavigation %}
+        <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+      {%- endfor %}
+    </div>
+    <script>
+      (function () {
+        var burgerBtn = document.getElementById("burger-btn");
+        var navMenu = document.getElementById("nav-menu");
+        if (!burgerBtn || !navMenu) return;
+
+        var nav = document.querySelector("header nav");
+        if (nav) {
+          document.documentElement.style.setProperty("--nav-height", nav.offsetHeight + "px");
+        }
+
+        function toggleMenu(open) {
+          burgerBtn.setAttribute("aria-expanded", String(open));
+          navMenu.classList.toggle("open", open);
+          navMenu.setAttribute("aria-hidden", String(!open));
+        }
+
+        burgerBtn.addEventListener("click", function () {
+          toggleMenu(burgerBtn.getAttribute("aria-expanded") !== "true");
+        });
+
+        navMenu.querySelectorAll("a").forEach(function (a) {
+          a.addEventListener("click", function () { toggleMenu(false); });
+        });
+
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && navMenu.classList.contains("open")) {
+            toggleMenu(false);
+            burgerBtn.focus();
+          }
+        });
+      })();
+    </script>
     <!-- Current page: {{ page.url | url }} -->
   </body>
 </html>
