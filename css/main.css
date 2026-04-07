@@ -2,6 +2,7 @@
 :root {
   --primary: #3D8A5E;
   --primary-dark: #85C9A0;
+  --nav-height: 68px;
   --font-family-base: "Inter", "Inter UI", -apple-system, sans-serif;
   --font-family-heading: "Playfair Display", serif,
     serif;
@@ -873,12 +874,80 @@ header nav a {
   color: #181818;
   margin-left: 1.5em;
 }
-header nav #nav > a:first-of-type {
+/* Burger button */
+#burger-btn {
   margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-end;
+  z-index: 2;
 }
-header nav #nav > a:last-of-type {
-  margin-right: 1.5em;
+#burger-btn span {
+  display: block;
+  height: 2px;
+  background: #181818;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
 }
+#burger-btn span:nth-child(1) { width: 22px; }
+#burger-btn span:nth-child(2) { width: 16px; }
+#burger-btn span:nth-child(3) { width: 22px; }
+#burger-btn[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+#burger-btn[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+#burger-btn[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Nav overlay menu */
+#nav-menu {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - var(--nav-height));
+  background: hsla(0, 0%, 100%, 0.97);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  z-index: 99;
+  transform: translateY(-100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+#nav-menu.open {
+  transform: translateY(0);
+  pointer-events: auto;
+}
+#nav-menu a {
+  display: block;
+  text-align: center;
+  padding: 1.25em 2em;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #181818;
+  margin-left: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  transition: color 0.2s ease, background 0.2s ease;
+}
+#nav-menu a:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+#nav-menu a:hover {
+  color: var(--primary);
+  background: rgba(61, 138, 94, 0.05);
+}
+
 header nav label {
   color: #000;
   cursor: pointer;

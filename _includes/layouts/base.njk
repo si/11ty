@@ -78,11 +78,18 @@
             </a>
           </h1>
           {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+          <button id="burger-btn" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <div id="reading-progress" aria-hidden="true"></div>
+        <div id="nav-menu" aria-hidden="true">
           {%- for entry in collections.all | eleventyNavigation %}
             <a href="{{ entry.url | url }}">{{ entry.title }}</a>
           {%- endfor %}
         </div>
-        <div id="reading-progress" aria-hidden="true"></div>
       </nav>
       {% block coverImage %}{% endblock %}
       <div class="header-content">
