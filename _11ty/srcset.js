@@ -43,12 +43,19 @@ const quality = {
 
 const optionalFormats = new Set(["avif", "webp"]);
 
+// On Netlify deploy-previews and branch-deploys, skip AVIF (slowest format,
+// not needed for correctness). Locally (no CONTEXT env var) treat as production.
+const isProduction = !process.env.CONTEXT || process.env.CONTEXT === "production";
+
 function supportsOutputFormat(format) {
   const info = sharp.format[format];
   return Boolean(info && info.output);
 }
 
 module.exports = async function srcset(filename, format) {
+  if (format === "avif" && !isProduction) {
+    return null;
+  }
   if (!supportsOutputFormat(format)) {
     if (optionalFormats.has(format)) {
       return null;
@@ -84,7 +91,7 @@ async function resize(filename, width, format) {
     .resize(width)
     [format]({
       quality: quality[format] || quality.default,
-      reductionEffort: 6,
+      reductionEffort: 4,
     })
     .toFile("_site" + out);
 

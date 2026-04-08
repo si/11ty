@@ -29,6 +29,16 @@ const ampOptimizer = AmpOptimizer.create({
 const PurgeCSS = require("purgecss").PurgeCSS;
 const csso = require("csso");
 
+// Cache the CSS file content at module level so it is only read once per build
+// rather than once per HTML page (can be 400+ reads otherwise).
+let _cssCache = null;
+function getCss() {
+  if (!_cssCache) {
+    _cssCache = require("fs").readFileSync("css/main.css", { encoding: "utf-8" });
+  }
+  return _cssCache;
+}
+
 /**
  * Inlines the CSS.
  * Makes font display display-optional
@@ -45,9 +55,7 @@ const purifyCss = async (rawContent, outputPath) => {
     !isAmp(content) &&
     !/data-style-override/.test(content)
   ) {
-    let before = require("fs").readFileSync("css/main.css", {
-      encoding: "utf-8",
-    });
+    let before = getCss();
 
     before = before.replace(
       /@font-face {/g,

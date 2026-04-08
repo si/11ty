@@ -24,6 +24,10 @@ jobs:
         with:
           path: |
             _site/**/*.blurred
+            _site/**/*-320w.*
+            _site/**/*-640w.*
+            _site/**/*-1280w.*
+            _site/**/*-1920w.*
           key: ${{ runner.os }}-11ty-images-${{ hashFiles('img/**/*', 'posts/**/*.{jpg,jpeg,png,gif,webp,svg,avif}', '_includes/**/*', '_11ty/blurry-placeholder.js', '_11ty/img-dim.js', '_11ty/srcset.js', '.eleventy.js') }}
           restore-keys: |
             ${{ runner.os }}-11ty-images-
