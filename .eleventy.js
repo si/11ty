@@ -227,6 +227,14 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => a.date - b.date)
       .slice(-5);
   });
+  eleventyConfig.addCollection("blogPosts", function (collectionApi) {
+    return collectionApi.getFilteredByTag("posts").filter((post) => {
+      const inputPath = post.inputPath || "";
+      const normalized = inputPath.replace(/^[.\\/]*posts[\\/]/, "");
+      const directory = normalized.split(/[/\\]/)[0];
+      return directory === "blog";
+    });
+  });
   eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
   // Copy migrated assets from src/assets to /assets in the built site.
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
