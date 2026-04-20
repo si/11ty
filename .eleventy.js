@@ -142,6 +142,75 @@ module.exports = function (eleventyConfig) {
     }
   );
 
+  async function getOriginalDate(filename) {
+    try {
+      const { stdout } = await execFile("git", [
+        "log",
+        "--diff-filter=A",
+        "--follow",
+        "-1",
+        "--format=%cd",
+        filename,
+      ]);
+      return new Date(stdout);
+    } catch (e) {
+      console.error(e.message);
+      return null;
+    }
+  }
+  const originalDateCache = new Map();
+
+  eleventyConfig.addNunjucksAsyncFilter(
+    "earliestDate",
+    function (dateObj, filename, callback) {
+      const getDates = async () => {
+         let dates = [];
+
+         // 1. Frontmatter Date
+         if (dateObj instanceof Date && !isNaN(dateObj)) {
+            dates.push(dateObj);
+         }
+
+         // 2. Last Modified Date (cached)
+         let modDatePromise = lastModifiedDateCache.get(filename);
+         if (!modDatePromise) {
+            modDatePromise = lastModifiedDate(filename);
+            lastModifiedDateCache.set(filename, modDatePromise);
+         }
+         try {
+           const modDate = await modDatePromise;
+           if (modDate instanceof Date && !isNaN(modDate)) {
+             dates.push(modDate);
+           }
+         } catch(e) {}
+
+         // 3. Original Creation Date (cached)
+         let origDatePromise = originalDateCache.get(filename);
+         if (!origDatePromise) {
+            origDatePromise = getOriginalDate(filename);
+            originalDateCache.set(filename, origDatePromise);
+         }
+         try {
+           const origDate = await origDatePromise;
+           if (origDate instanceof Date && !isNaN(origDate)) {
+             dates.push(origDate);
+           }
+         } catch(e) {}
+
+         if (dates.length === 0) {
+            // Fallback if no valid dates found
+            return new Date();
+         }
+
+         // Find earliest
+         dates.sort((a, b) => a.getTime() - b.getTime());
+         return dates[0];
+      };
+
+      getDates().then(date => callback(null, date)).catch(err => callback(null, dateObj));
+    }
+  );
+
   eleventyConfig.addFilter("encodeURIComponent", function (str) {
     return encodeURIComponent(str);
   });
