@@ -80,29 +80,43 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(require("./_11ty/apply-csp.js"));
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
+  const addHashCache = new Map();
   eleventyConfig.addNunjucksAsyncFilter(
     "addHash",
     function (absolutePath, callback) {
       const resolvedPath = path.join(".", absolutePath);
-      if (!fs.existsSync(resolvedPath)) {
-        // Avoid hard failure for missing assets; keep the original URL.
-        callback(null, absolutePath);
+      if (addHashCache.has(resolvedPath)) {
+        addHashCache
+          .get(resolvedPath)
+          .then((res) => callback(null, res))
+          .catch((err) => callback(err));
         return;
       }
-      readFile(resolvedPath, {
-        encoding: "utf-8",
-      })
-        .then((content) => {
-          return hasha.async(content);
+      const promise = new Promise((resolve, reject) => {
+        if (!fs.existsSync(resolvedPath)) {
+          // Avoid hard failure for missing assets; keep the original URL.
+          resolve(absolutePath);
+          return;
+        }
+        readFile(resolvedPath, {
+          encoding: "utf-8",
         })
-        .then((hash) => {
-          callback(null, `${absolutePath}?hash=${hash.substr(0, 10)}`);
-        })
-        .catch((error) => {
-          callback(
-            new Error(`Failed to addHash to '${absolutePath}': ${error}`)
-          );
-        });
+          .then((content) => {
+            return hasha.async(content);
+          })
+          .then((hash) => {
+            resolve(`${absolutePath}?hash=${hash.substr(0, 10)}`);
+          })
+          .catch((error) => {
+            reject(
+              new Error(`Failed to addHash to '${absolutePath}': ${error}`)
+            );
+          });
+      });
+      addHashCache.set(resolvedPath, promise);
+      promise
+        .then((res) => callback(null, res))
+        .catch((err) => callback(err));
     }
   );
 
