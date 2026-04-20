@@ -24,7 +24,6 @@
 
 const { promisify } = require("util");
 const sharp = require("sharp");
-const sizeOf = promisify(require("image-size"));
 const DatauriParser = require("datauri/parser");
 const parser = new DatauriParser();
 const readFile = promisify(require("fs").readFile);
@@ -56,9 +55,10 @@ async function getCachedDataURI(src) {
 }
 
 async function getDataURI(src) {
-  const info = await sizeOf(src);
+  const pipeline = sharp(src);
+  const info = await pipeline.metadata();
   const imgDimension = getBitmapDimensions_(info.width, info.height);
-  const buffer = await sharp(src)
+  const buffer = await pipeline
     .rotate() // Manifest rotation from metadata
     .resize(imgDimension.width, imgDimension.height)
     .png()
