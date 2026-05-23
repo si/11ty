@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-post
+---
+
+{% if description %}
+<p>{{ description }}</p>
+{% endif %}
+
+<ul class="page-index">
+{%- for post in collections[collectionName] | reverse %}
+  <li>
+    <a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+    <small>
+      <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+    </small>
+  </li>
+{%- endfor %}
+</ul>
