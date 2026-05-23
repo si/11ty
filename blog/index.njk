@@ -1,0 +1,15 @@
+---
+title: "Blog"
+layout: layouts/home.njk
+permalink: /blog/
+eleventyExcludeFromCollections: true
+---
+
+<ul>
+{%- for post in collections.blogPosts | reverse %}
+  <li>
+    <a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+    <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+  </li>
+{%- endfor %}
+</ul>
