@@ -20,6 +20,13 @@
  */
 
 module.exports = function () {
-  // YOLO.
-  return /serve|watch/.test(process.argv.join());
+  try {
+    // Check if process exists and has argv array (safe for Cloudflare Workers etc)
+    if (typeof process === "undefined" || !process || !process.argv || !Array.isArray(process.argv)) {
+      return false;
+    }
+    return /serve|watch/.test(process.argv.join());
+  } catch (e) {
+    return false;
+  }
 };
