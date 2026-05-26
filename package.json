@@ -13,7 +13,9 @@
     "debug": "DEBUG=* eleventy && npm run test",
     "test": "mocha test/test*.js",
     "test-watch": "mocha test/test*.js --watch --watch-files=test/*",
-    "clean": "rm -Rf ./_site/posts/*"
+    "clean": "rm -Rf ./_site/posts/*",
+    "youtube-sync": "node scripts/youtube-to-micro.js",
+    "youtube-sync:dry": "node scripts/youtube-to-micro.js --dry-run"
   },
   "pre-push": [
     "build"

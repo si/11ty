@@ -1,0 +1,49 @@
+name: Sync YouTube Playlist
+
+on:
+  schedule:
+    # Run daily at 07:00 UTC
+    - cron: "0 7 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (print what would be created, no commits)"
+        type: boolean
+        default: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+
+      - name: Sync playlist
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          YOUTUBE_PLAYLIST_ID: ${{ secrets.YOUTUBE_PLAYLIST_ID }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            node scripts/youtube-to-micro.js --dry-run
+          else
+            node scripts/youtube-to-micro.js
+          fi
+
+      - name: Commit and push new posts
+        if: ${{ inputs.dry_run != true }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add posts/micro/
+          if git diff --staged --quiet; then
+            echo "No new posts to commit."
+          else
+            git commit -m "chore: sync YouTube micro posts"
+            git push
+          fi
