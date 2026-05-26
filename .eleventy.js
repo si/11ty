@@ -214,7 +214,7 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => a.name.localeCompare(b.name));
   });
   eleventyConfig.addCollection("homeRecentPosts", function (collectionApi) {
-    const allowedDirectories = new Set(["aside", "blog", "weeknotes"]);
+    const allowedDirectories = new Set(["aside", "blog", "micro", "weeknotes"]);
     const posts = collectionApi.getFilteredByTag("posts");
 
     return posts
