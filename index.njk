@@ -37,11 +37,15 @@ coverImage: "Si-coaching-at-Akkroo-March-2019-16-9.jpg"
 <h2>Latest posts</h2>
 
 {% set recent_posts = collections.homeRecentPosts | reverse %}
-<ul>
+<ul class="latest-posts">
 {% for post in recent_posts %}
-  <li>
-    <a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-    <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+  {% set category = post.data.categories[0] if post.data.categories else "post" %}
+  <li class="latest-post-item">
+    <a href="{{ post.url | url }}" class="latest-post-title">{% if post.data.title %}{{ post.data.title }}{% else %}{{ post.url }}{% endif %}</a>
+    <div class="latest-post-meta">
+      <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+      <span class="category-pill category-{{ category }}">{{ category }}</span>
+    </div>
   </li>
 {% endfor %}
 </ul>

@@ -1185,3 +1185,58 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
 }
+
+/* Latest posts list on homepage */
+.latest-posts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.latest-post-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.25em;
+  padding: 0.65em 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.latest-post-item:last-child {
+  border-bottom: none;
+}
+
+.latest-post-title {
+  flex: 1;
+  min-width: 0;
+  line-height: 1.4;
+}
+
+.latest-post-meta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.latest-post-meta time {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.category-pill {
+  display: inline-block;
+  font-size: 0.65em;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 0.03em;
+  padding: 0.3em 0.7em;
+  border-radius: 999px;
+}
+
+.category-blog      { background: #2a2a2a; color: #fff; }
+.category-micro     { background: #555555; color: #fff; }
+.category-aside     { background: #888888; color: #fff; }
+.category-weeknotes { background: #b8b8b8; color: #111; }
