@@ -12,14 +12,17 @@ tags:
   - "sports"
   - "11ty"
   - "open-source"
+  - "microformats"
 coverImage: "footballcal-world-cup-2026.png"
 ---
 
-_Football Cal's World Cup edition - 48 teams, three countries, and Claude doing the heavy lifting on the data._
+_Football Cal's World Cup edition - 20 years on from the original, 48 teams, three countries, and Claude doing the heavy lifting on the data._
 
 ## Kick Off
 
-[Football Cal](https://footballcal.com) has been running since Euro 2020, originally built on the Gatsby template I'd used across a few other competitions. For this edition I've migrated the whole thing to 11ty, the same stack as this site, which makes it much easier to maintain. The [code is open source on GitHub](https://github.com/sportstimes/footballcal-11ty) and the fixture data is just Markdown files, so it's easy to contribute or fork for another competition.
+This year marks 20 years since the [original World Cup KickOff](https://web.archive.org/web/20060811012646/http://www.worldcupkickoff.com/) - a site I cobbled together in PHP ahead of the 2006 tournament in Germany. The clever bit was using Microformats hcalendar markup so [Brian Suda's](https://suda.co.uk/) X2V transformation script could convert it into ICS files people could subscribe to directly in their calendar app. It was proper cutting edge web standards stuff at the time, and after coverage from the BBC, The Guardian and Yahoo! it took off way beyond anything I'd anticipated.
+
+Twenty years and several editions later, [Football Cal](https://footballcal.com) is where that same idea lives now. It's been running since Euro 2020, originally built on a Gatsby template I'd reused across a few competitions. For this edition I've migrated the whole thing to 11ty, the same stack as this site, with a hat tip to [Trovster](https://www.trovster.com/) who helped get the GitHub/11ty setup working a few years back. The [code is open source on GitHub](https://github.com/sportstimes/footballcal-11ty) and the fixture data is just Markdown files, so it's easy to contribute or fork for another competition.
 
 World Cup 2026 was always going to get the Football Cal treatment. First 48-team tournament, 104 games spread across the USA, Canada and Mexico. Biggest edition by some distance.
 
