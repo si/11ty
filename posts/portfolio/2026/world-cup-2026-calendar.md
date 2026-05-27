@@ -15,54 +15,43 @@ tags:
 coverImage: "footballcal-world-cup-2026.png"
 ---
 
-_The biggest football tournament in history, with the biggest data challenge I've faced on any of these calendar projects - and the first time I've used AI as a genuine collaborator to get it done._
+_Football Cal's World Cup edition - 48 teams, three countries, and Claude doing the heavy lifting on the data._
 
 ## Kick Off
 
-[Football Cal](https://footballcal.com) has been my go-to sports calendar project since I launched it for Euro 2020, building on the framework I first created for the Rugby World Cup back in 2019. The idea is simple: structured fixture data in Markdown files, deployed as a static site, generates a subscribable ICS calendar you can add directly to your phone, desktop or Google Calendar. The [codebase is open source on GitHub](https://github.com/sportstimes/footballcal-11ty) and this edition marked a full migration from the old Gatsby template to 11ty - the same stack powering this site.
+[Football Cal](https://footballcal.com) has been running since Euro 2020, originally built on the Gatsby template I'd used across a few other competitions. For this edition I've migrated the whole thing to 11ty, the same stack as this site, which makes it much easier to maintain. The [code is open source on GitHub](https://github.com/sportstimes/footballcal-11ty) and the fixture data is just Markdown files, so it's easy to contribute or fork for another competition.
 
-For Euro 2025, I got a taste of what AI-assisted data wrangling could look like. Using ChatGPT and Cursor, I had the full fixture calendar live in under two hours. It was a revelation. So when World Cup 2026 started to loom large - the first 48-team tournament, co-hosted across three countries, with 104 games scheduled across the USA, Canada and Mexico - I knew this was both the most obvious and the most demanding edition yet.
+World Cup 2026 was always going to get the Football Cal treatment. First 48-team tournament, 104 games spread across the USA, Canada and Mexico. Biggest edition by some distance.
 
-## The Opposition
+## The Data Problem
 
-Previous calendar projects have had their data challenges, but nothing quite like this.
+Getting the fixtures together was messier than any previous edition.
 
-FIFA published their fixture schedule in a PDF - not a structured, machine-readable format but an awkwardly laid out document that resisted any clean extraction. Venue names, kick-off times and matchups were spread across the pages with inconsistent formatting and no reliable column structure to parse from. Cross-referencing that against secondary sources revealed discrepancies almost immediately: different sites reporting different kick-off times for the same game, time zone conversions done wrong, early qualifiers listed with placeholder matchup names that hadn't been updated when the draw was made.
+FIFA published the schedule as a PDF rather than anything structured or easy to work with. Kick-off times, venues and match details were spread across it inconsistently, and when I cross-referenced against other sources I found discrepancies straight away - different sites reporting different times for the same game, time zone conversions that were clearly wrong, early matches still showing placeholder team names after the draw had been made.
 
-The late qualifiers compounded this. A handful of intercontinental playoff spots weren't confirmed until relatively recently, meaning any data gathered early was necessarily incomplete. Running on placeholder names ("Qualifier A vs Qualifier B") is manageable for the group stage but becomes genuinely confusing when you're trying to deliver something useful before the tournament starts.
+The late qualifiers added to it. A few intercontinental playoff spots weren't confirmed until recently, so any data gathered early needed another pass once those teams were known.
 
-## Bringing Claude Off the Bench
+## Using Claude
 
-This is the first edition where I've used [Claude](https://claude.ai) as the primary AI collaborator throughout the project rather than as an occasional coding assistant.
+I used [Claude](https://claude.ai) a lot more on this one than previous editions.
 
-The main job was data: taking fixture information gathered from a range of sources - FIFA's PDF, [Wikipedia's structured tables](https://en.wikipedia.org/wiki/2026_FIFA_World_Cup), dedicated football data sites and early media coverage - and transforming it into the Markdown files with frontmatter that the Sports Times template expects. Each fixture is its own `.md` file with fields for the date, time, venue, home team, away team, group, stage and any tags. For 104 games across multiple time zones and three host countries, doing that by hand would have been deeply tedious.
+For Euro 2025, ChatGPT and Cursor handled the data and I had the whole thing done in a couple of hours. This time I used Claude throughout - pulling fixture data from FIFA's PDF, Wikipedia and a handful of other sources, sorting out the discrepancies between them, and generating the individual Markdown files with the right frontmatter for all 104 games. Getting the time zone data right across three countries took a few rounds of checking.
 
-Claude handled the extraction, normalisation and file generation. Where sources disagreed, I'd surface the conflict and we'd cross-reference to establish the most reliable answer. Where FIFA's PDF had formatting oddities, Claude helped parse the intent rather than the literal characters. It wasn't a single-pass process - it took several rounds of verification to get to a dataset I was confident in - but the collaboration made it significantly faster and more systematic than any previous edition.
+Once the final qualifier spots were confirmed I went back through and updated the relevant files.
 
-Once the late qualifiers were confirmed, I updated the relevant files with the verified team names and rechecked the surrounding fixtures to ensure nothing else had shifted.
+## What Got Built
 
-## The Match Day Features
+Core features are the same as previous editions - subscribable ICS feed, individual game pages, timeline view, filtering by group and stage. A few things were added or improved for this one:
 
-The core calendar functionality carries over from previous editions: subscribable ICS feed, individual game pages, timeline view and filtering by group or stage. A few notable improvements shipped for this edition:
+- **Timeline view**: past events are now faded out so it's easier to scan to where you are in the tournament, with the next upcoming fixture highlighted
+- **Redirects**: as placeholder team names were replaced with confirmed ones, old URLs now redirect cleanly to the updated pages rather than 404ing
+- **Mobile typography**: tidied up the type on smaller screens where venue names and kick-off times were getting cramped
+- **Buy Me a Coffee**: added a small widget for anyone who finds it useful and wants to chip in
 
-**Timeline view** — past events now fade out so the page naturally draws your eye to what's coming up rather than what's already been played. The next upcoming fixture is highlighted to give an at-a-glance anchor when the group stage is in full swing and there are multiple games per day.
+## What's Next
 
-**Redirects for updated fixtures** — as qualifier team names were confirmed and fixtures updated, old indexed URLs needed to forward cleanly to the revised pages. A set of redirects handles this so any bookmarked or search-indexed links from early in the build don't land on a 404.
+There'll be small fixes as real traffic hits during the group stage. I'll keep an eye on the analytics through the competition and chip away at anything that needs attention.
 
-**Mobile typography** — some of the type was getting cramped on smaller screens, particularly around venue names and kick-off times. A tidy-up pass brought the hierarchy into better shape without changing the overall visual language.
-
-**Buy Me a Coffee** — added a small widget for anyone who finds the calendar useful and wants to say thanks. These projects cover their own hosting costs but a small contribution always encourages the next one.
-
-## Full Time
-
-Compared to any previous edition of these calendar projects, this one has felt the most like a genuine collaboration between me and a tool rather than just me with a faster autocomplete. The data work especially — the extraction, normalisation, verification and file generation — would have been the kind of grind that either slows you down badly or introduces the sort of errors you only discover when a subscriber emails to say their calendar shows the wrong kick-off time.
-
-Using Claude didn't make the data problem disappear. FIFA's PDF was still awkward, sources were still inconsistent, and the late qualifiers still meant a late update pass. But having a capable collaborator to work through those problems systematically made the process faster, more thorough and honestly more enjoyable.
-
-## Extra Time
-
-There are always improvements in the backlog by the time something goes live. Beyond what's already shipped, I'm keeping an eye on user feedback through the competition and there's a Plausible analytics dashboard running to track what people are actually using.
-
-The bigger question for me is what this edition proves about the model. If AI collaboration can take the data side of these calendar projects from "a week of careful grinding" to "an evening of focused work", then the range of competitions worth covering expands considerably. There are a lot of sports calendars that don't exist yet.
+The main thing I've taken from this edition is how much easier the data side gets with AI helping out. 104 games across three countries still came together pretty quickly, which makes it easier to justify doing more of these.
 
 🔗 [footballcal.com/world-cup-2026](https://footballcal.com/world-cup-2026/) · [github.com/sportstimes/footballcal-11ty](https://github.com/sportstimes/footballcal-11ty)
