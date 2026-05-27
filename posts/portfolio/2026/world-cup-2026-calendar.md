@@ -13,7 +13,7 @@ tags:
   - "11ty"
   - "open-source"
   - "microformats"
-coverImage: "footballcal-world-cup-2026.png"
+coverImage: "2026/world-cup-2026-footballcal.png"
 ---
 
 _Football Cal's World Cup edition - 20 years on from the original, 48 teams, three countries, and Claude doing the heavy lifting on the data._
