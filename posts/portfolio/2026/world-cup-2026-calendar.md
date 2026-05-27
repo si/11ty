@@ -65,4 +65,4 @@ There are always improvements in the backlog by the time something goes live. Be
 
 The bigger question for me is what this edition proves about the model. If AI collaboration can take the data side of these calendar projects from "a week of careful grinding" to "an evening of focused work", then the range of competitions worth covering expands considerably. There are a lot of sports calendars that don't exist yet.
 
-🔗 [footballcal.com](https://footballcal.com) · [github.com/sportstimes/footballcal-11ty](https://github.com/sportstimes/footballcal-11ty)
+🔗 [footballcal.com/world-cup-2026](https://footballcal.com/world-cup-2026/) · [github.com/sportstimes/footballcal-11ty](https://github.com/sportstimes/footballcal-11ty)
