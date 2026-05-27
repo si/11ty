@@ -10,7 +10,7 @@ tags:
   - "ai"
   - "claude"
   - "sports"
-  - "gatsby"
+  - "11ty"
   - "open-source"
 coverImage: "footballcal-world-cup-2026.png"
 ---
@@ -19,7 +19,7 @@ _The biggest football tournament in history, with the biggest data challenge I'v
 
 ## Kick Off
 
-[Football Cal](https://footballcal.com) has been my go-to sports calendar project since I launched it for Euro 2020, building on the framework I first created for the Rugby World Cup back in 2019. The idea is simple: structured fixture data in Markdown files, built with [The Sports Times Gatsby template](https://sportstimes.website/), generates a subscribable ICS calendar you can add directly to your phone, desktop or Google Calendar.
+[Football Cal](https://footballcal.com) has been my go-to sports calendar project since I launched it for Euro 2020, building on the framework I first created for the Rugby World Cup back in 2019. The idea is simple: structured fixture data in Markdown files, deployed as a static site, generates a subscribable ICS calendar you can add directly to your phone, desktop or Google Calendar. The [codebase is open source on GitHub](https://github.com/sportstimes/footballcal-11ty) and this edition marked a full migration from the old Gatsby template to 11ty - the same stack powering this site.
 
 For Euro 2025, I got a taste of what AI-assisted data wrangling could look like. Using ChatGPT and Cursor, I had the full fixture calendar live in under two hours. It was a revelation. So when World Cup 2026 started to loom large - the first 48-team tournament, co-hosted across three countries, with 104 games scheduled across the USA, Canada and Mexico - I knew this was both the most obvious and the most demanding edition yet.
 
@@ -43,9 +43,15 @@ Once the late qualifiers were confirmed, I updated the relevant files with the v
 
 ## The Match Day Features
 
-<!-- TODO: Add feature details from commit history -->
+The core calendar functionality carries over from previous editions: subscribable ICS feed, individual game pages, timeline view and filtering by group or stage. A few notable improvements shipped for this edition:
 
-The core calendar functionality carries over from previous editions: subscribable ICS feed, individual game pages, timeline view and filtering by group or stage. Beyond that, a number of improvements were made for this edition that reflect both the scale of the tournament and the feedback gathered from Euro 2025 users.
+**Timeline view** — past events now fade out so the page naturally draws your eye to what's coming up rather than what's already been played. The next upcoming fixture is highlighted to give an at-a-glance anchor when the group stage is in full swing and there are multiple games per day.
+
+**Redirects for updated fixtures** — as qualifier team names were confirmed and fixtures updated, old indexed URLs needed to forward cleanly to the revised pages. A set of redirects handles this so any bookmarked or search-indexed links from early in the build don't land on a 404.
+
+**Mobile typography** — some of the type was getting cramped on smaller screens, particularly around venue names and kick-off times. A tidy-up pass brought the hierarchy into better shape without changing the overall visual language.
+
+**Buy Me a Coffee** — added a small widget for anyone who finds the calendar useful and wants to say thanks. These projects cover their own hosting costs but a small contribution always encourages the next one.
 
 ## Full Time
 
@@ -59,4 +65,4 @@ There are always improvements in the backlog by the time something goes live. Be
 
 The bigger question for me is what this edition proves about the model. If AI collaboration can take the data side of these calendar projects from "a week of careful grinding" to "an evening of focused work", then the range of competitions worth covering expands considerably. There are a lot of sports calendars that don't exist yet.
 
-🔗 [footballcal.com](https://footballcal.com)
+🔗 [footballcal.com](https://footballcal.com) · [github.com/sportstimes/footballcal-11ty](https://github.com/sportstimes/footballcal-11ty)
