@@ -8,12 +8,14 @@ tags:
   - "agentic-coding"
   - "ai"
   - "side-project"
-coverImage: "podnality.png"
+coverImage: "podnality-homepage.png"
 ---
 
 One of the things that frustrates me about podcasts is discoverability. The big platforms have their own algorithms and editorial picks, but they don't know you — they know what's popular. Your taste is yours, built up over time through your own subscriptions, and there's no real way to share that signal with people who might actually care about it.
 
 That frustration turned into [Podnality](https://podroll.unstyled.com/) — a little prototype that lets you upload your podcast subscriptions file (OPML format, which most podcast apps can export) and in return get a shareable link that surfaces the patterns in what you listen to.
+
+![Podnality homepage — upload your OPML file to get started](/img/assets/2026/podnality-homepage.png)
 
 ## The idea
 
@@ -22,6 +24,8 @@ The core premise is simple: fight the algorithm with your own data. Rather than 
 We also integrated an LLM to take that analysis a step further. Beyond just categorising your shows, it gives you a personality read based on what you listen to. It's a bit of fun, but it's surprisingly accurate — the kinds of shows you subscribe to do say something about how you think.
 
 The shareable link is the key bit. Send it to a friend, post it somewhere, and let people discover new shows through someone else's taste rather than an editorial algorithm.
+
+![Podnality profile page showing podcast categories, personality summary and show list](/img/assets/2026/podnality-example.png)
 
 ## Building it with agentic coding
 
