@@ -1240,3 +1240,281 @@ a {
 .category-micro     { background: #555555; color: #fff; }
 .category-aside     { background: #888888; color: #fff; }
 .category-weeknotes { background: #b8b8b8; color: #111; }
+
+/* ── Weeknote layout ────────────────────────────────────────── */
+
+.wn-section {
+  margin-bottom: 2.5rem;
+}
+
+.wn-section > h2 {
+  display: block;
+  text-align: left;
+  font-size: 0.7rem;
+  font-family: var(--font-family-base);
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.wn-section > h2::before,
+.wn-section > h2::after {
+  display: none;
+}
+
+/* Fitness */
+.wn-weight-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.wn-weight-label {
+  font-weight: 600;
+}
+
+.wn-delta-down { color: var(--primary); }
+.wn-delta-up   { color: #c0392b; }
+
+.wn-activities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.wn-activity-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 0.35em 0.75em;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  transition: opacity 0.15s ease;
+}
+
+.wn-activity-pill:hover {
+  opacity: 0.8;
+  text-decoration: none;
+  color: #fff;
+}
+
+.wn-activity-walk       { background: #5a9e6f; }
+.wn-activity-swim       { background: #3a7abf; }
+.wn-activity-elliptical { background: #8b5cf6; }
+.wn-activity-run        { background: #e67e22; }
+
+.wn-activity-duration {
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+/* Films */
+.wn-film-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.wn-film-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.04);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.wn-film-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  text-decoration: none;
+}
+
+.wn-film-poster img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+}
+
+.wn-film-meta {
+  padding: 0.75rem;
+}
+
+.wn-film-title {
+  font-size: 0.95rem;
+  font-family: var(--font-family-heading);
+  font-style: italic;
+  margin: 0 0 0.25rem;
+  line-height: 1.3;
+}
+
+.wn-film-year {
+  font-style: normal;
+  opacity: 0.5;
+  font-size: 0.85em;
+}
+
+.wn-film-rating {
+  color: #f9c412;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.35rem;
+}
+
+.wn-film-review {
+  font-size: 0.82rem;
+  font-style: italic;
+  color: #777;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Music */
+.wn-music-session {
+  margin-bottom: 1.25rem;
+}
+
+.wn-music-session-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6em;
+  margin-bottom: 0.5rem;
+}
+
+.wn-music-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.wn-music-date {
+  font-size: 0.78rem;
+  color: #777;
+}
+
+.wn-track-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.wn-track-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 0.3em 0.65em;
+  border-radius: 999px;
+  background: rgba(61, 138, 94, 0.1);
+  border: 1px solid rgba(61, 138, 94, 0.25);
+  font-size: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s ease;
+}
+
+.wn-track-pill:hover {
+  background: rgba(61, 138, 94, 0.22);
+  text-decoration: none;
+}
+
+.wn-track-artist {
+  font-weight: 600;
+}
+
+.wn-track-title {
+  opacity: 0.7;
+}
+
+/* Sides */
+.wn-sides-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.wn-side-card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 0.85rem;
+}
+
+.wn-side-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  margin-bottom: 0.5rem;
+}
+
+.wn-side-emoji {
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+.wn-side-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--primary);
+}
+
+.wn-side-name:hover {
+  text-decoration: underline;
+}
+
+.wn-side-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.82rem;
+}
+
+.wn-side-items li {
+  padding: 0.2em 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  line-height: 1.4;
+}
+
+.wn-side-items li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 37.5em) {
+  .wn-film-grid,
+  .wn-sides-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .wn-film-card {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .wn-film-poster {
+    flex: 0 0 90px;
+  }
+
+  .wn-film-poster img {
+    width: 90px;
+    height: 135px;
+    border-radius: 4px 0 0 4px;
+  }
+
+  .wn-film-meta {
+    flex: 1;
+    padding: 0.65rem;
+  }
+}
