@@ -1490,9 +1490,31 @@ a {
   border-bottom: none;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 37.5em) {
   .wn-film-grid,
   .wn-sides-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .wn-film-card {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .wn-film-poster {
+    flex: 0 0 90px;
+  }
+
+  .wn-film-poster img {
+    width: 90px;
+    height: 135px;
+    border-radius: 4px 0 0 4px;
+  }
+
+  .wn-film-meta {
+    flex: 1;
+    padding: 0.65rem;
   }
 }
