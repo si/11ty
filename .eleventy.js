@@ -189,6 +189,13 @@ module.exports = function (eleventyConfig) {
     return array.slice(0, n);
   });
 
+  eleventyConfig.addFilter("starRating", function (rating) {
+    const full = Math.floor(rating);
+    const half = Math.floor(rating * 2) % 2 === 1;
+    const empty = 5 - full - (half ? 1 : 0);
+    return "★".repeat(full) + (half ? "½" : "") + "☆".repeat(empty);
+  });
+
   eleventyConfig.addCollection("posts", function (collectionApi) {
     return collectionApi.getFilteredByTag("posts");
   });

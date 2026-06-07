@@ -1,0 +1,153 @@
+---
+templateClass: tmpl-post
+---
+{% extends "layouts/base.njk" %}
+
+{% block coverImage %}
+{% if coverImage %}
+  {% set datePath = page.date | datePath %}
+  {% set coverImagePath = "/img/assets/" + datePath + "/" + coverImage %}
+  <div class="cover-image-header">
+    <img src="{{ coverImagePath | addHash }}" alt="" class="cover-image">
+    <div class="cover-image-overlay"></div>
+  </div>
+{% endif %}
+{% endblock %}
+
+{% block extraArticleHeader %}
+  {% set wc = content | striptags | wordcount %}
+  {% set wPerMinute = (wc / 240) + 1 %}
+  <aside>
+    ~{{ wPerMinute | round }} min read
+    <time datetime="{{ page.date | htmlDateString }}">{{ page.date | longPublishedDate }}</time>
+  </aside>
+{% endblock %}
+
+{% set shareUrl = metadata.url + page.url %}
+
+{% block article %}
+
+{% if fitness %}
+<section class="wn-section wn-fitness">
+  <h2>Fitness</h2>
+  <div class="wn-weight-row">
+    <span class="wn-weight-label">Weight</span>
+    <span class="wn-weight-value">{{ fitness.weight_start }}kg → {{ fitness.weight_end }}kg</span>
+    <span class="wn-weight-delta {% if fitness.weight_end < fitness.weight_start %}wn-delta-down{% else %}wn-delta-up{% endif %}">
+      ({{ (fitness.weight_end - fitness.weight_start) | round(1) }}kg)
+    </span>
+  </div>
+  <div class="wn-activities">
+    {% for activity in fitness.activities %}
+    <a href="{{ activity.url }}" class="wn-activity-pill wn-activity-{{ activity.type }}" target="_blank" rel="noopener">
+      <span class="wn-activity-icon" aria-hidden="true">{{ activity.icon }}</span>
+      <span class="wn-activity-distance">{{ (activity.distance_m / 1000) | round(1) }}km</span>
+      {% if activity.duration_min %}<span class="wn-activity-duration">{{ activity.duration_min }}min</span>{% endif %}
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if films %}
+<section class="wn-section wn-films">
+  <h2>Films</h2>
+  <div class="wn-film-grid">
+    {% for film in films %}
+    <a href="{{ film.url }}" class="wn-film-card" target="_blank" rel="noopener">
+      <div class="wn-film-poster">
+        <img src="{{ film.poster }}" alt="Poster for {{ film.title }} ({{ film.year }})" loading="lazy" width="300" height="450">
+      </div>
+      <div class="wn-film-meta">
+        <div class="wn-film-title">{{ film.title }} <span class="wn-film-year">({{ film.year }})</span></div>
+        <div class="wn-film-rating" aria-label="Rating: {{ film.rating }} out of 5">{{ film.rating | starRating }}</div>
+        {% if film.review %}<p class="wn-film-review">"{{ film.review }}"</p>{% endif %}
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if music %}
+<section class="wn-section wn-music">
+  <h2>Music</h2>
+  {% for session in music %}
+  <div class="wn-music-session">
+    <div class="wn-music-session-header">
+      <span class="wn-music-label">{{ session.label }}</span>
+      <span class="wn-music-date">{{ session.date }}</span>
+    </div>
+    <div class="wn-track-pills">
+      {% for track in session.tracks %}
+      <a href="{{ track.url }}" class="wn-track-pill" target="_blank" rel="noopener">
+        <span class="wn-track-artist">{{ track.artist }}</span>
+        <span class="wn-track-title">{{ track.title }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</section>
+{% endif %}
+
+{% if sides %}
+<section class="wn-section wn-sides">
+  <h2>Sides</h2>
+  <div class="wn-sides-grid">
+    {% for project in sides %}
+    <div class="wn-side-card">
+      <div class="wn-side-card-header">
+        <span class="wn-side-emoji" aria-hidden="true">{{ project.emoji }}</span>
+        <a href="{{ project.url }}" class="wn-side-name" target="_blank" rel="noopener">{{ project.name }}</a>
+      </div>
+      <ul class="wn-side-items">
+        {% for item in project.items %}
+        <li>
+          {% if item.url %}<a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.label }}</a>
+          {% else %}{{ item.label }}{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<section class="wn-section wn-life">
+  <h2>Life</h2>
+  {{ content | safe }}
+</section>
+
+<share-widget>
+  <button on-click="share" aria-label="Share" href="{{ shareUrl | safe }}">
+    <div></div>
+  </button>
+</share-widget>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ title }} • {{ metadata.title }}",
+  "image": [],
+  "author": "{{ metadata.author.name }}",
+  "genre": "{{ metadata.genre }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ metadata.publisher.name }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ '/img/favicon/favicon-192x192.png' | addHash }}"
+    }
+  },
+  "url": "{{ metadata.url }}{{ canonicalUrl or page.url }}",
+  "mainEntityOfPage": "{{ metadata.url }}{{ canonicalUrl or page.url }}",
+  "datePublished": "{{ page.date | htmlDateString }}",
+  "dateModified": "{{ page.inputPath | lastModifiedDate | htmlDateString }}",
+  "description": "{{ description or (content | striptags | truncate(140)) }}"
+}
+</script>
+
+{% endblock %}
