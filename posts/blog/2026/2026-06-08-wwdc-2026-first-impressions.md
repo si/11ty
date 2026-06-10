@@ -111,3 +111,6 @@ Will anyone actually use this beyond the first play? Possibly not. If it's using
 More than any WWDC in recent memory, this one felt like Apple both catching up and genuinely pushing forward. Siri as a proper platform. Context-aware, deeply integrated, and available everywhere. Something we've been waiting years for. Whether the execution matches the demo is the question it always is.
 
 The real test starts now.
+
+<ins datetime="2026-06-10">Update 2 days later</ins>: 
+It came to light in the press releases after the keynote that [Siri AI won't be immediately available to EU](https://www.reuters.com/business/apple-failed-make-its-ai-tool-comply-eu-regulations-eu-commission-says-2026-06-09/) and Chinese residents due to ongoing legal pursuits (including interoptability between models). I suppose that's one minor benefit of Brexit.
