@@ -2,6 +2,7 @@
 :root {
   --primary: #3D8A5E;
   --primary-dark: #85C9A0;
+  --habit-flag: #B45309;
   --nav-height: 68px;
   --font-family-base: "Inter", "Inter UI", -apple-system, sans-serif;
   --font-family-heading: "Playfair Display", serif,
@@ -1239,4 +1240,145 @@ a {
 .category-blog      { background: #2a2a2a; color: #fff; }
 .category-micro     { background: #555555; color: #fff; }
 .category-aside     { background: #888888; color: #fff; }
+
+/* /habits/ section: habit cards, stat tiles, table and trend chart */
+.habit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 1em;
+  margin: 1.5em 0;
+  padding: 0;
+  list-style: none;
+}
+
+.habit-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  padding: 1.1em 1.2em;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.6em;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+
+.habit-card:hover,
+.habit-card:focus-visible {
+  border-color: var(--primary);
+  text-decoration: none;
+}
+
+.habit-card__icon {
+  font-size: 1.6em;
+  line-height: 1;
+}
+
+.habit-card__name {
+  font-weight: 700;
+}
+
+.habit-card__meta,
+.habit-card__latest {
+  font-size: 0.85em;
+  color: #666;
+}
+
+.habit-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin: 1.5em 0;
+}
+
+.habit-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  padding: 0.8em 1.1em;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.6em;
+  min-width: 8em;
+}
+
+.habit-stat__label {
+  font-size: 0.75em;
+  color: #666;
+}
+
+.habit-stat__value {
+  font-size: 1.4em;
+  font-weight: 700;
+  font-variant-numeric: proportional-nums;
+}
+
+.habit-table-wrap {
+  overflow-x: auto;
+}
+
+.habit-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.habit-table td,
+.habit-table th {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.habit-chart-figure {
+  margin: 1.5em 0;
+}
+
+.habit-chart {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.habit-chart__area {
+  fill: var(--primary);
+  opacity: 0.1;
+  stroke: none;
+}
+
+.habit-chart__line {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.habit-chart__gridline {
+  stroke: rgba(0, 0, 0, 0.1);
+  stroke-width: 1;
+}
+
+.habit-chart__axis-label {
+  fill: #666;
+  font-size: 11px;
+  font-family: var(--font-family-base);
+}
+
+.habit-chart__end-label {
+  fill: #222;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--font-family-base);
+}
+
+.habit-chart__marker {
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+.habit-chart__marker--clean {
+  fill: var(--primary);
+}
+
+.habit-chart__marker--flagged {
+  fill: var(--habit-flag);
+}
 .category-weeknotes { background: #b8b8b8; color: #111; }
