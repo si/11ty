@@ -11,6 +11,7 @@ const {
   formatMetricValue,
   formatIsoDate,
   pluralizeLabel,
+  lastKnownValue,
 } = require("./habits-data.js");
 
 function escapeXml(value) {
@@ -162,5 +163,6 @@ module.exports = {
     // called as an expression - `{% set chart = habitTrendChart(habit) %}` -
     // and conditionally skipped when there isn't enough data for a trend.
     eleventyConfig.addNunjucksGlobal("habitTrendChart", habitTrendChart);
+    eleventyConfig.addNunjucksGlobal("lastKnownValue", lastKnownValue);
   },
 };
