@@ -26,12 +26,8 @@ date: 2026-08-02
     <span class="habit-stat__value">{{ habit.latest.language }}</span>
   </div>
   <div class="habit-stat">
-    <span class="habit-stat__label">Total XP</span>
+    <span class="habit-stat__label">Total time practiced</span>
     <span class="habit-stat__value">{{ habit.stats.primaryTotal | formatMetric(habit.primaryMetric) }}</span>
-  </div>
-  <div class="habit-stat">
-    <span class="habit-stat__label">Best session</span>
-    <span class="habit-stat__value">{{ habit.stats.best | formatMetric(habit.primaryMetric) }}</span>
   </div>
   {% for stat in habit.stats.extra %}
     <div class="habit-stat">
@@ -39,6 +35,10 @@ date: 2026-08-02
       <span class="habit-stat__value">{{ stat.value | formatMetric(stat) }}</span>
     </div>
   {% endfor %}
+  <div class="habit-stat">
+    <span class="habit-stat__label">Best combo</span>
+    <span class="habit-stat__value">{{ habit.stats.secondaryBest | formatMetric(habit.secondaryMetric) }}</span>
+  </div>
   {% if lastLevel %}
     <div class="habit-stat">
       <span class="habit-stat__label">Last recorded level</span>
@@ -47,42 +47,29 @@ date: 2026-08-02
   {% endif %}
 </div>
 
-<p><em>The export only tags a language and level on some rows — French and Turkish are labelled throughout, but the Greek streak stops recording a level after {{ lastLevel.date | readableIsoDate }} even though it's been going ever since. Treat "last recorded level" as a floor, not the current level.</em></p>
+<p><em>The export only tags a language and level on some rows — French and Turkish are labelled throughout, but the Greek streak stops recording a level after {{ lastLevel.date | readableIsoDate }} even though it's been going ever since. Treat "last recorded level" as a floor, not the current level. XP isn't shown here either — the source scan regularly confuses it with the phone's battery level, so it's not trustworthy.</em></p>
 
-{% set chart = habitTrendChart(habit) %}
-{% if chart %}
-  <figure class="habit-chart-figure">
-    {{ chart | safe }}
-    <figcaption>{{ habit.primaryMetric.label }} per session, across all {{ habit.sessionCount }} logged sessions. Marker colour shows whether a {{ habit.secondaryMetric.label | lower }} streak was recorded that session.</figcaption>
-  </figure>
-{% else %}
-  <p><em>Log a few more sessions to see a trend chart here.</em></p>
-{% endif %}
-
-<h2>All sessions</h2>
+<h2>Monthly totals</h2>
+<p>The full lesson-by-lesson log is too long to list on one page, so it's merged by day and broken out by month below - each month links through to its day-by-day breakdown.</p>
 <div class="habit-table-wrap">
   <table class="habit-table">
     <thead>
       <tr>
-        <th scope="col">Date</th>
-        <th scope="col">Time</th>
-        <th scope="col">Language</th>
-        <th scope="col">XP</th>
-        <th scope="col">Accuracy</th>
-        <th scope="col">Duration</th>
-        <th scope="col">Combo</th>
+        <th scope="col">Month</th>
+        <th scope="col">Total duration</th>
+        <th scope="col">Accuracy (range)</th>
+        <th scope="col">Accuracy (avg)</th>
+        <th scope="col">Highest combo</th>
       </tr>
     </thead>
     <tbody>
-      {% for entry in habit.entries | reverse %}
+      {% for month in duolingoMonths | reverse %}
         <tr>
-          <td>{{ entry.date | readableIsoDate }}</td>
-          <td>{{ entry.time }}</td>
-          <td>{{ entry.language }}</td>
-          <td>{{ entry.xp }}</td>
-          <td>{% if entry.accuracy != null %}{{ entry.accuracy }}%{% else %}-{% endif %}</td>
-          <td>{% if entry.durationSeconds != null %}{{ entry.durationSeconds | formatDuration }}{% else %}-{% endif %}</td>
-          <td>{{ entry.combo or "-" }}</td>
+          <td><a href="{{ month.url | url }}">{{ month.label }}</a></td>
+          <td>{{ month.totals.totalDurationSeconds | formatDuration }}</td>
+          <td>{% if month.totals.accuracyMin != null %}{{ month.totals.accuracyMin }}–{{ month.totals.accuracyMax }}%{% else %}-{% endif %}</td>
+          <td>{% if month.totals.accuracyAvg != null %}{{ month.totals.accuracyAvg }}%{% else %}-{% endif %}</td>
+          <td>{{ month.totals.bestCombo or "-" }}</td>
         </tr>
       {% endfor %}
     </tbody>

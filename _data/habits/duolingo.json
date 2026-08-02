@@ -5,10 +5,10 @@
   "source": "Duolingo, logged in a Numbers spreadsheet in iCloud and exported as CSV.",
   "description": "Language-learning lessons on Duolingo. Started on French, tried Turkish for a couple of weeks, then settled into an ongoing Greek streak from 10 April 2026.",
   "primaryMetric": {
-    "key": "xp",
-    "label": "XP",
-    "unit": "count",
-    "goal": "higher"
+    "key": "durationSeconds",
+    "label": "Duration",
+    "unit": "duration",
+    "goal": "lower"
   },
   "secondaryMetric": {
     "key": "combo",

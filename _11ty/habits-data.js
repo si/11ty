@@ -19,8 +19,10 @@ const HABITS_DIR = path.join(__dirname, "..", "_data", "habits");
 
 function formatDuration(totalSeconds) {
   const seconds = Math.max(0, Math.round(Number(totalSeconds) || 0));
-  const m = Math.floor(seconds / 60);
+  const h = Math.floor(seconds / 3600);
+  const m = Math.floor((seconds % 3600) / 60);
   const s = seconds % 60;
+  if (h > 0) return `${h}h ${m}m`;
   if (m === 0) return `${s}s`;
   return `${m}m ${s}s`;
 }
@@ -133,6 +135,9 @@ function loadHabits() {
           average: habit.primaryMetric ? average(primaryValues) : null,
           primaryTotal: habit.primaryMetric ? sum(primaryValues) : null,
           secondaryTotal: sum(secondaryValues),
+          secondaryBest: habit.secondaryMetric
+            ? pickBest(secondaryValues, habit.secondaryMetric.goal)
+            : null,
           extra: computeExtraStats(entries, habit.extraStats),
         },
       };
