@@ -19,8 +19,10 @@ const HABITS_DIR = path.join(__dirname, "..", "_data", "habits");
 
 function formatDuration(totalSeconds) {
   const seconds = Math.max(0, Math.round(Number(totalSeconds) || 0));
-  const m = Math.floor(seconds / 60);
+  const h = Math.floor(seconds / 3600);
+  const m = Math.floor((seconds % 3600) / 60);
   const s = seconds % 60;
+  if (h > 0) return `${h}h ${m}m`;
   if (m === 0) return `${s}s`;
   return `${m}m ${s}s`;
 }
@@ -30,6 +32,8 @@ function formatMetricValue(value, metric) {
   switch (metric.unit) {
     case "duration":
       return formatDuration(value);
+    case "percent":
+      return `${Math.round(value)}%`;
     case "count":
       return `${value}${metric.suffix ? ` ${metric.suffix}` : ""}`;
     default:
@@ -66,6 +70,38 @@ function average(values) {
   return values.reduce((sum, v) => sum + v, 0) / values.length;
 }
 
+function sum(values) {
+  return values.reduce((total, v) => total + v, 0);
+}
+
+// Optional per-habit `extraStats` entries (beyond primary/secondary metric)
+// - e.g. Duolingo's accuracy, which isn't the thing charted but is still
+// worth a headline number. Missing values are skipped rather than treated
+// as zero, so a handful of ungraded sessions doesn't drag the average down.
+function computeExtraStats(entries, specs) {
+  if (!specs || !specs.length) return [];
+  return specs.map((spec) => {
+    const values = entries
+      .map((e) => e[spec.key])
+      .filter((v) => v !== undefined && v !== null)
+      .map(Number);
+    const value = spec.agg === "total" ? sum(values) : average(values);
+    return { ...spec, value: values.length ? value : null };
+  });
+}
+
+// Most recent entry (entries must already be date-ascending) that has a
+// non-null value for `key` - for sparsely-recorded fields like Duolingo's
+// level, which the export only captures some of the time.
+function lastKnownValue(entries, key) {
+  for (let i = entries.length - 1; i >= 0; i -= 1) {
+    if (entries[i][key] !== undefined && entries[i][key] !== null) {
+      return entries[i];
+    }
+  }
+  return null;
+}
+
 function loadHabits() {
   if (!fs.existsSync(HABITS_DIR)) return [];
 
@@ -97,7 +133,12 @@ function loadHabits() {
             ? pickBest(primaryValues, habit.primaryMetric.goal)
             : null,
           average: habit.primaryMetric ? average(primaryValues) : null,
-          secondaryTotal: secondaryValues.reduce((sum, v) => sum + v, 0),
+          primaryTotal: habit.primaryMetric ? sum(primaryValues) : null,
+          secondaryTotal: sum(secondaryValues),
+          secondaryBest: habit.secondaryMetric
+            ? pickBest(secondaryValues, habit.secondaryMetric.goal)
+            : null,
+          extra: computeExtraStats(entries, habit.extraStats),
         },
       };
     })
@@ -140,4 +181,6 @@ module.exports = {
   pluralizeLabel,
   pickBest,
   average,
+  sum,
+  lastKnownValue,
 };
