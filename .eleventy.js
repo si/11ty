@@ -60,6 +60,15 @@ const CleanCSS = require("clean-css");
 const GA_ID = require("./_data/metadata.json").googleAnalyticsId;
 const youtubeEmbed = require("./_11ty/youtube-embed.js");
 
+// /tags/* pages (one per tag, ~900 of them) are only needed on the deployed
+// site. Building them locally is most of what pushes a small content-only
+// build past 2 minutes, so we skip generating them outside of CI. Netlify and
+// GitHub Actions both set CI=true automatically, so production builds are
+// unaffected. Force them locally with `ELEVENTY_BUILD_TAGS=true` if you need
+// to check a tag page before pushing.
+const BUILD_TAG_PAGES =
+  Boolean(process.env.CI) || process.env.ELEVENTY_BUILD_TAGS === "true";
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
@@ -260,7 +269,13 @@ module.exports = function (eleventyConfig) {
       return directory === "micro";
     });
   });
-  eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
+  eleventyConfig.addCollection("tagList", function (collectionApi) {
+    if (!BUILD_TAG_PAGES) {
+      return [];
+    }
+    return require("./_11ty/getTagList")(collectionApi);
+  });
+  eleventyConfig.addGlobalData("buildTagPages", BUILD_TAG_PAGES);
   // Copy migrated assets from src/assets to /assets in the built site.
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy("img");
