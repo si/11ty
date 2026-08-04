@@ -13,6 +13,14 @@ touching the Eleventy version — see the `tagList` collection gating in
 `.eleventy.js` and `tags.njk`. This upgrade is a distinct piece of work with
 its own risk profile; don't bundle it with build-speed fixes.
 
+That said, Si has confirmed (2026-08-04) this is worth doing anyway for
+general maintenance and performance, not only for the incremental-build
+angle — it doesn't need to wait on a build-speed justification. See
+[`habit-runtime-render-idea.md`](./habit-runtime-render-idea.md) for a
+related but independent idea (client-side rendering for `/habits/`) that
+targets the same underlying pain from a different angle; do this upgrade
+first and re-assess that idea afterwards rather than doing both at once.
+
 ## Current state (verified)
 
 - Installed: `@11ty/eleventy@^1.0.0` (package-lock resolves `1.0.2`), engines
