@@ -309,20 +309,9 @@ module.exports = function (eleventyConfig) {
     .use(youtubeEmbed); // Automatically converts YouTube URLs to accessible embeds in all posts
   eleventyConfig.setLibrary("md", markdownLibrary);
 
-  // Browsersync Overrides
-  eleventyConfig.setBrowserSyncConfig({
-    callbacks: {
-      ready: function (err, browserSync) {
-        browserSync.addMiddleware("*", (req, res) => {
-          // Provides the 404 content without redirect.
-          res.write(fs.readFileSync("_site/404.html"));
-          res.end();
-        });
-      },
-    },
-    ui: false,
-    ghostMode: false,
-  });
+  // The @11ty/eleventy-dev-server (replaces Browser Sync as of Eleventy 2.0)
+  // already serves _site/404.html with a 404 status and no redirect when it
+  // exists, so no custom dev-server middleware is needed here.
 
   // After the build touch any file in the test directory to do a test run.
   eleventyConfig.on("afterBuild", async () => {
