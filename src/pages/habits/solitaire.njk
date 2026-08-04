@@ -1,0 +1,80 @@
+---
+title: "Solitaire"
+description: "Daily Crown Solitaire challenge deals, played in the Solitaire app."
+date: 2026-08-04
+---
+
+{% set habit = "solitaire" | getHabit %}
+
+<p><a href="{{ '/habits/' | url }}">← All habits</a></p>
+
+{% if habit %}
+<p>{{ habit.description }} Source: {{ habit.source }}.</p>
+
+<div class="habit-stats">
+  <div class="habit-stat">
+    <span class="habit-stat__label">Deals logged</span>
+    <span class="habit-stat__value">{{ habit.sessionCount }}</span>
+  </div>
+  {% if habit.stats.best != null %}
+    <div class="habit-stat">
+      <span class="habit-stat__label">Best {{ habit.primaryMetric.label | lower }} logged</span>
+      <span class="habit-stat__value">{{ habit.stats.best | formatMetric(habit.primaryMetric) }}</span>
+    </div>
+  {% endif %}
+  {% if habit.secondaryMetric %}
+    <div class="habit-stat">
+      <span class="habit-stat__label">Fewest {{ habit.secondaryMetric.label | lower }}</span>
+      <span class="habit-stat__value">{{ habit.stats.secondaryBest | formatMetric(habit.secondaryMetric) }}</span>
+    </div>
+  {% endif %}
+  {% for stat in habit.stats.extra %}
+    <div class="habit-stat">
+      <span class="habit-stat__label">{{ stat.label }}</span>
+      <span class="habit-stat__value">{{ stat.value | formatMetric(stat) }}</span>
+    </div>
+  {% endfor %}
+</div>
+
+{% if habit.personalBest %}
+<p><em>The game's own all-time personal best (not necessarily set during a logged session here): score {{ habit.personalBest.score }}, time {{ habit.personalBest.durationSeconds | formatDuration }}, moves {{ habit.personalBest.moves }}.</em></p>
+{% endif %}
+
+{% set chart = habitTrendChart(habit) %}
+{% if chart %}
+  <figure class="habit-chart-figure">
+    {{ chart | safe }}
+    <figcaption>{{ habit.primaryMetric.label }} per deal. Marker colour shows whether {{ habit.secondaryMetric.label | lower }} were above zero that deal — exact figures are in the table below.</figcaption>
+  </figure>
+{% else %}
+  <p><em>Log a few more deals to see a trend chart here.</em></p>
+{% endif %}
+
+<h2>All deals</h2>
+<div class="habit-table-wrap">
+  <table class="habit-table">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Draw mode</th>
+        <th scope="col">{{ habit.primaryMetric.label }}</th>
+        <th scope="col">Time</th>
+        {% if habit.secondaryMetric %}<th scope="col">{{ habit.secondaryMetric.label }}</th>{% endif %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for entry in habit.entries | reverse %}
+        <tr>
+          <td>{{ entry.date | readableIsoDate }}</td>
+          <td>{{ entry.drawMode }}</td>
+          <td>{{ entry[habit.primaryMetric.key] | formatMetric(habit.primaryMetric) }}</td>
+          <td>{{ entry.durationSeconds | formatDuration }}</td>
+          {% if habit.secondaryMetric %}<td>{{ entry[habit.secondaryMetric.key] | formatMetric(habit.secondaryMetric) }}</td>{% endif %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% else %}
+<p>No data yet.</p>
+{% endif %}

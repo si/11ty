@@ -1,0 +1,42 @@
+{
+  "id": "solitaire",
+  "name": "Solitaire",
+  "icon": "🃏",
+  "source": "Solitaire app - daily Crown Solitaire challenge deal.",
+  "description": "Daily Crown Solitaire challenge deal, played in the Solitaire app.",
+  "personalBest": {
+    "score": 27619,
+    "durationSeconds": 26,
+    "moves": 83,
+    "notedOn": "2026-08-04"
+  },
+  "primaryMetric": {
+    "key": "score",
+    "label": "Score",
+    "unit": "count",
+    "goal": "higher"
+  },
+  "secondaryMetric": {
+    "key": "moves",
+    "label": "Moves",
+    "unit": "count",
+    "goal": "lower"
+  },
+  "extraStats": [
+    {
+      "key": "durationSeconds",
+      "label": "Average time",
+      "unit": "duration",
+      "agg": "average"
+    }
+  ],
+  "entries": [
+    {
+      "date": "2026-08-04",
+      "drawMode": "Draw 3",
+      "score": 3939,
+      "durationSeconds": 212,
+      "moves": 111
+    }
+  ]
+}
