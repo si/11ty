@@ -70,7 +70,10 @@ const BUILD_TAG_PAGES =
   Boolean(process.env.CI) || process.env.ELEVENTY_BUILD_TAGS === "true";
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPlugin(pluginRss);
+  // @11ty/eleventy-plugin-rss is ESM-only as of v3; requiring it from this
+  // CJS config file returns the module namespace object, so the plugin
+  // function itself is under `.default`.
+  eleventyConfig.addPlugin(pluginRss.default || pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
 
