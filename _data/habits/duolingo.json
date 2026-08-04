@@ -8024,6 +8024,86 @@
       "language": "Greek",
       "level": null,
       "combo": 21
+    },
+    {
+      "date": "2026-08-03",
+      "time": "08:53",
+      "xp": 95,
+      "accuracy": 100,
+      "durationSeconds": 246,
+      "language": "Greek",
+      "level": null,
+      "combo": null
+    },
+    {
+      "date": "2026-08-03",
+      "time": "11:28",
+      "xp": 26,
+      "accuracy": 100,
+      "durationSeconds": 143,
+      "language": "Greek",
+      "level": null,
+      "combo": 26
+    },
+    {
+      "date": "2026-08-03",
+      "time": "11:33",
+      "xp": 28,
+      "accuracy": 67,
+      "durationSeconds": 237,
+      "language": "Greek",
+      "level": null,
+      "combo": null
+    },
+    {
+      "date": "2026-08-03",
+      "time": "11:47",
+      "xp": 29,
+      "accuracy": 100,
+      "durationSeconds": 137,
+      "language": "Greek",
+      "level": null,
+      "combo": 9
+    },
+    {
+      "date": "2026-08-03",
+      "time": "11:55",
+      "xp": 18,
+      "accuracy": 100,
+      "durationSeconds": 165,
+      "language": "Greek",
+      "level": null,
+      "combo": 18
+    },
+    {
+      "date": "2026-08-03",
+      "time": "12:00",
+      "xp": 34,
+      "accuracy": 88,
+      "durationSeconds": 293,
+      "language": "Greek",
+      "level": null,
+      "combo": null
+    },
+    {
+      "date": "2026-08-03",
+      "time": "12:14",
+      "xp": 84,
+      "accuracy": 95,
+      "durationSeconds": 311,
+      "language": "Greek",
+      "level": null,
+      "combo": null
+    },
+    {
+      "date": "2026-08-03",
+      "time": "12:20",
+      "xp": 81,
+      "accuracy": 90,
+      "durationSeconds": 337,
+      "language": "Greek",
+      "level": null,
+      "combo": null
     }
   ]
 }
