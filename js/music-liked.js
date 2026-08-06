@@ -1,9 +1,10 @@
 /**
  * Record Collection: fetches liked-track rows from a public Google Sheet
  * (populated by an IFTTT "Spotify like -> add row" recipe) and renders them
- * as a scrollable shelf of record sleeves. Cover art isn't in the sheet, so
- * it's fetched per-track from Spotify's public oEmbed endpoint and cached in
- * localStorage.
+ * as a scrollable shelf of record sleeves, with a Spotify embed below that
+ * follows whichever sleeve is currently in view. Cover art isn't in the
+ * sheet, so it's fetched per-track from Spotify's public oEmbed endpoint and
+ * cached in localStorage.
  */
 (function () {
   "use strict";
@@ -122,6 +123,15 @@
   function trackIdFromUrl(url) {
     var m = /track\/([A-Za-z0-9]+)/.exec(url || "");
     return m ? m[1] : null;
+  }
+
+  // "dd mon yyyy", e.g. "06 Aug 2026".
+  function formatLikedDate(date) {
+    if (!date) return "";
+    var day = String(date.getDate()).padStart(2, "0");
+    var month = MONTHS[date.getMonth()];
+    var monthAbbr = month.charAt(0).toUpperCase() + month.slice(1, 3);
+    return day + " " + monthAbbr + " " + date.getFullYear();
   }
 
   function buildTracks(rows) {
@@ -262,10 +272,17 @@
       var img = fragment.querySelector(".record-sleeve__art-image");
       var titleEl = fragment.querySelector(".record-sleeve__title");
       var artistEl = fragment.querySelector(".record-sleeve__artist");
+      var dateEl = fragment.querySelector(".record-sleeve__date");
 
       link.href = track.url;
       titleEl.textContent = track.title;
       artistEl.textContent = track.artists;
+      var likedDate = formatLikedDate(track.when);
+      if (likedDate) {
+        dateEl.textContent = likedDate;
+      } else {
+        dateEl.hidden = true;
+      }
       img.alt = track.title + (track.artists ? " — " + track.artists : "");
       li.__track = track;
 
@@ -276,6 +293,54 @@
       } else {
         loadArtwork(img, li.querySelector(".record-sleeve__art"), track);
       }
+    });
+  }
+
+  // Embeds a Spotify player for whichever sleeve is most visible in the
+  // shelf, defaulting to the first (most recently liked) track on load.
+  function setupPlayer(tracks) {
+    var playerEl = container.querySelector(".record-collection__player");
+    var frame = container.querySelector(".record-collection__player-frame");
+    var nowPlaying = container.querySelector(".record-collection__now-playing");
+    if (!playerEl || !frame || !tracks.length) return;
+
+    var currentUrl = null;
+    function showTrack(track) {
+      if (!track || track.url === currentUrl) return;
+      currentUrl = track.url;
+      frame.src = "https://open.spotify.com/embed/track/" + track.trackId + "?utm_source=generator";
+      if (nowPlaying) {
+        nowPlaying.textContent =
+          "Now spinning: " + track.title + (track.artists ? " — " + track.artists : "");
+      }
+      playerEl.hidden = false;
+    }
+
+    showTrack(tracks[0]);
+
+    if (!("IntersectionObserver" in window)) return;
+
+    var visibility = new Map();
+    var tracker = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          visibility.set(entry.target, entry.isIntersecting ? entry.intersectionRatio : 0);
+        });
+        var best = null;
+        var bestRatio = 0.5;
+        visibility.forEach(function (ratio, li) {
+          if (ratio > bestRatio) {
+            bestRatio = ratio;
+            best = li;
+          }
+        });
+        if (best && best.__track) showTrack(best.__track);
+      },
+      { root: shelf, threshold: [0, 0.25, 0.5, 0.75, 1] }
+    );
+
+    shelf.querySelectorAll(".record-sleeve").forEach(function (li) {
+      tracker.observe(li);
     });
   }
 
@@ -315,6 +380,7 @@
       }
       setStatus(tracks.length + " liked track" + (tracks.length === 1 ? "" : "s"));
       renderTracks(tracks);
+      setupPlayer(tracks);
     })
     .catch(function (err) {
       console.error(err);

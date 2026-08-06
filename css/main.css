@@ -1463,17 +1463,8 @@ a {
 }
 
 .record-sleeve__art--fallback {
-  background-color: #191919;
+  background-color: #2a2a2a;
   animation: none;
-}
-
-.record-sleeve__art--fallback::after {
-  content: "";
-  position: absolute;
-  inset: 22%;
-  background-color: #555;
-  -webkit-mask: url("/img/si-disc.svg") no-repeat center / contain;
-  mask: url("/img/si-disc.svg") no-repeat center / contain;
 }
 
 .record-sleeve__art-image {
@@ -1512,6 +1503,14 @@ a {
   white-space: nowrap;
 }
 
+.record-sleeve__date {
+  display: block;
+  margin-top: 0.15em;
+  font-size: 0.75em;
+  color: #999;
+  font-variant-numeric: tabular-nums;
+}
+
 .record-collection__controls {
   display: flex;
   gap: 0.6em;
@@ -1525,6 +1524,24 @@ a {
   margin: 0;
   font-size: 1.2em;
   line-height: 1;
+}
+
+.record-collection__player {
+  max-width: 30em;
+  margin: 1.5em 0 0;
+}
+
+.record-collection__now-playing {
+  margin: 0 0 0.5em;
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+.record-collection__player-frame {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0.6em;
 }
 
 /* /music/ section: skeleton grid of music sub-sections (liked tracks, and
