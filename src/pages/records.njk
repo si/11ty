@@ -1,0 +1,40 @@
+---
+title: "Record Collection"
+description: "Every track I've liked on Spotify, synced live from a running Google Sheet and shelved like a crate of records."
+date: 2026-08-06
+eleventyNavigation:
+  key: Records
+  order: 6
+---
+
+<p>Whenever I hit like on a track — on my phone, in CarPlay, wherever — an IFTTT recipe drops a row into a Google Sheet. This page reads that sheet straight from your browser every time it loads, so the crate below is always current.</p>
+
+<div id="record-collection" class="record-collection" data-sheet-id="1mGFy2np-VSWWMDaVSywqJLxZF9htT9kcj-SboyHJuZs">
+  <p class="record-collection__status" role="status">Loading the crate…</p>
+
+  <ul class="record-shelf" tabindex="0" aria-label="Liked tracks, scrollable"></ul>
+
+  <div class="record-collection__controls">
+    <button type="button" class="record-nav record-nav--prev" aria-label="Scroll to previous records">‹</button>
+    <button type="button" class="record-nav record-nav--next" aria-label="Scroll to next records">›</button>
+  </div>
+</div>
+
+<template id="record-sleeve-template">
+  <li class="record-sleeve">
+    <a class="record-sleeve__link" target="_blank" rel="noopener">
+      <span class="record-sleeve__vinyl" aria-hidden="true"></span>
+      <span class="record-sleeve__art record-sleeve__art--loading record-sleeve__art--fallback">
+        <img class="record-sleeve__art-image" alt="" loading="lazy">
+      </span>
+      <span class="record-sleeve__meta">
+        <span class="record-sleeve__title"></span>
+        <span class="record-sleeve__artist"></span>
+      </span>
+    </a>
+  </li>
+</template>
+
+<p><small>Cover art is fetched from Spotify per track and cached in your browser. Source data lives in <a href="https://docs.google.com/spreadsheets/d/1mGFy2np-VSWWMDaVSywqJLxZF9htT9kcj-SboyHJuZs/edit">this Google Sheet</a>.</small></p>
+
+<script defer src="{{ '/js/records.js' | addHash }}"></script>
