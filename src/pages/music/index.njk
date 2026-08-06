@@ -1,0 +1,25 @@
+---
+title: "Music"
+description: "Bringing together my music habits and listening life from the various services I use, pulled live onto one page."
+date: 2026-08-06
+eleventyNavigation:
+  key: Music
+  order: 6
+sections:
+  - title: "Liked Music"
+    icon: "💿"
+    description: "Every track I've liked on Spotify, shelved like a crate of records."
+    url: "/music/liked/"
+---
+
+<p>{{ description }}</p>
+
+<div class="music-grid">
+  {% for section in sections %}
+    <a class="music-card" href="{{ section.url | url }}">
+      <span class="music-card__icon" aria-hidden="true">{{ section.icon }}</span>
+      <span class="music-card__name">{{ section.title }}</span>
+      <span class="music-card__meta">{{ section.description }}</span>
+    </a>
+  {% endfor %}
+</div>

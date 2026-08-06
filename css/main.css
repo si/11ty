@@ -1526,3 +1526,44 @@ a {
   font-size: 1.2em;
   line-height: 1;
 }
+
+/* /music/ section: skeleton grid of music sub-sections (liked tracks, and
+   whatever else joins it later) */
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 1em;
+  margin: 1.5em 0;
+}
+
+.music-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  padding: 1.1em 1.2em;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.6em;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+
+.music-card:hover,
+.music-card:focus-visible {
+  border-color: var(--primary);
+  text-decoration: none;
+}
+
+.music-card__icon {
+  font-size: 1.6em;
+  line-height: 1;
+}
+
+.music-card__name {
+  font-weight: 700;
+}
+
+.music-card__meta {
+  font-size: 0.85em;
+  color: #666;
+}

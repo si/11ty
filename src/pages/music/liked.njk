@@ -1,11 +1,10 @@
 ---
-title: "Record Collection"
+title: "Liked Music"
 description: "Every track I've liked on Spotify, synced live from a running Google Sheet and shelved like a crate of records."
 date: 2026-08-06
-eleventyNavigation:
-  key: Records
-  order: 6
 ---
+
+<p><a href="{{ '/music/' | url }}">← Music</a></p>
 
 <p>Whenever I hit like on a track — on my phone, in CarPlay, wherever — an IFTTT recipe drops a row into a Google Sheet. This page reads that sheet straight from your browser every time it loads, so the crate below is always current.</p>
 
@@ -37,4 +36,4 @@ eleventyNavigation:
 
 <p><small>Cover art is fetched from Spotify per track and cached in your browser. Source data lives in <a href="https://docs.google.com/spreadsheets/d/1mGFy2np-VSWWMDaVSywqJLxZF9htT9kcj-SboyHJuZs/edit">this Google Sheet</a>.</small></p>
 
-<script defer src="{{ '/js/records.js' | addHash }}"></script>
+<script defer src="{{ '/js/music-liked.js' | addHash }}"></script>
