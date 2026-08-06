@@ -1417,9 +1417,14 @@ a {
 
 .record-sleeve__link {
   display: block;
-  position: relative;
   color: inherit;
   text-decoration: none;
+}
+
+.record-sleeve__frame {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
 }
 
 .record-sleeve__vinyl {
@@ -1441,10 +1446,10 @@ a {
 }
 
 .record-sleeve__art {
-  position: relative;
+  position: absolute;
+  inset: 0;
   z-index: 1;
   display: block;
-  aspect-ratio: 1 / 1;
   border-radius: 0.3em;
   overflow: hidden;
   background: #e6e6e6;
