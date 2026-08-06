@@ -1382,3 +1382,210 @@ a {
   fill: var(--habit-flag);
 }
 .category-weeknotes { background: #b8b8b8; color: #111; }
+
+/* /records/ page: Spotify liked-tracks carousel styled as a record shelf */
+.record-collection {
+  margin: 2em 0;
+}
+
+.record-collection__status {
+  margin: 0 0 1em;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.record-shelf {
+  display: flex;
+  gap: 1.6em;
+  padding: 0.5em 0.5em 1.5em;
+  margin: 0;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+}
+
+.record-shelf:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+}
+
+.record-sleeve {
+  flex: 0 0 auto;
+  width: 11em;
+  scroll-snap-align: start;
+}
+
+.record-sleeve__link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.record-sleeve__frame {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+}
+
+.record-sleeve__vinyl {
+  position: absolute;
+  top: 5%;
+  right: -1.1em;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, #2b2b2b 0%, #2b2b2b 32%, #050505 33%, #050505 100%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  z-index: 0;
+  transition: transform 0.2s ease;
+}
+
+.record-sleeve__link:hover .record-sleeve__vinyl,
+.record-sleeve__link:focus-visible .record-sleeve__vinyl {
+  transform: translateX(0.6em);
+}
+
+.record-sleeve__art {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  border-radius: 0.3em;
+  overflow: hidden;
+  background: #e6e6e6;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.record-sleeve__art--loading {
+  background: linear-gradient(100deg, #e6e6e6 30%, #f2f2f2 50%, #e6e6e6 70%);
+  background-size: 200% 100%;
+  animation: record-shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes record-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.record-sleeve__art--fallback {
+  background-color: #2a2a2a;
+  animation: none;
+}
+
+.record-sleeve__art-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.record-sleeve__art-image[src] {
+  opacity: 1;
+}
+
+.record-sleeve__meta {
+  display: block;
+  margin-top: 0.6em;
+}
+
+.record-sleeve__title {
+  display: block;
+  font-weight: 700;
+  font-size: 0.95em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.record-sleeve__artist {
+  display: block;
+  font-size: 0.82em;
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.record-sleeve__date {
+  display: block;
+  margin-top: 0.15em;
+  font-size: 0.75em;
+  color: #999;
+  font-variant-numeric: tabular-nums;
+}
+
+.record-collection__controls {
+  display: flex;
+  gap: 0.6em;
+}
+
+.record-nav {
+  border-radius: 50%;
+  width: 2.4em;
+  height: 2.4em;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+.record-collection__player {
+  max-width: 30em;
+  margin: 1.5em 0 0;
+}
+
+.record-collection__now-playing {
+  margin: 0 0 0.5em;
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+.record-collection__player-frame {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0.6em;
+}
+
+/* /music/ section: skeleton grid of music sub-sections (liked tracks, and
+   whatever else joins it later) */
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 1em;
+  margin: 1.5em 0;
+}
+
+.music-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  padding: 1.1em 1.2em;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.6em;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+
+.music-card:hover,
+.music-card:focus-visible {
+  border-color: var(--primary);
+  text-decoration: none;
+}
+
+.music-card__icon {
+  font-size: 1.6em;
+  line-height: 1;
+}
+
+.music-card__name {
+  font-weight: 700;
+}
+
+.music-card__meta {
+  font-size: 0.85em;
+  color: #666;
+}
