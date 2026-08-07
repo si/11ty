@@ -107,12 +107,14 @@ const processImage = async (img, outputPath) => {
     if (!fallback) {
       return;
     }
-    const avifFallback = await setSrcset(avif, src, "avif");
+    const [avifFallback, webpFallback] = await Promise.all([
+      setSrcset(avif, src, "avif"),
+      setSrcset(webp, src, "webp"),
+    ]);
     if (avifFallback) {
       avif.setAttribute("type", "image/avif");
       picture.appendChild(avif);
     }
-    const webpFallback = await setSrcset(webp, src, "webp");
     if (webpFallback) {
       webp.setAttribute("type", "image/webp");
       picture.appendChild(webp);
@@ -153,7 +155,11 @@ const dimImages = async (rawContent, outputPath) => {
     const images = [...dom.window.document.querySelectorAll("img,amp-img")];
 
     if (images.length > 0) {
-      await Promise.all(images.map((i) => processImage(i, outputPath)));
+      const concurrencyLimit = 1;
+      for (let i = 0; i < images.length; i += concurrencyLimit) {
+        const chunk = images.slice(i, i + concurrencyLimit);
+        await Promise.all(chunk.map((img) => processImage(img, outputPath)));
+      }
       content = dom.serialize();
     }
   }
