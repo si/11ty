@@ -27,6 +27,8 @@ const srcset = require("./srcset");
 const path = require("path");
 const { gif2mp4 } = require("./video-gif");
 
+const imageDimensionsCache = new Map();
+
 /**
  * Sets `width` and `height` on each image, adds blurry placeholder
  * and generates a srcset if none present.
@@ -54,7 +56,11 @@ const processImage = async (img, outputPath) => {
   }
   let dimensions;
   try {
-    dimensions = await sizeOf("_site/" + src);
+    let imagePath = "_site/" + src;
+    if (!imageDimensionsCache.has(imagePath)) {
+      imageDimensionsCache.set(imagePath, sizeOf(imagePath));
+    }
+    dimensions = await imageDimensionsCache.get(imagePath);
   } catch (e) {
     console.warn(e.message, src);
     return;
