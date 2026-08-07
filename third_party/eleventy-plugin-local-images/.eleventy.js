@@ -123,6 +123,20 @@ const grabRemoteImages = async (rawContent, outputPath) => {
   let content = rawContent;
 
   if (outputPath && outputPath.endsWith(".html")) {
+    // Optimization: fast exit if content doesn't contain images or metadata
+    // Only apply this optimization if the selector is one of the known defaults
+    // to avoid breaking custom selectors.
+    const projectSelector =
+      "img,amp-img,amp-video,meta[property='og:image'],meta[name='twitter:image'],amp-story";
+
+    if (selector === "img" || selector === projectSelector) {
+      const triggers =
+        /<img|<amp-(?:img|video|story)|property=['"]og:image['"]|name=['"]twitter:image['"]/i;
+      if (!triggers.test(content)) {
+        return content;
+      }
+    }
+
     const dom = new JSDOM(content);
     const images = [...dom.window.document.querySelectorAll(selector)];
 
