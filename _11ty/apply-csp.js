@@ -19,7 +19,6 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-const { JSDOM } = require("jsdom");
 const cspHashGen = require("csp-hash-generator");
 const syncPackage = require("browser-sync/package.json");
 
@@ -49,32 +48,36 @@ const addCspHash = async (rawContent, outputPath) => {
   let content = rawContent;
 
   if (outputPath && outputPath.endsWith(".html")) {
-    const dom = new JSDOM(content);
-    const cspAble = [
-      ...dom.window.document.querySelectorAll("script[csp-hash]"),
-    ];
+    // Fast fail if no CSP meta tag is present (check for the header value)
+    if (!/Content-Security-Policy/i.test(content)) {
+      return content;
+    }
 
-    const hashes = cspAble.map((element) => {
-      const hash = cspHashGen(element.textContent);
-      element.setAttribute("csp-hash", hash);
-      return quote(hash);
-    });
+    const hashes = [];
+
+    // Find and replace script tags with csp-hash attribute
+    content = content.replace(
+      /<script([^>]*)csp-hash([^>]*)>([\s\S]*?)<\/script>/gi,
+      (match, p1, p2, p3) => {
+        const hash = cspHashGen(p3);
+        hashes.push(quote(hash));
+        return `<script${p1}csp-hash="${hash}"${p2}>${p3}</script>`;
+      }
+    );
+
     if (isDevelopmentMode()) {
       hashes.push.apply(hashes, AUTO_RELOAD_SCRIPTS);
     }
 
-    const csp = dom.window.document.querySelector(
-      "meta[http-equiv='Content-Security-Policy']"
-    );
-    if (!csp) {
-      return content;
-    }
-    csp.setAttribute(
-      "content",
-      csp.getAttribute("content").replace("HASHES", hashes.join(" "))
-    );
-
-    content = dom.serialize();
+    // Replace HASHES in the CSP meta tag
+    // Finds the meta tag with http-equiv="Content-Security-Policy" and replaces HASHES inside it
+    const metaTagRegex = /<meta[^>]*http-equiv=["']Content-Security-Policy["'][^>]*>/i;
+    content = content.replace(metaTagRegex, (match) => {
+        if (match.includes("HASHES")) {
+             return match.replace("HASHES", hashes.join(" "));
+        }
+        return match;
+    });
   }
 
   return content;
