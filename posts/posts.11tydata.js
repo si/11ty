@@ -1,12 +1,39 @@
 const todaysDate = new Date();
-const isDev = require("../_data/isdevelopment")();
 
-function showDraft(data) {
-  if (isDev) return true;
+function isDev() {
+  try {
+    if (typeof process === "undefined" || !process || !process.argv || !Array.isArray(process.argv)) {
+      return false;
+    }
+    return /serve|watch/.test(process.argv.join());
+  } catch (e) {
+    return false;
+  }
+}
+
+const isDevEnv = isDev();
+
+function isPublished(data) {
+  if (!data) return true;
+  if (isDevEnv) return true;
   const isDraft = "draft" in data && data.draft !== false;
-  const isPostInFuture =
-    "scheduled" in data ? data.scheduled > todaysDate : false;
-  return !isDraft && !isPostInFuture;
+  return !isDraft;
+}
+
+function isCollectionVisible(data) {
+  if (!data) return false;
+  if (!isPublished(data)) return false;
+
+  if (isDevEnv) return true;
+
+  // Robustly handle dates
+  const scheduledDate = "scheduled" in data && data.scheduled ? new Date(data.scheduled) : null;
+  const postDate = data.date ? new Date(data.date) : todaysDate;
+
+  const isScheduledInFuture = scheduledDate && !isNaN(scheduledDate.getTime()) ? scheduledDate > todaysDate : false;
+  const isPostInFuture = postDate && !isNaN(postDate.getTime()) ? postDate > todaysDate : false;
+
+  return !isScheduledInFuture && !isPostInFuture;
 }
 
 module.exports = () => {
@@ -15,9 +42,9 @@ module.exports = () => {
     templateClass: "tmpl-post",
     eleventyComputed: {
       eleventyExcludeFromCollections: (data) =>
-        showDraft(data) ? data.eleventyExcludeFromCollections : true,
+        data && isCollectionVisible(data) ? (data.eleventyExcludeFromCollections || false) : true,
       permalink: (data) => {
-        if (!showDraft(data)) return false;
+        if (!data || !isPublished(data)) return false;
 
         if (data.permalink) return data.permalink;
 
