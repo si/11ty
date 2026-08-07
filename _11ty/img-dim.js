@@ -63,8 +63,12 @@ const processImage = async (img, outputPath) => {
     img.setAttribute("width", dimensions.width);
     img.setAttribute("height", dimensions.height);
   }
-  const inputType = dimensions.type;
+  const inputType = (dimensions.type || "").toLowerCase();
   if (inputType == "svg") {
+    return;
+  }
+  if (inputType == "heif" || inputType == "heic") {
+    console.warn(`Skipping unsupported image type "${inputType}"`, src);
     return;
   }
   if (inputType == "gif") {
