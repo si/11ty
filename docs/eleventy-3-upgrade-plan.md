@@ -1,9 +1,24 @@
 # Eleventy 1.x → 3.x upgrade plan
 
-Status: **not started**. This document is a pre-work assessment only — nothing
-in this repo has been changed to prepare for the upgrade. It exists so the
-upgrade can be picked up as a self-contained piece of work in a separate
-session.
+Status: **done** (2026-08-04). Completed on `@11ty/eleventy@3.1.6` following
+the phased plan below, plus the three official plugin bumps. See the git log
+on this branch for the individual checkpoint commits. A few things came up
+that this document didn't anticipate — noted inline below rather than
+rewriting history:
+
+- Eleventy 3.x added stricter permalink extension validation. `blog/feed.njk`
+  intentionally writes an extensionless `/blog/feed` file (Content-Type set
+  via the `_headers` Netlify rule), which needed
+  `eleventyAllowMissingExtension: true` added to its front matter.
+- `@11ty/eleventy-plugin-rss@3` is ESM-only, so `require()`ing it from this
+  CJS `.eleventy.js` returns the module namespace object rather than the
+  plugin function — needed `.default` unwrapping. It also removed the
+  `rssDate`/`rssLastUpdatedDate` filters in favor of
+  `dateToRfc3339`/`dateToRfc822` + `getNewestCollectionItemDate`, used across
+  all four feed templates (`feed/feed.njk`, `feed/json.njk`,
+  `feed/podcast.njk`, `blog/feed.njk`).
+- `eleventy-plugin-syntaxhighlight` and `eleventy-navigation` needed no code
+  changes — still CJS, same plugin signatures.
 
 ## Why this isn't urgent
 

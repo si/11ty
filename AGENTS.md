@@ -5,7 +5,7 @@
 This is **Si Jobling's personal website** built with [Eleventy (11ty)](https://www.11ty.dev/), a static site generator. The site is based on the [eleventy-high-performance-blog](https://github.com/11ty/eleventy-base-blog) starter and is deployed on Netlify.
 
 **Site URL**: https://sijobling.com  
-**Primary Technologies**: Eleventy 1.0, Node.js 18.x, Nunjucks templating, Markdown
+**Primary Technologies**: Eleventy 3.x, Node.js 18.x, Nunjucks templating, Markdown
 
 ---
 
