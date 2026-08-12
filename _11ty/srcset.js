@@ -86,7 +86,13 @@ async function resize(filename, width, format) {
   if (await exists("_site" + out)) {
     return out;
   }
-  await sharp("_site" + filename)
+
+  let inputPath = "_site" + filename;
+  if (!await exists(inputPath) && filename.startsWith("/assets/")) {
+    inputPath = "src" + filename;
+  }
+
+  await sharp(inputPath)
     .rotate() // Manifest rotation from metadata
     .resize(width)
     [format]({

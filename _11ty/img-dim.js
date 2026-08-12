@@ -21,6 +21,7 @@
 
 const { JSDOM } = require("jsdom");
 const { promisify } = require("util");
+const fs = require("fs");
 const sizeOf = promisify(require("image-size"));
 const blurryPlaceholder = require("./blurry-placeholder");
 const srcset = require("./srcset");
@@ -54,7 +55,11 @@ const processImage = async (img, outputPath) => {
   }
   let dimensions;
   try {
-    dimensions = await sizeOf("_site/" + src);
+    let inputPath = "_site/" + src;
+    if (!fs.existsSync(inputPath) && src.startsWith("/assets/")) {
+      inputPath = "src" + src;
+    }
+    dimensions = await sizeOf(inputPath);
   } catch (e) {
     console.warn(e.message, src);
     return;
@@ -93,39 +98,52 @@ const processImage = async (img, outputPath) => {
   if (img.tagName == "IMG") {
     img.setAttribute("decoding", "async");
     img.setAttribute("loading", "lazy");
-    img.setAttribute(
-      "style",
-      `background-size:cover;` +
-        `background-image:url("${await blurryPlaceholder(src)}")`
-    );
+    try {
+      img.setAttribute(
+        "style",
+        `background-size:cover;` +
+          `background-image:url("${await blurryPlaceholder(src)}")`
+      );
+    } catch (e) {
+      console.warn(`[img-dim] blurryPlaceholder failed for ${src}: ${e.message}`);
+    }
     const doc = img.ownerDocument;
     const picture = doc.createElement("picture");
     const avif = doc.createElement("source");
     const webp = doc.createElement("source");
     const jpeg = doc.createElement("source");
-    const fallback = await setSrcset(jpeg, src, fallbackType);
-    if (!fallback) {
+    try {
+      const fallback = await setSrcset(jpeg, src, fallbackType);
+      if (!fallback) {
+        return;
+      }
+      const avifFallback = await setSrcset(avif, src, "avif");
+      if (avifFallback) {
+        avif.setAttribute("type", "image/avif");
+        picture.appendChild(avif);
+      }
+      const webpFallback = await setSrcset(webp, src, "webp");
+      if (webpFallback) {
+        webp.setAttribute("type", "image/webp");
+        picture.appendChild(webp);
+      }
+      jpeg.setAttribute("type", `image/${fallbackType}`);
+      picture.appendChild(jpeg);
+      img.parentElement.replaceChild(picture, img);
+      picture.appendChild(img);
+      img.setAttribute("src", fallback);
+    } catch (e) {
+      console.warn(`[img-dim] setSrcset failed for ${src}: ${e.message}`);
       return;
     }
-    const avifFallback = await setSrcset(avif, src, "avif");
-    if (avifFallback) {
-      avif.setAttribute("type", "image/avif");
-      picture.appendChild(avif);
-    }
-    const webpFallback = await setSrcset(webp, src, "webp");
-    if (webpFallback) {
-      webp.setAttribute("type", "image/webp");
-      picture.appendChild(webp);
-    }
-    jpeg.setAttribute("type", `image/${fallbackType}`);
-    picture.appendChild(jpeg);
-    img.parentElement.replaceChild(picture, img);
-    picture.appendChild(img);
-    img.setAttribute("src", fallback);
   } else if (!img.getAttribute("srcset")) {
-    const fallback = await setSrcset(img, src, fallbackType);
-    if (fallback) {
-      img.setAttribute("src", fallback);
+    try {
+      const fallback = await setSrcset(img, src, fallbackType);
+      if (fallback) {
+        img.setAttribute("src", fallback);
+      }
+    } catch (e) {
+      console.warn(`[img-dim] setSrcset (fallback) failed for ${src}: ${e.message}`);
     }
   }
 };
