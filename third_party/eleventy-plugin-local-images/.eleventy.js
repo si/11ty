@@ -8,30 +8,43 @@ const metadata = require("../../_data/metadata.json");
 
 let config = { distPath: "_site", verbose: false, attribute: "src" };
 
+const pendingDownloads = new Map();
+
 const downloadImage = async (url) => {
   if (config.verbose) {
     console.log("eleventy-plugin-local-images: Attempting to copy " + url);
   }
 
-  try {
-    const imgBuffer = await fetch(url, { redirect: "follow" })
-      .then((res) => {
-        if (!res.ok) {
-          console.warn(
-            `[local-images] Skipping remote image ${url} — HTTP ${res.status}`
-          );
-          return null;
-        } else if (res.status == 200) {
-          return res;
-        } else {
-          throw new Error(`File "${url}" not found`);
-        }
-      })
-      .then((res) => res.buffer());
-    return imgBuffer;
-  } catch (error) {
-    console.log(error);
+  if (pendingDownloads.has(url)) {
+    return pendingDownloads.get(url);
   }
+
+  const downloadPromise = (async () => {
+    try {
+      const imgBuffer = await fetch(url, { redirect: "follow" })
+        .then((res) => {
+          if (!res.ok) {
+            console.warn(
+              `[local-images] Skipping remote image ${url} — HTTP ${res.status}`
+            );
+            return null;
+          } else if (res.status == 200) {
+            return res;
+          } else {
+            throw new Error(`File "${url}" not found`);
+          }
+        })
+        .then((res) => (res ? res.buffer() : null));
+      return imgBuffer;
+    } catch (error) {
+      console.log(error);
+    } finally {
+      pendingDownloads.delete(url);
+    }
+  })();
+
+  pendingDownloads.set(url, downloadPromise);
+  return downloadPromise;
 };
 
 const getFileType = (filename, buffer) => {
