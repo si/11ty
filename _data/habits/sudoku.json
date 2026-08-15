@@ -34,6 +34,12 @@
       "time": "09:39",
       "durationSeconds": 201,
       "mistakes": 1
+    },
+    {
+      "date": "2026-08-05",
+      "time": "20:36",
+      "durationSeconds": 288,
+      "mistakes": 5
     }
   ]
 }
