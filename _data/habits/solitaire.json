@@ -39,6 +39,27 @@
       "moves": 111
     },
     {
+      "date": "2026-08-05",
+      "drawMode": "Draw 3",
+      "score": 5645,
+      "durationSeconds": 140,
+      "moves": 122
+    },
+    {
+      "date": "2026-08-06",
+      "drawMode": "Draw 3",
+      "score": 5176,
+      "durationSeconds": 154,
+      "moves": 115
+    },
+    {
+      "date": "2026-08-07",
+      "drawMode": "Draw 3",
+      "score": 6266,
+      "durationSeconds": 125,
+      "moves": 112
+    },
+    {
       "date": "2026-08-08",
       "drawMode": "Draw 3",
       "score": 6660,
