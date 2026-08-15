@@ -5,10 +5,10 @@
   "source": "Solitaire app - daily Crown Solitaire challenge deal.",
   "description": "Daily Crown Solitaire challenge deal, played in the Solitaire app.",
   "personalBest": {
-    "score": 27619,
-    "durationSeconds": 26,
-    "moves": 83,
-    "notedOn": "2026-08-04"
+    "score": 28701,
+    "durationSeconds": 25,
+    "moves": 91,
+    "notedOn": "2026-08-15"
   },
   "primaryMetric": {
     "key": "score",
@@ -37,6 +37,41 @@
       "score": 3939,
       "durationSeconds": 212,
       "moves": 111
+    },
+    {
+      "date": "2026-08-08",
+      "drawMode": "Draw 3",
+      "score": 6660,
+      "durationSeconds": 117,
+      "moves": 108
+    },
+    {
+      "date": "2026-08-09",
+      "drawMode": "Draw 3",
+      "score": 6145,
+      "durationSeconds": 128,
+      "moves": 109
+    },
+    {
+      "date": "2026-08-11",
+      "drawMode": "Draw 3",
+      "score": 4505,
+      "durationSeconds": 182,
+      "moves": 102
+    },
+    {
+      "date": "2026-08-12",
+      "drawMode": "Draw 3",
+      "score": 7461,
+      "durationSeconds": 103,
+      "moves": 98
+    },
+    {
+      "date": "2026-08-14",
+      "drawMode": "Draw 3",
+      "score": 6676,
+      "durationSeconds": 117,
+      "moves": 119
     }
   ]
 }
