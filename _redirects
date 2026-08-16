@@ -1,11 +1,15 @@
 # Generated from src/redirect.json
 /airbnb https://www.airbnb.co.uk/rp/sjobling2?p=stay
+/atom.xml /feed/feed.xml 301
 /babylon https://www.beautiful.ai/player/-MH7sN4N4aI2vK9dCNFR 301
 /descript https://get.descript.com/2bxpxg5vp0v2 301
 /descript2 https://www.descript.com/?lmref=ZzV-GA 301
 /donate https://fundraise.cancerresearchuk.org/page/si-100-push-ups-challenge 301
 /duolingo /habits/duolingo/ 301
 /fathom https://usefathom.com/ref/SZMMNP 301
+/feed /feed/feed.xml 301
+/feed.xml /feed/feed.xml 301
+/feed/ /feed/feed.xml 301
 /feedback https://forms.office.com/e/0fZyejrGdd 301
 /freetrade https://magic.freetrade.io/join/simon/7190a0fa 301
 /ifttt https://ifttt.com/join?referral_code=qiYYJV5dvCsxXqgK8YlAQlCey_ogCVuR 301
@@ -143,6 +147,7 @@
 /podcast/stephen-turvey-wright https://makelifeworkpodcast.com/stephen-turvey-wright/ 301
 /pushup /blog/100-push-up-challenge-cancer-research-uk/ 301
 /rescuemycar https://rescuemycar.mention-me.com/m/ol/ob6cs-simon-jobling 301
+/rss.xml /feed/feed.xml 301
 /setapp https://go.setapp.com/invite/5lsgaljw 301
 /shavekit https://www.shavekit.com/trial?referral=Si.295650 301
 /simplycook https://simplycook.com/invite/1Y4A4Y?t=cp&via=mb&pg=mr 301
