@@ -8,6 +8,6 @@ tags:
 youtubeId: "xAY12wnQI-8"
 ---
 
-https://www.youtube.com/watch?v=xAY12wnQI-8
+https://m.youtube.com/watch?v=xAY12wnQI-8&list=PLKbU77Ew5WTHYXz8pqeVGf_nSp8Ysydaq&index=6&pp=iAQBsAgC&ra=m
 
 A new (longer) format for the podcast, this time an open discussion with Simon Hamp about the state of social media (is it even social anymore?), the impact it's having on society and how we can make things better going forward.
