@@ -1187,6 +1187,112 @@ a {
   background: var(--primary);
 }
 
+/* "You might know me from…" carousel on homepage */
+.know-me {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #14181c;
+  padding: 3em 0;
+  margin: 2.5em 0;
+}
+
+.know-me-inner {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+
+.know-me h2 {
+  color: #fff;
+  margin: 0 0 0.25em;
+}
+
+.know-me-carousel {
+  overflow: hidden;
+  margin-top: 1.75em;
+}
+
+.know-me-track {
+  display: flex;
+  gap: 1.5em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: max-content;
+  animation: know-me-scroll 32s linear infinite;
+}
+
+.know-me-carousel:hover .know-me-track,
+.know-me-carousel:focus-within .know-me-track {
+  animation-play-state: paused;
+}
+
+.know-me-item {
+  flex: 0 0 auto;
+  width: min(20em, 78vw);
+}
+
+.know-me-item a {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+  background: #1e242b;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.know-me-item a:hover,
+.know-me-item a:focus-visible {
+  transform: translateY(-4px);
+}
+
+.know-me-item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #fff;
+}
+
+.know-me-caption {
+  padding: 1em 1.25em 1.25em;
+}
+
+.know-me-caption h3 {
+  margin: 0 0 0.35em;
+  font-size: 1.1em;
+  color: #fff;
+}
+
+.know-me-caption p {
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: #c7ccd1;
+}
+
+@keyframes know-me-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .know-me-track {
+    animation: none;
+  }
+  .know-me-carousel {
+    overflow-x: auto;
+  }
+}
+
 /* Latest posts list on homepage */
 .latest-posts {
   list-style: none;
