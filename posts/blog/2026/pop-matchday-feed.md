@@ -34,5 +34,3 @@ Chapter artwork is the part I like most. Episode artwork stays spoiler-free, cre
 Subscription and value-for-value is more of a proposal at this point than a finished thought: pay for the private feed, then tip the commentator directly in sats while they're calling the match, split automatically between club, commentator and platform. Feels right, but needs someone who actually understands club finance to poke holes in it before it's anything more than that.
 
 None of this needs inventing, either. [Truefans](https://truefans.fm/) and [Fountain](https://fountain.fm/) already do live items and value-for-value today, properly, in a shipped app. The hard part was never the technology, it's getting a club to actually buy into the idea, and that gets harder the further up the pyramid you go, where broadcasting rights are locked down tight. Realistic proof of concept is grassroots or lower EFL: less rights mess to navigate, and fans loyal enough to give something new a go.
-
-Still working out how to visualise the mechanism behind all this, the fixture-to-live-to-replay bit, the money flow, rather than just describing it. That's next.
