@@ -1,5 +1,5 @@
 ---
-title: "POP: Matchday Feed"
+title: "POP: Matchday Podcast Feed"
 date: 2026-08-22
 categories:
   - "blog"
@@ -23,7 +23,7 @@ I mocked this one up properly rather than scribbling it on paper, a screenshot f
 
 <figcaption>
 
-Matchday Feed Product On a Page: listener experience, chapter artwork, and the subscription/value-for-value proposal
+Matchday Podcast Feed Product On a Page: listener experience, chapter artwork, and the subscription/value-for-value proposal
 
 </figcaption>
 
