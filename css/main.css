@@ -1216,7 +1216,7 @@ a {
 
 .know-me-track {
   display: flex;
-  gap: 1.5em;
+  gap: 3vw;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1231,7 +1231,7 @@ a {
 
 .know-me-item {
   flex: 0 0 auto;
-  width: min(20em, 78vw);
+  width: 90vw;
 }
 
 .know-me-item a {
