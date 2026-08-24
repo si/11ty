@@ -1,6 +1,6 @@
 ---
 name: duolingo-habit-log
-description: Use when Si shares a new Duolingo data export (a zip or CSV from the "Progress" Numbers spreadsheet - "Progress-Data.csv" plus pivot-table CSVs like "Daily Average", "Weekly Average", "Weekday Average", "Data Pivot") to append the new lesson sessions to the Duolingo habit log at _data/habits/duolingo.json so they show up on /habits/duolingo/ and /habits/.
+description: Use when Si shares a new Duolingo data export (a zip or CSV from the "Progress" Numbers spreadsheet - "Progress-Data.csv" plus pivot-table CSVs like "Daily Average", "Weekly Average", "Weekday Average", "Data Pivot") to log the new lesson sessions to the Duolingo habit's Google Sheet via the habits-api webhook, so they show up on /habits/duolingo/ and /habits/.
 ---
 
 # Duolingo habit log import
@@ -8,8 +8,14 @@ description: Use when Si shares a new Duolingo data export (a zip or CSV from th
 Si tracks his Duolingo lesson sessions on his blog at `/habits/duolingo/`, part
 of the combined `/habits/` section. He logs sessions in a Numbers spreadsheet
 on iCloud and periodically exports it as a zip of CSVs. When he shares a new
-export, extract the *new* rows and append them to
-`_data/habits/duolingo.json` - do not just describe the numbers back.
+export, extract the *new* rows and POST them to the habits-api webhook (see
+"Where it goes" below) - do not just describe the numbers back.
+
+Entries live in a Google Sheet now, not in git (`_data/habits/duolingo.json`
+only holds schema metadata - see `worker/README.md` for the architecture).
+This skill needs `HABITS_WORKER_URL` and `HABITS_WEBHOOK_SECRET` available as
+environment variables in the session. If either is missing, ask Si for them
+rather than guessing or falling back to editing the JSON file directly.
 
 ## What's in the export
 
@@ -21,16 +27,17 @@ A zip with several CSVs, only one of which matters for the raw log:
   `Weekday Average-Data Pivot.csv`, `Data Pivot-Data Pivot.csv` - these are
   Numbers pivot-table exports (accuracy/XP aggregated by day, week, weekday).
   **Ignore them** - the site already computes its own month/day rollups from
-  the raw log in `_data/duolingoMonths.js`, and these pivots have no data the
-  raw log doesn't already have.
+  the raw log client-side (`src/habits-app.js`), and these pivots have no
+  data the raw log doesn't already have.
 
 ## Finding what's new
 
 `Progress-Data.csv` is a full export from the beginning, not just new rows -
-it will mostly overlap with what's already in `_data/habits/duolingo.json`.
-Only append the rows *after* the last entry already in the JSON file:
+it will mostly overlap with what's already logged. Only send the rows *after*
+the last entry already logged:
 
-1. Read the last entry in `_data/habits/duolingo.json` (its `date` + `time`).
+1. `GET ${HABITS_WORKER_URL}/habits/duolingo` and note the last entry's
+   `date` + `time` (entries come back date/time-sorted).
 2. In the CSV, find the row with a matching "When" timestamp - match on
    parsed date/time and the xp/accuracy/duration values together, since
    there can be several sessions in the same minute.
@@ -101,40 +108,35 @@ the embedded values out of the quoted field the same way as a normal row.
 
 ## Where it goes
 
-1. Read `_data/habits/duolingo.json` and note its last entry.
-2. Append the new, parsed entries to the end of its `entries` array, in
-   the order they appear in the CSV (append order doesn't need to be
-   perfectly sorted - the site sorts by date/time at build time, but keeping
-   chronological order makes the diff easy to review).
-3. Preserve the file's existing JSON formatting (2-space indent, one key per
-   line, `ensure_ascii=false` if scripting the edit - the file has emoji
-   elsewhere) - a diff that only adds rows at the end is much easier to spot
-   check than one that reformats the whole file.
-4. **De-duplication**: if a "new" row's date/time/xp/accuracy/duration all
-   match an entry already in the file, skip it - some exports include a
-   couple of overlapping rows at the boundary.
-5. No other file needs to change - `_data/duolingoMonths.js`,
-   `src/pages/habits/duolingo.njk`, and the shared `/habits/` machinery
-   (`_11ty/habits.js`, `_11ty/habits-data.js`) all recompute from
-   `_data/habits/duolingo.json` at build time.
-6. If a dev build is available in the session, `npx eleventy` (or
-   `npm run build`) sanity-checks the JSON is valid and the page builds, but
-   a full build is slow (see the repo's build-speed notes) - only do this if
-   asked to verify, not as a default step.
-7. Commit and push the change the same way you would any other content
-   update in this repo - a short message like `Log Duolingo sessions through
-   2026-08-03` is enough. Don't ask for confirmation on this specific,
-   low-risk data-only commit unless something about the extraction is
-   ambiguous (an unparseable duration, an overlap point you can't find,
-   etc).
+1. `GET ${HABITS_WORKER_URL}/habits/duolingo` and note the last entry (see
+   "Finding what's new" above).
+2. For each new, parsed entry, in the order they appear in the CSV:
+   ```
+   POST ${HABITS_WORKER_URL}/habits/duolingo/entries
+   X-Habit-Webhook-Secret: ${HABITS_WEBHOOK_SECRET}
+   Content-Type: application/json
+
+   {"date": "...", "time": "...", "xp": ..., "accuracy": ..., "durationSeconds": ..., "language": "...", "level": ..., "combo": ...}
+   ```
+   Send a short pause between requests (a couple hundred ms) rather than
+   firing them all at once - the Google Sheets API this webhook writes
+   through has its own rate limits.
+3. **De-duplication**: if a "new" row's date/time/xp/accuracy/duration all
+   match an entry already returned by the `GET` in step 1, skip it - some
+   exports include a couple of overlapping rows at the boundary.
+4. Verify by re-fetching `GET ${HABITS_WORKER_URL}/habits/duolingo` and
+   checking the new entries are present. No git commit is needed for this -
+   entries live in the Duolingo Google Sheet now, not in this repo.
 
 ## A different habit, or a different export shape
 
-This skill is specifically for Duolingo's Numbers-export CSV going into
-`duolingo.json`. If Si shares data for a different habit, don't force it
-into this file - follow the general pattern in the `yudoku-habit-log` skill
-instead: create `_data/habits/<slug>.json` with `id`/`name`/`icon`/`source`/
-`description`/`primaryMetric`/`entries` (copy the shape from an existing
-habit file), and a matching `src/pages/habits/<slug>.njk` page. Nothing else
-needs to change - `/habits/` works generically off whatever's in
-`_data/habits/`.
+This skill is specifically for Duolingo's Numbers-export CSV. If Si shares
+data for a different habit, don't force it into this flow - follow the
+general pattern in the `yudoku-habit-log` skill instead: create
+`_data/habits/<slug>.json` with `id`/`name`/`icon`/`source`/`description`/
+`primaryMetric`/`sheetId` (copy the shape from an existing habit's
+schema-config, and see `worker/README.md` for setting up its Google Sheet
+and adding it to `worker/src/habitConfigs.js`), and a matching
+`src/pages/habits/<slug>.njk` shell page. Nothing else needs to change -
+`/habits/` and the habits-api Worker both work generically off whatever
+schema-configs exist in `_data/habits/`.

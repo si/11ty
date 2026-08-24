@@ -3,7 +3,10 @@ node_modules/
 .DS_Store
 js/min.js
 js/min.js.map
+js/habits-app.js
+js/habits-app.js.map
 .vscode/
 .netlify/
 export
 .npm-cache/
+worker/node_modules/

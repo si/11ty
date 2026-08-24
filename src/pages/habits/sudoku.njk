@@ -11,57 +11,8 @@ date: 2026-08-01
 {% if habit %}
 <p>{{ habit.description }} Source: {{ habit.source }}.</p>
 
-<div class="habit-stats">
-  <div class="habit-stat">
-    <span class="habit-stat__label">Sessions logged</span>
-    <span class="habit-stat__value">{{ habit.sessionCount }}</span>
-  </div>
-  {% if habit.stats.best != null %}
-    <div class="habit-stat">
-      <span class="habit-stat__label">Best {{ habit.primaryMetric.label | lower }}</span>
-      <span class="habit-stat__value">{{ habit.stats.best | formatMetric(habit.primaryMetric) }}</span>
-    </div>
-  {% endif %}
-  {% if habit.secondaryMetric %}
-    <div class="habit-stat">
-      <span class="habit-stat__label">Total {{ habit.secondaryMetric.label | lower }}</span>
-      <span class="habit-stat__value">{{ habit.stats.secondaryTotal | formatMetric(habit.secondaryMetric) }}</span>
-    </div>
-  {% endif %}
-</div>
-
-{% set chart = habitTrendChart(habit) %}
-{% if chart %}
-  <figure class="habit-chart-figure">
-    {{ chart | safe }}
-    <figcaption>{{ habit.primaryMetric.label }} per session. Marker colour shows whether {{ habit.secondaryMetric.label | lower }} were made that session — exact figures are in the table below.</figcaption>
-  </figure>
-{% else %}
-  <p><em>Log a few more sessions to see a trend chart here.</em></p>
-{% endif %}
-
-<h2>All sessions</h2>
-<div class="habit-table-wrap">
-  <table class="habit-table">
-    <thead>
-      <tr>
-        <th scope="col">Date</th>
-        <th scope="col">Time</th>
-        <th scope="col">{{ habit.primaryMetric.label }}</th>
-        {% if habit.secondaryMetric %}<th scope="col">{{ habit.secondaryMetric.label }}</th>{% endif %}
-      </tr>
-    </thead>
-    <tbody>
-      {% for entry in habit.entries | reverse %}
-        <tr>
-          <td>{{ entry.date | readableIsoDate }}</td>
-          <td>{{ entry.time }}</td>
-          <td>{{ entry[habit.primaryMetric.key] | formatMetric(habit.primaryMetric) }}</td>
-          {% if habit.secondaryMetric %}<td>{{ entry[habit.secondaryMetric.key] | formatMetric(habit.secondaryMetric) }}</td>{% endif %}
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+<div id="habit-app" data-habit-app="detail" data-habit="sudoku">
+  <noscript><p><em>Enable JavaScript to see logged sessions, stats, and the trend chart here.</em></p></noscript>
 </div>
 {% else %}
 <p>No data yet.</p>

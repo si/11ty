@@ -1,6 +1,6 @@
 ---
 name: yudoku-habit-log
-description: Use when the user shares a screenshot of the Yudoku (sudoku, YuLife app) daily results screen - the "Great work! Come back tomorrow for a new round." completion screen showing Personal best, Today's time, Hints, Mistakes and Reward. Extracts the day's session data and appends it to the sudoku habit log at _data/habits/sudoku.json so it shows up on /habits/sudoku/ and /habits/.
+description: Use when the user shares a screenshot of the Yudoku (sudoku, YuLife app) daily results screen - the "Great work! Come back tomorrow for a new round." completion screen showing Personal best, Today's time, Hints, Mistakes and Reward. Extracts the day's session data and logs it to the sudoku habit's Google Sheet via the habits-api webhook, so it shows up on /habits/sudoku/ and /habits/.
 ---
 
 # Yudoku habit log import
@@ -8,7 +8,14 @@ description: Use when the user shares a screenshot of the Yudoku (sudoku, YuLife
 Si tracks his daily Yudoku (sudoku, played in the YuLife app) sessions on his
 blog at `/habits/sudoku/`, part of the combined `/habits/` section. When he
 shares a screenshot of the Yudoku results screen, extract the day's data and
-append it to `_data/habits/sudoku.json` - do not just describe the numbers back.
+POST it to the habits-api webhook (see "Where it goes" below) - do not just
+describe the numbers back.
+
+Entries live in a Google Sheet now, not in git (`_data/habits/sudoku.json`
+only holds schema metadata - see `worker/README.md` for the architecture).
+This skill needs `HABITS_WORKER_URL` and `HABITS_WEBHOOK_SECRET` available as
+environment variables in the session. If either is missing, ask Si for them
+rather than guessing or falling back to editing the JSON file directly.
 
 ## What the screenshot looks like
 
@@ -40,38 +47,35 @@ screen but intentionally not part of this log.
 
 ## Where it goes
 
-1. Read `_data/habits/sudoku.json`.
-2. Append a new object to the end of its `entries` array with the four fields
-   above (entry order doesn't matter - the site sorts by date/time at build
-   time).
-3. **De-duplication**: sudoku is a once-a-day puzzle. If an entry for the same
-   `date` already exists, ask Si whether to overwrite it rather than silently
-   adding a second entry for the same day.
-4. Save the file. No other file needs to change for a new sudoku session.
-5. If a dev build is available in the session, you can run `npx eleventy` (or
-   `npm run build`) to sanity-check the JSON is valid and the page builds, but
-   it's not required - the site rebuilds on deploy.
-6. Commit and push the change the same way you would any other content update
-   in this repo (see the repo's branch/commit conventions) - a short message
-   like `Log sudoku session for 2026-08-01` is enough. Don't ask for
-   confirmation on this specific, low-risk data-only commit unless something
-   about the extraction is ambiguous (e.g. an unreadable digit, a missing
-   stat, or an existing entry for that date).
+1. `GET ${HABITS_WORKER_URL}/habits/sudoku` and check whether an entry for
+   this screenshot's `date` already exists.
+2. **De-duplication**: sudoku is a once-a-day puzzle. If an entry for the
+   same `date` already exists, ask Si whether to log it anyway (it currently
+   appends rather than overwrites, so re-sending would create a second row
+   for that day) rather than silently double-logging.
+3. `POST ${HABITS_WORKER_URL}/habits/sudoku/entries` with header
+   `X-Habit-Webhook-Secret: ${HABITS_WEBHOOK_SECRET}` and a JSON body with
+   the four fields above:
+   ```json
+   {"date": "2026-08-01", "time": "18:05", "durationSeconds": 225, "mistakes": 1}
+   ```
+4. Verify by re-fetching `GET ${HABITS_WORKER_URL}/habits/sudoku` and
+   checking the new entry is present. No git commit is needed - entries live
+   in the sudoku Google Sheet now, not in this repo.
 
 ## A different habit, or a different app
 
-This skill is specifically for the Yudoku results screen going into
-`sudoku.json`. If Si shares a screenshot for a habit that isn't sudoku (e.g. a
-fitness app), don't force the data into `sudoku.json`. Instead follow the same
-shape:
+This skill is specifically for the Yudoku results screen. If Si shares a
+screenshot for a habit that isn't sudoku (e.g. a fitness app), don't force
+the data into this flow. Instead follow the same shape:
 
 1. Create `_data/habits/<slug>.json` with `id`, `name`, `icon`, `source`,
    `description`, `primaryMetric` (`key`/`label`/`unit`/`goal`), optionally
-   `secondaryMetric`, and an `entries` array - copy the structure from
-   `_data/habits/sudoku.json`.
+   `secondaryMetric`, and a `sheetId` - copy the structure from
+   `_data/habits/sudoku.json`. See `worker/README.md` for creating the
+   Google Sheet and adding the habit to `worker/src/habitConfigs.js`.
 2. Copy `src/pages/habits/sudoku.njk` to `src/pages/habits/<slug>.njk`,
    swapping the `"sudoku" | getHabit` slug and the page title/description.
 
-Nothing else needs to change - `/habits/` and its shared table/chart
-rendering (`_11ty/habits.js`, `_11ty/habits-data.js`) already work generically
-off whatever habit JSON files exist in `_data/habits/`.
+Nothing else needs to change - `/habits/` and the habits-api Worker both
+work generically off whatever schema-configs exist in `_data/habits/`.

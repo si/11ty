@@ -1,6 +1,6 @@
 ---
 name: solitaire-habit-log
-description: Use when Si shares a screenshot of a Solitaire app "Results" screen (e.g. Crown Solitaire's daily deal) showing Deal date, Draw mode, and a You/Best comparison table of Score, Time and Moves. Extracts the day's session data and appends it to the solitaire habit log at _data/habits/solitaire.json so it shows up on /habits/solitaire/ and /habits/.
+description: Use when Si shares a screenshot of a Solitaire app "Results" screen (e.g. Crown Solitaire's daily deal) showing Deal date, Draw mode, and a You/Best comparison table of Score, Time and Moves. Extracts the day's session data and logs it to the solitaire habit's Google Sheet via the habits-api webhook, so it shows up on /habits/solitaire/ and /habits/.
 ---
 
 # Solitaire habit log import
@@ -8,8 +8,14 @@ description: Use when Si shares a screenshot of a Solitaire app "Results" screen
 Si tracks a daily solitaire challenge deal on his blog at
 `/habits/solitaire/`, part of the combined `/habits/` section. When he shares
 a screenshot of the Solitaire app's post-game "Results" screen, extract the
-day's data and append it to `_data/habits/solitaire.json` - do not just
-describe the numbers back.
+day's data and POST it to the habits-api webhook (see "Where it goes" below)
+- do not just describe the numbers back.
+
+Entries live in a Google Sheet now, not in git (`_data/habits/solitaire.json`
+only holds schema metadata - see `worker/README.md` for the architecture).
+This skill needs `HABITS_WORKER_URL` and `HABITS_WEBHOOK_SECRET` available as
+environment variables in the session. If either is missing, ask Si for them
+rather than guessing or falling back to editing the JSON file directly.
 
 ## What the screenshot looks like
 
@@ -49,47 +55,45 @@ point for today - see below for how it's handled.
 
 ## Where it goes
 
-1. Read `_data/habits/solitaire.json`.
-2. Append a new object to the end of its `entries` array with the five
-   fields above (entry order doesn't matter - the site sorts by date at
-   build time; there's no `time` field on these entries).
-3. **De-duplication**: this is a once-a-day challenge deal. If an entry for
-   the same `date` already exists, ask Si whether to overwrite it rather
-   than silently adding a second entry for the same day.
+1. `GET ${HABITS_WORKER_URL}/habits/solitaire` and check whether an entry
+   for this screenshot's `date` already exists.
+2. **De-duplication**: this is a once-a-day challenge deal. If an entry for
+   the same `date` already exists, ask Si whether to log it anyway (it
+   currently appends rather than overwrites, so re-sending would create a
+   second row for that day) rather than silently double-logging.
+3. `POST ${HABITS_WORKER_URL}/habits/solitaire/entries` with header
+   `X-Habit-Webhook-Secret: ${HABITS_WEBHOOK_SECRET}` and a JSON body with
+   the five fields above (no `time` field on these entries):
+   ```json
+   {"date": "2026-08-04", "drawMode": "Draw 3", "score": 3939, "durationSeconds": 212, "moves": 111}
+   ```
 4. **Personal best**: the screenshot's **Best** column is the game's
    in-app all-time record, independent of what's logged here. Update the
-   top-level `personalBest` object (`score`/`durationSeconds`/`moves`/
-   `notedOn`) only if the screenshot's Best values differ from what's
-   currently stored (i.e. the record has moved on since it was last noted) -
-   set `notedOn` to the date this screenshot was sent. If the Best values
-   match what's already stored, leave `personalBest` alone.
-5. Save the file. No other file needs to change for a new solitaire session.
-6. If a dev build is available in the session, you can run `npx eleventy`
-   (or `npm run build`) to sanity-check the JSON is valid and the page
-   builds, but a full build is slow - it's not required, the site rebuilds
-   on deploy.
-7. Commit and push the change the same way you would any other content
-   update in this repo (see the repo's branch/commit conventions) - a short
-   message like `Log solitaire deal for 2026-08-04` is enough. Don't ask
-   for confirmation on this specific, low-risk data-only commit unless
-   something about the extraction is ambiguous (an unreadable digit, a
-   missing stat, or an existing entry for that date).
+   `personalBest` object in `_data/habits/solitaire.json`
+   (`score`/`durationSeconds`/`moves`/`notedOn`) only if the screenshot's
+   Best values differ from what's currently stored (i.e. the record has
+   moved on since it was last noted) - set `notedOn` to the date this
+   screenshot was sent, and commit/push that file change (this is the one
+   piece of solitaire data that's still schema metadata in git, not a Sheet
+   row). If the Best values match what's already stored, leave it alone.
+5. Verify by re-fetching `GET ${HABITS_WORKER_URL}/habits/solitaire` and
+   checking the new entry is present.
 
 ## A different habit, or a different screen
 
-This skill is specifically for the Solitaire app's Results screen going
-into `solitaire.json`. If Si shares a screenshot for a habit that isn't
-this, don't force the data into `solitaire.json`. Instead follow the same
-general pattern (see also the `yudoku-habit-log` skill):
+This skill is specifically for the Solitaire app's Results screen. If Si
+shares a screenshot for a habit that isn't this, don't force the data into
+this flow. Instead follow the same general pattern (see also the
+`yudoku-habit-log` skill):
 
 1. Create `_data/habits/<slug>.json` with `id`, `name`, `icon`, `source`,
    `description`, `primaryMetric` (`key`/`label`/`unit`/`goal`), optionally
-   `secondaryMetric` and `extraStats`, and an `entries` array - copy the
-   structure from an existing habit file such as `solitaire.json` or
-   `sudoku.json`.
+   `secondaryMetric`, `extraStats`, and a `sheetId` - copy the structure
+   from an existing habit's schema-config such as `solitaire.json` or
+   `sudoku.json`. See `worker/README.md` for creating the Google Sheet and
+   adding the habit to `worker/src/habitConfigs.js`.
 2. Copy `src/pages/habits/solitaire.njk` to `src/pages/habits/<slug>.njk`,
    swapping the `"solitaire" | getHabit` slug and the page title/description.
 
-Nothing else needs to change - `/habits/` and its shared table/chart
-rendering (`_11ty/habits.js`, `_11ty/habits-data.js`) already work
-generically off whatever habit JSON files exist in `_data/habits/`.
+Nothing else needs to change - `/habits/` and the habits-api Worker both
+work generically off whatever schema-configs exist in `_data/habits/`.

@@ -1,3 +1,11 @@
+# SPA fallback for /habits/*: day URLs like /habits/solitaire/2026-08-04/
+# are virtual (client-side pushState routes, not Eleventy-generated pages -
+# see src/habits-app.js), so a hard reload/direct link needs to fall through
+# to that habit's shell page, which then reads location.pathname itself.
+# Generic across any habit slug, so a new habit (e.g. maptap) needs no
+# change here. 200 (rewrite), not a redirect, so the URL bar keeps the date.
+/habits/:slug/:date/ /habits/:slug/ 200
+
 # Generated from src/redirect.json
 /airbnb https://www.airbnb.co.uk/rp/sjobling2?p=stay
 /atom.xml /feed/feed.xml 301
