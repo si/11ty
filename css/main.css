@@ -1,7 +1,7 @@
 /* Color customization */
 :root {
-  --primary: #3D8A5E;
-  --primary-dark: #85C9A0;
+  --primary: #A0522D;
+  --primary-dark: #D89474;
   --habit-flag: #B45309;
   --nav-height: 68px;
   --font-family-base: "Inter", "Inter UI", -apple-system, sans-serif;
@@ -818,7 +818,7 @@ video {
 }
 body {
   font-family: var(--font-family-base);
-  background: #F0FAF4;
+  background: #FBF3E4;
   color: #111111;
 }
 section {
@@ -972,7 +972,7 @@ header nav a {
 }
 #nav-menu a:hover {
   color: var(--primary);
-  background: rgba(61, 138, 94, 0.05);
+  background: rgba(160, 82, 45, 0.05);
 }
 
 header nav label {
@@ -1160,11 +1160,13 @@ input[type="submit"],
 button[type="submit"],
 button:not([disabled]) {
   background: var(--primary);
+  color: #fff;
 }
 input[type="submit"]:hover,
 button[type="submit"]:hover,
 button:not([disabled]):hover {
   background: var(--primary-dark);
+  color: #181818;
 }
 
 dd + dt {
@@ -1177,6 +1179,7 @@ blockquote {
 
 mark {
   background: var(--primary);
+  color: #fff;
 }
 
 a {

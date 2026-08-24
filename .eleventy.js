@@ -190,6 +190,32 @@ module.exports = function (eleventyConfig) {
     return dt.toISO();
   });
 
+  eleventyConfig.addFilter("toRoman", (num) => {
+    const numerals = [
+      [1000, "M"],
+      [900, "CM"],
+      [500, "D"],
+      [400, "CD"],
+      [100, "C"],
+      [90, "XC"],
+      [50, "L"],
+      [40, "XL"],
+      [10, "X"],
+      [9, "IX"],
+      [5, "V"],
+      [4, "IV"],
+      [1, "I"],
+    ];
+    let result = "";
+    for (const [value, numeral] of numerals) {
+      while (num >= value) {
+        result += numeral;
+        num -= value;
+      }
+    }
+    return result;
+  });
+
   // Get the first `n` elements of a collection.
   eleventyConfig.addFilter("head", (array, n) => {
     if (n < 0) {
@@ -276,6 +302,7 @@ module.exports = function (eleventyConfig) {
     return require("./_11ty/getTagList")(collectionApi);
   });
   eleventyConfig.addGlobalData("buildTagPages", BUILD_TAG_PAGES);
+  eleventyConfig.addGlobalData("buildYear", () => new Date().getFullYear());
   // Copy migrated assets from src/assets to /assets in the built site.
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy("img");
