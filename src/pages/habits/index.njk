@@ -9,45 +9,18 @@ eleventyNavigation:
 
 <p>A running record of habits I'm spending time on. Each one gets its own page with a table and trend chart; this page is the combined timeline across all of them.</p>
 
-{% if habitsIndex.list | length %}
-<div class="habit-grid">
-  {% for habit in habitsIndex.list %}
-    <a class="habit-card" href="{{ habit.url | url }}">
-      <span class="habit-card__icon" aria-hidden="true">{{ habit.icon }}</span>
-      <span class="habit-card__name">{{ habit.name }}</span>
-      <span class="habit-card__meta">{{ habit.sessionCount }} session{% if habit.sessionCount != 1 %}s{% endif %} logged</span>
-      {% if habit.latest %}
-        <span class="habit-card__latest">
-          Last: {{ habit.latest[habit.primaryMetric.key] | formatMetric(habit.primaryMetric) }}{% if habit.secondaryMetric %} · {{ habit.latest[habit.secondaryMetric.key] | formatMetric(habit.secondaryMetric) }} {{ habit.latest[habit.secondaryMetric.key] | pluralizeLabel(habit.secondaryMetric.label) }}{% endif %}
-        </span>
-      {% endif %}
-    </a>
-  {% endfor %}
+<div id="habit-app" data-habit-app="index">
+  {% if habitsIndex.list | length %}
+  <div class="habit-grid">
+    {% for habit in habitsIndex.list %}
+      <a class="habit-card" href="{{ habit.url | url }}">
+        <span class="habit-card__icon" aria-hidden="true">{{ habit.icon }}</span>
+        <span class="habit-card__name">{{ habit.name }}</span>
+      </a>
+    {% endfor %}
+  </div>
+  <noscript><p><em>Enable JavaScript to see session counts, latest results, and recent activity here.</em></p></noscript>
+  {% else %}
+  <p>No habits tracked yet.</p>
+  {% endif %}
 </div>
-
-<h2>Recent activity</h2>
-<div class="habit-table-wrap">
-  <table class="habit-table">
-    <thead>
-      <tr>
-        <th scope="col">Habit</th>
-        <th scope="col">Date</th>
-        <th scope="col">Time</th>
-        <th scope="col">Result</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for item in habitsIndex.timeline %}
-        <tr>
-          <td><a href="{{ item.url | url }}">{{ item.icon }} {{ item.habitName }}</a></td>
-          <td>{{ item.date | readableIsoDate }}</td>
-          <td>{{ item.time }}</td>
-          <td>{{ item.primaryDisplay }}{% if item.secondaryDisplay %} · {{ item.secondaryDisplay }} {{ item.secondaryLabel }}{% endif %}</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-</div>
-{% else %}
-<p>No habits tracked yet.</p>
-{% endif %}

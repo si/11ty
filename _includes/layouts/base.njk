@@ -52,6 +52,9 @@
     <script async defer src="{{ "/js/min.js" | addHash }}"
       {% if webvitals %}data-cwv-src="{{ "/js/web-vitals.js" | addHash }}"{% endif %}>
     </script>
+    {% if page.url and page.url.indexOf("/habits/") == 0 %}
+      <script defer src="{{ "/js/habits-app.js" | addHash }}"></script>
+    {% endif %}
     {% if googleanalytics %}
       <script async defer src="{{ "/js/cached.js" | addHash }}"></script>
     {% endif %}

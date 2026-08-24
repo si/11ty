@@ -1,9 +1,9 @@
-const { loadHabits, buildTimeline } = require("../_11ty/habits-data.js");
+// Metadata-only list of habits for the static /habits/ shell's fallback
+// content (card grid with name/icon/description, no counts or "recent
+// activity" - those need live entries, which `src/habits-app.js` fetches
+// client-side from the Worker API and renders into the page's mount point).
+const { loadHabitConfigs } = require("../_11ty/habits-data.js");
 
 module.exports = function () {
-  const list = loadHabits();
-  return {
-    list,
-    timeline: buildTimeline(list),
-  };
+  return { list: loadHabitConfigs() };
 };

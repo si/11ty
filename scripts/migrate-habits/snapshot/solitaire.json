@@ -30,5 +30,13 @@
       "agg": "average"
     }
   ],
-  "sheetId": "REPLACE_WITH_SOLITAIRE_SHEET_ID"
+  "entries": [
+    {
+      "date": "2026-08-04",
+      "drawMode": "Draw 3",
+      "score": 3939,
+      "durationSeconds": 212,
+      "moves": 111
+    }
+  ]
 }

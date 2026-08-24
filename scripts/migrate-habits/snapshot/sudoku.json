@@ -16,5 +16,18 @@
     "unit": "count",
     "goal": "lower"
   },
-  "sheetId": "REPLACE_WITH_SUDOKU_SHEET_ID"
+  "entries": [
+    {
+      "date": "2026-08-01",
+      "time": "18:05",
+      "durationSeconds": 225,
+      "mistakes": 1
+    },
+    {
+      "date": "2026-08-02",
+      "time": "14:48",
+      "durationSeconds": 245,
+      "mistakes": 0
+    }
+  ]
 }

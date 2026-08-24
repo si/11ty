@@ -33,6 +33,8 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
     "netlify-plugin-cache": "^1.0.3",
     "@11ty/eleventy-navigation": "^0.1.3",
     "@11ty/eleventy-plugin-rss": "^1.0.7",

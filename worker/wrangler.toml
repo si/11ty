@@ -1,0 +1,30 @@
+name = "habits-api"
+main = "src/index.js"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# Non-secret config. Secrets (WEBHOOK_SECRET, GOOGLE_SERVICE_ACCOUNT_EMAIL,
+# GOOGLE_PRIVATE_KEY) are set with `wrangler secret put <NAME>` - never put
+# them here.
+[vars]
+CACHE_TTL_SECONDS = "60"
+
+# --- Routing (pick ONE, see worker/README.md) ---
+#
+# Option A - same-origin path route on the live domain's zone (preferred:
+# the site's habit pages can then fetch("/api/...") with zero CSP change,
+# since default-src 'self' already allows same-origin fetch). Only works if
+# Cloudflare is the DNS/proxy in front of the domain, which is unconfirmed
+# while hosting is "mid-migration" between Netlify and Cloudflare Pages -
+# confirm before uncommenting.
+#
+# [[routes]]
+# pattern = "sijobling.com/api/*"
+# zone_name = "sijobling.com"
+
+# Option B - the Worker's own subdomain (works regardless of which host
+# serves the rest of the site, but is cross-origin from the client's point
+# of view - requires adding a `connect-src` entry to `_data/csp.js` for this
+# origin). Uncomment and adjust if Option A's zone routing isn't available:
+#
+# route = "habits-api.sijobling.com/*"

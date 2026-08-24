@@ -15,65 +15,12 @@ date: 2026-08-02
 
 <p><a href="https://www.duolingo.com/profile/SiJobling?via=share_profile_qr"><img alt="QR code to follow Si Jobling on Duolingo" src="/assets/images/Duolingo_Sharing-782x1024.png"></a></p>
 
-{% set lastLevel = lastKnownValue(habit.entries, 'level') %}
-<div class="habit-stats">
-  <div class="habit-stat">
-    <span class="habit-stat__label">Sessions logged</span>
-    <span class="habit-stat__value">{{ habit.sessionCount }}</span>
-  </div>
-  <div class="habit-stat">
-    <span class="habit-stat__label">Current language</span>
-    <span class="habit-stat__value">{{ habit.latest.language }}</span>
-  </div>
-  <div class="habit-stat">
-    <span class="habit-stat__label">Total time practiced</span>
-    <span class="habit-stat__value">{{ habit.stats.primaryTotal | formatMetric(habit.primaryMetric) }}</span>
-  </div>
-  {% for stat in habit.stats.extra %}
-    <div class="habit-stat">
-      <span class="habit-stat__label">{{ stat.label }}</span>
-      <span class="habit-stat__value">{{ stat.value | formatMetric(stat) }}</span>
-    </div>
-  {% endfor %}
-  <div class="habit-stat">
-    <span class="habit-stat__label">Best combo</span>
-    <span class="habit-stat__value">{{ habit.stats.secondaryBest | formatMetric(habit.secondaryMetric) }}</span>
-  </div>
-  {% if lastLevel %}
-    <div class="habit-stat">
-      <span class="habit-stat__label">Last recorded level</span>
-      <span class="habit-stat__value">{{ lastLevel.level }} <small>({{ lastLevel.language }}, {{ lastLevel.date | readableIsoDate }})</small></span>
-    </div>
-  {% endif %}
-</div>
+<p><em>The export only tags a language and level on some rows — French and Turkish are labelled throughout, but the Greek streak stops recording a level partway through even though it's been going ever since. Treat "last recorded level" (below) as a floor, not the current level. XP isn't shown here either — the source scan regularly confuses it with the phone's battery level, so it's not trustworthy.</em></p>
 
-<p><em>The export only tags a language and level on some rows — French and Turkish are labelled throughout, but the Greek streak stops recording a level after {{ lastLevel.date | readableIsoDate }} even though it's been going ever since. Treat "last recorded level" as a floor, not the current level. XP isn't shown here either — the source scan regularly confuses it with the phone's battery level, so it's not trustworthy.</em></p>
-
-<h2>Monthly totals</h2>
-<p>The full lesson-by-lesson log is too long to list on one page, so it's merged by day and broken out by month below - each month links through to its day-by-day breakdown.</p>
-<div class="habit-table-wrap">
-  <table class="habit-table">
-    <thead>
-      <tr>
-        <th scope="col">Month</th>
-        <th scope="col">Total duration</th>
-        <th scope="col">Accuracy (range)</th>
-        <th scope="col">Accuracy (avg)</th>
-        <th scope="col">Highest combo</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for month in duolingoMonths | reverse %}
-        <tr>
-          <td><a href="{{ month.url | url }}">{{ month.label }}</a></td>
-          <td>{{ month.totals.totalDurationSeconds | formatDuration }}</td>
-          <td>{% if month.totals.accuracyMin != null %}{{ month.totals.accuracyMin }}–{{ month.totals.accuracyMax }}%{% else %}-{% endif %}</td>
-          <td>{% if month.totals.accuracyAvg != null %}{{ month.totals.accuracyAvg }}%{% else %}-{% endif %}</td>
-          <td>{{ month.totals.bestCombo or "-" }}</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+<h2>Lesson history</h2>
+<p>Merged by day and broken out by month — too long to list lesson-by-lesson on one page.</p>
+<div id="habit-app" data-habit-app="detail" data-habit="duolingo">
+  <noscript><p><em>Enable JavaScript to see stats, the trend chart, and monthly totals here.</em></p></noscript>
 </div>
 {% else %}
 <p>No data yet.</p>

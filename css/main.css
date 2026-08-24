@@ -1327,6 +1327,15 @@ a {
   white-space: nowrap;
 }
 
+.habit-table__row--active {
+  background: rgba(0, 0, 0, 0.05);
+  font-weight: 700;
+}
+
+.habit-day-detail {
+  margin: 1.5em 0;
+}
+
 .habit-chart-figure {
   margin: 1.5em 0;
 }

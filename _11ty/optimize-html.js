@@ -82,6 +82,12 @@ const purifyCss = async (rawContent, outputPath) => {
       ],*/
       fontFace: true,
       variables: true,
+      // habit-* classes are applied client-side by src/habits-app.js
+      // (stat tiles/chart/table are rendered at runtime from fetched data,
+      // not baked into the page's HTML at build time) - PurgeCSS only sees
+      // each page's static HTML, so without this it would strip them as
+      // unused.
+      safelist: [/^habit-/],
     });
 
     const after = csso.minify(purged[0].css).css;
