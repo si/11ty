@@ -136,6 +136,102 @@
       "result": "win",
       "note": "Not great.",
       "garyNote": "Least said the better..."
+    },
+    {
+      "date": "2026-08-20",
+      "guesses": [
+        { "score": 99, "emoji": "🔥", "garyScore": 92, "garyEmoji": "🏆", "diff": 7 },
+        { "score": 70, "emoji": "😄", "garyScore": 78, "garyEmoji": "🌞", "diff": -8 },
+        { "score": 85, "emoji": "😄", "garyScore": 81, "garyEmoji": "🌟", "diff": 4 },
+        { "score": 84, "emoji": "🌟", "garyScore": 74, "garyEmoji": "😂", "diff": 10 },
+        { "score": 45, "emoji": "😨", "garyScore": 46, "garyEmoji": "🙁", "diff": -1 }
+      ],
+      "finalScore": 726,
+      "garyFinalScore": 692,
+      "diff": 34,
+      "result": "win",
+      "note": "My African knowledge is poor. Paraguay wasn't too bad, I thought it was next to Argentina. I thought Estonia was further south.",
+      "garyNote": null
+    },
+    {
+      "date": "2026-08-21",
+      "guesses": [
+        { "score": 96, "emoji": "🥉", "garyScore": 98, "garyEmoji": "🔥", "diff": -2 },
+        { "score": 78, "emoji": "👏", "garyScore": 77, "garyEmoji": "🤗", "diff": 1 },
+        { "score": 97, "emoji": "🥉", "garyScore": 98, "garyEmoji": "🔥", "diff": -1 },
+        { "score": 41, "emoji": "🙁", "garyScore": 69, "garyEmoji": "🙂", "diff": -28 },
+        { "score": 73, "emoji": "😂", "garyScore": 60, "garyEmoji": "🤨", "diff": 13 }
+      ],
+      "finalScore": 710,
+      "garyFinalScore": 758,
+      "diff": -48,
+      "result": "loss",
+      "note": "Why is Africa so big?",
+      "garyNote": "Africa!!!!"
+    },
+    {
+      "date": "2026-08-22",
+      "guesses": [
+        { "score": 98, "emoji": "🔥", "garyScore": 96, "garyEmoji": "🔥", "diff": 2 },
+        { "score": 90, "emoji": "🎉", "garyScore": 92, "garyEmoji": "🏆", "diff": -2 },
+        { "score": 87, "emoji": "🎓", "garyScore": 80, "garyEmoji": "🌞", "diff": 7 },
+        { "score": 93, "emoji": "👑", "garyScore": 95, "garyEmoji": "🥇", "diff": -2 },
+        { "score": 69, "emoji": "😄", "garyScore": 68, "garyEmoji": "😄", "diff": 1 }
+      ],
+      "finalScore": 848,
+      "garyFinalScore": 837,
+      "diff": 11,
+      "result": "win",
+      "note": "Not as good as you.",
+      "garyNote": null
+    },
+    {
+      "date": "2026-08-23",
+      "guesses": [
+        { "score": 97, "emoji": "🥇", "garyScore": 98, "garyEmoji": "🎯", "diff": -1 },
+        { "score": 87, "emoji": "🎓", "garyScore": 75, "garyEmoji": "🙂", "diff": 12 },
+        { "score": 80, "emoji": "✨", "garyScore": 87, "garyEmoji": "🎓", "diff": -7 },
+        { "score": 82, "emoji": "✨", "garyScore": 78, "garyEmoji": "😂", "diff": 4 },
+        { "score": 82, "emoji": "✨", "garyScore": 75, "garyEmoji": "🤗", "diff": 7 }
+      ],
+      "finalScore": 836,
+      "garyFinalScore": 806,
+      "diff": 30,
+      "result": "win",
+      "note": null,
+      "garyNote": null
+    },
+    {
+      "date": "2026-08-24",
+      "guesses": [
+        { "score": 97, "emoji": "🥇", "garyScore": 94, "garyEmoji": "🥇", "diff": 3 },
+        { "score": 100, "emoji": "🎯", "garyScore": 100, "garyEmoji": "🎯", "diff": 0 },
+        { "score": 89, "emoji": "🎉", "garyScore": 58, "garyEmoji": "😑", "diff": 31 },
+        { "score": 78, "emoji": "👏", "garyScore": 87, "garyEmoji": "🎉", "diff": -9 },
+        { "score": 78, "emoji": "👏", "garyScore": 89, "garyEmoji": "🎉", "diff": -11 }
+      ],
+      "finalScore": 843,
+      "garyFinalScore": 838,
+      "diff": 5,
+      "result": "win",
+      "note": "I'd be disappointed if you didn't. Your Africa & South America game is better than mine though.",
+      "garyNote": "If I hadn't got 100 on one of these I would be having a word with myself. Yes but overall mate you are thrashing me."
+    },
+    {
+      "date": "2026-08-25",
+      "guesses": [
+        { "score": 62, "emoji": "😐", "garyScore": 91, "garyEmoji": "🏆", "diff": -29 },
+        { "score": 81, "emoji": "✨", "garyScore": 88, "garyEmoji": "🎉", "diff": -7 },
+        { "score": 86, "emoji": "😄", "garyScore": 90, "garyEmoji": "👑", "diff": -4 },
+        { "score": 96, "emoji": "🥈", "garyScore": 91, "garyEmoji": "👑", "diff": 5 },
+        { "score": 93, "emoji": "👑", "garyScore": 90, "garyEmoji": "👑", "diff": 3 }
+      ],
+      "finalScore": 882,
+      "garyFinalScore": 902,
+      "diff": -20,
+      "result": "loss",
+      "note": "Well done! Big Australia didn't help when I went the other side.",
+      "garyNote": "Bit more like it."
     }
   ]
 }
