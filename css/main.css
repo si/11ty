@@ -3,6 +3,7 @@
   --primary: #A0522D;
   --primary-dark: #D89474;
   --habit-flag: #B45309;
+  --habit-compare: #6B7280;
   --nav-height: 68px;
   --font-family-base: "Inter", "Inter UI", -apple-system, sans-serif;
   --font-family-heading: "Playfair Display", serif,
@@ -1383,6 +1384,37 @@ a {
 
 .habit-chart__marker--flagged {
   fill: var(--habit-flag);
+}
+
+.habit-chart__line--compare {
+  stroke: var(--habit-compare);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 4;
+}
+
+.habit-chart__marker--compare {
+  fill: var(--habit-compare);
+  stroke-width: 1.5;
+}
+
+.habit-chart__legend-swatch {
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.habit-chart__legend-swatch--primary {
+  stroke: var(--primary);
+}
+
+.habit-chart__legend-swatch--compare {
+  stroke: var(--habit-compare);
+  stroke-dasharray: 5 4;
+}
+
+.habit-chart__legend-label {
+  fill: #666;
+  font-size: 11px;
+  font-family: var(--font-family-base);
 }
 .category-weeknotes { background: #b8b8b8; color: #111; }
 

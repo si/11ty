@@ -73,8 +73,10 @@ function habitTrendChart(habit, options = {}) {
   const innerHeight = height - marginTop - marginBottom;
 
   const metric = habit.primaryMetric;
+  const compare = habit.compareSeries;
   const values = entries.map((e) => Number(e[metric.key]) || 0);
-  const axisMax = niceAxisMax(Math.max(...values), metric.unit);
+  const compareValues = compare ? entries.map((e) => Number(e[compare.key]) || 0) : [];
+  const axisMax = niceAxisMax(Math.max(...values, ...compareValues), metric.unit);
 
   const xStep = innerWidth / (entries.length - 1);
   const x = (i) => marginLeft + i * xStep;
@@ -136,16 +138,55 @@ function habitTrendChart(habit, options = {}) {
   const endLabel = `
       <text class="habit-chart__end-label" x="${last.x.toFixed(1)}" y="${(last.y - 12).toFixed(1)}" text-anchor="middle">${escapeXml(formatMetricValue(last.entry[metric.key], metric))}</text>`;
 
-  const ariaLabel = `${habit.name} ${metric.label.toLowerCase()} trend over ${entries.length} sessions, latest ${formatMetricValue(last.entry[metric.key], metric)}`;
+  // Optional second series (e.g. an opponent's score in a head-to-head
+  // habit) sharing the same axes - a plain dashed line + small markers,
+  // deliberately lighter than the primary series so it reads as context
+  // rather than a second thing to track.
+  let comparePath = "";
+  let compareMarkers = "";
+  let legend = "";
+  if (compare) {
+    const comparePoints = entries.map((entry, i) => ({
+      entry,
+      x: x(i),
+      y: y(Number(entry[compare.key]) || 0),
+    }));
+    const compareLinePath = comparePoints
+      .map((p, i) => `${i === 0 ? "M" : "L"}${p.x.toFixed(1)},${p.y.toFixed(1)}`)
+      .join(" ");
+    comparePath = `<path class="habit-chart__line habit-chart__line--compare" d="${compareLinePath}"></path>`;
+    compareMarkers = comparePoints
+      .map(({ entry, x: cx, y: cy }) => {
+        const title = `${formatIsoDate(entry.date)} — ${compare.label}: ${formatMetricValue(entry[compare.key], metric)}`;
+        return `
+      <circle class="habit-chart__marker habit-chart__marker--compare" cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="3.5"><title>${escapeXml(title)}</title></circle>`;
+      })
+      .join("");
+    const legendY = marginTop - 8;
+    legend = `
+      <g class="habit-chart__legend" transform="translate(${marginLeft}, ${legendY})">
+        <line class="habit-chart__legend-swatch habit-chart__legend-swatch--primary" x1="0" y1="0" x2="16" y2="0"></line>
+        <text class="habit-chart__legend-label" x="20" y="0" dominant-baseline="middle">${escapeXml(habit.name)}</text>
+        <line class="habit-chart__legend-swatch habit-chart__legend-swatch--compare" x1="90" y1="0" x2="106" y2="0"></line>
+        <text class="habit-chart__legend-label" x="110" y="0" dominant-baseline="middle">${escapeXml(compare.label)}</text>
+      </g>`;
+  }
+
+  const ariaLabel = compare
+    ? `${habit.name} ${metric.label.toLowerCase()} trend over ${entries.length} sessions, compared with ${compare.label}, latest ${formatMetricValue(last.entry[metric.key], metric)}`
+    : `${habit.name} ${metric.label.toLowerCase()} trend over ${entries.length} sessions, latest ${formatMetricValue(last.entry[metric.key], metric)}`;
 
   return `
     <svg class="habit-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeXml(ariaLabel)}">
       <path class="habit-chart__area" d="${areaPath}"></path>
       ${gridlines}
+      ${comparePath}
+      ${compareMarkers}
       <path class="habit-chart__line" d="${linePath}"></path>
       ${markers}
       ${endLabel}
       ${xLabels}
+      ${legend}
     </svg>`;
 }
 
