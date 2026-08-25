@@ -1,0 +1,90 @@
+---
+title: "MapTap"
+description: "Daily 5-round MapTap geography guessing game, played head-to-head with Gary."
+date: 2026-08-19
+---
+
+{% set habit = "maptap" | getHabit %}
+
+<p><a href="{{ '/habits/' | url }}">← All habits</a></p>
+
+{% if habit %}
+<p>{{ habit.description }} Source: {{ habit.source }}.</p>
+
+<div class="habit-stats">
+  <div class="habit-stat">
+    <span class="habit-stat__label">Rounds logged</span>
+    <span class="habit-stat__value">{{ habit.sessionCount }}</span>
+  </div>
+  {% if habit.stats.best != null %}
+    <div class="habit-stat">
+      <span class="habit-stat__label">Best {{ habit.primaryMetric.label | lower }}</span>
+      <span class="habit-stat__value">{{ habit.stats.best | formatMetric(habit.primaryMetric) }}</span>
+    </div>
+  {% endif %}
+  {% if habit.secondaryMetric %}
+    <div class="habit-stat">
+      <span class="habit-stat__label">Biggest win margin</span>
+      <span class="habit-stat__value">{{ habit.stats.secondaryBest | formatMetric(habit.secondaryMetric) }}</span>
+    </div>
+  {% endif %}
+  {% for stat in habit.stats.extra %}
+    <div class="habit-stat">
+      <span class="habit-stat__label">{{ stat.label }}</span>
+      <span class="habit-stat__value">{{ stat.value | formatMetric(stat) }}</span>
+    </div>
+  {% endfor %}
+</div>
+
+{% set wins = 0 %}
+{% set losses = 0 %}
+{% for entry in habit.entries %}
+  {% if entry.result == "win" %}{% set wins = wins + 1 %}{% endif %}
+  {% if entry.result == "loss" %}{% set losses = losses + 1 %}{% endif %}
+{% endfor %}
+<p><em>Head-to-head with Gary: {{ wins }} win{% if wins != 1 %}s{% endif %} to {{ losses }} loss{% if losses != 1 %}es{% endif %} across {{ habit.sessionCount }} rounds.</em></p>
+
+{% set chart = habitTrendChart(habit) %}
+{% if chart %}
+  <figure class="habit-chart-figure">
+    {{ chart | safe }}
+    <figcaption>Final score per round. Marker colour shows whether the round was a win or a loss against Gary — exact figures are in the table below.</figcaption>
+  </figure>
+{% else %}
+  <p><em>Log a few more rounds to see a trend chart here.</em></p>
+{% endif %}
+
+<h2>All rounds</h2>
+<div class="habit-table-wrap">
+  <table class="habit-table">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Guess 1</th>
+        <th scope="col">Guess 2</th>
+        <th scope="col">Guess 3</th>
+        <th scope="col">Guess 4</th>
+        <th scope="col">Guess 5</th>
+        <th scope="col">Final score</th>
+        <th scope="col">Gary</th>
+        <th scope="col">Margin</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for entry in habit.entries | reverse %}
+        <tr>
+          <td>{{ entry.date | readableIsoDate }}</td>
+          {% for guess in entry.guesses %}
+            <td>{{ guess.score }} {{ guess.emoji }}<br><small>{% if guess.diff > 0 %}+{% endif %}{{ guess.diff }} vs Gary</small></td>
+          {% endfor %}
+          <td>{{ entry.finalScore }}</td>
+          <td>{{ entry.garyFinalScore }}</td>
+          <td>{% if entry.diff > 0 %}+{% endif %}{{ entry.diff }} {% if entry.result == "win" %}🏆{% elif entry.result == "loss" %}💀{% else %}🤝{% endif %}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% else %}
+<p>No data yet.</p>
+{% endif %}

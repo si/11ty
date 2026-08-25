@@ -1,0 +1,141 @@
+{
+  "id": "maptap",
+  "name": "MapTap",
+  "icon": "🗺️",
+  "source": "www.maptap.gg - daily 5-round geography guessing game, played head-to-head with Gary (a friend in Rhodes) and compared over WhatsApp most mornings.",
+  "description": "Daily 5-round MapTap geography guessing game. Each round scores 0-100 with a rating emoji; Gary usually plays first (he's up ~2 hours before me) and we swap results over WhatsApp.",
+  "primaryMetric": {
+    "key": "finalScore",
+    "label": "Final score",
+    "unit": "count",
+    "goal": "higher"
+  },
+  "secondaryMetric": {
+    "key": "diff",
+    "label": "Margin vs Gary",
+    "unit": "count",
+    "goal": "higher"
+  },
+  "extraStats": [
+    {
+      "key": "garyFinalScore",
+      "label": "Gary's average final score",
+      "unit": "count",
+      "agg": "average"
+    }
+  ],
+  "entries": [
+    {
+      "date": "2026-08-12",
+      "guesses": [
+        { "score": 99, "emoji": "🔥", "garyScore": 92, "garyEmoji": "🏆", "diff": 7 },
+        { "score": 81, "emoji": "✨", "garyScore": 85, "garyEmoji": "😄", "diff": -4 },
+        { "score": 84, "emoji": "🌟", "garyScore": 88, "garyEmoji": "🎉", "diff": -4 },
+        { "score": 73, "emoji": "😂", "garyScore": 66, "garyEmoji": "🤔", "diff": 7 },
+        { "score": 84, "emoji": "🌟", "garyScore": 70, "garyEmoji": "🙂", "diff": 14 }
+      ],
+      "finalScore": 819,
+      "garyFinalScore": 761,
+      "diff": 58,
+      "result": "win",
+      "note": "Pretty shit first attempt. It was Georgia and Nigeria that threw me out the most.",
+      "garyNote": "No that's good. See?"
+    },
+    {
+      "date": "2026-08-13",
+      "guesses": [
+        { "score": 80, "emoji": "✨", "garyScore": 87, "garyEmoji": "🚀", "diff": -7 },
+        { "score": 96, "emoji": "🥉", "garyScore": 92, "garyEmoji": "🏆", "diff": 4 },
+        { "score": 47, "emoji": "😟", "garyScore": 85, "garyEmoji": "🚀", "diff": -38 },
+        { "score": 62, "emoji": "😐", "garyScore": 90, "garyEmoji": "👑", "diff": -28 },
+        { "score": 77, "emoji": "🌞", "garyScore": 89, "garyEmoji": "👑", "diff": -12 }
+      ],
+      "finalScore": 687,
+      "garyFinalScore": 886,
+      "diff": -199,
+      "result": "loss",
+      "note": "Pretty shit by comparison. Got the African nations well out.",
+      "garyNote": "Enjoy your trip. A decent score by way of a change..."
+    },
+    {
+      "date": "2026-08-14",
+      "guesses": [
+        { "score": 86, "emoji": "😄", "garyScore": 89, "garyEmoji": "👑", "diff": -3 },
+        { "score": 80, "emoji": "✨", "garyScore": 80, "garyEmoji": "🙂", "diff": 0 },
+        { "score": 87, "emoji": "🎓", "garyScore": 96, "garyEmoji": "🔥", "diff": -9 },
+        { "score": 83, "emoji": "🌟", "garyScore": 83, "garyEmoji": "😄", "diff": 0 },
+        { "score": 8, "emoji": "😱", "garyScore": 27, "garyEmoji": "😢", "diff": -19 }
+      ],
+      "finalScore": 613,
+      "garyFinalScore": 691,
+      "diff": -78,
+      "result": "loss",
+      "note": "Guam was the trick question with USA in the hint. That last one was a dirty trick - I read Guam and thought it was near Vietnam.",
+      "garyNote": "Poo."
+    },
+    {
+      "date": "2026-08-15",
+      "guesses": [
+        { "score": 88, "emoji": "🎓", "garyScore": 88, "garyEmoji": "🎉", "diff": 0 },
+        { "score": 97, "emoji": "🥈", "garyScore": 53, "garyEmoji": "😰", "diff": 44 },
+        { "score": 98, "emoji": "🔥", "garyScore": 97, "garyEmoji": "🔥", "diff": 1 },
+        { "score": 84, "emoji": "🌟", "garyScore": 88, "garyEmoji": "🎉", "diff": -4 },
+        { "score": 94, "emoji": "🏆", "garyScore": 88, "garyEmoji": "🎉", "diff": 6 }
+      ],
+      "finalScore": 915,
+      "garyFinalScore": 863,
+      "diff": 52,
+      "result": "win",
+      "note": "Quite pleased with that - although started off a bit out",
+      "garyNote": "The second one cocked me up. Should've had it easily."
+    },
+    {
+      "date": "2026-08-17",
+      "guesses": [
+        { "score": 96, "emoji": "🥇", "garyScore": 92, "garyEmoji": "🏆", "diff": 4 },
+        { "score": 95, "emoji": "🏆", "garyScore": 93, "garyEmoji": "🏆", "diff": 2 },
+        { "score": 80, "emoji": "✨", "garyScore": 82, "garyEmoji": "🌟", "diff": -2 },
+        { "score": 64, "emoji": "🤭", "garyScore": 80, "garyEmoji": "✨", "diff": -16 },
+        { "score": 80, "emoji": "✨", "garyScore": 82, "garyEmoji": "🌟", "diff": -2 }
+      ],
+      "finalScore": 783,
+      "garyFinalScore": 835,
+      "diff": -52,
+      "result": "loss",
+      "note": "Kazakhstan was my weak spot - ended up in Turkey",
+      "garyNote": "Mediocre"
+    },
+    {
+      "date": "2026-08-18",
+      "guesses": [
+        { "score": 97, "emoji": "🥇", "garyScore": 95, "garyEmoji": "🥉", "diff": 2 },
+        { "score": 86, "emoji": "😄", "garyScore": 92, "garyEmoji": "🏆", "diff": -6 },
+        { "score": 98, "emoji": "🔥", "garyScore": 49, "garyEmoji": "😰", "diff": 49 },
+        { "score": 69, "emoji": "😄", "garyScore": 76, "garyEmoji": "🤗", "diff": -7 },
+        { "score": 84, "emoji": "🌟", "garyScore": 67, "garyEmoji": "🤔", "diff": 17 }
+      ],
+      "finalScore": 838,
+      "garyFinalScore": 714,
+      "diff": 124,
+      "result": "win",
+      "note": "Closer on some, cap on others",
+      "garyNote": "Dire. Hope your journey home was uneventful."
+    },
+    {
+      "date": "2026-08-19",
+      "guesses": [
+        { "score": 88, "emoji": "🎓", "garyScore": 88, "garyEmoji": "🎉", "diff": 0 },
+        { "score": 86, "emoji": "😄", "garyScore": 69, "garyEmoji": "😑", "diff": 17 },
+        { "score": 59, "emoji": "😐", "garyScore": 78, "garyEmoji": "✨", "diff": -19 },
+        { "score": 78, "emoji": "👏", "garyScore": 66, "garyEmoji": "😐", "diff": 12 },
+        { "score": 65, "emoji": "🙁", "garyScore": 40, "garyEmoji": "😴", "diff": 25 }
+      ],
+      "finalScore": 721,
+      "garyFinalScore": 631,
+      "diff": 90,
+      "result": "win",
+      "note": "Not great.",
+      "garyNote": "Least said the better..."
+    }
+  ]
+}
