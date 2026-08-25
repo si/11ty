@@ -2,8 +2,8 @@
   "id": "maptap",
   "name": "MapTap",
   "icon": "🗺️",
-  "source": "www.maptap.gg - daily 5-round geography guessing game, played head-to-head with Gary (a friend in Rhodes) and compared over WhatsApp most mornings.",
-  "description": "Daily 5-round MapTap geography guessing game. Each round scores 0-100 with a rating emoji; Gary usually plays first (he's up ~2 hours before me) and we swap results over WhatsApp.",
+  "source": "www.maptap.gg",
+  "description": "Daily 5-round MapTap geography guessing game, played head-to-head with my friend Gary and compared each morning over WhatsApp.",
   "primaryMetric": {
     "key": "finalScore",
     "label": "Final score",
@@ -12,18 +12,14 @@
   },
   "secondaryMetric": {
     "key": "diff",
-    "label": "Margin vs Gary",
+    "label": "Margin",
     "unit": "count",
     "goal": "higher"
   },
-  "extraStats": [
-    {
-      "key": "garyFinalScore",
-      "label": "Gary's average final score",
-      "unit": "count",
-      "agg": "average"
-    }
-  ],
+  "compareSeries": {
+    "key": "garyFinalScore",
+    "label": "Gary"
+  },
   "entries": [
     {
       "date": "2026-08-12",

@@ -48,7 +48,7 @@ date: 2026-08-19
 {% if chart %}
   <figure class="habit-chart-figure">
     {{ chart | safe }}
-    <figcaption>Final score per round. Marker colour shows whether the round was a win or a loss against Gary — exact figures are in the table below.</figcaption>
+    <figcaption>Final score per round, mine against Gary's (dashed line). Marker colour on my line shows whether the round was a win or a loss — exact figures are in the table below.</figcaption>
   </figure>
 {% else %}
   <p><em>Log a few more rounds to see a trend chart here.</em></p>
@@ -75,7 +75,7 @@ date: 2026-08-19
         <tr>
           <td>{{ entry.date | readableIsoDate }}</td>
           {% for guess in entry.guesses %}
-            <td>{{ guess.score }} {{ guess.emoji }}<br><small>{% if guess.diff > 0 %}+{% endif %}{{ guess.diff }} vs Gary</small></td>
+            <td>{{ guess.score }} {{ guess.emoji }}<br><small>Gary: {{ guess.garyScore }} {{ guess.garyEmoji }} ({% if guess.diff > 0 %}+{% endif %}{{ guess.diff }})</small></td>
           {% endfor %}
           <td>{{ entry.finalScore }}</td>
           <td>{{ entry.garyFinalScore }}</td>
