@@ -228,6 +228,38 @@
       "result": "loss",
       "note": "Well done! Big Australia didn't help when I went the other side.",
       "garyNote": "Bit more like it."
+    },
+    {
+      "date": "2026-08-26",
+      "guesses": [
+        { "score": 99, "emoji": "🔥", "garyScore": 98, "garyEmoji": "🎯", "diff": 1 },
+        { "score": 96, "emoji": "🥈", "garyScore": 95, "garyEmoji": "🥈", "diff": 1 },
+        { "score": 89, "emoji": "🎉", "garyScore": 72, "garyEmoji": "🤔", "diff": 17 },
+        { "score": 81, "emoji": "✨", "garyScore": 83, "garyEmoji": "😁", "diff": -2 },
+        { "score": 30, "emoji": "🙈", "garyScore": 58, "garyEmoji": "😑", "diff": -28 }
+      ],
+      "finalScore": 706,
+      "garyFinalScore": 760,
+      "diff": -54,
+      "result": "loss",
+      "note": "Same. Wrong end of S America.",
+      "garyNote": "Bloody French colonies..."
+    },
+    {
+      "date": "2026-08-28",
+      "guesses": [
+        { "score": 95, "emoji": "🏆", "garyScore": 94, "garyEmoji": "🥇", "diff": 1 },
+        { "score": 97, "emoji": "🥈", "garyScore": 97, "garyEmoji": "🔥", "diff": 0 },
+        { "score": 80, "emoji": "✨", "garyScore": 86, "garyEmoji": "🎓", "diff": -6 },
+        { "score": 80, "emoji": "✨", "garyScore": 89, "garyEmoji": "🎉", "diff": -9 },
+        { "score": 46, "emoji": "😰", "garyScore": 86, "garyEmoji": "🎓", "diff": -40 }
+      ],
+      "finalScore": 730,
+      "garyFinalScore": 888,
+      "diff": -158,
+      "result": "loss",
+      "note": "I don't know my Middle East very well",
+      "garyNote": null
     }
   ]
 }
