@@ -1,0 +1,55 @@
+---
+title: "Friends"
+description: "The closest friends I regularly talk to — most of them from the On The Side Slack."
+date: 2026-08-29
+eleventyNavigation:
+  key: Friends
+  order: 7
+friends:
+  - name: "Adrian Lansdown"
+    url: "https://adrianlansdown.com/"
+    domain: "adrianlansdown.com"
+    photo: "https://avatars.githubusercontent.com/u/33496?v=4"
+  - name: "Sertan Yamaner"
+    url: "https://sertan.com/"
+    domain: "sertan.com"
+    photo: "https://avatars.githubusercontent.com/u/13239417?v=4"
+  - name: "Brian Suda"
+    url: "https://suda.co.uk/"
+    domain: "suda.co.uk"
+    photo: "https://avatars.githubusercontent.com/u/173116?v=4"
+  - name: "Dom Hodgson"
+    url: "https://www.thehodge.co.uk/"
+    domain: "thehodge.co.uk"
+    photo: "https://avatars.githubusercontent.com/u/15485?v=4"
+  - name: "Mike Street"
+    url: "https://www.mikestreety.co.uk/"
+    domain: "mikestreety.co.uk"
+    photo: "https://avatars.githubusercontent.com/u/354085?v=4"
+  - name: "Andy Yates"
+    url: "https://andy-yates-software.co.uk/"
+    domain: "andy-yates-software.co.uk"
+    photo: null
+  - name: "Sam Hardacre"
+    url: "https://nocturnalmonkey.com/"
+    domain: "nocturnalmonkey.com"
+    photo: "https://avatars.githubusercontent.com/u/832227?v=4"
+---
+
+<p>{{ description }} Most of this crew hang out with me in the <a href="{{ '/ontheside/' | url }}">On The Side Slack</a> — that's the hook for this list, and it'll grow as it goes.</p>
+
+<div class="friend-grid">
+  {% for friend in friends %}
+    <a class="friend-card" href="{{ friend.url }}" rel="noopener" target="_blank">
+      {% if friend.photo %}
+        <img class="friend-card__avatar" src="{{ friend.photo }}" alt="{{ friend.name }}" width="80" height="80">
+      {% else %}
+        <span class="friend-card__avatar friend-card__avatar--initials" aria-hidden="true">
+          {{ friend.name | initials }}
+        </span>
+      {% endif %}
+      <span class="friend-card__name">{{ friend.name }}</span>
+      <span class="friend-card__domain">{{ friend.domain }}</span>
+    </a>
+  {% endfor %}
+</div>

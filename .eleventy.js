@@ -160,6 +160,14 @@ module.exports = function (eleventyConfig) {
     return new CleanCSS({}).minify(code).styles;
   });
 
+  eleventyConfig.addFilter("initials", function (name) {
+    return name
+      .split(" ")
+      .filter(Boolean)
+      .map((part) => part[0].toUpperCase())
+      .join("");
+  });
+
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
       "dd LLL yyyy"
