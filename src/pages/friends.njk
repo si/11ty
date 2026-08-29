@@ -1,0 +1,85 @@
+---
+title: "Friends"
+description: "People I talk to most — many of them from the On The Side Slack."
+date: 2026-08-29
+eleventyNavigation:
+  key: Friends
+  order: 7
+friends:
+  - name: "Adrian Lansdown"
+    url: "https://adrianlansdown.com/"
+    domain: "adrianlansdown.com"
+    photo: "https://avatars.githubusercontent.com/u/33496?v=4"
+  - name: "Sertan Yamaner"
+    url: "https://sertan.com/"
+    domain: "sertan.com"
+    photo: "https://avatars.githubusercontent.com/u/13239417?v=4"
+  - name: "Brian Suda"
+    url: "https://suda.co.uk/"
+    domain: "suda.co.uk"
+    photo: "https://avatars.githubusercontent.com/u/173116?v=4"
+  - name: "Dom Hodgson"
+    url: "https://www.thehodge.co.uk/"
+    domain: "thehodge.co.uk"
+    photo: "https://avatars.githubusercontent.com/u/15485?v=4"
+  - name: "Mike Street"
+    url: "https://www.mikestreety.co.uk/"
+    domain: "mikestreety.co.uk"
+    photo: "https://avatars.githubusercontent.com/u/354085?v=4"
+  - name: "Andy Yates"
+    url: "https://ay8s.com/"
+    domain: "ay8s.com"
+    photo: "https://avatars.githubusercontent.com/u/1058408?v=4"
+  - name: "Sam Hardacre"
+    url: "https://nocturnalmonkey.com/"
+    domain: "nocturnalmonkey.com"
+    photo: "https://avatars.githubusercontent.com/u/832227?v=4"
+  - name: "Simon Hamp"
+    url: "https://simonhamp.me/"
+    domain: "simonhamp.me"
+    photo: "https://avatars.githubusercontent.com/u/31628?v=4"
+  - name: "Trevor Morris"
+    url: "https://trovster.com/"
+    domain: "trovster.com"
+    photo: "https://avatars.githubusercontent.com/u/48729?v=4"
+  - name: "James Norton"
+    url: "https://jamesnorton.com/"
+    domain: "jamesnorton.com"
+    photo: null
+  - name: "Rachel Shillcock"
+    url: "https://rachilli.com/"
+    domain: "rachilli.com"
+    photo: "/assets/images/Make-Life-Work-Rachel-Shillcock-1-1024x1024.png"
+  - name: "Marc Littlemore"
+    url: "https://marclittlemore.com/"
+    domain: "marclittlemore.com"
+    photo: "/assets/images/Marc-Littlemore-Twitter.jpg"
+  - name: "Cole Henley"
+    url: "https://cole007.net/"
+    domain: "cole007.net"
+    photo: "https://avatars.githubusercontent.com/u/855195?v=4"
+---
+
+<p>People I talk to most — many from the <a href="{{ '/ontheside/' | url }}">On The Side Slack</a>.</p>
+
+<p>Yes, I've noticed: it's a solid wall of white, middle-aged blokes in tech. Send help — or better friends.</p>
+
+<div class="friend-grid">
+  {% for friend in friends %}
+    <a class="friend-card" href="{{ friend.url }}" rel="noopener" target="_blank">
+      {% if friend.photo %}
+        <img class="friend-card__avatar" src="{{ friend.photo }}" alt="{{ friend.name }}" width="80" height="80">
+      {% else %}
+        <span class="friend-card__avatar friend-card__avatar--initials" aria-hidden="true">
+          {{ friend.name | initials }}
+        </span>
+      {% endif %}
+      <span class="friend-card__name">{{ friend.name }}</span>
+      <span class="friend-card__domain">{{ friend.domain }}</span>
+    </a>
+  {% endfor %}
+</div>
+
+<hr>
+
+<p><em>Motivated by the <a href="https://slashfriends.org/">/friends</a> idea, in the same spirit as my <a href="{{ '/now/' | url }}">/now page</a> follows the Now Page standard.</em></p>
