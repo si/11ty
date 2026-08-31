@@ -1,9 +1,32 @@
 # Eleventy 1.x → 3.x upgrade plan
 
-Status: **not started**. This document is a pre-work assessment only — nothing
-in this repo has been changed to prepare for the upgrade. It exists so the
-upgrade can be picked up as a self-contained piece of work in a separate
-session.
+Status: **done** (branch `claude/11ty-upgrade-habit-builds-arjv8q`). Upgraded
+1.0.2 → 2.0.1 → 3.1.6 following the phased plan below, plus the three
+official plugin bumps in step 4. `npm run build-ci` green throughout, tag
+pages (`ELEVENTY_BUILD_TAGS=true`) still build correctly (1471 files /
+151.76s, consistent with the pre-upgrade figure noted below), and a live
+dev server confirmed `/`, a nested page, a missing path, and `/blog/feed`
+all still resolve correctly after the Browser Sync → eleventy-dev-server
+migration. One caveat: the true pre-upgrade `_site/` output wasn't
+preserved before the 2.x install, so the regression pass relied on the
+test suite, tag-page parity with the previously-documented figures, and
+manual page checks rather than a literal byte-diff against the original
+1.0.2 output.
+
+**Important finding, since this is what actually motivated the upgrade**:
+3.x's incremental build support does **not** fix the habit-update rebuild
+problem. Tested directly - running `eleventy --watch --incremental` and
+then appending one entry to `_data/habits/duolingo.json` (the same kind of
+change the `duolingo-habit-log` skill makes) triggered a full rebuild of
+all 574 files, not a scoped one. Global `_data/*.json` changes aren't
+tracked at the granularity the incremental dependency graph needs - it's
+template/data-file relationships it can reason about, not "which pages
+read this specific JSON file's contents." See
+[`habit-runtime-render-idea.md`](./habit-runtime-render-idea.md), whose
+"re-evaluate once the upgrade lands" checkpoint this result answers: the
+upgrade alone isn't sufficient, that doc's client-side-render approach (or
+some other data-dependency-aware alternative) is still needed to actually
+solve this.
 
 ## Why this isn't urgent
 
