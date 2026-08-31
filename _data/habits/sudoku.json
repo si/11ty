@@ -28,6 +28,138 @@
       "time": "14:48",
       "durationSeconds": 245,
       "mistakes": 0
+    },
+    {
+      "date": "2026-08-04",
+      "time": "09:39",
+      "durationSeconds": 201,
+      "mistakes": 1
+    },
+    {
+      "date": "2026-08-05",
+      "time": "20:36",
+      "durationSeconds": 288,
+      "mistakes": 5
+    },
+    {
+      "date": "2026-08-06",
+      "time": "19:36",
+      "durationSeconds": 254,
+      "mistakes": 2
+    },
+    {
+      "date": "2026-08-07",
+      "time": "21:27",
+      "durationSeconds": 188,
+      "mistakes": 2
+    },
+    {
+      "date": "2026-08-08",
+      "time": "21:24",
+      "durationSeconds": 309,
+      "mistakes": 4
+    },
+    {
+      "date": "2026-08-09",
+      "time": "21:00",
+      "durationSeconds": 190,
+      "mistakes": 3
+    },
+    {
+      "date": "2026-08-12",
+      "time": "17:37",
+      "durationSeconds": 223,
+      "mistakes": 1
+    },
+    {
+      "date": "2026-08-13",
+      "time": "15:09",
+      "durationSeconds": 205,
+      "mistakes": 2
+    },
+    {
+      "date": "2026-08-14",
+      "time": "16:19",
+      "durationSeconds": 171,
+      "mistakes": 1
+    },
+    {
+      "date": "2026-08-15",
+      "time": "18:09",
+      "durationSeconds": 216,
+      "mistakes": 2
+    },
+    {
+      "date": "2026-08-16",
+      "time": "09:18",
+      "durationSeconds": 343,
+      "mistakes": 5
+    },
+    {
+      "date": "2026-08-17",
+      "time": "16:34",
+      "durationSeconds": 243,
+      "mistakes": 3
+    },
+    {
+      "date": "2026-08-18",
+      "time": "18:40",
+      "durationSeconds": 217,
+      "mistakes": 1
+    },
+    {
+      "date": "2026-08-19",
+      "time": "19:02",
+      "durationSeconds": 470,
+      "mistakes": 8
+    },
+    {
+      "date": "2026-08-23",
+      "time": "18:22",
+      "durationSeconds": 177,
+      "mistakes": 3
+    },
+    {
+      "date": "2026-08-24",
+      "time": "18:42",
+      "durationSeconds": 210,
+      "mistakes": 0
+    },
+    {
+      "date": "2026-08-25",
+      "time": "19:42",
+      "durationSeconds": 179,
+      "mistakes": 2
+    },
+    {
+      "date": "2026-08-26",
+      "time": "17:52",
+      "durationSeconds": 175,
+      "mistakes": 0
+    },
+    {
+      "date": "2026-08-27",
+      "time": "22:47",
+      "durationSeconds": 349,
+      "mistakes": 6
+    },
+    {
+      "date": "2026-08-28",
+      "time": "22:36",
+      "durationSeconds": 257,
+      "mistakes": 4
+    },
+    {
+      "date": "2026-08-29",
+      "time": "15:52",
+      "durationSeconds": 176,
+      "mistakes": 2
+    },
+    {
+      "date": "2026-08-30",
+      "time": "17:55",
+      "durationSeconds": 159,
+      "mistakes": 2
     }
   ]
 }
