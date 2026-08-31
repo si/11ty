@@ -1,6 +1,9 @@
 ---
 permalink: blog/feed
 eleventyExcludeFromCollections: true
+# Intentionally extensionless (clean URL) - see the /blog/feed override in
+# _headers for the Content-Type that makes this work without a file extension.
+eleventyAllowMissingExtension: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
