@@ -21,7 +21,6 @@
 
 const { JSDOM } = require("jsdom");
 const cspHashGen = require("csp-hash-generator");
-const syncPackage = require("browser-sync/package.json");
 
 /**
  * Substitute the magic `HASHES` string in the CSP with the actual values of the
@@ -29,17 +28,10 @@ const syncPackage = require("browser-sync/package.json");
  * The ACTUAL CSP is configured in `_data/csp.js`.
  */
 
-// Allow the auto-reload script in local dev. Would be good to get rid of this magic
-// string which would break on ungrades of 11ty.
-const AUTO_RELOAD_SCRIPTS = [
-  quote(
-    cspHashGen(
-      "//<![CDATA[\n    document.write(\"<script async src='/browser-sync/browser-sync-client.js?v=" +
-        syncPackage.version +
-        '\'><\\/script>".replace("HOST", location.hostname));\n//]]>'
-    )
-  ),
-];
+// eleventy-dev-server's live-reload script (Eleventy 2.0+, replaces Browser Sync)
+// is loaded as an external `<script src="...">` with a `script-src 'self'`-covered
+// same-origin URL, not inlined - so unlike Browser Sync's old inline reload snippet,
+// it needs no CSP hash here.
 
 function quote(str) {
   return `'${str}'`;
@@ -59,9 +51,6 @@ const addCspHash = async (rawContent, outputPath) => {
       element.setAttribute("csp-hash", hash);
       return quote(hash);
     });
-    if (isDevelopmentMode()) {
-      hashes.push.apply(hashes, AUTO_RELOAD_SCRIPTS);
-    }
 
     const csp = dom.window.document.querySelector(
       "meta[http-equiv='Content-Security-Policy']"
@@ -103,7 +92,3 @@ module.exports = {
     eleventyConfig.addTransform("csp", addCspHash);
   },
 };
-
-function isDevelopmentMode() {
-  return /serve|dev/.test(process.argv.join());
-}
