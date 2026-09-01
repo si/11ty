@@ -50,9 +50,6 @@ const readFile = promisify(fs.readFile);
 const readdir = promisify(fs.readdir);
 const stat = promisify(fs.stat);
 const execFile = promisify(require("child_process").execFile);
-// eleventy-plugin-rss is ESM-only as of 3.x; CJS require() interop puts the
-// plugin function on `.default` rather than the module itself.
-const pluginRss = require("@11ty/eleventy-plugin-rss").default;
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
@@ -71,7 +68,13 @@ const youtubeEmbed = require("./_11ty/youtube-embed.js");
 const BUILD_TAG_PAGES =
   Boolean(process.env.CI) || process.env.ELEVENTY_BUILD_TAGS === "true";
 
-module.exports = function (eleventyConfig) {
+module.exports = async function (eleventyConfig) {
+  // eleventy-plugin-rss is ESM-only as of 3.x. On Node 18/20, require()-ing
+  // an ES module throws ERR_REQUIRE_ESM - only Node 22+'s newer require(esm)
+  // support papers over this, which this repo can't rely on since it's
+  // pinned to Node 18.x (.nvmrc, engines.node). A dynamic import() works on
+  // every supported Node version, so use that instead of require().
+  const pluginRss = (await import("@11ty/eleventy-plugin-rss")).default;
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
