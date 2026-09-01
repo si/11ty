@@ -1,6 +1,9 @@
 ---
 permalink: blog/feed
 eleventyExcludeFromCollections: true
+# Intentionally extensionless (clean URL) - see the /blog/feed override in
+# _headers for the Content-Type that makes this work without a file extension.
+eleventyAllowMissingExtension: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -9,7 +12,7 @@ eleventyExcludeFromCollections: true
 	{% set absoluteUrl %}{{ "/blog/feed" | url | absoluteUrl(metadata.url) }}{% endset %}
 	<link href="{{ absoluteUrl }}" rel="self"/>
 	<link href="{{ metadata.url }}/blog/"/>
-	<updated>{{ collections.blogPosts | rssLastUpdatedDate }}</updated>
+	<updated>{{ collections.blogPosts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
 	<id>{{ metadata.url }}/blog/</id>
 	<author>
 		<name>{{ metadata.author.name }}</name>
@@ -19,7 +22,7 @@ eleventyExcludeFromCollections: true
 	<entry>
 		<title>{{ post.data.title }}</title>
 		<link href="{{ absolutePostUrl }}"/>
-		<updated>{{ post.date | rssDate }}</updated>
+		<updated>{{ post.date | dateToRfc3339 }}</updated>
 		<id>{{ absolutePostUrl }}</id>
 		<content type="html">
 		  {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}

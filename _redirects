@@ -1,5 +1,5 @@
 # Generated from src/redirect.json
-/airbnb https://www.airbnb.co.uk/rp/sjobling2?p=stay
+/airbnb https://www.airbnb.co.uk/rp/sjobling2?p=stay 301
 /atom.xml /feed/feed.xml 301
 /babylon https://www.beautiful.ai/player/-MH7sN4N4aI2vK9dCNFR 301
 /descript https://get.descript.com/2bxpxg5vp0v2 301
@@ -159,4 +159,4 @@
 /weekly https://sijobling.com/weeknotes/ 301
 
 # Fallback to action_data.server + url for ids: 62
-/index /site-index/ 301!
+/index /site-index/ 301

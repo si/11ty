@@ -50,7 +50,6 @@ const readFile = promisify(fs.readFile);
 const readdir = promisify(fs.readdir);
 const stat = promisify(fs.stat);
 const execFile = promisify(require("child_process").execFile);
-const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
@@ -69,7 +68,13 @@ const youtubeEmbed = require("./_11ty/youtube-embed.js");
 const BUILD_TAG_PAGES =
   Boolean(process.env.CI) || process.env.ELEVENTY_BUILD_TAGS === "true";
 
-module.exports = function (eleventyConfig) {
+module.exports = async function (eleventyConfig) {
+  // eleventy-plugin-rss is ESM-only as of 3.x. On Node 18/20, require()-ing
+  // an ES module throws ERR_REQUIRE_ESM - only Node 22+'s newer require(esm)
+  // support papers over this, which this repo can't rely on since it's
+  // pinned to Node 18.x (.nvmrc, engines.node). A dynamic import() works on
+  // every supported Node version, so use that instead of require().
+  const pluginRss = (await import("@11ty/eleventy-plugin-rss")).default;
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
@@ -344,20 +349,11 @@ module.exports = function (eleventyConfig) {
     .use(youtubeEmbed); // Automatically converts YouTube URLs to accessible embeds in all posts
   eleventyConfig.setLibrary("md", markdownLibrary);
 
-  // Browsersync Overrides
-  eleventyConfig.setBrowserSyncConfig({
-    callbacks: {
-      ready: function (err, browserSync) {
-        browserSync.addMiddleware("*", (req, res) => {
-          // Provides the 404 content without redirect.
-          res.write(fs.readFileSync("_site/404.html"));
-          res.end();
-        });
-      },
-    },
-    ui: false,
-    ghostMode: false,
-  });
+  // Dev server: eleventy-dev-server (replaces Browser Sync as of Eleventy 2.0)
+  // already serves _site/404.html without a redirect for any unmatched path
+  // by default (see its eleventyProjectMiddleware), so no custom
+  // setServerOptions/middleware is needed here to reproduce the old
+  // Browser Sync setBrowserSyncConfig behavior.
 
   // After the build touch any file in the test directory to do a test run.
   eleventyConfig.on("afterBuild", async () => {

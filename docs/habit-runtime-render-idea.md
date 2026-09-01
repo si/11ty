@@ -1,10 +1,19 @@
 # Idea: client-side runtime render for /habits/
 
-Status: **not started, idea only**. Nothing in this repo has been changed to
-prepare for this. Written up so it can be picked up and evaluated properly in
-a separate session, after weighing it against the plainer
-[`eleventy-3-upgrade-plan.md`](./eleventy-3-upgrade-plan.md) fix for the same
-underlying pain (full rebuilds being slow).
+Status: **not started, idea only - but now confirmed necessary, not just an
+alternative**. The Eleventy 3.x upgrade in
+[`eleventy-3-upgrade-plan.md`](./eleventy-3-upgrade-plan.md) is done as of
+this note. Its own "re-evaluate before starting this" checkpoint has been
+answered: measured directly (append one entry to
+`_data/habits/duolingo.json`, run `eleventy --watch --incremental`), 3.x's
+incremental build still rewrites the full 574-page site, not a scoped
+subset - global JSON data-file changes aren't tracked at the granularity
+incremental builds need. So this doc's approach (or some other way of
+decoupling habit-page output from a full site rebuild) is still the open
+problem; the Eleventy upgrade fixed a lot of other things but not this one.
+Still not implemented - this was out of scope for the session that did the
+upgrade and ran that measurement (upgrade-and-verify was the explicitly
+approved scope; this rewrite is real, separate work to pick up next).
 
 ## The pain this would address
 

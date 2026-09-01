@@ -15,14 +15,14 @@ eleventyExcludeFromCollections: true
     <itunes:subtitle>{{ metadata.podcast.subtitle }}</itunes:subtitle>
     <itunes:author>{{ metadata.author.name }}</itunes:author>
     <atom:link href="{{ metadata.podcast.url }}" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>{{ collections.podcast | rssLastUpdatedDate }}</lastBuildDate>
+    <lastBuildDate>{{ collections.podcast | getNewestCollectionItemDate | dateToRfc822 }}</lastBuildDate>
     {%- for post in collections.podcast | reverse %}
     {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
     <item>
       <title>{{ post.data.title }}</title>
       <link>{{ absolutePostUrl }}</link>
       <guid>{{ absolutePostUrl }}</guid>
-      <pubDate>{{ post.date | rssDate }}</pubDate>
+      <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
       <enclosure url="{{ post.data.enclosure.url }}" length="{{ post.data.enclosure.filesize or 0 }}" type="{{ post.data.enclosure.type }}"/>
       <description><![CDATA[
         {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
