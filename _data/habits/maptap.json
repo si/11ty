@@ -260,6 +260,134 @@
       "result": "loss",
       "note": "I don't know my Middle East very well",
       "garyNote": null
+    },
+    {
+      "date": "2026-08-29",
+      "guesses": [
+        { "score": 98, "emoji": "🔥", "garyScore": 95, "garyEmoji": "🥇", "diff": 3 },
+        { "score": 78, "emoji": "👏", "garyScore": 86, "garyEmoji": "🎓", "diff": -8 },
+        { "score": 91, "emoji": "🎉", "garyScore": 60, "garyEmoji": "🤔", "diff": 31 },
+        { "score": 94, "emoji": "🏆", "garyScore": 78, "garyEmoji": "🌞", "diff": 16 },
+        { "score": 78, "emoji": "👏", "garyScore": 76, "garyEmoji": "😄", "diff": 2 }
+      ],
+      "finalScore": 874,
+      "garyFinalScore": 763,
+      "diff": 111,
+      "result": "win",
+      "note": "Lucky guess in China 🇨🇳",
+      "garyNote": "Dire. Great score Si"
+    },
+    {
+      "date": "2026-08-30",
+      "guesses": [
+        { "score": 90, "emoji": "🎉", "garyScore": 81, "garyEmoji": "🌟", "diff": 9 },
+        { "score": 97, "emoji": "🥇", "garyScore": 98, "garyEmoji": "🎯", "diff": -1 },
+        { "score": 90, "emoji": "🎉", "garyScore": 93, "garyEmoji": "🏆", "diff": -3 },
+        { "score": 81, "emoji": "✨", "garyScore": 80, "garyEmoji": "👏", "diff": 1 },
+        { "score": 78, "emoji": "👏", "garyScore": 85, "garyEmoji": "🎓", "diff": -7 }
+      ],
+      "finalScore": 844,
+      "garyFinalScore": 860,
+      "diff": -16,
+      "result": "loss",
+      "note": "Too many big misses.",
+      "garyNote": "Bugger Si..."
+    },
+    {
+      "date": "2026-08-31",
+      "guesses": [
+        { "score": 93, "emoji": "👑", "garyScore": 95, "garyEmoji": "🥇", "diff": -2 },
+        { "score": 98, "emoji": "🔥", "garyScore": 95, "garyEmoji": "🥇", "diff": 3 },
+        { "score": 59, "emoji": "😑", "garyScore": 92, "garyEmoji": "🏆", "diff": -33 },
+        { "score": 88, "emoji": "🎓", "garyScore": 50, "garyEmoji": "😔", "diff": 38 },
+        { "score": 48, "emoji": "😟", "garyScore": 60, "garyEmoji": "😐", "diff": -12 }
+      ],
+      "finalScore": 717,
+      "garyFinalScore": 704,
+      "diff": 13,
+      "result": "win",
+      "note": "It was a tricky one today",
+      "garyNote": "Just dire"
+    },
+    {
+      "date": "2026-09-01",
+      "guesses": [
+        { "score": 96, "emoji": "🏅", "garyScore": 91, "garyEmoji": "👑", "diff": 5 },
+        { "score": 100, "emoji": "🎯", "garyScore": 80, "garyEmoji": "🤗", "diff": 20 },
+        { "score": 83, "emoji": "🌟", "garyScore": 64, "garyEmoji": "😐", "diff": 19 },
+        { "score": 73, "emoji": "😂", "garyScore": 78, "garyEmoji": "😂", "diff": -5 },
+        { "score": 59, "emoji": "😑", "garyScore": 76, "garyEmoji": "👏", "diff": -17 }
+      ],
+      "finalScore": 758,
+      "garyFinalScore": 761,
+      "diff": -3,
+      "result": "loss",
+      "note": "I got 100 on Boston! But why was there an ice berg that far south?",
+      "garyNote": "Tough one for two locations Si. Unfortunately despite me missing by a distance the subject of the Titanic was one of my favourite things as a child. Other ships reported unseasonably cold weather but Captain Smith chose to ignore the reports in favour of a faster crossing. Soz Si, went into spotter mode😊"
+    },
+    {
+      "date": "2026-09-02",
+      "guesses": [
+        { "score": 100, "emoji": "🎯", "garyScore": 100, "garyEmoji": "🎯", "diff": 0 },
+        { "score": 95, "emoji": "🏆", "garyScore": 96, "garyEmoji": "🥇", "diff": -1 },
+        { "score": 78, "emoji": "👏", "garyScore": 76, "garyEmoji": "🤗", "diff": 2 },
+        { "score": 74, "emoji": "🤗", "garyScore": 57, "garyEmoji": "😔", "diff": 17 },
+        { "score": 66, "emoji": "🙃", "garyScore": 67, "garyEmoji": "🤔", "diff": -1 }
+      ],
+      "finalScore": 771,
+      "garyFinalScore": 720,
+      "diff": 51,
+      "result": "win",
+      "note": "China is effin' 'uge!",
+      "garyNote": "Occidentals Si. Barstards 😊"
+    },
+    {
+      "date": "2026-09-03",
+      "guesses": [
+        { "score": 97, "emoji": "🥇", "garyScore": 99, "garyEmoji": "🎯", "diff": -2 },
+        { "score": 62, "emoji": "😐", "garyScore": 38, "garyEmoji": "😶", "diff": 24 },
+        { "score": 17, "emoji": "🤯", "garyScore": 95, "garyEmoji": "🥇", "diff": -78 },
+        { "score": 81, "emoji": "✨", "garyScore": 84, "garyEmoji": "😁", "diff": -3 },
+        { "score": 80, "emoji": "✨", "garyScore": 90, "garyEmoji": "🤴", "diff": -10 }
+      ],
+      "finalScore": 676,
+      "garyFinalScore": 849,
+      "diff": -173,
+      "result": "loss",
+      "note": "That was pretty bad. Completely messed up with San Marino thinking S America!",
+      "garyNote": "Oh dear mate. Normal service will be resumed I'm sure tomorrow. Oops!!!"
+    },
+    {
+      "date": "2026-09-04",
+      "guesses": [
+        { "score": 89, "emoji": "🎉", "garyScore": 80, "garyEmoji": "✨", "diff": 9 },
+        { "score": 86, "emoji": "😁", "garyScore": 80, "garyEmoji": "✨", "diff": 6 },
+        { "score": 94, "emoji": "🏆", "garyScore": 100, "garyEmoji": "🎯", "diff": -6 },
+        { "score": 80, "emoji": "✨", "garyScore": 76, "garyEmoji": "😁", "diff": 4 },
+        { "score": 81, "emoji": "✨", "garyScore": 68, "garyEmoji": "😁", "diff": 13 }
+      ],
+      "finalScore": 846,
+      "garyFinalScore": 792,
+      "diff": 54,
+      "result": "win",
+      "note": "A lot of lucky (centred) guesses. Clever bastard!",
+      "garyNote": "I was poor chum. Stavro got 946!!!"
+    },
+    {
+      "date": "2026-09-05",
+      "guesses": [
+        { "score": 80, "emoji": "✨", "garyScore": 74, "garyEmoji": "🙁", "diff": 6 },
+        { "score": 80, "emoji": "✨", "garyScore": 97, "garyEmoji": "🔥", "diff": -17 },
+        { "score": 82, "emoji": "✨", "garyScore": 87, "garyEmoji": "🎉", "diff": -5 },
+        { "score": 73, "emoji": "😂", "garyScore": 77, "garyEmoji": "🌞", "diff": -4 },
+        { "score": 69, "emoji": "😄", "garyScore": 15, "garyEmoji": "😵", "diff": 54 }
+      ],
+      "finalScore": 750,
+      "garyFinalScore": 621,
+      "diff": 129,
+      "result": "win",
+      "note": "Meh. Where did you go for Malawi? I hesitated and guessed East Africa. Easily done.",
+      "garyNote": "Oh f**k. Yes but you didn't get 15. My lowest ever score...😢 I put it in Indonesia!!! 😂 Stupid boy"
     }
   ]
 }
