@@ -324,6 +324,54 @@
       "result": "loss",
       "note": "I got 100 on Boston! But why was there an ice berg that far south?",
       "garyNote": "Tough one for two locations Si. Unfortunately despite me missing by a distance the subject of the Titanic was one of my favourite things as a child. Other ships reported unseasonably cold weather but Captain Smith chose to ignore the reports in favour of a faster crossing. Soz Si, went into spotter mode😊"
+    },
+    {
+      "date": "2026-09-02",
+      "guesses": [
+        { "score": 100, "emoji": "🎯", "garyScore": 100, "garyEmoji": "🎯", "diff": 0 },
+        { "score": 95, "emoji": "🏆", "garyScore": 96, "garyEmoji": "🥇", "diff": -1 },
+        { "score": 78, "emoji": "👏", "garyScore": 76, "garyEmoji": "🤗", "diff": 2 },
+        { "score": 74, "emoji": "🤗", "garyScore": 57, "garyEmoji": "😔", "diff": 17 },
+        { "score": 66, "emoji": "🙃", "garyScore": 67, "garyEmoji": "🤔", "diff": -1 }
+      ],
+      "finalScore": 771,
+      "garyFinalScore": 720,
+      "diff": 51,
+      "result": "win",
+      "note": "China is effin' 'uge!",
+      "garyNote": "Occidentals Si. Barstards 😊"
+    },
+    {
+      "date": "2026-09-03",
+      "guesses": [
+        { "score": 97, "emoji": "🥇", "garyScore": 99, "garyEmoji": "🎯", "diff": -2 },
+        { "score": 62, "emoji": "😐", "garyScore": 38, "garyEmoji": "😶", "diff": 24 },
+        { "score": 17, "emoji": "🤯", "garyScore": 95, "garyEmoji": "🥇", "diff": -78 },
+        { "score": 81, "emoji": "✨", "garyScore": 84, "garyEmoji": "😁", "diff": -3 },
+        { "score": 80, "emoji": "✨", "garyScore": 90, "garyEmoji": "🤴", "diff": -10 }
+      ],
+      "finalScore": 676,
+      "garyFinalScore": 849,
+      "diff": -173,
+      "result": "loss",
+      "note": "That was pretty bad. Completely messed up with San Marino thinking S America!",
+      "garyNote": "Oh dear mate. Normal service will be resumed I'm sure tomorrow. Oops!!!"
+    },
+    {
+      "date": "2026-09-04",
+      "guesses": [
+        { "score": 89, "emoji": "🎉", "garyScore": 80, "garyEmoji": "✨", "diff": 9 },
+        { "score": 86, "emoji": "😁", "garyScore": 80, "garyEmoji": "✨", "diff": 6 },
+        { "score": 94, "emoji": "🏆", "garyScore": 100, "garyEmoji": "🎯", "diff": -6 },
+        { "score": 80, "emoji": "✨", "garyScore": 76, "garyEmoji": "😁", "diff": 4 },
+        { "score": 81, "emoji": "✨", "garyScore": 68, "garyEmoji": "😁", "diff": 13 }
+      ],
+      "finalScore": 846,
+      "garyFinalScore": 792,
+      "diff": 54,
+      "result": "win",
+      "note": "A lot of lucky (centred) guesses. Clever bastard!",
+      "garyNote": "I was poor chum. Stavro got 946!!!"
     }
   ]
 }
