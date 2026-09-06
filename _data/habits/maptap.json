@@ -388,6 +388,22 @@
       "result": "win",
       "note": "Meh. Where did you go for Malawi? I hesitated and guessed East Africa. Easily done.",
       "garyNote": "Oh f**k. Yes but you didn't get 15. My lowest ever score...😢 I put it in Indonesia!!! 😂 Stupid boy"
+    },
+    {
+      "date": "2026-09-06",
+      "guesses": [
+        { "score": 92, "emoji": "👑", "garyScore": 93, "garyEmoji": "🏆", "diff": -1 },
+        { "score": 92, "emoji": "👑", "garyScore": 53, "garyEmoji": "😟", "diff": 39 },
+        { "score": 88, "emoji": "🎓", "garyScore": 67, "garyEmoji": "🤨", "diff": 21 },
+        { "score": 90, "emoji": "🎉", "garyScore": 85, "garyEmoji": "😁", "diff": 5 },
+        { "score": 49, "emoji": "😨", "garyScore": 58, "garyEmoji": "🤔", "diff": -9 }
+      ],
+      "finalScore": 777,
+      "garyFinalScore": 709,
+      "diff": 68,
+      "result": "win",
+      "note": "That's why he's not in our game.",
+      "garyNote": "I'm really poor at this. Stavros got 902. He sent that score to Bev at 1 in the effing morning"
     }
   ]
 }
