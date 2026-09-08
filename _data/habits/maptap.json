@@ -260,6 +260,38 @@
       "result": "loss",
       "note": "I don't know my Middle East very well",
       "garyNote": null
+    },
+    {
+      "date": "2026-08-29",
+      "guesses": [
+        { "score": 98, "emoji": "🔥", "garyScore": 95, "garyEmoji": "🥇", "diff": 3 },
+        { "score": 78, "emoji": "👏", "garyScore": 86, "garyEmoji": "🎓", "diff": -8 },
+        { "score": 91, "emoji": "🎉", "garyScore": 60, "garyEmoji": "🤨", "diff": 31 },
+        { "score": 94, "emoji": "🏆", "garyScore": 78, "garyEmoji": "🌞", "diff": 16 },
+        { "score": 78, "emoji": "👏", "garyScore": 76, "garyEmoji": "😁", "diff": 2 }
+      ],
+      "finalScore": 874,
+      "garyFinalScore": 763,
+      "diff": 111,
+      "result": "win",
+      "note": "Lucky guess in China 🇨🇳",
+      "garyNote": "Dire. Great score Si"
+    },
+    {
+      "date": "2026-08-30",
+      "guesses": [
+        { "score": 90, "emoji": "🎉", "garyScore": 81, "garyEmoji": "🌟", "diff": 9 },
+        { "score": 97, "emoji": "🥇", "garyScore": 98, "garyEmoji": "🎯", "diff": -1 },
+        { "score": 90, "emoji": "🎉", "garyScore": 93, "garyEmoji": "🏆", "diff": -3 },
+        { "score": 81, "emoji": "✨", "garyScore": 80, "garyEmoji": "👏", "diff": 1 },
+        { "score": 78, "emoji": "👏", "garyScore": 85, "garyEmoji": "🎓", "diff": -7 }
+      ],
+      "finalScore": 844,
+      "garyFinalScore": 860,
+      "diff": -16,
+      "result": "loss",
+      "note": "Too many big misses.",
+      "garyNote": null
     }
   ]
 }
