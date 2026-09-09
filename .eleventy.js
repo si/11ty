@@ -44,7 +44,7 @@ const { DateTime } = require("luxon");
 const { promisify } = require("util");
 const fs = require("fs");
 const path = require("path");
-const hasha = require("hasha");
+const crypto = require("crypto");
 const touch = require("touch");
 const readFile = promisify(fs.readFile);
 const readdir = promisify(fs.readdir);
@@ -108,7 +108,7 @@ module.exports = async function (eleventyConfig) {
         encoding: "utf-8",
       })
         .then((content) => {
-          return hasha.async(content);
+          return crypto.createHash("sha256").update(content).digest("hex");
         })
         .then((hash) => {
           callback(null, `${absolutePath}?hash=${hash.substr(0, 10)}`);
