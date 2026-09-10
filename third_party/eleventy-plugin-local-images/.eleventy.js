@@ -1,9 +1,8 @@
 const fs = require("fs-extra");
 const path = require("path");
 const { JSDOM } = require("jsdom");
-const fetch = require("node-fetch");
+const { fileTypeFromBuffer } = require("file-type");
 const sh = require("shorthash");
-const fileType = require("file-type");
 const metadata = require("../../_data/metadata.json");
 
 let config = { distPath: "_site", verbose: false, attribute: "src" };
@@ -27,7 +26,8 @@ const downloadImage = async (url) => {
           throw new Error(`File "${url}" not found`);
         }
       })
-      .then((res) => res.buffer());
+      .then((res) => res.arrayBuffer())
+      .then((buf) => Buffer.from(buf));
     return imgBuffer;
   } catch (error) {
     console.log(error);
