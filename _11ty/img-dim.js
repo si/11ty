@@ -20,8 +20,7 @@
  */
 
 const { JSDOM } = require("jsdom");
-const { promisify } = require("util");
-const sizeOf = promisify(require("image-size"));
+const { imageSizeFromFile: sizeOf } = require("image-size/fromFile");
 const blurryPlaceholder = require("./blurry-placeholder");
 const srcset = require("./srcset");
 const path = require("path");
