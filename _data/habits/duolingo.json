@@ -9160,7 +9160,7 @@
       "time": "20:20",
       "xp": 90,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 144,
       "language": "Greek",
       "level": null,
       "combo": 10
@@ -9170,7 +9170,7 @@
       "time": "20:25",
       "xp": 90,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 213,
       "language": "Greek",
       "level": null,
       "combo": 22
@@ -9200,7 +9200,7 @@
       "time": "19:03",
       "xp": 90,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 105,
       "language": "Greek",
       "level": null,
       "combo": 19
@@ -9230,7 +9230,7 @@
       "time": "20:24",
       "xp": 105,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 319,
       "language": "Greek",
       "level": null,
       "combo": 19
@@ -9240,7 +9240,7 @@
       "time": "20:29",
       "xp": 84,
       "accuracy": 83,
-      "durationSeconds": null,
+      "durationSeconds": 222,
       "language": "Greek",
       "level": null,
       "combo": 2
@@ -9250,7 +9250,7 @@
       "time": "18:08",
       "xp": 30,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 152,
       "language": "Greek",
       "level": null,
       "combo": 10
@@ -9270,7 +9270,7 @@
       "time": "18:22",
       "xp": 35,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 149,
       "language": "Greek",
       "level": null,
       "combo": 20
@@ -9300,7 +9300,7 @@
       "time": "07:31",
       "xp": 90,
       "accuracy": 91,
-      "durationSeconds": null,
+      "durationSeconds": 153,
       "language": "Greek",
       "level": null,
       "combo": 1
@@ -9320,7 +9320,7 @@
       "time": "07:41",
       "xp": 90,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 254,
       "language": "Greek",
       "level": null,
       "combo": 24
@@ -9330,7 +9330,7 @@
       "time": "07:45",
       "xp": 90,
       "accuracy": 90,
-      "durationSeconds": null,
+      "durationSeconds": 192,
       "language": "Greek",
       "level": null,
       "combo": 36
@@ -9340,7 +9340,7 @@
       "time": "21:31",
       "xp": 99,
       "accuracy": 94,
-      "durationSeconds": null,
+      "durationSeconds": 200,
       "language": "Greek",
       "level": null,
       "combo": null
@@ -9360,7 +9360,7 @@
       "time": "21:36",
       "xp": 90,
       "accuracy": 90,
-      "durationSeconds": null,
+      "durationSeconds": 92,
       "language": "Greek",
       "level": null,
       "combo": 13
@@ -9370,7 +9370,7 @@
       "time": "20:10",
       "xp": 90,
       "accuracy": 93,
-      "durationSeconds": null,
+      "durationSeconds": 327,
       "language": "Greek",
       "level": null,
       "combo": 1
@@ -9390,7 +9390,7 @@
       "time": "19:21",
       "xp": 60,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 140,
       "language": "Greek",
       "level": null,
       "combo": 22
@@ -9400,7 +9400,7 @@
       "time": "19:25",
       "xp": 45,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 214,
       "language": "Greek",
       "level": null,
       "combo": 39
@@ -9410,7 +9410,7 @@
       "time": "19:28",
       "xp": 41,
       "accuracy": 90,
-      "durationSeconds": null,
+      "durationSeconds": 161,
       "language": "Greek",
       "level": null,
       "combo": 16
@@ -9440,7 +9440,7 @@
       "time": "19:43",
       "xp": 45,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 220,
       "language": "Greek",
       "level": null,
       "combo": 51
@@ -9480,7 +9480,7 @@
       "time": "21:35",
       "xp": 30,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 135,
       "language": "Greek",
       "level": null,
       "combo": 7
@@ -9500,7 +9500,7 @@
       "time": "20:28",
       "xp": 30,
       "accuracy": 30,
-      "durationSeconds": null,
+      "durationSeconds": 113,
       "language": "Greek",
       "level": null,
       "combo": 1
@@ -9520,7 +9520,7 @@
       "time": "19:59",
       "xp": 45,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 139,
       "language": "Greek",
       "level": null,
       "combo": 10
@@ -9530,7 +9530,7 @@
       "time": "07:48",
       "xp": 64,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 169,
       "language": "Greek",
       "level": null,
       "combo": 25
@@ -9540,7 +9540,7 @@
       "time": "07:52",
       "xp": 30,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 198,
       "language": "Greek",
       "level": null,
       "combo": 36
@@ -9550,7 +9550,7 @@
       "time": "17:12",
       "xp": 165,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 218,
       "language": "Greek",
       "level": null,
       "combo": 46
@@ -9570,7 +9570,7 @@
       "time": "17:19",
       "xp": 105,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 135,
       "language": "Greek",
       "level": null,
       "combo": 66
@@ -9580,7 +9580,7 @@
       "time": "17:21",
       "xp": 120,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 84,
       "language": "Greek",
       "level": null,
       "combo": 75
@@ -9590,7 +9590,7 @@
       "time": "17:24",
       "xp": 90,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 86,
       "language": "Greek",
       "level": null,
       "combo": 84
@@ -9600,7 +9600,7 @@
       "time": "17:26",
       "xp": 90,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 122,
       "language": "Greek",
       "level": null,
       "combo": 92
@@ -9610,7 +9610,7 @@
       "time": "17:29",
       "xp": 90,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 111,
       "language": "Greek",
       "level": null,
       "combo": 100
@@ -9620,7 +9620,7 @@
       "time": "17:30",
       "xp": 90,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 91,
       "language": "Greek",
       "level": null,
       "combo": 108
@@ -9630,7 +9630,7 @@
       "time": "17:33",
       "xp": 90,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 101,
       "language": "Greek",
       "level": null,
       "combo": 116
@@ -9660,7 +9660,7 @@
       "time": "18:46",
       "xp": 105,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 273,
       "language": "Greek",
       "level": null,
       "combo": 12
@@ -9670,7 +9670,7 @@
       "time": "19:45",
       "xp": 96,
       "accuracy": 82,
-      "durationSeconds": null,
+      "durationSeconds": 142,
       "language": "Greek",
       "level": null,
       "combo": 1
@@ -9680,7 +9680,7 @@
       "time": "19:47",
       "xp": 62,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 69,
       "language": "Greek",
       "level": null,
       "combo": 6
@@ -9690,7 +9690,7 @@
       "time": "19:53",
       "xp": 56,
       "accuracy": 58,
-      "durationSeconds": null,
+      "durationSeconds": 349,
       "language": "Greek",
       "level": null,
       "combo": 1
@@ -9700,7 +9700,7 @@
       "time": "19:57",
       "xp": 60,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 211,
       "language": "Greek",
       "level": null,
       "combo": 6
@@ -9710,7 +9710,7 @@
       "time": "20:18",
       "xp": 50,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 249,
       "language": "Greek",
       "level": null,
       "combo": 17
@@ -9740,7 +9740,7 @@
       "time": "21:00",
       "xp": 70,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 235,
       "language": "Greek",
       "level": null,
       "combo": 22
@@ -9750,7 +9750,7 @@
       "time": "20:24",
       "xp": 150,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 75,
       "language": "Greek",
       "level": null,
       "combo": 29
@@ -9760,7 +9760,7 @@
       "time": "20:25",
       "xp": 90,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 60,
       "language": "Greek",
       "level": null,
       "combo": 36
@@ -9780,7 +9780,7 @@
       "time": "16:31",
       "xp": 165,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 170,
       "language": "Greek",
       "level": null,
       "combo": 10
@@ -9790,7 +9790,7 @@
       "time": "16:37",
       "xp": 105,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 225,
       "language": "Greek",
       "level": null,
       "combo": 20
@@ -9800,7 +9800,7 @@
       "time": "09:51",
       "xp": 55,
       "accuracy": 100,
-      "durationSeconds": null,
+      "durationSeconds": 265,
       "language": "Greek",
       "level": null,
       "combo": 35
