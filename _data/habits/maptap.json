@@ -292,6 +292,342 @@
       "result": "loss",
       "note": "Too many big misses.",
       "garyNote": null
+    },
+    {
+      "date": "2026-08-31",
+      "guesses": [
+        { "score": 93, "emoji": "👑", "garyScore": 95, "garyEmoji": "🥇", "diff": -2 },
+        { "score": 98, "emoji": "🔥", "garyScore": 95, "garyEmoji": "🥇", "diff": 3 },
+        { "score": 59, "emoji": "😑", "garyScore": 92, "garyEmoji": "🏆", "diff": -33 },
+        { "score": 88, "emoji": "🎓", "garyScore": 50, "garyEmoji": "😔", "diff": 38 },
+        { "score": 48, "emoji": "😟", "garyScore": 60, "garyEmoji": "😐", "diff": -12 }
+      ],
+      "finalScore": 717,
+      "garyFinalScore": 704,
+      "diff": 13,
+      "result": "win",
+      "note": "It was a tricky one today",
+      "garyNote": "Just dire"
+    },
+    {
+      "date": "2026-09-01",
+      "guesses": [
+        { "score": 96, "emoji": "🥇", "garyScore": 91, "garyEmoji": "👑", "diff": 5 },
+        { "score": 100, "emoji": "🎯", "garyScore": 80, "garyEmoji": "🤗", "diff": 20 },
+        { "score": 83, "emoji": "🌟", "garyScore": 64, "garyEmoji": "😐", "diff": 19 },
+        { "score": 73, "emoji": "😂", "garyScore": 78, "garyEmoji": "😂", "diff": -5 },
+        { "score": 59, "emoji": "😑", "garyScore": 76, "garyEmoji": "👏", "diff": -17 }
+      ],
+      "finalScore": 758,
+      "garyFinalScore": 761,
+      "diff": -3,
+      "result": "loss",
+      "note": "I got 100 on Boston!",
+      "garyNote": "Tough one for two locations Si."
+    },
+    {
+      "date": "2026-09-02",
+      "guesses": [
+        { "score": 100, "emoji": "🎯", "garyScore": 100, "garyEmoji": "🎯", "diff": 0 },
+        { "score": 95, "emoji": "🏆", "garyScore": 96, "garyEmoji": "🥇", "diff": -1 },
+        { "score": 78, "emoji": "👏", "garyScore": 76, "garyEmoji": "🤗", "diff": 2 },
+        { "score": 74, "emoji": "🤗", "garyScore": 57, "garyEmoji": "😔", "diff": 17 },
+        { "score": 66, "emoji": "🙁", "garyScore": 67, "garyEmoji": "🤨", "diff": -1 }
+      ],
+      "finalScore": 771,
+      "garyFinalScore": 720,
+      "diff": 51,
+      "result": "win",
+      "note": "China is effin' 'uge!",
+      "garyNote": "Occidentals Si. Barstards"
+    },
+    {
+      "date": "2026-09-03",
+      "guesses": [
+        { "score": 97, "emoji": "🥇", "garyScore": 99, "garyEmoji": "🎯", "diff": -2 },
+        { "score": 62, "emoji": "😐", "garyScore": 38, "garyEmoji": "😶", "diff": 24 },
+        { "score": 17, "emoji": "🤯", "garyScore": 95, "garyEmoji": "🥇", "diff": -78 },
+        { "score": 81, "emoji": "✨", "garyScore": 84, "garyEmoji": "😁", "diff": -3 },
+        { "score": 80, "emoji": "✨", "garyScore": 90, "garyEmoji": "👑", "diff": -10 }
+      ],
+      "finalScore": 676,
+      "garyFinalScore": 849,
+      "diff": -173,
+      "result": "loss",
+      "note": "That was pretty bad.",
+      "garyNote": "Oh dear mate. Normal service will be resumed I'm sure tomorrow"
+    },
+    {
+      "date": "2026-09-04",
+      "guesses": [
+        { "score": 89, "emoji": "🎉", "garyScore": 80, "garyEmoji": "✨", "diff": 9 },
+        { "score": 86, "emoji": "😁", "garyScore": 80, "garyEmoji": "✨", "diff": 6 },
+        { "score": 94, "emoji": "🏆", "garyScore": 100, "garyEmoji": "🎯", "diff": -6 },
+        { "score": 80, "emoji": "✨", "garyScore": 76, "garyEmoji": "😁", "diff": 4 },
+        { "score": 81, "emoji": "✨", "garyScore": 68, "garyEmoji": "😁", "diff": 13 }
+      ],
+      "finalScore": 846,
+      "garyFinalScore": 792,
+      "diff": 54,
+      "result": "win",
+      "note": "A lot of lucky (centred) guesses",
+      "garyNote": "I was poor chum. Stavro got 946!!!"
+    },
+    {
+      "date": "2026-09-05",
+      "guesses": [
+        { "score": 80, "emoji": "✨", "garyScore": 74, "garyEmoji": "😨", "diff": 6 },
+        { "score": 80, "emoji": "✨", "garyScore": 97, "garyEmoji": "🔥", "diff": -17 },
+        { "score": 82, "emoji": "✨", "garyScore": 87, "garyEmoji": "🎉", "diff": -5 },
+        { "score": 73, "emoji": "😂", "garyScore": 77, "garyEmoji": "☀️", "diff": -4 },
+        { "score": 69, "emoji": "😁", "garyScore": 15, "garyEmoji": "😵", "diff": 54 }
+      ],
+      "finalScore": 750,
+      "garyFinalScore": 621,
+      "diff": 129,
+      "result": "win",
+      "note": "Meh.",
+      "garyNote": "Oh f**k."
+    },
+    {
+      "date": "2026-09-06",
+      "guesses": [
+        { "score": 92, "emoji": "👑", "garyScore": 93, "garyEmoji": "🏆", "diff": -1 },
+        { "score": 92, "emoji": "👑", "garyScore": 53, "garyEmoji": "😟", "diff": 39 },
+        { "score": 88, "emoji": "🎓", "garyScore": 67, "garyEmoji": "🤨", "diff": 21 },
+        { "score": 90, "emoji": "🎉", "garyScore": 85, "garyEmoji": "😁", "diff": 5 },
+        { "score": 49, "emoji": "😱", "garyScore": 58, "garyEmoji": "🤐", "diff": -9 }
+      ],
+      "finalScore": 777,
+      "garyFinalScore": 709,
+      "diff": 68,
+      "result": "win",
+      "note": null,
+      "garyNote": "I'm really poor at this. Stavros got 902"
+    },
+    {
+      "date": "2026-09-07",
+      "guesses": [
+        { "score": 94, "emoji": "🏆", "garyScore": 92, "garyEmoji": "🏆", "diff": 2 },
+        { "score": 80, "emoji": "✨", "garyScore": 84, "garyEmoji": "😁", "diff": -4 },
+        { "score": 32, "emoji": "😪", "garyScore": 42, "garyEmoji": "😱", "diff": -10 },
+        { "score": 64, "emoji": "🤔", "garyScore": 52, "garyEmoji": "😱", "diff": 12 },
+        { "score": 63, "emoji": "🤔", "garyScore": 72, "garyEmoji": "🤔", "diff": -9 }
+      ],
+      "finalScore": 619,
+      "garyFinalScore": 632,
+      "diff": -13,
+      "result": "loss",
+      "note": "Jeez! Africa and Russia are too big to guess centre. And Brazil ain't small either.",
+      "garyNote": "Bev got 492. Stavro got 720 I think, tough one."
+    },
+    {
+      "date": "2026-09-08",
+      "guesses": [
+        { "score": 95, "emoji": "🏆", "garyScore": 98, "garyEmoji": "🔥", "diff": -3 },
+        { "score": 99, "emoji": "🔥", "garyScore": 93, "garyEmoji": "🏆", "diff": 6 },
+        { "score": 68, "emoji": "🙂", "garyScore": 98, "garyEmoji": "🎯", "diff": -30 },
+        { "score": 97, "emoji": "🥇", "garyScore": 89, "garyEmoji": "👑", "diff": 8 },
+        { "score": 78, "emoji": "👏", "garyScore": 81, "garyEmoji": "🌟", "diff": -3 }
+      ],
+      "finalScore": 855,
+      "garyFinalScore": 897,
+      "diff": -42,
+      "result": "loss",
+      "note": "Lucky guess for Somalia aiming for the East",
+      "garyNote": "Better."
+    },
+    {
+      "date": "2026-09-09",
+      "guesses": [
+        { "score": 95, "emoji": "🏆", "garyScore": 97, "garyEmoji": "🔥", "diff": -2 },
+        { "score": 70, "emoji": "😁", "garyScore": 99, "garyEmoji": "🎯", "diff": -29 },
+        { "score": 86, "emoji": "😁", "garyScore": 88, "garyEmoji": "🎉", "diff": -2 },
+        { "score": 30, "emoji": "🙈", "garyScore": 64, "garyEmoji": "😐", "diff": -34 },
+        { "score": 69, "emoji": "😁", "garyScore": 73, "garyEmoji": "😂", "diff": -4 }
+      ],
+      "finalScore": 634,
+      "garyFinalScore": 783,
+      "diff": -149,
+      "result": "loss",
+      "note": "Pretty shit",
+      "garyNote": "Bev got 917"
+    },
+    {
+      "date": "2026-09-10",
+      "guesses": [
+        { "score": 99, "emoji": "🔥", "garyScore": 95, "garyEmoji": "🥇", "diff": 4 },
+        { "score": 95, "emoji": "🏆", "garyScore": 98, "garyEmoji": "🔥", "diff": -3 },
+        { "score": 100, "emoji": "🎯", "garyScore": 99, "garyEmoji": "🎯", "diff": 1 },
+        { "score": 81, "emoji": "✨", "garyScore": 69, "garyEmoji": "😐", "diff": 12 },
+        { "score": 80, "emoji": "✨", "garyScore": 78, "garyEmoji": "😂", "diff": 2 }
+      ],
+      "finalScore": 877,
+      "garyFinalScore": 832,
+      "diff": 45,
+      "result": "win",
+      "note": "Beat ya (just about)",
+      "garyNote": null
+    },
+    {
+      "date": "2026-09-11",
+      "guesses": [
+        { "score": 80, "emoji": "✨", "garyScore": 69, "garyEmoji": "😑", "diff": 11 },
+        { "score": 69, "emoji": "😁", "garyScore": 62, "garyEmoji": "🤭", "diff": 7 },
+        { "score": 55, "emoji": "🤭", "garyScore": 66, "garyEmoji": "🤐", "diff": -11 },
+        { "score": 47, "emoji": "😟", "garyScore": 97, "garyEmoji": "🔥", "diff": -50 },
+        { "score": 81, "emoji": "✨", "garyScore": 65, "garyEmoji": "😶", "diff": 16 }
+      ],
+      "finalScore": 643,
+      "garyFinalScore": 749,
+      "diff": -106,
+      "result": "loss",
+      "note": "Same.",
+      "garyNote": "Awful."
+    },
+    {
+      "date": "2026-09-12",
+      "guesses": [
+        { "score": 70, "emoji": "😁", "garyScore": 81, "garyEmoji": "🌟", "diff": -11 },
+        { "score": 96, "emoji": "🥇", "garyScore": 93, "garyEmoji": "🏆", "diff": 3 },
+        { "score": 93, "emoji": "👑", "garyScore": 90, "garyEmoji": "👑", "diff": 3 },
+        { "score": 93, "emoji": "👑", "garyScore": 47, "garyEmoji": "😟", "diff": 46 },
+        { "score": 78, "emoji": "👏", "garyScore": 80, "garyEmoji": "✨", "diff": -2 }
+      ],
+      "finalScore": 865,
+      "garyFinalScore": 735,
+      "diff": 130,
+      "result": "win",
+      "note": "Definitely easier than yesterday",
+      "garyNote": "Knew Madagascar was a big island off Africa but looking more South. Buffoon"
+    },
+    {
+      "date": "2026-09-13",
+      "guesses": [
+        { "score": 77, "emoji": "☀️", "garyScore": 80, "garyEmoji": "🤗", "diff": -3 },
+        { "score": 97, "emoji": "🥇", "garyScore": 89, "garyEmoji": "👑", "diff": 8 },
+        { "score": 62, "emoji": "😐", "garyScore": 95, "garyEmoji": "🥇", "diff": -33 },
+        { "score": 89, "emoji": "🎉", "garyScore": 80, "garyEmoji": "✨", "diff": 9 },
+        { "score": 67, "emoji": "🙂", "garyScore": 65, "garyEmoji": "🤔", "diff": 2 }
+      ],
+      "finalScore": 766,
+      "garyFinalScore": 794,
+      "diff": -28,
+      "result": "loss",
+      "note": "Some tricky ones",
+      "garyNote": "Even Bev beat me."
+    },
+    {
+      "date": "2026-09-14",
+      "guesses": [
+        { "score": 91, "emoji": "🎉", "garyScore": null, "garyEmoji": null, "diff": null },
+        { "score": 96, "emoji": "🥇", "garyScore": null, "garyEmoji": null, "diff": null },
+        { "score": 94, "emoji": "🏆", "garyScore": null, "garyEmoji": null, "diff": null },
+        { "score": 33, "emoji": "😪", "garyScore": null, "garyEmoji": null, "diff": null },
+        { "score": 63, "emoji": "🤔", "garyScore": null, "garyEmoji": null, "diff": null }
+      ],
+      "finalScore": 663,
+      "garyFinalScore": 611,
+      "diff": 52,
+      "result": "win",
+      "note": "I was doing alright until South America",
+      "garyNote": "Not sending my score today. Disappointed and harassed by painters at 7 in the morning. (611 - lowest ever, Bev got 700, Stavro got 946)"
+    },
+    {
+      "date": "2026-09-15",
+      "guesses": [
+        { "score": 93, "emoji": "👑", "garyScore": 94, "garyEmoji": "🥇", "diff": -1 },
+        { "score": 93, "emoji": "👑", "garyScore": 80, "garyEmoji": "👏", "diff": 13 },
+        { "score": 50, "emoji": "😱", "garyScore": 37, "garyEmoji": "😱", "diff": 13 },
+        { "score": 57, "emoji": "😐", "garyScore": 68, "garyEmoji": "😟", "diff": -11 },
+        { "score": 81, "emoji": "✨", "garyScore": 71, "garyEmoji": "😂", "diff": 10 }
+      ],
+      "finalScore": 700,
+      "garyFinalScore": 665,
+      "diff": 35,
+      "result": "win",
+      "note": "Meh",
+      "garyNote": "Another poor effort. Good luck Si."
+    },
+    {
+      "date": "2026-09-16",
+      "guesses": [
+        { "score": 95, "emoji": "🏆", "garyScore": 92, "garyEmoji": "🏆", "diff": 3 },
+        { "score": 91, "emoji": "🎉", "garyScore": 93, "garyEmoji": "🏆", "diff": -2 },
+        { "score": 80, "emoji": "✨", "garyScore": 85, "garyEmoji": "🎓", "diff": -5 },
+        { "score": 0, "emoji": "🤮", "garyScore": 79, "garyEmoji": "✨", "diff": -79 },
+        { "score": 88, "emoji": "🎓", "garyScore": 75, "garyEmoji": "☀️", "diff": 13 }
+      ],
+      "finalScore": 610,
+      "garyFinalScore": 817,
+      "diff": -207,
+      "result": "loss",
+      "note": "Haven't a clue where Papa New Guinea is.",
+      "garyNote": "Bev got 909"
+    },
+    {
+      "date": "2026-09-17",
+      "guesses": [
+        { "score": 90, "emoji": "🎉", "garyScore": 90, "garyEmoji": "👑", "diff": 0 },
+        { "score": 91, "emoji": "🎉", "garyScore": 97, "garyEmoji": "🔥", "diff": -6 },
+        { "score": 89, "emoji": "🎉", "garyScore": 97, "garyEmoji": "🔥", "diff": -8 },
+        { "score": 95, "emoji": "🏆", "garyScore": 64, "garyEmoji": "😔", "diff": 31 },
+        { "score": 74, "emoji": "🤗", "garyScore": 82, "garyEmoji": "🌟", "diff": -8 }
+      ],
+      "finalScore": 866,
+      "garyFinalScore": 819,
+      "diff": 47,
+      "result": "win",
+      "note": "Getting there.",
+      "garyNote": "Apparently the same score as the game number-winner in a different way"
+    },
+    {
+      "date": "2026-09-18",
+      "guesses": [
+        { "score": 42, "emoji": "😟", "garyScore": 40, "garyEmoji": "😱", "diff": 2 },
+        { "score": 75, "emoji": "🤗", "garyScore": 90, "garyEmoji": "🎉", "diff": -15 },
+        { "score": 85, "emoji": "😁", "garyScore": 72, "garyEmoji": "🙂", "diff": 13 },
+        { "score": 81, "emoji": "✨", "garyScore": 80, "garyEmoji": "✨", "diff": 1 },
+        { "score": 56, "emoji": "🤨", "garyScore": 55, "garyEmoji": "😟", "diff": 1 }
+      ],
+      "finalScore": 698,
+      "garyFinalScore": 679,
+      "diff": 19,
+      "result": "win",
+      "note": "Wrong side of Canada on first guess",
+      "garyNote": null
+    },
+    {
+      "date": "2026-09-19",
+      "guesses": [
+        { "score": 93, "emoji": "👑", "garyScore": 99, "garyEmoji": "🎯", "diff": -6 },
+        { "score": 88, "emoji": "🎓", "garyScore": 87, "garyEmoji": "🎓", "diff": 1 },
+        { "score": 87, "emoji": "🎓", "garyScore": 93, "garyEmoji": "🏆", "diff": -6 },
+        { "score": 83, "emoji": "🌟", "garyScore": 80, "garyEmoji": "👏", "diff": 3 },
+        { "score": 76, "emoji": "☀️", "garyScore": 71, "garyEmoji": "😐", "diff": 5 }
+      ],
+      "finalScore": 832,
+      "garyFinalScore": 825,
+      "diff": 7,
+      "result": "win",
+      "note": "Yeeeah. Chin-a!",
+      "garyNote": "Better. Bloody China"
+    },
+    {
+      "date": "2026-09-20",
+      "guesses": [
+        { "score": 85, "emoji": "😁", "garyScore": 80, "garyEmoji": "✨", "diff": 5 },
+        { "score": 94, "emoji": "🏆", "garyScore": 84, "garyEmoji": "😁", "diff": 10 },
+        { "score": 6, "emoji": "😭", "garyScore": 78, "garyEmoji": "☀️", "diff": -72 },
+        { "score": 60, "emoji": "😐", "garyScore": 79, "garyEmoji": "😂", "diff": -19 },
+        { "score": 36, "emoji": "😱", "garyScore": 71, "garyEmoji": "🙂", "diff": -35 }
+      ],
+      "finalScore": 479,
+      "garyFinalScore": 770,
+      "diff": -291,
+      "result": "loss",
+      "note": "Started well then went to shit.",
+      "garyNote": "Flipping heck Si, that's most un Si-like..."
     }
   ]
 }
