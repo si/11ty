@@ -87,78 +87,210 @@
       "date": "2026-08-15",
       "time": "18:09",
       "durationSeconds": 216,
+      "recordedDurationSeconds": 216,
       "mistakes": 2
     },
     {
       "date": "2026-08-16",
       "time": "09:18",
-      "durationSeconds": 343,
+      "durationSeconds": 283,
+      "recordedDurationSeconds": 343,
       "mistakes": 5
     },
     {
       "date": "2026-08-17",
       "time": "16:34",
       "durationSeconds": 243,
+      "recordedDurationSeconds": 243,
       "mistakes": 3
     },
     {
       "date": "2026-08-18",
       "time": "18:40",
       "durationSeconds": 217,
+      "recordedDurationSeconds": 217,
       "mistakes": 1
     },
     {
       "date": "2026-08-19",
       "time": "19:02",
-      "durationSeconds": 470,
+      "durationSeconds": 320,
+      "recordedDurationSeconds": 470,
       "mistakes": 8
     },
     {
       "date": "2026-08-23",
       "time": "18:22",
       "durationSeconds": 177,
+      "recordedDurationSeconds": 177,
       "mistakes": 3
     },
     {
       "date": "2026-08-24",
       "time": "18:42",
       "durationSeconds": 210,
+      "recordedDurationSeconds": 210,
       "mistakes": 0
     },
     {
       "date": "2026-08-25",
       "time": "19:42",
       "durationSeconds": 179,
+      "recordedDurationSeconds": 179,
       "mistakes": 2
     },
     {
       "date": "2026-08-26",
       "time": "17:52",
       "durationSeconds": 175,
+      "recordedDurationSeconds": 175,
       "mistakes": 0
     },
     {
       "date": "2026-08-27",
       "time": "22:47",
-      "durationSeconds": 349,
+      "durationSeconds": 259,
+      "recordedDurationSeconds": 349,
       "mistakes": 6
     },
     {
       "date": "2026-08-28",
       "time": "22:36",
-      "durationSeconds": 257,
+      "durationSeconds": 227,
+      "recordedDurationSeconds": 257,
       "mistakes": 4
     },
     {
       "date": "2026-08-29",
       "time": "15:52",
       "durationSeconds": 176,
+      "recordedDurationSeconds": 176,
       "mistakes": 2
     },
     {
       "date": "2026-08-30",
       "time": "17:55",
       "durationSeconds": 159,
+      "recordedDurationSeconds": 159,
+      "mistakes": 2
+    },
+    {
+      "date": "2026-08-31",
+      "time": "16:47",
+      "durationSeconds": 275,
+      "recordedDurationSeconds": 335,
+      "mistakes": 5
+    },
+    {
+      "date": "2026-09-01",
+      "time": "19:26",
+      "durationSeconds": 275,
+      "recordedDurationSeconds": 275,
+      "mistakes": 3
+    },
+    {
+      "date": "2026-09-02",
+      "time": "17:53",
+      "durationSeconds": 242,
+      "recordedDurationSeconds": 332,
+      "mistakes": 6
+    },
+    {
+      "date": "2026-09-03",
+      "time": "21:27",
+      "durationSeconds": 220,
+      "recordedDurationSeconds": 220,
+      "mistakes": 1
+    },
+    {
+      "date": "2026-09-04",
+      "time": "15:05",
+      "durationSeconds": 194,
+      "recordedDurationSeconds": 194,
+      "mistakes": 2
+    },
+    {
+      "date": "2026-09-05",
+      "time": "18:56",
+      "durationSeconds": 183,
+      "recordedDurationSeconds": 183,
+      "mistakes": 1
+    },
+    {
+      "date": "2026-09-06",
+      "time": "19:49",
+      "durationSeconds": 214,
+      "recordedDurationSeconds": 214,
+      "mistakes": 1
+    },
+    {
+      "date": "2026-09-08",
+      "time": "21:45",
+      "durationSeconds": 197,
+      "recordedDurationSeconds": 227,
+      "mistakes": 4
+    },
+    {
+      "date": "2026-09-09",
+      "time": "20:19",
+      "durationSeconds": 254,
+      "recordedDurationSeconds": 314,
+      "mistakes": 5
+    },
+    {
+      "date": "2026-09-10",
+      "time": "19:49",
+      "durationSeconds": 261,
+      "recordedDurationSeconds": 291,
+      "mistakes": 4
+    },
+    {
+      "date": "2026-09-12",
+      "time": "12:30",
+      "durationSeconds": 277,
+      "recordedDurationSeconds": 397,
+      "mistakes": 7
+    },
+    {
+      "date": "2026-09-13",
+      "time": "20:43",
+      "durationSeconds": 313,
+      "recordedDurationSeconds": 433,
+      "mistakes": 7
+    },
+    {
+      "date": "2026-09-14",
+      "time": "18:16",
+      "durationSeconds": 219,
+      "recordedDurationSeconds": 219,
+      "mistakes": 0
+    },
+    {
+      "date": "2026-09-15",
+      "time": "20:13",
+      "durationSeconds": 247,
+      "recordedDurationSeconds": 277,
+      "mistakes": 4
+    },
+    {
+      "date": "2026-09-16",
+      "time": "19:38",
+      "durationSeconds": 209,
+      "recordedDurationSeconds": 239,
+      "mistakes": 4
+    },
+    {
+      "date": "2026-09-17",
+      "time": "20:20",
+      "durationSeconds": 258,
+      "recordedDurationSeconds": 258,
+      "mistakes": 1
+    },
+    {
+      "date": "2026-09-19",
+      "time": "22:40",
+      "durationSeconds": 194,
+      "recordedDurationSeconds": 194,
       "mistakes": 2
     }
   ]
