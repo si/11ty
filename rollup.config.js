@@ -1,6 +1,6 @@
-import { terser } from "rollup-plugin-terser";
+const terser = require("@rollup/plugin-terser").default;
 
-export default {
+module.exports = {
   input: "src/main.js",
   output: [
     {
