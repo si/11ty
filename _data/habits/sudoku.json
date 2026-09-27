@@ -292,6 +292,55 @@
       "durationSeconds": 194,
       "recordedDurationSeconds": 194,
       "mistakes": 2
+    },
+    {
+      "date": "2026-09-20",
+      "time": "19:20",
+      "durationSeconds": 197,
+      "recordedDurationSeconds": 197,
+      "mistakes": 2
+    },
+    {
+      "date": "2026-09-21",
+      "time": "19:55",
+      "durationSeconds": 197,
+      "recordedDurationSeconds": 197,
+      "mistakes": 3
+    },
+    {
+      "date": "2026-09-22",
+      "time": "21:51",
+      "durationSeconds": 305,
+      "recordedDurationSeconds": 305,
+      "mistakes": 5
+    },
+    {
+      "date": "2026-09-23",
+      "time": "18:16",
+      "durationSeconds": 266,
+      "recordedDurationSeconds": 266,
+      "mistakes": 4
+    },
+    {
+      "date": "2026-09-24",
+      "time": "19:00",
+      "durationSeconds": 190,
+      "recordedDurationSeconds": 190,
+      "mistakes": 0
+    },
+    {
+      "date": "2026-09-25",
+      "time": "19:11",
+      "durationSeconds": 193,
+      "recordedDurationSeconds": 193,
+      "mistakes": 2
+    },
+    {
+      "date": "2026-09-26",
+      "time": "21:45",
+      "durationSeconds": 250,
+      "recordedDurationSeconds": 250,
+      "mistakes": 2
     }
   ]
 }
