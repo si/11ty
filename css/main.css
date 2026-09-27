@@ -1496,6 +1496,51 @@ a {
   text-decoration: none;
 }
 
+/* {% deviceFrame %} / {% deviceFrameScroll %} / {% deviceFrames %}
+   shortcodes: phone-shaped frames for app screenshots. The scroll variant
+   pans a taller source image up and down inside the fixed-height frame,
+   like a slow screen-recording of someone scrolling. */
+.device-frames {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(9rem, 1fr));
+  gap: 1em;
+  max-width: 24em;
+  margin: 1.5em auto;
+}
+
+.device-frame {
+  overflow: hidden;
+  border-radius: 1.2em;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  position: relative;
+}
+
+.device-frame__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.device-frame__img--scroll {
+  animation: device-frame-scroll 14s ease-in-out infinite alternate;
+}
+
+@keyframes device-frame-scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(var(--device-scroll-distance));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .device-frame__img--scroll {
+    animation: none;
+  }
+}
+
 /* /records/ page: Spotify liked-tracks carousel styled as a record shelf */
 .record-collection {
   margin: 2em 0;

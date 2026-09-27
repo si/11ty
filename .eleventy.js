@@ -95,6 +95,7 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig.addPlugin(require("./_11ty/habits.js"));
   eleventyConfig.addPlugin(require("./_11ty/stat-cards.js"));
   eleventyConfig.addPlugin(require("./_11ty/cta-buttons.js"));
+  eleventyConfig.addPlugin(require("./_11ty/device-frame.js"));
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
   eleventyConfig.addNunjucksAsyncFilter(
