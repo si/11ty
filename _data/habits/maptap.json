@@ -628,6 +628,118 @@
       "result": "loss",
       "note": "Started well then went to shit.",
       "garyNote": "Flipping heck Si, that's most un Si-like..."
+    },
+    {
+      "date": "2026-09-21",
+      "guesses": [
+        { "score": 100, "emoji": "🎯", "garyScore": 99, "garyEmoji": "🎯", "diff": 1 },
+        { "score": 79, "emoji": "👏", "garyScore": 92, "garyEmoji": "🏆", "diff": -13 },
+        { "score": 43, "emoji": "😟", "garyScore": 70, "garyEmoji": "🙂", "diff": -27 },
+        { "score": 84, "emoji": "🌟", "garyScore": 99, "garyEmoji": "🎯", "diff": -15 },
+        { "score": 82, "emoji": "✨", "garyScore": 88, "garyEmoji": "🎉", "diff": -6 }
+      ],
+      "finalScore": 763,
+      "garyFinalScore": 892,
+      "diff": -129,
+      "result": "loss",
+      "note": "Well done my friend.",
+      "garyNote": "Enjoyed today's offering by way of a change."
+    },
+    {
+      "date": "2026-09-22",
+      "guesses": [
+        { "score": 99, "emoji": "🔥", "garyScore": 100, "garyEmoji": "🎯", "diff": -1 },
+        { "score": 64, "emoji": "🤭", "garyScore": 80, "garyEmoji": "✨", "diff": -16 },
+        { "score": 83, "emoji": "🌟", "garyScore": 79, "garyEmoji": "😂", "diff": 4 },
+        { "score": 73, "emoji": "😂", "garyScore": 81, "garyEmoji": "🌟", "diff": -8 },
+        { "score": 82, "emoji": "✨", "garyScore": 76, "garyEmoji": "🌞", "diff": 6 }
+      ],
+      "finalScore": 794,
+      "garyFinalScore": 809,
+      "diff": -15,
+      "result": "loss",
+      "note": "Average.",
+      "garyNote": "Started well, ended poorly"
+    },
+    {
+      "date": "2026-09-23",
+      "guesses": [
+        { "score": 91, "emoji": "🎉", "garyScore": 84, "garyEmoji": "😁", "diff": 7 },
+        { "score": 85, "emoji": "😁", "garyScore": 66, "garyEmoji": "🤔", "diff": 19 },
+        { "score": 41, "emoji": "😟", "garyScore": 83, "garyEmoji": "🌟", "diff": -42 },
+        { "score": 89, "emoji": "🎉", "garyScore": 85, "garyEmoji": "😁", "diff": 4 },
+        { "score": 74, "emoji": "🤗", "garyScore": 63, "garyEmoji": "🤔", "diff": 11 }
+      ],
+      "finalScore": 747,
+      "garyFinalScore": 760,
+      "diff": -13,
+      "result": "loss",
+      "note": "Dammit",
+      "garyNote": "Bugger."
+    },
+    {
+      "date": "2026-09-24",
+      "guesses": [
+        { "score": 80, "emoji": "✨", "garyScore": 76, "garyEmoji": "🙂", "diff": 4 },
+        { "score": 85, "emoji": "😁", "garyScore": 77, "garyEmoji": "🤗", "diff": 8 },
+        { "score": 80, "emoji": "✨", "garyScore": 80, "garyEmoji": "🤗", "diff": 0 },
+        { "score": 30, "emoji": "😢", "garyScore": 50, "garyEmoji": "😟", "diff": -20 },
+        { "score": 62, "emoji": "😟", "garyScore": 95, "garyEmoji": "🥇", "diff": -33 }
+      ],
+      "finalScore": 601,
+      "garyFinalScore": 748,
+      "diff": -147,
+      "result": "loss",
+      "note": "Poor show.",
+      "garyNote": "V. Poor"
+    },
+    {
+      "date": "2026-09-25",
+      "guesses": [
+        { "score": 99, "emoji": "🎯", "garyScore": 82, "garyEmoji": "🌟", "diff": 17 },
+        { "score": 94, "emoji": "🥇", "garyScore": 65, "garyEmoji": "😔", "diff": 29 },
+        { "score": 78, "emoji": "🤗", "garyScore": 86, "garyEmoji": "🎓", "diff": -8 },
+        { "score": 78, "emoji": "☀️", "garyScore": 67, "garyEmoji": "🤭", "diff": 11 },
+        { "score": 66, "emoji": "🙂", "garyScore": 87, "garyEmoji": "🎓", "diff": -21 }
+      ],
+      "finalScore": 781,
+      "garyFinalScore": 781,
+      "diff": 0,
+      "result": "draw",
+      "note": "Snap",
+      "garyNote": "Still bang average"
+    },
+    {
+      "date": "2026-09-26",
+      "guesses": [
+        { "score": 95, "emoji": "🥇", "garyScore": 97, "garyEmoji": "🔥", "diff": -2 },
+        { "score": 87, "emoji": "🎓", "garyScore": 94, "garyEmoji": "🥇", "diff": -7 },
+        { "score": 84, "emoji": "😁", "garyScore": 92, "garyEmoji": "🏆", "diff": -8 },
+        { "score": 71, "emoji": "😂", "garyScore": 75, "garyEmoji": "😂", "diff": -4 },
+        { "score": 84, "emoji": "😁", "garyScore": 90, "garyEmoji": "👑", "diff": -6 }
+      ],
+      "finalScore": 815,
+      "garyFinalScore": 870,
+      "diff": -55,
+      "result": "loss",
+      "note": "Pah. I knew you'd know Thessaloniki",
+      "garyNote": "Stans are a pain in the bum."
+    },
+    {
+      "date": "2026-09-27",
+      "guesses": [
+        { "score": 96, "emoji": "🥇", "garyScore": 95, "garyEmoji": "🥇", "diff": 1 },
+        { "score": 96, "emoji": "🔥", "garyScore": 99, "garyEmoji": "🔥", "diff": -3 },
+        { "score": 100, "emoji": "🎯", "garyScore": 97, "garyEmoji": "🔥", "diff": 3 },
+        { "score": 95, "emoji": "🥇", "garyScore": 87, "garyEmoji": "🎓", "diff": 8 },
+        { "score": 67, "emoji": "🤔", "garyScore": 81, "garyEmoji": "✨", "diff": -14 }
+      ],
+      "finalScore": 878,
+      "garyFinalScore": 892,
+      "diff": -14,
+      "result": "loss",
+      "note": "Yep!",
+      "garyNote": "South America!!!"
     }
   ]
 }
