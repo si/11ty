@@ -5,8 +5,6 @@ date: 2023-11-13
 
 This website has several RSS feeds available for following specific topics, or you could just follow everything on the master feed.
 
-- [Blog feed](http://sijobling.com/blog/feed) - when I write a fully blown blog post
-
 - [Aside feed](http://sijobling.com/aside/feed) - for some random posts of random ideas and findings
 
 - [Micro feed](http://sijobling.com/micro/feed) - similar to Asides but shorter for syndication on social media
