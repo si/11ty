@@ -159,4 +159,5 @@
 /weekly https://sijobling.com/weeknotes/ 301
 
 # Fallback to action_data.server + url for ids: 62
-/index /site-index/ 301
+/index /sitemap/ 301
+/site-index/ /sitemap/ 301

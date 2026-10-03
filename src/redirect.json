@@ -4051,14 +4051,40 @@
             "action_code": 301,
             "action_type": "url",
             "action_data": {
-                "url": "/site-index/"
+                "url": "/sitemap/"
             },
             "match_type": "url",
-            "title": "Site Index",
+            "title": "Sitemap",
             "hits": 0,
             "regex": false,
             "group_id": 1,
             "position": 154,
+            "last_access": "-",
+            "enabled": true
+        },
+        {
+            "id": 159,
+            "url": "/site-index/",
+            "match_url": "/site-index/",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/sitemap/"
+            },
+            "match_type": "url",
+            "title": "Sitemap Redirect",
+            "hits": 0,
+            "regex": false,
+            "group_id": 1,
+            "position": 155,
             "last_access": "-",
             "enabled": true
         }

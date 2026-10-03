@@ -1,13 +1,13 @@
 ---
 layout: layouts/base.njk
-title: Index
+title: Sitemap
 templateClass: tmpl-post
 description: A directory of every page on the site.
-permalink: /site-index/
+permalink: /sitemap/
 ---
 <p>Browse every published page on the site.</p>
 
-<nav class="page-index__jump">
+<nav class="sitemap-jump">
   <a href="#pages">Pages</a>
   <a href="#posts">Posts</a>
 </nav>
@@ -15,7 +15,7 @@ permalink: /site-index/
 {%- set sorted = collections.all | sort(false, false, "data.title") %}
 
 <h2 id="pages">Pages</h2>
-<ul class="page-index">
+<ul class="sitemap-list">
 {%- for entry in sorted %}
   {%- if (not entry.data.tags or "posts" not in entry.data.tags) and (not entry.url or entry.url.indexOf('/tags/') !== 0) and (entry.inputPath.indexOf('README.md') == -1) and (entry.inputPath.indexOf('AGENTS.md') == -1) %}
     {%- set flattenedUrl = entry.url | replace('/src/pages', '') %}
@@ -29,7 +29,7 @@ permalink: /site-index/
 </ul>
 
 <h2 id="posts">Posts</h2>
-<ul class="page-index">
+<ul class="sitemap-list">
 {%- for entry in sorted %}
   {%- if entry.data.tags and "posts" in entry.data.tags %}
     {%- set flattenedUrl = entry.url | replace('/src/pages', '') %}

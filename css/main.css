@@ -1191,6 +1191,57 @@ a {
   background: var(--primary);
 }
 
+/* Sitemap styling */
+.sitemap-jump {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+
+.sitemap-jump a {
+  display: inline-block;
+  padding: 0.4em 0.8em;
+  border-radius: 0.4em;
+  background: rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.sitemap-jump a:hover,
+.sitemap-jump a:focus-visible {
+  background: rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.sitemap-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2em;
+}
+
+.sitemap-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1em;
+  padding: 0.5em 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.sitemap-list li:last-child {
+  border-bottom: none;
+}
+
+.sitemap-list li code {
+  font-size: 0.8em;
+  color: #666;
+  background: rgba(0, 0, 0, 0.04);
+  padding: 0.15em 0.4em;
+  border-radius: 0.25em;
+  white-space: nowrap;
+}
+
 /* Latest posts list on homepage */
 .latest-posts {
   list-style: none;
