@@ -383,6 +383,48 @@
       "durationSeconds": 258,
       "recordedDurationSeconds": 258,
       "mistakes": 5
+    },
+    {
+      "date": "2026-10-04",
+      "time": "19:45",
+      "durationSeconds": 262,
+      "recordedDurationSeconds": 262,
+      "mistakes": 4
+    },
+    {
+      "date": "2026-10-05",
+      "time": "19:58",
+      "durationSeconds": 335,
+      "recordedDurationSeconds": 335,
+      "mistakes": 6
+    },
+    {
+      "date": "2026-10-06",
+      "time": "19:57",
+      "durationSeconds": 207,
+      "recordedDurationSeconds": 207,
+      "mistakes": 3
+    },
+    {
+      "date": "2026-10-07",
+      "time": "12:56",
+      "durationSeconds": 180,
+      "recordedDurationSeconds": 180,
+      "mistakes": 3
+    },
+    {
+      "date": "2026-10-08",
+      "time": "21:32",
+      "durationSeconds": 185,
+      "recordedDurationSeconds": 185,
+      "mistakes": 2
+    },
+    {
+      "date": "2026-10-09",
+      "time": "20:56",
+      "durationSeconds": 200,
+      "recordedDurationSeconds": 200,
+      "mistakes": 1
     }
   ]
 }
