@@ -23,26 +23,7 @@ In the Shortcuts app on iPhone, create two personal automations:
 
 (Shortcuts calls it Cinema Mode, the watch calls it Theatre Mode. Same thing.)
 
-<figure>
-
-![](/img/assets/2026/10/shortcut-bedtime-theatre-mode.png)
-
-<figcaption>
-
-Bedtime begins, Cinema Mode on
-
-</figcaption>
-
-</figure>
-
-<figure>
-
-![](/img/assets/2026/10/shortcut-wake-theatre-mode-off.png)
-
-<figcaption>
-
-Waking up, Cinema Mode off
-
-</figcaption>
-
-</figure>
+{% figureRow %}
+{% rowFigure "/img/assets/2026/10/shortcut-bedtime-theatre-mode.png", "Shortcuts automation: when Bedtime Begins, turn Cinema Mode on", "Bedtime begins, Cinema Mode on" %}
+{% rowFigure "/img/assets/2026/10/shortcut-wake-theatre-mode-off.png", "Shortcuts automation: when Waking Up, turn Cinema Mode off", "Waking up, Cinema Mode off" %}
+{% endfigureRow %}
