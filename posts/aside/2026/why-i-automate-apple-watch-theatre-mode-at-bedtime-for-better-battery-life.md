@@ -1,11 +1,12 @@
 ---
-title: "Apple Watch Theatre Mode at Bedtime"
+title: "Why I Automate Apple Watch Theatre Mode at Bedtime for Better Battery Life"
 date: 2026-10-12
 categories:
   - "aside"
 tags:
   - "apple-watch"
   - "shortcuts"
+  - "battery"
   - "tips"
 coverImage: "shortcut-bedtime-theatre-mode.png"
 ---
