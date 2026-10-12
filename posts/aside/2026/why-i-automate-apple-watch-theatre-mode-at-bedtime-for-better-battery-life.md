@@ -1,5 +1,5 @@
 ---
-title: "Why I Automate Apple Watch Theatre Mode at Bedtime for Better Battery Life"
+title: "Why I automate Apple Watch Theatre Mode at bedtime for better battery life"
 date: 2026-10-12
 categories:
   - "aside"
