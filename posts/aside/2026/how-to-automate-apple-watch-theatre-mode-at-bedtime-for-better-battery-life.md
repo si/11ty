@@ -11,13 +11,13 @@ tags:
 coverImage: "shortcut-bedtime-theatre-mode.png"
 ---
 
-**Micro tip: automate Theatre Mode on your Apple Watch so the screen isn't lit up all night.**
+**Micro tip: here's how to switch Theatre Mode on and off automatically so your Apple Watch screen isn't lit up all night.**
 
-I recently set up two little Shortcuts automations that toggle Theatre Mode on my watch when I'm in bed. I'd noticed the screen was on all night, which was pointless and quite a bright distraction in a dark room.
+My watch screen was on all night, which was pointless and quite a bright distraction in a dark room. Two little Shortcuts automations fixed it by toggling Theatre Mode when I go to bed and when I wake up.
 
-Now my battery is much healthier in the morning, and gets me through a full day of activity without needing a boost.
+The bonus is that my battery is now much healthier in the morning, and gets me through a full day of activity without needing a boost.
 
-In the Shortcuts app on iPhone, create two personal automations:
+To set it up, open the Shortcuts app on your iPhone and create two personal automations:
 
 1. **Bedtime Theatre Mode:** when *Bedtime Begins*, turn *Cinema Mode* **On**.
 2. **Turn Off Theatre Mode:** when *Waking Up*, turn *Cinema Mode* **Off**.
