@@ -62,7 +62,9 @@ Custom Eleventy plugins and HTML transformations:
 
 - **`apply-csp.js`** - Applies Content Security Policy headers
 - **`blurry-placeholder.js`** - Generates blurred image placeholders
+- **`figure-row.js`** - `{% figureRow %}` / `{% rowFigure %}` shortcodes for side-by-side images (see Reusable Content Components)
 - **`getTagList.js`** - Extracts and manages post tags
+- **`stat-cards.js`** - `{% statCards %}` / `{% statCard %}` shortcodes for metric cards
 - **`img-dim.js`** - Adds image dimensions to img tags
 - **`json-ld.js`** - Adds JSON-LD structured data
 - **`optimize-html.js`** - Minifies and optimizes HTML output
@@ -203,6 +205,33 @@ tags:
 - `tags` - Array of tags for categorization
 - `description` - Optional meta description
 - `layout` - Template to use (defaults set in `.11tydata.js`)
+
+---
+
+## Reusable Content Components
+
+Posts are rendered through Liquid, so shortcodes can be used directly in Markdown. Styles live in `/css/main.css`.
+
+### Figure row (side-by-side images)
+
+Use for two or more images that belong together (e.g. phone screenshots, before/after). Images sit **side by side from 768px up** and **stack on mobile** (each capped at 22rem wide and centred, so tall phone screenshots don't fill the screen).
+
+```liquid
+{% figureRow %}
+{% rowFigure "/img/assets/2026/10/one.png", "Alt text describing the image", "Optional caption" %}
+{% rowFigure "/img/assets/2026/10/two.png", "Alt text describing the image", "Optional caption" %}
+{% endfigureRow %}
+```
+
+- `rowFigure` arguments: image path, alt text, optional caption (all comma separated, in quotes).
+- Always provide meaningful alt text.
+- Put no blank lines inside the block, or Markdown will break the HTML.
+- Prefer this over stacked `<figure>` blocks whenever a post has a pair or set of screenshots.
+- Source: `/_11ty/figure-row.js`, styles under `.figure-row` in `/css/main.css`.
+
+### Stat cards
+
+`{% statCards %}` wrapping `{% statCard "emoji", "Label", "Value", "up|down|flat", "delta text" %}` renders a grid of metric cards (used in weeknotes). Source: `/_11ty/stat-cards.js`.
 
 ---
 

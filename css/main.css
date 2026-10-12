@@ -1469,6 +1469,41 @@ a {
 }
 .category-weeknotes { background: #b8b8b8; color: #111; }
 
+/* {% figureRow %} / {% rowFigure %} shortcodes: images side by side from
+   768px up, stacked (and capped in width) on mobile. */
+.figure-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  margin: 1.5em 0;
+}
+
+.figure-row__item {
+  margin: 0;
+  width: 100%;
+  max-width: 22rem;
+}
+
+.figure-row__item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .figure-row {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .figure-row__item {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+
 /* {% statCard %} / {% statCards %} shortcodes: quick metric cards for
    dropping habit and fitness week-on-week numbers into post content. */
 .stat-cards {
