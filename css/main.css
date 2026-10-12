@@ -1852,3 +1852,83 @@ a {
   font-size: 0.85em;
   color: #666;
 }
+
+/* Reading: books shelf (/reading/) and book card on individual book posts */
+.book-shelf {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1.4em 1.2em;
+  padding: 0;
+  margin: 0 0 1.5em;
+  list-style: none;
+}
+
+.book-spine__link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.book-spine__cover {
+  display: block;
+  width: 100%;
+  max-width: 7em;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 0.2em 0.4em 0.4em 0.2em;
+  background: #e6e6e6;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.book-spine__link:hover .book-spine__cover,
+.book-spine__link:focus-visible .book-spine__cover {
+  transform: translateY(-0.3em);
+}
+
+.book-spine__title,
+.book-spine__author,
+.book-spine__rating {
+  display: block;
+}
+
+.book-spine__title {
+  margin-top: 0.6em;
+  font-weight: 700;
+  font-size: 0.9em;
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.book-spine__author {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.book-spine__rating {
+  font-size: 0.8em;
+  color: #b8860b;
+}
+
+.book-card {
+  display: flex;
+  gap: 1em;
+  align-items: flex-start;
+  margin: 0.5em 0 1em;
+}
+
+.book-card__cover {
+  flex: 0 0 auto;
+  border-radius: 0.2em 0.4em 0.4em 0.2em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.book-card__meta {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9em;
+}

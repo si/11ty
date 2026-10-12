@@ -17,6 +17,7 @@ module.exports = function(collection) {
           case "homeRecentPosts":
           case "blogPosts":
           case "asidePosts":
+          case "readingPosts":
           case "portfolioPosts":
           case "microPosts":
             return false;

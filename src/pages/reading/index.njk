@@ -1,0 +1,39 @@
+---
+title: "Reading"
+description: "Books I've read, logged from Goodreads and shelved by the year I started them."
+date: 2026-10-12
+eleventyNavigation:
+  key: Reading
+  order: 7
+---
+
+<p>{{ description }}</p>
+
+<p>These were captured automatically by a Zapier connection to Goodreads between late 2020 and early 2023, so each one is logged when I <em>started</em> it. A finish date and star rating only show up where I marked it as read at the time. Everything here is read unless it's marked to-read.</p>
+
+{% set books = collections.readingPosts | reverse %}
+<p><strong>{{ books | length }} books logged.</strong></p>
+
+{% set currentYear = "" %}
+{% for book in books %}
+  {% set year = book.date.getUTCFullYear() %}
+  {% if year != currentYear %}
+    {% if currentYear != "" %}</ul>{% endif %}
+    <h2>{{ year }}</h2>
+    <ul class="book-shelf">
+    {% set currentYear = year %}
+  {% endif %}
+  <li class="book-spine">
+    <a class="book-spine__link" href="{{ book.url | url }}">
+      {% if book.data.book.cover %}
+        <img class="book-spine__cover" src="{{ ('/img/reading/' + book.data.book.cover) | url }}" alt="" width="75" height="113" loading="lazy">
+      {% else %}
+        <span class="book-spine__cover book-spine__cover--blank" aria-hidden="true"></span>
+      {% endif %}
+      <span class="book-spine__title">{{ book.data.title }}</span>
+      <span class="book-spine__author">{{ book.data.book.author }}</span>
+      {% if book.data.reading.rating %}<span class="book-spine__rating" aria-label="Rated {{ book.data.reading.rating }} out of 5">{{ "★".repeat(book.data.reading.rating) }}</span>{% elif book.data.reading.status == "to-read" %}<span class="book-spine__rating">To read</span>{% endif %}
+    </a>
+  </li>
+{% endfor %}
+{% if currentYear != "" %}</ul>{% endif %}
