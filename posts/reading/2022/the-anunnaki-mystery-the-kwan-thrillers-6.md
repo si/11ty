@@ -1,5 +1,5 @@
 ---
-title: "The Anunnaki Mystery (The Kwan Thrillers #6)"
+title: "The Anunnaki Mystery"
 date: 2022-12-19
 categories:
   - "reading"

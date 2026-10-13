@@ -1,5 +1,5 @@
 ---
-title: "Off to Be the Wizard (Magic 2.0, #1)"
+title: "Off to Be the Wizard"
 date: 2022-05-14
 categories:
   - "reading"

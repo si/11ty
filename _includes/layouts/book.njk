@@ -7,10 +7,14 @@ templateClass: tmpl-post
   {% set status = reading.status %}
   <div class="book-card">
     {% if book.cover %}
-      <img class="book-card__cover" src="{{ ('/img/reading/' + book.cover) | url }}" alt="Cover of {{ title }}" width="75" height="113" loading="lazy">
+      <img class="book-card__cover" src="{{ ('/img/reading/' + book.cover) | url }}" alt="Cover of {{ title }}" width="120" height="180" loading="lazy">
     {% endif %}
+    <div class="book-card__body">
+    {% if book.subtitle %}<p class="book-card__subtitle">{{ book.subtitle }}</p>{% endif %}
     <ul class="book-card__meta">
-      <li><strong>{{ book.author }}</strong>{% if book.published %} ({{ book.published }}){% endif %}</li>
+      <li><strong>{{ book.author }}</strong></li>
+      {% if book.published %}<li>Published {{ book.published }}</li>{% endif %}
+      {% if book.averageRating %}<li>Goodreads average: {{ book.averageRating }} / 5</li>{% endif %}
       {% if book.series %}<li>{{ book.series }}{% if book.seriesNumber %}, book {{ book.seriesNumber }}{% endif %}</li>{% endif %}
       {% if status == "to-read" %}
         <li>On the to-read list since <time datetime="{{ page.date | htmlDateString }}">{{ page.date | longPublishedDate }}</time></li>
@@ -21,5 +25,6 @@ templateClass: tmpl-post
       {% endif %}
       {% if book.goodreadsUrl %}<li><a href="{{ book.goodreadsUrl }}" rel="noopener">View on Goodreads</a></li>{% endif %}
     </ul>
+    </div>
   </div>
 {% endblock %}

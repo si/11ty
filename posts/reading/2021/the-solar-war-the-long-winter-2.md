@@ -1,5 +1,5 @@
 ---
-title: "The Solar War (The Long Winter, #2)"
+title: "The Solar War"
 date: 2021-07-04
 categories:
   - "reading"

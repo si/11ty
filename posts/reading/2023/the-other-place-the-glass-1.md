@@ -1,5 +1,5 @@
 ---
-title: "The Other Place (The Glass, #1)"
+title: "The Other Place"
 date: 2023-02-28
 categories:
   - "reading"

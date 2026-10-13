@@ -1,5 +1,5 @@
 ---
-title: "Shifted (The Kwan Thrillers #7)"
+title: "Shifted"
 date: 2023-01-24
 categories:
   - "reading"

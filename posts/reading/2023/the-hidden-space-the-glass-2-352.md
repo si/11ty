@@ -1,5 +1,5 @@
 ---
-title: "The Hidden Space (The Glass, #2)"
+title: "The Hidden Space"
 date: 2023-04-23
 categories:
   - "reading"

@@ -1,9 +1,10 @@
 ---
-title: "Perfect Startup: A Complete System for Becoming a Successful Entrepreneur"
+title: "Perfect Startup"
 date: 2021-06-17
 categories:
   - "reading"
 book:
+  subtitle: "A Complete System for Becoming a Successful Entrepreneur"
   author: "Andrii Sedniev"
   goodreadsId: "45020301"
   goodreadsUrl: "https://www.goodreads.com/book/show/45020301"

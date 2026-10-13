@@ -1,5 +1,5 @@
 ---
-title: "The Way the World Ends (Warmer, #1)"
+title: "The Way the World Ends"
 date: 2021-03-08
 categories:
   - "reading"

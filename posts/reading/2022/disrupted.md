@@ -1,5 +1,5 @@
 ---
-title: "Disrupted: Ludicrous Misadventures in the Tech Start-up Bubble"
+title: "Disrupted"
 date: 2022-07-11
 categories:
   - "reading"
@@ -8,6 +8,7 @@ tags:
   - "non-fiction"
   - "startups"
 book:
+  subtitle: "Ludicrous Misadventures in the Tech Start-up Bubble"
   author: "Dan Lyons"
   goodreadsId: "29744770"
   goodreadsUrl: "https://www.goodreads.com/book/show/29744770"

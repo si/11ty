@@ -1,5 +1,5 @@
 ---
-title: "The Coaching Habit: Say Less, Ask More & Change the Way You Lead Forever"
+title: "The Coaching Habit"
 date: 2021-03-04
 categories:
   - "reading"
@@ -7,6 +7,7 @@ tags:
   - "leadership"
   - "non-fiction"
 book:
+  subtitle: "Say Less, Ask More & Change the Way You Lead Forever"
   author: "Michael Bungay Stanier"
   goodreadsId: "36684893"
   goodreadsUrl: "https://www.goodreads.com/book/show/36684893"

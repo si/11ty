@@ -1,9 +1,10 @@
 ---
-title: "101 Podcast Episode Templates – Powerful, Done-for-You Episode Templates to Grow Your Podcast Audience (Big Podcast)"
+title: "101 Podcast Episode Templates"
 date: 2022-09-01
 categories:
   - "reading"
 book:
+  subtitle: "Powerful, Done-for-You Episode Templates to Grow Your Podcast Audience (Big Podcast)"
   author: "David Hooper"
   goodreadsId: "60890844"
   goodreadsUrl: "https://www.goodreads.com/book/show/60890844"

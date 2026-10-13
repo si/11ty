@@ -1,9 +1,10 @@
 ---
-title: "The P.R.I.M.E.R. Goal Setting Method: The Only Goal Achievement Guide You'll Ever Need!"
+title: "The P.R.I.M.E.R. Goal Setting Method"
 date: 2021-07-17
 categories:
   - "reading"
 book:
+  subtitle: "The Only Goal Achievement Guide You'll Ever Need!"
   author: "Damon Zahariades"
   goodreadsId: "40616564"
   goodreadsUrl: "https://www.goodreads.com/book/show/40616564"

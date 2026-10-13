@@ -1,5 +1,5 @@
 ---
-title: "Pandemic (The Extinction Files, #1)"
+title: "Pandemic"
 date: 2021-10-15
 categories:
   - "reading"

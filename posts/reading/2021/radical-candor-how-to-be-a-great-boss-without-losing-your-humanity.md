@@ -1,5 +1,5 @@
 ---
-title: "Radical Candor: How to be a Great Boss Without Losing Your Humanity"
+title: "Radical Candor"
 date: 2021-05-10
 categories:
   - "reading"
@@ -8,6 +8,7 @@ tags:
   - "leadership"
   - "non-fiction"
 book:
+  subtitle: "How to be a Great Boss Without Losing Your Humanity"
   author: "Kim Malone Scott"
   published: 2017
   averageRating: 4.19

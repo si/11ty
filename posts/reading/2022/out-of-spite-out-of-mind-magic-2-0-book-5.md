@@ -1,5 +1,5 @@
 ---
-title: "Out of Spite, Out of Mind (Magic 2.0 Book 5)"
+title: "Out of Spite, Out of Mind"
 date: 2022-11-25
 categories:
   - "reading"

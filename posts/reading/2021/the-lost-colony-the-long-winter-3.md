@@ -1,5 +1,5 @@
 ---
-title: "The Lost Colony (The Long Winter, #3)"
+title: "The Lost Colony"
 date: 2021-08-08
 categories:
   - "reading"

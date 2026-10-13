@@ -1,9 +1,10 @@
 ---
-title: "No Filter: The inside story of how Instagram transformed business, celebrity and our culture"
+title: "No Filter"
 date: 2021-01-17
 categories:
   - "reading"
 book:
+  subtitle: "The inside story of how Instagram transformed business, celebrity and our culture"
   author: "Sarah Frier"
   goodreadsId: "50699720"
   goodreadsUrl: "https://www.goodreads.com/book/show/50699720"

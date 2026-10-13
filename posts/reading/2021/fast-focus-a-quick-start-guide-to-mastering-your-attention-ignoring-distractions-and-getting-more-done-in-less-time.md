@@ -1,9 +1,10 @@
 ---
-title: "Fast Focus: A Quick-Start Guide To Mastering Your Attention, Ignoring Distractions, And Getting More Done In Less Time!"
+title: "Fast Focus"
 date: 2021-06-06
 categories:
   - "reading"
 book:
+  subtitle: "A Quick-Start Guide To Mastering Your Attention, Ignoring Distractions, And Getting More Done In Less Time!"
   author: "Damon Zahariades"
   goodreadsId: "33780690"
   goodreadsUrl: "https://www.goodreads.com/book/show/33780690"

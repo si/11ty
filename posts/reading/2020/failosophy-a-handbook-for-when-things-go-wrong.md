@@ -1,9 +1,10 @@
 ---
-title: "Failosophy: A Handbook For When Things Go Wrong"
+title: "Failosophy"
 date: 2020-11-19
 categories:
   - "reading"
 book:
+  subtitle: "A Handbook For When Things Go Wrong"
   author: "Elizabeth Day"
   goodreadsId: "53738576"
   goodreadsUrl: "https://www.goodreads.com/book/show/53738576"

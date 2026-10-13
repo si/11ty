@@ -1,5 +1,5 @@
 ---
-title: "Quantum (Captain Chase #1)"
+title: "Quantum"
 date: 2021-04-18
 categories:
   - "reading"

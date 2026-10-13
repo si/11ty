@@ -1,5 +1,5 @@
 ---
-title: "Enki (The Kwan Thrillers #9)"
+title: "Enki"
 date: 2023-03-20
 categories:
   - "reading"

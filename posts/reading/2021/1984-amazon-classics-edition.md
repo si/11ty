@@ -1,5 +1,5 @@
 ---
-title: "1984 (Amazon Classics Edition)"
+title: "1984"
 date: 2021-02-20
 categories:
   - "reading"
@@ -8,6 +8,7 @@ tags:
   - "fiction"
   - "george-orwell"
 book:
+  subtitle: "Amazon Classics Edition"
   author: "George Orwell"
   goodreadsId: "56557080"
   goodreadsUrl: "https://www.goodreads.com/book/show/56557080"

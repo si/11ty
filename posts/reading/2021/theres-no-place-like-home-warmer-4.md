@@ -1,5 +1,5 @@
 ---
-title: "There's No Place Like Home (Warmer, #4)"
+title: "There's No Place Like Home"
 date: 2021-05-04
 categories:
   - "reading"

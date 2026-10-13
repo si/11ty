@@ -1,9 +1,10 @@
 ---
-title: "The Little Book of Big Coaching Models: 83 ways to help managers get the best out of people"
+title: "The Little Book of Big Coaching Models"
 date: 2023-03-15
 categories:
   - "reading"
 book:
+  subtitle: "83 ways to help managers get the best out of people"
   author: "Bob Bates"
   goodreadsId: "25163383"
   goodreadsUrl: "https://www.goodreads.com/book/show/25163383"

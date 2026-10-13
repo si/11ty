@@ -1,5 +1,5 @@
 ---
-title: "Spin (Captain Chase #2)"
+title: "Spin"
 date: 2021-03-21
 categories:
   - "reading"

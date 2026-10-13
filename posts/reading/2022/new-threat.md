@@ -1,5 +1,5 @@
 ---
-title: "New Threat (The Survivors, #2)"
+title: "New Threat"
 date: 2022-07-28
 categories:
   - "reading"

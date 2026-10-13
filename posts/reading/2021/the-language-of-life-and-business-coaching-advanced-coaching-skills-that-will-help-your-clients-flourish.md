@@ -1,9 +1,10 @@
 ---
-title: "The Language of Life and Business Coaching: Advanced Coaching Skills That Will Help Your Clients Flourish"
+title: "The Language of Life and Business Coaching"
 date: 2021-09-05
 categories:
   - "reading"
 book:
+  subtitle: "Advanced Coaching Skills That Will Help Your Clients Flourish"
   author: "Chad Hall"
   goodreadsId: "41542595"
   goodreadsUrl: "https://www.goodreads.com/book/show/41542595"

@@ -1,5 +1,5 @@
 ---
-title: "The Girl Beneath the Sea (Underwater Investigation Unit, #1)"
+title: "The Girl Beneath the Sea"
 date: 2021-02-03
 categories:
   - "reading"

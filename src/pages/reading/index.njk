@@ -27,7 +27,7 @@ eleventyNavigation:
   <li class="book-spine">
     <a class="book-spine__link" href="{{ book.url | url }}">
       {% if book.data.book.cover %}
-        <img class="book-spine__cover" src="{{ ('/img/reading/' + book.data.book.cover) | url }}" alt="" width="75" height="113" loading="lazy">
+        <img class="book-spine__cover" src="{{ ('/img/reading/' + book.data.book.cover) | url }}" alt="" width="112" height="168" loading="lazy">
       {% else %}
         <span class="book-spine__cover book-spine__cover--blank" aria-hidden="true"></span>
       {% endif %}

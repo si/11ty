@@ -1,5 +1,5 @@
 ---
-title: "Winter World (The Long Winter, #1)"
+title: "Winter World"
 date: 2021-06-21
 categories:
   - "reading"

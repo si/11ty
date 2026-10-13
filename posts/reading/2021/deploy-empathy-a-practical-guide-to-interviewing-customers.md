@@ -1,9 +1,10 @@
 ---
-title: "Deploy Empathy: A Practical Guide to Interviewing Customers"
+title: "Deploy Empathy"
 date: 2021-09-13
 categories:
   - "reading"
 book:
+  subtitle: "A Practical Guide to Interviewing Customers"
   author: "Michele Hansen"
   goodreadsId: "58713729"
   goodreadsUrl: "https://www.goodreads.com/book/show/58713729"

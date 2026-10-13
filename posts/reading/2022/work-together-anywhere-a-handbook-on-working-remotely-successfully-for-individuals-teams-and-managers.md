@@ -1,9 +1,10 @@
 ---
-title: "Work Together Anywhere: A Handbook on Working Remotely -Successfully- for Individuals, Teams, and Managers"
+title: "Work Together Anywhere"
 date: 2022-12-13
 categories:
   - "reading"
 book:
+  subtitle: "A Handbook on Working Remotely -Successfully- for Individuals, Teams, and Managers"
   author: "Lisette Sutherland"
   goodreadsId: "53893173"
   goodreadsUrl: "https://www.goodreads.com/book/show/53893173"

@@ -1,5 +1,5 @@
 ---
-title: "Delta Paradox (The Kwan Thrillers #8)"
+title: "Delta Paradox"
 date: 2023-01-14
 categories:
   - "reading"

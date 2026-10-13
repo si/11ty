@@ -1,5 +1,5 @@
 ---
-title: "The Atlantis Gene (The Origin Mystery, #1)"
+title: "The Atlantis Gene"
 date: 2021-04-05
 categories:
   - "reading"

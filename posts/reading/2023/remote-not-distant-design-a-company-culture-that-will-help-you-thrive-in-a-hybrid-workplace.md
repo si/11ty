@@ -1,9 +1,10 @@
 ---
-title: "Remote Not Distant: Design a Company Culture That Will Help You Thrive in a Hybrid Workplace"
+title: "Remote Not Distant"
 date: 2023-01-29
 categories:
   - "reading"
 book:
+  subtitle: "Design a Company Culture That Will Help You Thrive in a Hybrid Workplace"
   author: "Gustavo Razzetti"
   goodreadsId: "61070978"
   goodreadsUrl: "https://www.goodreads.com/book/show/61070978"

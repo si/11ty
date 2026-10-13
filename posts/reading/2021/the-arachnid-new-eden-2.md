@@ -1,5 +1,5 @@
 ---
-title: "The Arachnid (New Eden #2)"
+title: "The Arachnid"
 date: 2021-08-06
 categories:
   - "reading"

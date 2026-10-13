@@ -1,5 +1,5 @@
 ---
-title: "Boca Raton (Warmer, #2)"
+title: "Boca Raton"
 date: 2021-06-20
 categories:
   - "reading"

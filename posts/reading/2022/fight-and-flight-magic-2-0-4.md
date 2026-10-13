@@ -1,5 +1,5 @@
 ---
-title: "Fight and Flight (Magic 2.0, #4)"
+title: "Fight and Flight"
 date: 2022-08-28
 categories:
   - "reading"

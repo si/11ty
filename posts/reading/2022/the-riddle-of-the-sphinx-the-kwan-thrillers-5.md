@@ -1,5 +1,5 @@
 ---
-title: "The Riddle of the Sphinx (The Kwan Thrillers #5)"
+title: "The Riddle of the Sphinx"
 date: 2022-11-10
 categories:
   - "reading"
