@@ -7,7 +7,7 @@ eleventyNavigation:
   order: 5
 ---
 
-<p>A running record of habits I'm spending time on. Each one gets its own page with a table and trend chart; this page is the combined timeline across all of them.</p>
+<p>A running record of habits I'm spending time on. Each one gets its own page with a table and trend chart; this page is the combined timeline across the tracked ones. Music and Reading live here too, as habits without a session log.</p>
 
 {% if habitsIndex.list | length %}
 <div class="habit-grid">
@@ -23,6 +23,16 @@ eleventyNavigation:
       {% endif %}
     </a>
   {% endfor %}
+  <a class="habit-card" href="{{ '/music/' | url }}">
+    <span class="habit-card__icon" aria-hidden="true">💿</span>
+    <span class="habit-card__name">Music</span>
+    <span class="habit-card__meta">Every track I've liked on Spotify</span>
+  </a>
+  <a class="habit-card" href="{{ '/reading/' | url }}">
+    <span class="habit-card__icon" aria-hidden="true">📚</span>
+    <span class="habit-card__name">Reading</span>
+    <span class="habit-card__meta">{{ collections.readingPosts | length }} books logged from Goodreads</span>
+  </a>
 </div>
 
 <h2>Recent activity</h2>

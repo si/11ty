@@ -121,6 +121,13 @@
     <div id="nav-menu" aria-hidden="true">
       {%- for entry in collections.all | eleventyNavigation %}
         <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+        {%- if entry.children | length %}
+        <div class="nav-menu-group">
+          {%- for child in entry.children %}
+          <a href="{{ child.url | url }}">{{ child.title }}</a>
+          {%- endfor %}
+        </div>
+        {%- endif %}
       {%- endfor %}
     </div>
     <script>

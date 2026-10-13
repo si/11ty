@@ -296,6 +296,22 @@ module.exports = async function (eleventyConfig) {
       return directory === "aside";
     });
   });
+  // Feeds skip the reading log so moving the Goodreads posts to /reading/
+  // doesn't re-announce 100+ old books to subscribers under new URLs.
+  eleventyConfig.addCollection("feedPosts", function (collectionApi) {
+    return collectionApi.getFilteredByTag("posts").filter((post) => {
+      const inputPath = post.inputPath || "";
+      return !/^[.\\/]*posts[\\/]reading[\\/]/.test(inputPath);
+    });
+  });
+  eleventyConfig.addCollection("readingPosts", function (collectionApi) {
+    return collectionApi.getFilteredByTag("posts").filter((post) => {
+      const inputPath = post.inputPath || "";
+      const normalized = inputPath.replace(/^[.\\/]*posts[\\/]/, "");
+      const directory = normalized.split(/[/\\]/)[0];
+      return directory === "reading";
+    });
+  });
   eleventyConfig.addCollection("portfolioPosts", function (collectionApi) {
     return collectionApi.getFilteredByTag("posts").filter((post) => {
       const inputPath = post.inputPath || "";
