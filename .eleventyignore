@@ -12,3 +12,5 @@ functions
 test
 .oryx_prod_node_modules/
 .claude/
+AGENTS.md
+CLAUDE.md
