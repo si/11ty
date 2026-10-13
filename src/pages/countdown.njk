@@ -1,0 +1,68 @@
+---
+title: "Countdown"
+description: "A short video each weekday counting down to my last day at Rightmove on 18 December 2026."
+date: 2026-10-13
+---
+
+<p>I'm leaving Rightmove on <strong>Friday 18 December 2026</strong>, so each weekday I'm recording a short video counting down to it: what I'm wrapping up, handing over and thinking about along the way. This page is the home for the series, in the order they were recorded.</p>
+
+{% if countdown.latest %}
+{% statCards %}
+{% statCard "🎬", "Episodes", countdown.list | length %}
+{% statCard "⏳", "Days to go", countdown.latest.daysToGo %}
+{% statCard "📅", "Last day", "18 Dec" %}
+{% endstatCards %}
+
+<h2>Latest episode</h2>
+{# Facade: a thumbnail link that js/countdown.js swaps for the real
+   youtube-nocookie iframe on click. Without JS it is just a link to YouTube. #}
+<div class="countdown-player countdown-player--featured">
+  <a class="countdown-facade" href="{{ countdown.latest.url }}" data-embed="{{ countdown.latest.embedUrl }}" data-title="{{ countdown.latest.title }}">
+    <img src="{{ countdown.latest.thumbnail }}" alt="" width="480" height="360" loading="lazy" decoding="async">
+    <span class="countdown-facade__play" aria-hidden="true">▶</span>
+    <span class="countdown-facade__label">Play: {{ countdown.latest.title }}</span>
+  </a>
+</div>
+<p><strong>{{ countdown.latest.title }}</strong></p>
+
+<h2>All episodes</h2>
+<ol class="countdown-list">
+  {% for video in countdown.list %}
+  <li class="countdown-list__item" id="days-{{ video.daysToGo }}">
+    <h3 class="countdown-list__title">{{ video.title }}</h3>
+    <p class="countdown-list__meta"><time datetime="{{ video.recorded }}">Recorded {{ video.recorded | readableIsoDate }}</time></p>
+    <div class="countdown-player">
+      <a class="countdown-facade" href="{{ video.url }}" data-embed="{{ video.embedUrl }}" data-title="{{ video.title }}">
+        <img src="{{ video.thumbnail }}" alt="" width="480" height="360" loading="lazy" decoding="async">
+        <span class="countdown-facade__play" aria-hidden="true">▶</span>
+        <span class="countdown-facade__label">Play: {{ video.title }}</span>
+      </a>
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+
+{# Top-level array on purpose: _11ty/json-ld.js adds an `image` property with
+   site-relative URLs to the first JSON-LD object it finds, which would mangle
+   these absolute thumbnail URLs on a single object (JSON.stringify ignores it on an array). #}
+<script type="application/ld+json">
+[
+  {% for video in countdown.list %}
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": {{ video.title | dump | safe }},
+    "description": {{ ("Day " + video.daysToGo + " of my countdown to leaving Rightmove on 18 December 2026.") | dump | safe }},
+    "thumbnailUrl": "{{ video.thumbnail }}",
+    "uploadDate": "{{ video.recorded }}",
+    "embedUrl": "{{ video.embedUrl }}",
+    "contentUrl": "{{ video.url }}"
+  }{% if not loop.last %},{% endif %}
+  {% endfor %}
+]
+</script>
+
+<script defer src="{{ '/js/countdown.js' | addHash }}"></script>
+{% else %}
+<p>The first episode is coming soon.</p>
+{% endif %}
