@@ -36,6 +36,7 @@ The main content area organized by content type:
 - **`/posts/aside/`** - Shorter thoughts/notes organized by year
 - **`/posts/portfolio/`** - Portfolio/project showcase items
 - **`/posts/weeknotes/`** - Weekly update posts (numbered 1-N)
+- **`/posts/reading/`** - Books I've read, one post per book (see "Reading, Music and Habits" below)
 
 Each directory has a `posts.11tydata.js` file that sets default frontmatter for that section.
 
@@ -206,6 +207,34 @@ tags:
 
 ---
 
+## Reading, Music and Habits
+
+Three related sections sit together under **Habits** in the navigation. Music and Reading are children of Habits (`parent: Habits` in their `eleventyNavigation`), shown as a smaller row under it in the nav overlay (`_includes/layouts/base.njk`), and each has a card on `/habits/` (`src/pages/habits/index.njk`).
+
+### Habits (`/habits/`)
+
+- Data-driven session logs in `_data/habits/*.json` (duolingo, maptap, solitaire, sudoku), loaded by `_11ty/habits-data.js` and exposed as `habitsIndex`.
+- Each habit has its own page under `src/pages/habits/`. Use the `*-habit-log` skills to append new sessions.
+
+### Reading (`/reading/`)
+
+A closed archive of 104 books captured by a Zapier Goodreads connection between late 2020 and early 2023. It is built at build time from frontmatter (no client-side fetching).
+
+- **Posts**: `posts/reading/YYYY/<slug>.md`, published at `/reading/<slug>/` (the permalink comes from `categories: ["reading"]`). The directory data file is `posts/reading/reading.11tydata.js` (it must be named after the directory) and sets `layouts/book.njk`.
+- **Frontmatter**: `title` is the short title; `book.subtitle` holds anything after the first colon, dash or bracket. `book` also holds `author`, `goodreadsId`, `goodreadsUrl`, `series`, `seriesNumber`, `published`, `averageRating` and `cover`. `reading` holds `status` (`read` or `to-read`), `started`, `finished` and `rating`. Post `date` is the started date, or the finished date where there is no start.
+- **Status rules**: every book is treated as read. Books logged as "currently reading" have `started` only, finished books have `finished` and a rating, and the one `to-read` book has neither. A missing rating means unrated, not zero.
+- **Covers**: stored locally in `img/reading/` and referenced by `book.cover` (never hot-linked). The original 75px thumbnails are being replaced with `<goodreadsId>.jpg` by `node scripts/fetch-book-covers.js`, a throttled, resumable script to run on a normal machine (Goodreads is blocked in cloud sessions). See the header of the script for flags.
+- **Pages**: `src/pages/reading/index.njk` is the cover shelf grouped by year; `_includes/layouts/book.njk` is the book post layout. Styles are `.book-shelf`, `.book-spine` and `.book-card` in `css/main.css`.
+- **Feeds**: reading posts are deliberately excluded from the RSS and JSON feeds via `collections.feedPosts`, so subscribers are not re-notified about old books.
+- **Redirects**: the old `/aside/<slug>/` URLs redirect to `/reading/<slug>/` (301, with and without a trailing slash) in `_redirects`. Keep these if renaming slugs.
+- **Adding a book**: copy an existing post in `posts/reading/` and fill in the frontmatter. Add the Goodreads ID so the cover script can find the cover.
+
+### Music (`/music/`)
+
+- `src/pages/music/index.njk` is a hub page listing sections as cards (currently one: Liked Music).
+- `src/pages/music/liked.njk` plus `js/music-liked.js` render every Spotify liked track as a shelf of record sleeves. An IFTTT recipe adds a row to a public Google Sheet on each like, and the page reads that sheet in the browser on load, so new likes appear without a rebuild. Cover art is fetched per track from Spotify oEmbed and cached in `localStorage`. Styles are the `.record-*` classes in `css/main.css`.
+- Reading is static and build-time; Music is live and client-side, because likes keep arriving and the book log has stopped.
+
 ## Navigation & Collections
 
 Eleventy automatically creates collections:
@@ -213,6 +242,8 @@ Eleventy automatically creates collections:
 - **`collections.aside`** - All aside posts
 - **`collections.portfolio`** - All portfolio items
 - **`collections.weeknotes`** - All weeknotes
+- **`collections.readingPosts`** - All book posts in `posts/reading/`
+- **`collections.feedPosts`** - All posts except the reading log; used by the RSS and JSON feeds
 - **`collections.tagList`** - All unique tags across the site
 
 These collections are used in:
@@ -310,4 +341,4 @@ MIT License (see LICENSE file)
 
 ---
 
-**Last Updated**: January 2026
+**Last Updated**: October 2026
