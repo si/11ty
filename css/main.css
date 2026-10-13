@@ -2002,3 +2002,94 @@ a {
   margin: 0;
   font-size: 0.9em;
 }
+
+/* /countdown/: facade players (thumbnail first, iframe on click) and the
+   episode list, recorded order */
+.countdown-player {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 0.6em;
+  overflow: hidden;
+}
+
+.countdown-player--featured {
+  margin: 0.5em 0 1em;
+}
+
+.countdown-facade {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-decoration: none;
+}
+
+.countdown-facade img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.countdown-facade__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 4em;
+  height: 2.8em;
+  transform: translate(-50%, -50%);
+  background: var(--primary);
+  border-radius: 0.7em;
+  font-size: 1.2em;
+  transition: background 0.15s ease;
+}
+
+.countdown-facade:hover .countdown-facade__play,
+.countdown-facade:focus-visible .countdown-facade__play {
+  background: var(--primary-dark);
+}
+
+.countdown-facade:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Visually hidden, but read out by screen readers as the link name. */
+.countdown-facade__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.countdown-frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.countdown-list {
+  display: grid;
+  gap: 2em;
+  margin: 1.5em 0;
+  padding: 0;
+  list-style: none;
+}
+
+.countdown-list__title {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.countdown-list__meta {
+  margin: 0.2em 0 0.6em;
+  font-size: 0.85em;
+  color: #666;
+}
