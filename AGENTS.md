@@ -220,22 +220,27 @@ Three related sections sit together under **Habits** in the navigation. Music an
 
 ### Reading (`/reading/`)
 
-A closed archive of 104 books captured by a Zapier Goodreads connection between late 2020 and early 2023. It is built at build time from frontmatter (no client-side fetching).
+A book log of 121 books, built at build time from frontmatter (no client-side fetching). It has two sources:
+
+- **Goodreads (late 2020 to early 2023)**: captured by a Zapier connection, so these only have a started date, and a finish date and rating where the book was marked as read at the time.
+- **Rambling Readers (December 2022 onwards)**: an open source BookWyrm instance at https://ramblingreaders.org/user/si. Its CSV export is the source of truth for dates, ratings and reviews of anything read from December 2022. Its ActivityPub endpoints are behind a Cloudflare challenge and cannot be fetched from cloud sessions; only the `/user/si/rss*` feeds can, and they return just the last 10 items. Use the CSV export (Settings > Export) instead.
 
 - **Posts**: `posts/reading/YYYY/<slug>.md`, published at `/reading/<slug>/` (the permalink comes from `categories: ["reading"]`). The directory data file is `posts/reading/reading.11tydata.js` (it must be named after the directory) and sets `layouts/book.njk`.
-- **Frontmatter**: `title` is the short title; `book.subtitle` holds anything after the first colon, dash or bracket. `book` also holds `author`, `goodreadsId`, `goodreadsUrl`, `series`, `seriesNumber`, `published`, `averageRating` and `cover`. `reading` holds `status` (`read` or `to-read`), `started`, `finished` and `rating`. Post `date` is the started date, or the finished date where there is no start.
-- **Status rules**: every book is treated as read. Books logged as "currently reading" have `started` only, finished books have `finished` and a rating, and the one `to-read` book has neither. A missing rating means unrated, not zero.
-- **Covers**: stored locally in `img/reading/` and referenced by `book.cover` (never hot-linked). The original 75px thumbnails are being replaced with `<goodreadsId>.jpg` by `node scripts/fetch-book-covers.js`, a throttled, resumable script to run on a normal machine (Goodreads is blocked in cloud sessions). See the header of the script for flags.
+- **Frontmatter**: `title` is the short title; `book.subtitle` holds anything after the first colon, dash or bracket. `book` also holds `author`, `goodreadsId`, `goodreadsUrl`, `series`, `seriesNumber`, `published`, `averageRating` and `cover`. Books imported from Rambling Readers have `bookwyrmUrl`, plus `isbn` and `openLibraryKey` where known (used to find covers) and no Goodreads fields. `reading` holds `status` (`read`, `reading` or `to-read`), `started`, `finished` and `rating`. Post `date` is the started date, or the finished date where there is no start. Where a book has a review, the headline (bold) and text are the post body.
+- **Status rules**: books are treated as read unless `status` says otherwise. `reading` (currently reading) has `started` only and shows a "Currently reading" label; finished books have `finished` and a rating; the one `to-read` book has neither. A missing rating means unrated, not zero.
+- **Covers**: stored locally in `img/reading/` and referenced by `book.cover` (never hot-linked). Both scripts are throttled and resumable, and should be run on a normal machine (Goodreads and Open Library are blocked in cloud sessions). See the header of each script for flags.
+  - `node scripts/fetch-book-covers.js` replaces the original 75px thumbnails with `<goodreadsId>.jpg`, for posts with a Goodreads ID.
+  - `node scripts/fetch-book-covers-openlibrary.js` finds covers for posts with no cover (the Rambling Readers imports) by ISBN, Open Library ID, then a title and author search on Open Library and Google Books, and saves `<slug>.jpg`. It lists any it cannot find so they can be added by hand.
 - **Pages**: `src/pages/reading/index.njk` is the cover shelf grouped by year; `_includes/layouts/book.njk` is the book post layout. Styles are `.book-shelf`, `.book-spine` and `.book-card` in `css/main.css`.
 - **Feeds**: reading posts are deliberately excluded from the RSS and JSON feeds via `collections.feedPosts`, so subscribers are not re-notified about old books.
 - **Redirects**: the old `/aside/<slug>/` URLs redirect to `/reading/<slug>/` (301, with and without a trailing slash) in `_redirects`. Keep these if renaming slugs.
-- **Adding a book**: copy an existing post in `posts/reading/` and fill in the frontmatter. Add the Goodreads ID so the cover script can find the cover.
+- **Adding books**: export the CSV from Rambling Readers and run `node scripts/import-bookwyrm-export.js export.csv` (add `--dry-run` first). It is safe to re-run. It updates matching posts (matched by `bookwyrmUrl`, else author plus a fuzzy title match) and creates new ones in `posts/reading/<year started>/`. For existing posts it keeps the earliest started and finished dates, takes the export's rating, sets `date` to the started date (moving the file to that year's folder) and only adds a review if the post has no body. It never touches covers or series, so add `series` and `seriesNumber` by hand, then run the Open Library cover script. A single book can also be added by copying an existing post.
 
 ### Music (`/music/`)
 
 - `src/pages/music/index.njk` is a hub page listing sections as cards (currently one: Liked Music).
 - `src/pages/music/liked.njk` plus `js/music-liked.js` render every Spotify liked track as a shelf of record sleeves. An IFTTT recipe adds a row to a public Google Sheet on each like, and the page reads that sheet in the browser on load, so new likes appear without a rebuild. Cover art is fetched per track from Spotify oEmbed and cached in `localStorage`. Styles are the `.record-*` classes in `css/main.css`.
-- Reading is static and build-time; Music is live and client-side, because likes keep arriving and the book log has stopped.
+- Reading is static and build-time (updated by importing a Rambling Readers export); Music is live and client-side, because likes keep arriving.
 ## Reusable Content Components
 
 Posts are rendered through Liquid, so shortcodes can be used directly in Markdown. Styles live in `/css/main.css`.

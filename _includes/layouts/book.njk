@@ -23,7 +23,9 @@ templateClass: tmpl-post
         {% if reading.finished %}<li>Finished <time datetime="{{ reading.finished | htmlDateString }}">{{ reading.finished | longPublishedDate }}</time></li>{% endif %}
         {% if reading.rating %}<li aria-label="Rated {{ reading.rating }} out of 5">{{ "★".repeat(reading.rating) }}{{ "☆".repeat(5 - reading.rating) }}</li>{% endif %}
       {% endif %}
+      {% if status == "reading" %}<li>Currently reading</li>{% endif %}
       {% if book.goodreadsUrl %}<li><a href="{{ book.goodreadsUrl }}" rel="noopener">View on Goodreads</a></li>{% endif %}
+      {% if book.bookwyrmUrl %}<li><a href="{{ book.bookwyrmUrl }}" rel="noopener">View on Rambling Readers</a></li>{% endif %}
     </ul>
     </div>
   </div>
