@@ -164,7 +164,7 @@ async function main() {
   const batch = todo.slice(0, args.limit);
 
   console.log(`${books.length} books, ${todo.length} need a full-size cover, doing ${batch.length}.`);
-  if (noId.length) console.log(`No Goodreads ID (skipped, add one to the frontmatter): ${noId.join(", ")}`);
+  if (noId.length) console.log(`No Goodreads ID (skipped; run fetch-book-covers-openlibrary.js or add an ID to the frontmatter): ${noId.join(", ")}`);
   if (args.dryRun) {
     batch.forEach((b) => console.log(`  would fetch ${b.id}  ${path.relative(ROOT, b.file)}`));
     return;

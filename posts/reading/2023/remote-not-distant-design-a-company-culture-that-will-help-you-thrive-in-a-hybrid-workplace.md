@@ -11,7 +11,10 @@ book:
   published: 2022
   averageRating: 4.00
   cover: "61070978._SX50_-ZwhmRb.jpeg"
+  bookwyrmUrl: "https://ramblingreaders.org/book/171670"
 reading:
   status: read
   started: 2023-01-29
+  finished: 2023-02-08
+  rating: 5
 ---

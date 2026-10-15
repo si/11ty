@@ -1,6 +1,6 @@
 ---
 title: "Reading"
-description: "Books I've read, logged from Goodreads and shelved by the year I started them."
+description: "Books I've read, logged from Goodreads and Rambling Readers and shelved by the year I started them."
 date: 2026-10-12
 eleventyNavigation:
   key: Reading
@@ -10,7 +10,7 @@ eleventyNavigation:
 
 <p>{{ description }}</p>
 
-<p>These were captured automatically by a Zapier connection to Goodreads between late 2020 and early 2023, so each one is logged when I <em>started</em> it. A finish date and star rating only show up where I marked it as read at the time. Everything here is read unless it's marked to-read.</p>
+<p>From late 2020 to early 2023 these were captured automatically by a Zapier connection to Goodreads, so each one was logged when I <em>started</em> it. From December 2022 I moved to <a href="https://ramblingreaders.org/user/si" rel="noopener">Rambling Readers</a>, an open source BookWyrm instance, which is where the finish dates, ratings and reviews come from. Books I only logged through Goodreads have a finish date and rating only where I marked them as read at the time. Everything here is read unless it's marked as to-read or currently reading.</p>
 
 {% set books = collections.readingPosts | reverse %}
 <p><strong>{{ books | length }} books logged.</strong></p>
@@ -33,7 +33,7 @@ eleventyNavigation:
       {% endif %}
       <span class="book-spine__title">{{ book.data.title }}</span>
       <span class="book-spine__author">{{ book.data.book.author }}</span>
-      {% if book.data.reading.rating %}<span class="book-spine__rating" aria-label="Rated {{ book.data.reading.rating }} out of 5">{{ "★".repeat(book.data.reading.rating) }}</span>{% elif book.data.reading.status == "to-read" %}<span class="book-spine__rating">To read</span>{% endif %}
+      {% if book.data.reading.rating %}<span class="book-spine__rating" aria-label="Rated {{ book.data.reading.rating }} out of 5">{{ "★".repeat(book.data.reading.rating) }}</span>{% elif book.data.reading.status == "to-read" %}<span class="book-spine__rating">To read</span>{% elif book.data.reading.status == "reading" %}<span class="book-spine__rating">Reading</span>{% endif %}
     </a>
   </li>
 {% endfor %}

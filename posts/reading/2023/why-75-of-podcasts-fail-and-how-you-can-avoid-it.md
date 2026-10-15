@@ -13,7 +13,9 @@ book:
   goodreadsUrl: "https://www.goodreads.com/book/show/59700974"
   averageRating: 2.90
   cover: "59700974._SY75_-hgrWLK.jpeg"
+  bookwyrmUrl: "https://ramblingreaders.org/book/166630"
 reading:
   status: read
   started: 2023-01-24
+  finished: 2023-01-27
 ---

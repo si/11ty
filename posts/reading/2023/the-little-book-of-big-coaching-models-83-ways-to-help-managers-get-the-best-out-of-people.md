@@ -11,7 +11,9 @@ book:
   published: 2015
   averageRating: 3.83
   cover: "25163383._SY75_-SZLYs3.jpeg"
+  bookwyrmUrl: "https://ramblingreaders.org/book/257559"
 reading:
   status: read
   started: 2023-03-15
+  finished: 2023-11-01
 ---
