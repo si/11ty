@@ -425,6 +425,63 @@
       "durationSeconds": 200,
       "recordedDurationSeconds": 200,
       "mistakes": 1
+    },
+    {
+      "date": "2026-10-10",
+      "time": "21:55",
+      "durationSeconds": 212,
+      "recordedDurationSeconds": 212,
+      "mistakes": 1
+    },
+    {
+      "date": "2026-10-11",
+      "time": "17:20",
+      "durationSeconds": 212,
+      "recordedDurationSeconds": 212,
+      "mistakes": 3
+    },
+    {
+      "date": "2026-10-12",
+      "time": "21:07",
+      "durationSeconds": 188,
+      "recordedDurationSeconds": 188,
+      "mistakes": 3
+    },
+    {
+      "date": "2026-10-13",
+      "time": "22:00",
+      "durationSeconds": 154,
+      "recordedDurationSeconds": 154,
+      "mistakes": 1
+    },
+    {
+      "date": "2026-10-14",
+      "time": "18:33",
+      "durationSeconds": 213,
+      "recordedDurationSeconds": 213,
+      "mistakes": 2
+    },
+    {
+      "date": "2026-10-15",
+      "time": "19:42",
+      "durationSeconds": 174,
+      "recordedDurationSeconds": 174,
+      "mistakes": 2
+    },
+    {
+      "date": "2026-10-16",
+      "time": "21:51",
+      "durationSeconds": 210,
+      "recordedDurationSeconds": 210
+    },
+    {
+      "date": "2026-10-17",
+      "time": "14:03",
+      "durationSeconds": 150,
+      "recordedDurationSeconds": 150
     }
+  ],
+  "notes": [
+    "From 16 Oct 2026 the Yudoku app redesign stopped showing mistakes on the results screen, so sessions from that date have no mistake count."
   ]
 }

@@ -125,7 +125,7 @@ function habitTrendChart(habit, options = {}) {
   const markers = points
     .map(({ entry, x: cx, y: cy, flagged }) => {
       const secondaryValue = habit.secondaryMetric ? entry[habit.secondaryMetric.key] : null;
-      const secondaryNote = habit.secondaryMetric
+      const secondaryNote = habit.secondaryMetric && secondaryValue != null
         ? `, ${formatMetricValue(secondaryValue, habit.secondaryMetric)} ${pluralizeLabel(secondaryValue, habit.secondaryMetric.label)}`
         : "";
       const title = `${formatIsoDate(entry.date)} — ${formatMetricValue(entry[metric.key], metric)}${secondaryNote}`;

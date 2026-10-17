@@ -159,10 +159,10 @@ function buildTimeline(habits, limit = 20) {
         primaryDisplay: habit.primaryMetric
           ? formatMetricValue(entry[habit.primaryMetric.key], habit.primaryMetric)
           : null,
-        secondaryDisplay: habit.secondaryMetric
+        secondaryDisplay: habit.secondaryMetric && entry[habit.secondaryMetric.key] != null
           ? formatMetricValue(entry[habit.secondaryMetric.key], habit.secondaryMetric)
           : null,
-        secondaryLabel: habit.secondaryMetric
+        secondaryLabel: habit.secondaryMetric && entry[habit.secondaryMetric.key] != null
           ? pluralizeLabel(entry[habit.secondaryMetric.key], habit.secondaryMetric.label)
           : null,
       });

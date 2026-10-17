@@ -10,7 +10,8 @@ date: 2026-08-01
 
 {% if habit %}
 <p>{{ habit.description }} Source: {{ habit.source }}.</p>
-
+{% for note in habit.notes %}<p><em>{{ note }}</em></p>
+{% endfor %}
 <div class="habit-stats">
   <div class="habit-stat">
     <span class="habit-stat__label">Sessions logged</span>
