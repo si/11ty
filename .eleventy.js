@@ -61,8 +61,8 @@ const youtubeEmbed = require("./_11ty/youtube-embed.js");
 
 // /tags/* pages (one per tag, ~900 of them) are only needed on the deployed
 // site. Building them locally is most of what pushes a small content-only
-// build past 2 minutes, so we skip generating them outside of CI. Netlify and
-// GitHub Actions both set CI=true automatically, so production builds are
+// build past 2 minutes, so we skip generating them outside of CI. Cloudflare Pages
+// and GitHub Actions both set CI=true automatically, so production builds are
 // unaffected. Force them locally with `ELEVENTY_BUILD_TAGS=true` if you need
 // to check a tag page before pushing.
 const BUILD_TAG_PAGES =

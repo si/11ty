@@ -1,8 +1,6 @@
 # Si on 11ty
 
-Now hosted on Netlify
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e4905586-88ab-457b-8a0e-0df3542ad315/deploy-status)](https://app.netlify.com/projects/sijobling/deploys)
+Now hosted on Cloudflare Pages
 
 This is the source code for [sijobling.com](https://sijobling.com), a personal website and blog built with [Eleventy (11ty)](https://www.11ty.dev/). It is based on the [eleventy-high-performance-blog](https://github.com/11ty/eleventy-base-blog) starter kit.
 
@@ -85,10 +83,10 @@ Your content here...
 
 ## 🌐 Deployment
 
-The site is automatically deployed to **Netlify** when changes are pushed to the `main` branch.
+The site is automatically deployed to **Cloudflare Pages** when changes are pushed to the `main` branch.
 
-- **Configuration**: `_headers` and `_redirects` handle server-side behavior.
-- **Environment Variables**: Managed in the Netlify dashboard.
+- **Configuration**: `wrangler.toml`, plus `_headers` and `_redirects` for server-side behaviour.
+- **Environment Variables**: Managed in the Cloudflare dashboard.
 
 ## 📄 License
 
