@@ -44,7 +44,6 @@
     "luxon": "^3.7.2",
     "markdown-it": "^15.0.2",
     "markdown-it-anchor": "^10.0.0",
-    "netlify-plugin-cache": "^1.0.3",
     "pre-push": "^0.1.4",
     "shorthash": "0.0.2"
   },
