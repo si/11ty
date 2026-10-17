@@ -27,6 +27,14 @@ function formatDuration(totalSeconds) {
   return `${m}m ${s}s`;
 }
 
+// Signed gap to the best value, e.g. 62 -> "+1m 2s"; zero is "Best".
+function formatGap(gap, metric) {
+  if (gap === undefined || gap === null || !metric) return "-";
+  if (gap === 0) return "Best";
+  const sign = gap > 0 ? "+" : "-";
+  return `${sign}${formatMetricValue(Math.abs(gap), metric)}`;
+}
+
 function formatMetricValue(value, metric) {
   if (value === undefined || value === null || !metric) return "-";
   switch (metric.unit) {
@@ -122,10 +130,23 @@ function loadHabits() {
         ? entries.map((e) => Number(e[habit.secondaryMetric.key]) || 0)
         : [];
 
+      // Best entry on the primary metric (earliest wins a tie), plus each
+      // entry's gap to it - e.g. how far a sudoku session was off the best time.
+      let bestEntry = null;
+      if (habit.primaryMetric) {
+        const bestValue = pickBest(primaryValues, habit.primaryMetric.goal);
+        bestEntry = entries[primaryValues.indexOf(bestValue)] || null;
+      }
+      const withGap = entries.map((entry, i) => ({
+        ...entry,
+        vsBest: bestEntry ? primaryValues[i] - primaryValues[entries.indexOf(bestEntry)] : null,
+      }));
+
       return {
         ...habit,
         url: `/habits/${habit.id}/`,
-        entries,
+        entries: withGap,
+        bestEntry,
         sessionCount: entries.length,
         latest: entries.length ? entries[entries.length - 1] : null,
         stats: {
@@ -177,6 +198,7 @@ module.exports = {
   buildTimeline,
   formatDuration,
   formatMetricValue,
+  formatGap,
   formatIsoDate,
   pluralizeLabel,
   pickBest,

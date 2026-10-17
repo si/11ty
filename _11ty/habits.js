@@ -9,6 +9,7 @@ const {
   loadHabits,
   formatDuration,
   formatMetricValue,
+  formatGap,
   formatIsoDate,
   pluralizeLabel,
   lastKnownValue,
@@ -195,6 +196,7 @@ module.exports = {
   configFunction: (eleventyConfig) => {
     eleventyConfig.addFilter("formatDuration", formatDuration);
     eleventyConfig.addFilter("formatMetric", formatMetricValue);
+    eleventyConfig.addFilter("formatGap", formatGap);
     eleventyConfig.addFilter("readableIsoDate", (dateStr) => formatIsoDate(dateStr));
     eleventyConfig.addFilter("pluralizeLabel", pluralizeLabel);
     eleventyConfig.addFilter("getHabit", (id) =>
