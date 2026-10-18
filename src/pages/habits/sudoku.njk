@@ -10,7 +10,8 @@ date: 2026-08-01
 
 {% if habit %}
 <p>{{ habit.description }} Source: {{ habit.source }}.</p>
-
+{% for note in habit.notes %}<p><em>{{ note }}</em></p>
+{% endfor %}
 <div class="habit-stats">
   <div class="habit-stat">
     <span class="habit-stat__label">Sessions logged</span>
@@ -20,6 +21,7 @@ date: 2026-08-01
     <div class="habit-stat">
       <span class="habit-stat__label">Best {{ habit.primaryMetric.label | lower }}</span>
       <span class="habit-stat__value">{{ habit.stats.best | formatMetric(habit.primaryMetric) }}</span>
+      {% if habit.bestEntry %}<span class="habit-stat__label">{{ habit.bestEntry.date | readableIsoDate }}</span>{% endif %}
     </div>
   {% endif %}
   {% if habit.secondaryMetric %}
@@ -48,6 +50,7 @@ date: 2026-08-01
         <th scope="col">Date</th>
         <th scope="col">Time</th>
         <th scope="col">{{ habit.primaryMetric.label }}</th>
+        <th scope="col">vs best</th>
         {% if habit.secondaryMetric %}<th scope="col">{{ habit.secondaryMetric.label }}</th>{% endif %}
       </tr>
     </thead>
@@ -57,6 +60,7 @@ date: 2026-08-01
           <td>{{ entry.date | readableIsoDate }}</td>
           <td>{{ entry.time }}</td>
           <td>{{ entry[habit.primaryMetric.key] | formatMetric(habit.primaryMetric) }}</td>
+          <td>{{ entry.vsBest | formatGap(habit.primaryMetric) }}</td>
           {% if habit.secondaryMetric %}<td>{{ entry[habit.secondaryMetric.key] | formatMetric(habit.secondaryMetric) }}</td>{% endif %}
         </tr>
       {% endfor %}

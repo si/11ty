@@ -9,6 +9,7 @@ const {
   loadHabits,
   formatDuration,
   formatMetricValue,
+  formatGap,
   formatIsoDate,
   pluralizeLabel,
   lastKnownValue,
@@ -125,7 +126,7 @@ function habitTrendChart(habit, options = {}) {
   const markers = points
     .map(({ entry, x: cx, y: cy, flagged }) => {
       const secondaryValue = habit.secondaryMetric ? entry[habit.secondaryMetric.key] : null;
-      const secondaryNote = habit.secondaryMetric
+      const secondaryNote = habit.secondaryMetric && secondaryValue != null
         ? `, ${formatMetricValue(secondaryValue, habit.secondaryMetric)} ${pluralizeLabel(secondaryValue, habit.secondaryMetric.label)}`
         : "";
       const title = `${formatIsoDate(entry.date)} — ${formatMetricValue(entry[metric.key], metric)}${secondaryNote}`;
@@ -195,6 +196,7 @@ module.exports = {
   configFunction: (eleventyConfig) => {
     eleventyConfig.addFilter("formatDuration", formatDuration);
     eleventyConfig.addFilter("formatMetric", formatMetricValue);
+    eleventyConfig.addFilter("formatGap", formatGap);
     eleventyConfig.addFilter("readableIsoDate", (dateStr) => formatIsoDate(dateStr));
     eleventyConfig.addFilter("pluralizeLabel", pluralizeLabel);
     eleventyConfig.addFilter("getHabit", (id) =>
