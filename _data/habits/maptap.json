@@ -963,6 +963,38 @@
       "diff": -54,
       "result": "loss",
       "note": "Some bad moves"
+    },
+    {
+      "date": "2026-10-17",
+      "guesses": [
+        { "score": 90, "emoji": "👑", "garyScore": 95, "garyEmoji": "🥇", "diff": -5 },
+        { "score": 41, "emoji": "😶", "garyScore": 97, "garyEmoji": "🔥", "diff": -56 },
+        { "score": 84, "emoji": "😁", "garyScore": 80, "garyEmoji": "👏", "diff": 4 },
+        { "score": 88, "emoji": "🎉", "garyScore": 87, "garyEmoji": "🎓", "diff": 1 },
+        { "score": 89, "emoji": "🎉", "garyScore": 72, "garyEmoji": "🤭", "diff": 17 }
+      ],
+      "finalScore": 830,
+      "garyFinalScore": 829,
+      "diff": 1,
+      "result": "win",
+      "note": "Brazil is too big.",
+      "garyNote": "China has no business being that big."
+    },
+    {
+      "date": "2026-10-18",
+      "guesses": [
+        { "score": 96, "emoji": "🔥", "garyScore": 96, "garyEmoji": "🔥", "diff": 0 },
+        { "score": 88, "emoji": "🎓", "garyScore": 89, "garyEmoji": "🎉", "diff": -1 },
+        { "score": 66, "emoji": "😔", "garyScore": 94, "garyEmoji": "🥇", "diff": -28 },
+        { "score": 88, "emoji": "🎉", "garyScore": 79, "garyEmoji": "✨", "diff": 9 },
+        { "score": 59, "emoji": "😔", "garyScore": 16, "garyEmoji": "😝", "diff": 43 }
+      ],
+      "finalScore": 757,
+      "garyFinalScore": 658,
+      "diff": 99,
+      "result": "win",
+      "note": "Wrong side of Oz",
+      "garyNote": "Dire"
     }
   ]
 }
