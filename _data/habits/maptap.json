@@ -965,6 +965,54 @@
       "note": "Some bad moves"
     },
     {
+      "date": "2026-10-12",
+      "guesses": [
+        { "score": 86, "emoji": "🎓", "garyScore": 89, "garyEmoji": "🎉", "diff": -3 },
+        { "score": 83, "emoji": "🌟", "garyScore": 86, "garyEmoji": "🎓", "diff": -3 },
+        { "score": 83, "emoji": "🌟", "garyScore": 78, "garyEmoji": "🌞", "diff": 5 },
+        { "score": 76, "emoji": "🤗", "garyScore": 79, "garyEmoji": "👏", "diff": -3 },
+        { "score": 60, "emoji": "🤫", "garyScore": 3, "garyEmoji": "🤮", "diff": 57 }
+      ],
+      "finalScore": 743,
+      "garyFinalScore": 577,
+      "diff": 166,
+      "result": "win",
+      "note": "Average across the board.",
+      "garyNote": "Well that went well."
+    },
+    {
+      "date": "2026-10-13",
+      "guesses": [
+        { "score": 97, "emoji": "🔥", "garyScore": 99, "garyEmoji": "🔥", "diff": -2 },
+        { "score": 93, "emoji": "🏆", "garyScore": 91, "garyEmoji": "👑", "diff": 2 },
+        { "score": 90, "emoji": "👑", "garyScore": 89, "garyEmoji": "🎉", "diff": 1 },
+        { "score": 66, "emoji": "🙃", "garyScore": 72, "garyEmoji": "😁", "diff": -6 },
+        { "score": 65, "emoji": "😐", "garyScore": 61, "garyEmoji": "🤨", "diff": 4 }
+      ],
+      "finalScore": 763,
+      "garyFinalScore": 767,
+      "diff": -4,
+      "result": "loss",
+      "note": "Bermuda is invisible!",
+      "garyNote": "Once again a good start cocked up."
+    },
+    {
+      "date": "2026-10-16",
+      "guesses": [
+        { "score": 94, "emoji": "🏆", "garyScore": 98, "garyEmoji": "🔥", "diff": -4 },
+        { "score": 91, "emoji": "👑", "garyScore": 93, "garyEmoji": "🏆", "diff": -2 },
+        { "score": 82, "emoji": "🌟", "garyScore": 88, "garyEmoji": "🎉", "diff": -6 },
+        { "score": 92, "emoji": "🏆", "garyScore": 91, "garyEmoji": "👑", "diff": 1 },
+        { "score": 84, "emoji": "😁", "garyScore": 89, "garyEmoji": "🎉", "diff": -5 }
+      ],
+      "finalScore": 877,
+      "garyFinalScore": 907,
+      "diff": -30,
+      "result": "loss",
+      "note": "Could've been worse.",
+      "garyNote": "Another good one for me. Best of luck chum."
+    },
+    {
       "date": "2026-10-17",
       "guesses": [
         { "score": 90, "emoji": "👑", "garyScore": 95, "garyEmoji": "🥇", "diff": -5 },
