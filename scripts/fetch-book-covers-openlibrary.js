@@ -37,6 +37,9 @@ const COVERS = process.env.COVERS_BASE || "https://covers.openlibrary.org";
 const GOOGLE_BOOKS = process.env.GOOGLE_BOOKS_BASE || "https://www.googleapis.com/books/v1";
 const USER_AGENT = "sijobling.com cover fetcher (one-off, throttled; simon.jobling@gmail.com)";
 const MAX_RETRIES = 3;
+// Once a search source has exhausted its retries (almost always a 429 block),
+// skip it for the rest of the run instead of burning minutes retrying per book.
+const blockedSources = new Set();
 
 function parseArgs(argv) {
   const args = { delay: 2, limit: Infinity, dryRun: false, force: false, all: false };
@@ -140,16 +143,26 @@ function* sources(book, args) {
   yield {
     name: "Open Library search",
     urls: async () => {
+      if (blockedSources.has("Open Library search")) return [];
       const q = new URLSearchParams({ title: book.title, author: book.author, limit: "5", fields: "title,cover_i" });
       const data = await getJson(`${OPENLIBRARY}/search.json?${q}`, args.delay);
+      if (!data) {
+        blockedSources.add("Open Library search");
+        console.warn("  Open Library search unavailable, skipping it for the rest of this run");
+      }
       return ((data && data.docs) || []).filter((d) => d.cover_i).map((d) => `${COVERS}/b/id/${d.cover_i}-L.jpg?default=false`);
     },
   };
   yield {
     name: "Google Books search",
     urls: async () => {
+      if (blockedSources.has("Google Books search")) return [];
       const q = new URLSearchParams({ q: `intitle:${book.title} inauthor:${book.author}`, maxResults: "3" });
       const data = await getJson(`${GOOGLE_BOOKS}/volumes?${q}`, args.delay);
+      if (!data) {
+        blockedSources.add("Google Books search");
+        console.warn("  Google Books search unavailable, skipping it for the rest of this run");
+      }
       return ((data && data.items) || [])
         .map((i) => i.volumeInfo && i.volumeInfo.imageLinks && (i.volumeInfo.imageLinks.thumbnail || i.volumeInfo.imageLinks.smallThumbnail))
         .filter(Boolean)
