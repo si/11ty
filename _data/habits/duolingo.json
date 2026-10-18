@@ -9804,6 +9804,616 @@
       "language": "Greek",
       "level": null,
       "combo": 35
+    },
+    {
+      "date": "2026-09-20",
+      "time": "19:55",
+      "xp": null,
+      "accuracy": 55,
+      "durationSeconds": 202,
+      "language": "Greek",
+      "level": null,
+      "combo": 45
+    },
+    {
+      "date": "2026-09-20",
+      "time": "19:59",
+      "xp": 40,
+      "accuracy": 89,
+      "durationSeconds": 134,
+      "language": "Greek",
+      "level": null,
+      "combo": null
+    },
+    {
+      "date": "2026-09-20",
+      "time": "20:03",
+      "xp": 60,
+      "accuracy": 94,
+      "durationSeconds": 175,
+      "language": "Greek",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-09-20",
+      "time": "20:06",
+      "xp": 56,
+      "accuracy": 87,
+      "durationSeconds": 125,
+      "language": "Greek",
+      "level": null,
+      "combo": null
+    },
+    {
+      "date": "2026-09-20",
+      "time": "20:11",
+      "xp": 60,
+      "accuracy": 94,
+      "durationSeconds": 281,
+      "language": "Greek",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-09-21",
+      "time": "07:05",
+      "xp": 50,
+      "accuracy": 100,
+      "durationSeconds": 136,
+      "language": "Greek",
+      "level": null,
+      "combo": 8
+    },
+    {
+      "date": "2026-09-21",
+      "time": "07:11",
+      "xp": 31,
+      "accuracy": 92,
+      "durationSeconds": 271,
+      "language": "Greek",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-09-21",
+      "time": "07:17",
+      "xp": 50,
+      "accuracy": 81,
+      "durationSeconds": 298,
+      "language": "Greek",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-09-21",
+      "time": "07:21",
+      "xp": 100,
+      "accuracy": 45,
+      "durationSeconds": 218,
+      "language": "Greek",
+      "level": null,
+      "combo": 9
+    },
+    {
+      "date": "2026-09-22",
+      "time": "21:39",
+      "xp": 150,
+      "accuracy": 100,
+      "durationSeconds": 130,
+      "language": "Greek",
+      "level": null,
+      "combo": 17
+    },
+    {
+      "date": "2026-09-22",
+      "time": "21:43",
+      "xp": 84,
+      "accuracy": 90,
+      "durationSeconds": 190,
+      "language": "Greek",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-09-23",
+      "time": "18:31",
+      "xp": 50,
+      "accuracy": 91,
+      "durationSeconds": 142,
+      "language": "Greek",
+      "level": null,
+      "combo": 2
+    },
+    {
+      "date": "2026-09-23",
+      "time": "18:36",
+      "xp": null,
+      "accuracy": 30,
+      "durationSeconds": 155,
+      "language": "Greek",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-09-23",
+      "time": "18:40",
+      "xp": null,
+      "accuracy": 35,
+      "durationSeconds": 208,
+      "language": "Greek",
+      "level": null,
+      "combo": 22
+    },
+    {
+      "date": "2026-09-23",
+      "time": "18:44",
+      "xp": 42,
+      "accuracy": 92,
+      "durationSeconds": 157,
+      "language": "Greek",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-09-23",
+      "time": "18:46",
+      "xp": 44,
+      "accuracy": 90,
+      "durationSeconds": 117,
+      "language": "Greek",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-09-24",
+      "time": "07:26",
+      "xp": null,
+      "accuracy": 50,
+      "durationSeconds": 192,
+      "language": "Greek",
+      "level": null,
+      "combo": null
+    },
+    {
+      "date": "2026-09-24",
+      "time": "07:31",
+      "xp": null,
+      "accuracy": 90,
+      "durationSeconds": 237,
+      "language": "Greek",
+      "level": null,
+      "combo": 28
+    },
+    {
+      "date": "2026-09-24",
+      "time": "07:35",
+      "xp": null,
+      "accuracy": null,
+      "durationSeconds": 184,
+      "language": "Greek",
+      "level": null,
+      "combo": null
+    },
+    {
+      "date": "2026-09-24",
+      "time": "07:41",
+      "xp": 105,
+      "accuracy": 86,
+      "durationSeconds": 282,
+      "language": "Greek",
+      "level": null,
+      "combo": 53
+    },
+    {
+      "date": "2026-09-24",
+      "time": "19:12",
+      "xp": 100,
+      "accuracy": 100,
+      "durationSeconds": 930,
+      "language": "Greek",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-09-25",
+      "time": "21:42",
+      "xp": 54,
+      "accuracy": 91,
+      "durationSeconds": 166,
+      "language": "Greek",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-09-26",
+      "time": "16:41",
+      "xp": 59,
+      "accuracy": 87,
+      "durationSeconds": 229,
+      "language": "Greek",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-09-27",
+      "time": "19:37",
+      "xp": 70,
+      "accuracy": 100,
+      "durationSeconds": 87,
+      "language": "French",
+      "level": null,
+      "combo": 8
+    },
+    {
+      "date": "2026-09-27",
+      "time": "19:41",
+      "xp": 47,
+      "accuracy": 80,
+      "durationSeconds": 115,
+      "language": "French",
+      "level": null,
+      "combo": null
+    },
+    {
+      "date": "2026-09-27",
+      "time": "19:45",
+      "xp": 100,
+      "accuracy": 91,
+      "durationSeconds": 110,
+      "language": "French",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-09-28",
+      "time": "19:39",
+      "xp": 59,
+      "accuracy": 91,
+      "durationSeconds": 104,
+      "language": "French",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-09-30",
+      "time": "22:20",
+      "xp": 58,
+      "accuracy": 93,
+      "durationSeconds": 254,
+      "language": "French",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-10-01",
+      "time": "20:42",
+      "xp": 8,
+      "accuracy": 83,
+      "durationSeconds": 199,
+      "language": "French",
+      "level": null,
+      "combo": 0
+    },
+    {
+      "date": "2026-10-03",
+      "time": "23:12",
+      "xp": 8,
+      "accuracy": 82,
+      "durationSeconds": 182,
+      "language": "French",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-10-05",
+      "time": "06:22",
+      "xp": 86,
+      "accuracy": 100,
+      "durationSeconds": 145,
+      "language": "French",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-10-05",
+      "time": "06:45",
+      "xp": 105,
+      "accuracy": 80,
+      "durationSeconds": 264,
+      "language": "French",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-10-05",
+      "time": "06:50",
+      "xp": 117,
+      "accuracy": 77,
+      "durationSeconds": 221,
+      "language": "French",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-10-05",
+      "time": "07:28",
+      "xp": 35,
+      "accuracy": 83,
+      "durationSeconds": 172,
+      "language": "French",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-10-06",
+      "time": "20:05",
+      "xp": 68,
+      "accuracy": 100,
+      "durationSeconds": 202,
+      "language": "French",
+      "level": null,
+      "combo": 10
+    },
+    {
+      "date": "2026-10-07",
+      "time": "13:04",
+      "xp": 53,
+      "accuracy": 100,
+      "durationSeconds": 360,
+      "language": "French",
+      "level": null,
+      "combo": 39
+    },
+    {
+      "date": "2026-10-07",
+      "time": "13:12",
+      "xp": 62,
+      "accuracy": 14,
+      "durationSeconds": 133,
+      "language": "French",
+      "level": null,
+      "combo": 61
+    },
+    {
+      "date": "2026-10-08",
+      "time": "07:26",
+      "xp": 68,
+      "accuracy": 94,
+      "durationSeconds": 213,
+      "language": "French",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-10-08",
+      "time": "07:32",
+      "xp": 35,
+      "accuracy": 83,
+      "durationSeconds": 329,
+      "language": "French",
+      "level": null,
+      "combo": 3
+    },
+    {
+      "date": "2026-10-08",
+      "time": "07:37",
+      "xp": 75,
+      "accuracy": 93,
+      "durationSeconds": 260,
+      "language": "French",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-10-09",
+      "time": "21:31",
+      "xp": 55,
+      "accuracy": 100,
+      "durationSeconds": 158,
+      "language": "French",
+      "level": null,
+      "combo": null
+    },
+    {
+      "date": "2026-10-09",
+      "time": "21:35",
+      "xp": 42,
+      "accuracy": 100,
+      "durationSeconds": 106,
+      "language": "French",
+      "level": null,
+      "combo": null
+    },
+    {
+      "date": "2026-10-10",
+      "time": "22:03",
+      "xp": 62,
+      "accuracy": 14,
+      "durationSeconds": 141,
+      "language": "French",
+      "level": null,
+      "combo": 2
+    },
+    {
+      "date": "2026-10-11",
+      "time": "17:23",
+      "xp": 60,
+      "accuracy": 87,
+      "durationSeconds": 127,
+      "language": "French",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-10-11",
+      "time": "17:27",
+      "xp": 35,
+      "accuracy": 100,
+      "durationSeconds": 184,
+      "language": "French",
+      "level": null,
+      "combo": 6
+    },
+    {
+      "date": "2026-10-11",
+      "time": "17:37",
+      "xp": null,
+      "accuracy": 46,
+      "durationSeconds": 268,
+      "language": "French",
+      "level": null,
+      "combo": 20
+    },
+    {
+      "date": "2026-10-12",
+      "time": "07:33",
+      "xp": 55,
+      "accuracy": 50,
+      "durationSeconds": 190,
+      "language": "French",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-10-12",
+      "time": "07:55",
+      "xp": 36,
+      "accuracy": 100,
+      "durationSeconds": 101,
+      "language": "French",
+      "level": null,
+      "combo": 7
+    },
+    {
+      "date": "2026-10-13",
+      "time": "17:33",
+      "xp": 66,
+      "accuracy": 100,
+      "durationSeconds": 198,
+      "language": "French",
+      "level": null,
+      "combo": 15
+    },
+    {
+      "date": "2026-10-13",
+      "time": "17:37",
+      "xp": 53,
+      "accuracy": 50,
+      "durationSeconds": 218,
+      "language": "French",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-10-13",
+      "time": "17:43",
+      "xp": 63,
+      "accuracy": 86,
+      "durationSeconds": 302,
+      "language": "French",
+      "level": null,
+      "combo": 4
+    },
+    {
+      "date": "2026-10-13",
+      "time": "17:49",
+      "xp": 86,
+      "accuracy": 100,
+      "durationSeconds": 293,
+      "language": "French",
+      "level": null,
+      "combo": 42
+    },
+    {
+      "date": "2026-10-14",
+      "time": "21:29",
+      "xp": 105,
+      "accuracy": 83,
+      "durationSeconds": 160,
+      "language": "French",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-10-14",
+      "time": "21:32",
+      "xp": 144,
+      "accuracy": 100,
+      "durationSeconds": 181,
+      "language": "French",
+      "level": null,
+      "combo": 14
+    },
+    {
+      "date": "2026-10-15",
+      "time": "07:44",
+      "xp": 53,
+      "accuracy": 95,
+      "durationSeconds": 183,
+      "language": "French",
+      "level": null,
+      "combo": 20
+    },
+    {
+      "date": "2026-10-15",
+      "time": "07:49",
+      "xp": null,
+      "accuracy": 75,
+      "durationSeconds": 253,
+      "language": "French",
+      "level": null,
+      "combo": null
+    },
+    {
+      "date": "2026-10-16",
+      "time": "06:56",
+      "xp": 105,
+      "accuracy": 67,
+      "durationSeconds": 183,
+      "language": "French",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-10-16",
+      "time": "07:02",
+      "xp": 141,
+      "accuracy": 88,
+      "durationSeconds": 293,
+      "language": "French",
+      "level": null,
+      "combo": 1
+    },
+    {
+      "date": "2026-10-16",
+      "time": "07:12",
+      "xp": null,
+      "accuracy": 87,
+      "durationSeconds": 194,
+      "language": "French",
+      "level": null,
+      "combo": null
+    },
+    {
+      "date": "2026-10-16",
+      "time": "07:18",
+      "xp": 35,
+      "accuracy": 83,
+      "durationSeconds": 258,
+      "language": "French",
+      "level": null,
+      "combo": 35
+    },
+    {
+      "date": "2026-10-17",
+      "time": "19:30",
+      "xp": 39,
+      "accuracy": 82,
+      "durationSeconds": 195,
+      "language": "French",
+      "level": null,
+      "combo": 1
     }
   ]
 }
