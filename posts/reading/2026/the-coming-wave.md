@@ -1,6 +1,6 @@
 ---
 title: "The Coming Wave"
-date: 2026-10-18
+date: 2026-02-01
 categories:
   - "reading"
 book:
@@ -8,4 +8,5 @@ book:
   subtitle: "AI, Power and Our Future"
 reading:
   status: read
+  finished: 2026-02-01
 ---

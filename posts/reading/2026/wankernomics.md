@@ -1,6 +1,6 @@
 ---
 title: "Wankernomics"
-date: 2026-10-18
+date: 2026-09-01
 categories:
   - "reading"
 book:
@@ -8,4 +8,5 @@ book:
   subtitle: "A Deep Dive into Workplace Bullsh*ttery"
 reading:
   status: read
+  finished: 2026-09-01
 ---
