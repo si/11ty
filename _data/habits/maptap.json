@@ -997,6 +997,22 @@
       "garyNote": "Once again a good start cocked up."
     },
     {
+      "date": "2026-10-15",
+      "guesses": [
+        { "score": 92, "emoji": "👑", "garyScore": 98, "garyEmoji": "🔥", "diff": -6 },
+        { "score": 87, "emoji": "🎓", "garyScore": 91, "garyEmoji": "👑", "diff": -4 },
+        { "score": 97, "emoji": "🔥", "garyScore": 91, "garyEmoji": "👑", "diff": 6 },
+        { "score": 99, "emoji": "🔥", "garyScore": 96, "garyEmoji": "🔥", "diff": 3 },
+        { "score": 71, "emoji": "😂", "garyScore": 100, "garyEmoji": "🎯", "diff": -29 }
+      ],
+      "finalScore": 883,
+      "garyFinalScore": 959,
+      "diff": -76,
+      "result": "loss",
+      "note": "Actually did alright on those.",
+      "garyNote": "Just watched QI where they were talking about a group of British scientists who were trapped there for four months - serendipity!!!"
+    },
+    {
       "date": "2026-10-16",
       "guesses": [
         { "score": 94, "emoji": "🏆", "garyScore": 98, "garyEmoji": "🔥", "diff": -4 },
