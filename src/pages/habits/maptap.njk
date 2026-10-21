@@ -62,32 +62,42 @@ date: 2026-08-19
 {% endif %}
 
 <h2>All rounds</h2>
+<p>Each day's five guesses get progressively harder, from easy (1) to hard (5).</p>
 <div class="habit-table-wrap">
-  <table class="habit-table">
+  <table class="habit-table habit-table--maptap">
     <thead>
       <tr>
         <th scope="col">Date</th>
-        <th scope="col">Guess 1</th>
+        <th scope="col">Player</th>
+        <th scope="col">Guess 1<br><small>Easy</small></th>
         <th scope="col">Guess 2</th>
         <th scope="col">Guess 3</th>
         <th scope="col">Guess 4</th>
-        <th scope="col">Guess 5</th>
+        <th scope="col">Guess 5<br><small>Hard</small></th>
         <th scope="col">Final score</th>
         <th scope="col">Margin</th>
       </tr>
     </thead>
-    <tbody>
-      {% for entry in habit.entries | reverse %}
+    {% for entry in habit.entries | reverse %}
+      <tbody>
         <tr>
-          <td>{{ entry.date | readableIsoDate }}</td>
+          <td rowspan="2">{{ entry.date | readableIsoDate }}</td>
+          <th scope="row">Si</th>
           {% for guess in entry.guesses %}
-            <td>{{ guess.score }} {{ guess.emoji }}<br><small>Gary: {{ guess.garyScore }} {{ guess.garyEmoji }} ({% if guess.diff > 0 %}+{% endif %}{{ guess.diff }})</small></td>
+            <td>{{ guess.score }} {{ guess.emoji }} <small>({% if guess.diff > 0 %}+{% endif %}{{ guess.diff }})</small></td>
           {% endfor %}
-          <td><strong>{{ entry.finalScore }}</strong><br><small>Gary: {{ entry.garyFinalScore }}</small></td>
-          <td><strong>{% if entry.diff > 0 %}+{% endif %}{{ entry.diff }}</strong> {% if entry.result == "win" %}🏆{% elif entry.result == "loss" %}💀{% else %}🤝{% endif %}</td>
+          <td><strong>{{ entry.finalScore }}</strong></td>
+          <td rowspan="2"><strong>{% if entry.diff > 0 %}+{% endif %}{{ entry.diff }}</strong> {% if entry.result == "win" %}🏆{% elif entry.result == "loss" %}💀{% else %}🤝{% endif %}</td>
         </tr>
-      {% endfor %}
-    </tbody>
+        <tr>
+          <th scope="row">Gary</th>
+          {% for guess in entry.guesses %}
+            <td>{{ guess.garyScore }} {{ guess.garyEmoji }}</td>
+          {% endfor %}
+          <td>{{ entry.garyFinalScore }}</td>
+        </tr>
+      </tbody>
+    {% endfor %}
   </table>
 </div>
 {% else %}

@@ -1442,6 +1442,15 @@ a {
   white-space: nowrap;
 }
 
+.habit-table--maptap tbody {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.habit-table--maptap tbody tr:last-child td:not([rowspan]),
+.habit-table--maptap tbody tr:last-child th {
+  color: #666;
+}
+
 .habit-chart-figure {
   margin: 1.5em 0;
 }
