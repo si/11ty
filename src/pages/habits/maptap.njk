@@ -9,13 +9,9 @@ date: 2026-08-19
 <p><a href="{{ '/habits/' | url }}">← All habits</a></p>
 
 {% if habit %}
-<p>{{ habit.description }} Source: {{ habit.source }}.</p>
+<p>{{ habit.description }} Source: <a href="https://www.maptap.gg" rel="noopener">{{ habit.source }}</a>.</p>
 
 <div class="habit-stats">
-  <div class="habit-stat">
-    <span class="habit-stat__label">Rounds logged</span>
-    <span class="habit-stat__value">{{ habit.sessionCount }}</span>
-  </div>
   {% if habit.stats.best != null %}
     <div class="habit-stat">
       <span class="habit-stat__label">Best {{ habit.primaryMetric.label | lower }}</span>
@@ -42,7 +38,18 @@ date: 2026-08-19
   {% if entry.result == "win" %}{% set wins = wins + 1 %}{% endif %}
   {% if entry.result == "loss" %}{% set losses = losses + 1 %}{% endif %}
 {% endfor %}
-<p><em>Head-to-head with Gary: {{ wins }} win{% if wins != 1 %}s{% endif %} to {{ losses }} loss{% if losses != 1 %}es{% endif %} across {{ habit.sessionCount }} rounds.</em></p>
+<div class="habit-h2h" role="group" aria-label="Head-to-head: Si {{ wins }}, Gary {{ losses }}, across {{ habit.sessionCount }} rounds">
+  <div class="habit-h2h__side">
+    <span class="habit-h2h__name">Si</span>
+    <span class="habit-h2h__score">{{ wins }}</span>
+  </div>
+  <span class="habit-h2h__divider" aria-hidden="true">-</span>
+  <div class="habit-h2h__side">
+    <span class="habit-h2h__name">Gary</span>
+    <span class="habit-h2h__score">{{ losses }}</span>
+  </div>
+</div>
+<p class="habit-h2h__rounds">{{ habit.sessionCount }} rounds</p>
 
 {% set chart = habitTrendChart(habit) %}
 {% if chart %}
