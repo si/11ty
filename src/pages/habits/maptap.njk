@@ -73,7 +73,6 @@ date: 2026-08-19
         <th scope="col">Guess 4</th>
         <th scope="col">Guess 5</th>
         <th scope="col">Final score</th>
-        <th scope="col">Gary</th>
         <th scope="col">Margin</th>
       </tr>
     </thead>
@@ -84,9 +83,8 @@ date: 2026-08-19
           {% for guess in entry.guesses %}
             <td>{{ guess.score }} {{ guess.emoji }}<br><small>Gary: {{ guess.garyScore }} {{ guess.garyEmoji }} ({% if guess.diff > 0 %}+{% endif %}{{ guess.diff }})</small></td>
           {% endfor %}
-          <td>{{ entry.finalScore }}</td>
-          <td>{{ entry.garyFinalScore }}</td>
-          <td>{% if entry.diff > 0 %}+{% endif %}{{ entry.diff }} {% if entry.result == "win" %}🏆{% elif entry.result == "loss" %}💀{% else %}🤝{% endif %}</td>
+          <td><strong>{{ entry.finalScore }}</strong><br><small>Gary: {{ entry.garyFinalScore }}</small></td>
+          <td><strong>{% if entry.diff > 0 %}+{% endif %}{{ entry.diff }}</strong> {% if entry.result == "win" %}🏆{% elif entry.result == "loss" %}💀{% else %}🤝{% endif %}</td>
         </tr>
       {% endfor %}
     </tbody>
