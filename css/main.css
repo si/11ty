@@ -1391,6 +1391,42 @@ a {
   font-variant-numeric: proportional-nums;
 }
 
+.habit-h2h {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1em;
+  margin: 2em 0 0.3em;
+  text-align: center;
+}
+
+.habit-h2h__side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 4em;
+}
+
+.habit-h2h__name {
+  font-size: 1em;
+  color: #666;
+}
+
+.habit-h2h__score,
+.habit-h2h__divider {
+  font-size: 3.5em;
+  font-weight: 700;
+  line-height: 1.1;
+  font-variant-numeric: proportional-nums;
+}
+
+.habit-h2h__rounds {
+  text-align: center;
+  font-size: 0.85em;
+  color: #666;
+  margin: 0 0 2em;
+}
+
 .habit-table-wrap {
   overflow-x: auto;
 }
@@ -1404,6 +1440,15 @@ a {
 .habit-table th {
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
+}
+
+.habit-table--maptap tbody {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.habit-table--maptap tbody tr:last-child td:not([rowspan]),
+.habit-table--maptap tbody tr:last-child th {
+  color: #666;
 }
 
 .habit-chart-figure {

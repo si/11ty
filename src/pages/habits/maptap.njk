@@ -9,13 +9,9 @@ date: 2026-08-19
 <p><a href="{{ '/habits/' | url }}">← All habits</a></p>
 
 {% if habit %}
-<p>{{ habit.description }} Source: {{ habit.source }}.</p>
+<p>{{ habit.description }} Source: <a href="https://www.maptap.gg" rel="noopener">{{ habit.source }}</a>.</p>
 
 <div class="habit-stats">
-  <div class="habit-stat">
-    <span class="habit-stat__label">Rounds logged</span>
-    <span class="habit-stat__value">{{ habit.sessionCount }}</span>
-  </div>
   {% if habit.stats.best != null %}
     <div class="habit-stat">
       <span class="habit-stat__label">Best {{ habit.primaryMetric.label | lower }}</span>
@@ -42,7 +38,18 @@ date: 2026-08-19
   {% if entry.result == "win" %}{% set wins = wins + 1 %}{% endif %}
   {% if entry.result == "loss" %}{% set losses = losses + 1 %}{% endif %}
 {% endfor %}
-<p><em>Head-to-head with Gary: {{ wins }} win{% if wins != 1 %}s{% endif %} to {{ losses }} loss{% if losses != 1 %}es{% endif %} across {{ habit.sessionCount }} rounds.</em></p>
+<div class="habit-h2h" role="group" aria-label="Head-to-head: Si {{ wins }}, Gary {{ losses }}, across {{ habit.sessionCount }} rounds">
+  <div class="habit-h2h__side">
+    <span class="habit-h2h__name">Si</span>
+    <span class="habit-h2h__score">{{ wins }}</span>
+  </div>
+  <span class="habit-h2h__divider" aria-hidden="true">-</span>
+  <div class="habit-h2h__side">
+    <span class="habit-h2h__name">Gary</span>
+    <span class="habit-h2h__score">{{ losses }}</span>
+  </div>
+</div>
+<p class="habit-h2h__rounds">{{ habit.sessionCount }} rounds</p>
 
 {% set chart = habitTrendChart(habit) %}
 {% if chart %}
@@ -55,34 +62,42 @@ date: 2026-08-19
 {% endif %}
 
 <h2>All rounds</h2>
+<p>Each day's five guesses get progressively harder, from easy (1) to hard (5).</p>
 <div class="habit-table-wrap">
-  <table class="habit-table">
+  <table class="habit-table habit-table--maptap">
     <thead>
       <tr>
         <th scope="col">Date</th>
-        <th scope="col">Guess 1</th>
+        <th scope="col">Player</th>
+        <th scope="col">Guess 1<br><small>Easy</small></th>
         <th scope="col">Guess 2</th>
         <th scope="col">Guess 3</th>
         <th scope="col">Guess 4</th>
-        <th scope="col">Guess 5</th>
+        <th scope="col">Guess 5<br><small>Hard</small></th>
         <th scope="col">Final score</th>
-        <th scope="col">Gary</th>
         <th scope="col">Margin</th>
       </tr>
     </thead>
-    <tbody>
-      {% for entry in habit.entries | reverse %}
+    {% for entry in habit.entries | reverse %}
+      <tbody>
         <tr>
-          <td>{{ entry.date | readableIsoDate }}</td>
+          <td rowspan="2">{{ entry.date | readableIsoDate }}</td>
+          <th scope="row">Si</th>
           {% for guess in entry.guesses %}
-            <td>{{ guess.score }} {{ guess.emoji }}<br><small>Gary: {{ guess.garyScore }} {{ guess.garyEmoji }} ({% if guess.diff > 0 %}+{% endif %}{{ guess.diff }})</small></td>
+            <td>{{ guess.score }} {{ guess.emoji }} <small>({% if guess.diff > 0 %}+{% endif %}{{ guess.diff }})</small></td>
           {% endfor %}
-          <td>{{ entry.finalScore }}</td>
-          <td>{{ entry.garyFinalScore }}</td>
-          <td>{% if entry.diff > 0 %}+{% endif %}{{ entry.diff }} {% if entry.result == "win" %}🏆{% elif entry.result == "loss" %}💀{% else %}🤝{% endif %}</td>
+          <td><strong>{{ entry.finalScore }}</strong></td>
+          <td rowspan="2"><strong>{% if entry.diff > 0 %}+{% endif %}{{ entry.diff }}</strong> {% if entry.result == "win" %}🏆{% elif entry.result == "loss" %}💀{% else %}🤝{% endif %}</td>
         </tr>
-      {% endfor %}
-    </tbody>
+        <tr>
+          <th scope="row">Gary</th>
+          {% for guess in entry.guesses %}
+            <td>{{ guess.garyScore }} {{ guess.garyEmoji }}</td>
+          {% endfor %}
+          <td>{{ entry.garyFinalScore }}</td>
+        </tr>
+      </tbody>
+    {% endfor %}
   </table>
 </div>
 {% else %}
