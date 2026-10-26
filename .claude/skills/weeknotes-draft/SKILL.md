@@ -31,7 +31,7 @@ Use the reusable shortcodes, not hand-written HTML:
 
 Si wants a lasting record of his work, so every update mentioned in a post needs a link and a visual, not just prose.
 
-- **Link** the live page, post or PR for each update (site pages, blog posts, banners, releases).
+- **Link** the live page or post for each update (site pages, blog posts, banners, releases). Never link GitHub pull requests or commits in the post itself: describe the change in plain words instead. PR links belong in the PR description only.
 - **Find an associated image first**: a blog post's `featuredImage`, a screenshot in the PR or repo, newsletter images. Reuse it rather than recreating it.
 - **Otherwise take screenshots.** Build or serve the site locally and capture it with Playwright (Chromium is at `/opt/pw-browsers/chromium`; use `executablePath`, don't run `playwright install`). Take desktop (about 1280px) and mobile (about 390px) shots of the changed element or page, at 2x scale, and look at them before using them.
 - Save under `img/assets/<year>/<month>/` with a descriptive name (for example `hf-patreon-banner-desktop.png`) and embed with meaningful alt text.
@@ -40,6 +40,7 @@ Si wants a lasting record of his work, so every update mentioned in a post needs
 ## Draft rules
 
 - Write in Si's voice (first person, plain, warm). Use `TODO(Si)` for anything that needs his input rather than inventing it.
+- Published PETALS blog URLs drop the date prefix from the filename (`src/content/blog/2026-10-23-foo.md` is `https://usepetals.com/blog/foo/`). `petals-team/marketingsite` is attached, so read the post itself and summarise what it says rather than just its description.
 - Don't fabricate. If a value was read from a screenshot, flag it.
 - Keep the "How this is made" section at the bottom up to date with any change to this process.
 - PR description: list sources used, what was skipped and why, and any data gaps.
