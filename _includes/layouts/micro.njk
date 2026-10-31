@@ -22,7 +22,23 @@ templateClass: tmpl-micro
     <a href="{{ canonicalHref }}">
       <time datetime="{{ stamp.iso }}">{{ stamp.date }}{% if stamp.time %} · {{ stamp.time }}{% endif %}</time>
     </a>
-    · <a href="/micro/">All micro posts</a>
+  </p>
+
+  {%- set olderPost = collections.microPosts | getPreviousCollectionItem(page) %}
+  {%- set newerPost = collections.microPosts | getNextCollectionItem(page) %}
+  {%- if olderPost or newerPost %}
+  <nav class="micro-nav" aria-label="Micro posts">
+    {%- if olderPost %}
+    <a class="micro-nav-older" href="{{ olderPost.url }}" rel="prev">&larr; Older</a>
+    {%- endif %}
+    {%- if newerPost %}
+    <a class="micro-nav-newer" href="{{ newerPost.url }}" rel="next">Newer &rarr;</a>
+    {%- endif %}
+  </nav>
+  {%- endif %}
+
+  <p class="micro-meta micro-index-link">
+    <a href="/micro/">All micro posts</a>
   </p>
 </div>
 
