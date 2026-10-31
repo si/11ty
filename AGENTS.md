@@ -242,6 +242,16 @@ A book log of 121 books, built at build time from frontmatter (no client-side fe
 - `src/pages/music/index.njk` is a hub page listing sections as cards (currently one: Liked Music).
 - `src/pages/music/liked.njk` plus `js/music-liked.js` render every Spotify liked track as a shelf of record sleeves. An IFTTT recipe adds a row to a public Google Sheet on each like, and the page reads that sheet in the browser on load, so new likes appear without a rebuild. Cover art is fetched per track from Spotify oEmbed and cached in `localStorage`. Styles are the `.record-*` classes in `css/main.css`.
 - Reading is static and build-time (updated by importing a Rambling Readers export); Music is live and client-side, because likes keep arriving.
+### Micro posts (`/micro/`)
+
+Short social-style posts, one file per post at `posts/micro/YYYY/YYYY-MM-DD-HHMM.md` (UK local time).
+
+- **Layout**: `_includes/layouts/micro.njk`, applied by `posts/micro/micro.11tydata.js`. It shows no heading and no read time: just the body (larger than normal text) and a date and time linked to the canonical URL. A `title` is still needed for `<title>`, social cards and the feeds. Styles are `.micro-post`, `.micro-body` and `.micro-meta` in `css/main.css`. The base layout exposes a `pageHeading` block so a layout can drop the `<h1>`.
+- **Directory data files must be named after their directory** (`micro.11tydata.js`). A file called `posts.11tydata.js` inside `posts/micro/` is ignored by Eleventy.
+- **Front matter**: `title`, `date` (full ISO datetime with offset), `permalink` (`/micro/YYYY-MM-DD-HHMM/`) and `categories: ["micro"]`. Always set `permalink`: Eleventy strips the date from file names, so `2026-10-31-0934.md` would otherwise publish at `/micro/0934/`.
+- **Time**: the `microStamp` filter in `.eleventy.js` formats the date and time in UK time (BST included). Posts dated with no time (midnight UTC, such as the YouTube sync) show the date only.
+- **Images**: put them in `img/assets/YYYY/MM/` and reference them as a Markdown image with alt text.
+
 ## Reusable Content Components
 
 Posts are rendered through Liquid, so shortcodes can be used directly in Markdown. Styles live in `/css/main.css`.

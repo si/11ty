@@ -189,6 +189,25 @@ module.exports = async function (eleventyConfig) {
     );
   });
 
+  // Date and time for micro posts, in UK local time (BST included). Posts with
+  // a date but no time (midnight UTC, e.g. the YouTube sync) have no meaningful
+  // time, so the time is left blank and the date stays in UTC.
+  eleventyConfig.addFilter("microStamp", (dateObj) => {
+    const utc = DateTime.fromJSDate(dateObj, { zone: "utc" });
+    if (!utc.isValid) {
+      return { iso: "", date: "", time: "" };
+    }
+    const hasTime = utc.hour !== 0 || utc.minute !== 0;
+    const dt = hasTime ? utc.setZone("Europe/London") : utc;
+    return {
+      iso: hasTime
+        ? dt.toISO({ suppressMilliseconds: true })
+        : dt.toFormat("yyyy-LL-dd"),
+      date: dt.toFormat("dd LLLL yyyy"),
+      time: hasTime ? dt.toFormat("HH:mm") : "",
+    };
+  });
+
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");

@@ -88,7 +88,7 @@
       </nav>
       {% block coverImage %}{% endblock %}
       <div class="header-content">
-        <h1>{{ title }}</h1>
+        {% block pageHeading %}<h1>{{ title }}</h1>{% endblock %}
         {% block extraArticleHeader %}{% endblock %}
       </div>
       <dialog id="message"></dialog>

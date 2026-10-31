@@ -1,0 +1,58 @@
+---
+templateClass: tmpl-micro
+---
+{% extends "layouts/base.njk" %}
+
+{#- Micro posts have no visible heading or read time; the body is the post.
+    The title is still used for <title>, social cards and the feeds. -#}
+{% block pageHeading %}{% endblock %}
+{% block extraArticleHeader %}{% endblock %}
+
+{% set stamp = page.date | microStamp %}
+{% set canonicalHref = metadata.url + (canonicalUrl or page.url) %}
+{% set shareUrl = metadata.url + page.url %}
+
+{% block article %}
+<div class="micro-post">
+  <div class="micro-body">
+{{ content | safe }}
+  </div>
+
+  <p class="micro-meta">
+    <a href="{{ canonicalHref }}">
+      <time datetime="{{ stamp.iso }}">{{ stamp.date }}{% if stamp.time %} · {{ stamp.time }}{% endif %}</time>
+    </a>
+  </p>
+</div>
+
+<share-widget>
+  <button on-click="share" aria-label="Share" href="{{ shareUrl | safe }}">
+    <div></div>
+  </button>
+</share-widget>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ title }} • {{ metadata.title }}",
+  "image": [],
+  "author": "{{ metadata.author.name }}",
+  "genre": "{{ metadata.genre }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ metadata.publisher.name }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ '/img/favicon/favicon-192x192.png' | addHash }}"
+    }
+  },
+  "url": "{{ canonicalHref }}",
+  "mainEntityOfPage": "{{ canonicalHref }}",
+  "datePublished": "{{ stamp.iso }}",
+  "dateModified": "{{ page.inputPath | lastModifiedDate  | htmlDateString }}",
+  "description": "{{ content | striptags | truncate(140) }}"
+}
+</script>
+
+{% endblock %}
