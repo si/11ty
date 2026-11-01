@@ -521,6 +521,48 @@
       "time": "09:13",
       "durationSeconds": 189,
       "recordedDurationSeconds": 189
+    },
+    {
+      "date": "2026-10-26",
+      "time": "10:31",
+      "durationSeconds": 170,
+      "recordedDurationSeconds": 170
+    },
+    {
+      "date": "2026-10-27",
+      "time": "11:05",
+      "durationSeconds": 234,
+      "recordedDurationSeconds": 234
+    },
+    {
+      "date": "2026-10-28",
+      "time": "10:30",
+      "durationSeconds": 281,
+      "recordedDurationSeconds": 281
+    },
+    {
+      "date": "2026-10-29",
+      "time": "08:13",
+      "durationSeconds": 172,
+      "recordedDurationSeconds": 172
+    },
+    {
+      "date": "2026-10-30",
+      "time": "19:04",
+      "durationSeconds": 269,
+      "recordedDurationSeconds": 269
+    },
+    {
+      "date": "2026-10-31",
+      "time": "09:08",
+      "durationSeconds": 226,
+      "recordedDurationSeconds": 226
+    },
+    {
+      "date": "2026-11-01",
+      "time": "08:35",
+      "durationSeconds": 183,
+      "recordedDurationSeconds": 183
     }
   ],
   "notes": [
