@@ -2179,3 +2179,64 @@ header:has(~ main .micro-post) {
     line-height: 1.5;
   }
 }
+
+/* Reading: authors index (/reading/authors/) and per-author pages */
+.author-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em 1.2em;
+  padding: 0;
+  margin: 0 0 1.5em;
+  list-style: none;
+}
+
+.author-list__count {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.author-books {
+  padding: 0;
+  margin: 0 0 1.5em;
+  list-style: none;
+}
+
+.author-book + .author-book {
+  margin-top: 1em;
+}
+
+.author-book__link {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+.author-book__cover {
+  flex: none;
+  width: 3.75em;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 0.15em 0.3em 0.3em 0.15em;
+  background: #e6e6e6;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.author-book__title,
+.author-book__meta {
+  display: block;
+}
+
+.author-book__title {
+  font-weight: 700;
+}
+
+.author-book__meta {
+  font-size: 0.85em;
+  color: #666;
+}
+
+.author-book__rating {
+  color: #b8860b;
+}

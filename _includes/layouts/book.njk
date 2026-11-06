@@ -12,7 +12,7 @@ templateClass: tmpl-post
     <div class="book-card__body">
     {% if book.subtitle %}<p class="book-card__subtitle">{{ book.subtitle }}</p>{% endif %}
     <ul class="book-card__meta">
-      <li><strong>{{ book.author }}</strong></li>
+      <li><strong>{% set authorKey = book.author | lower | replace(r/[^a-z0-9]+/g, "") %}<a href="{{ ('/reading/authors/' + authorKey + '/') | url }}">{{ book.author }}</a></strong></li>
       {% if book.published %}<li>Published {{ book.published }}</li>{% endif %}
       {% if book.averageRating %}<li>Goodreads average: {{ book.averageRating }} / 5</li>{% endif %}
       {% if book.series %}<li>{{ book.series }}{% if book.seriesNumber %}, book {{ book.seriesNumber }}{% endif %}</li>{% endif %}

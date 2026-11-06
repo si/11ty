@@ -331,6 +331,27 @@ module.exports = async function (eleventyConfig) {
       return directory === "reading";
     });
   });
+  // Books grouped by author, for /reading/authors/. Names are matched on
+  // letters and numbers only so "A.G. Riddle" and "A. G. Riddle" are one
+  // author. Books are in reading order (post date is the started date).
+  eleventyConfig.addCollection("readingAuthors", function (collectionApi) {
+    const authors = new Map();
+    const posts = collectionApi
+      .getFilteredByTag("posts")
+      .filter((post) => /^[.\\/]*posts[\\/]reading[\\/]/.test(post.inputPath || ""))
+      .sort((a, b) => a.date - b.date);
+    for (const post of posts) {
+      const name = ((post.data.book || {}).author || "").trim();
+      const key = name.toLowerCase().normalize("NFD").replace(/[^a-z0-9]+/g, "");
+      if (!key) continue;
+      if (!authors.has(key)) authors.set(key, { key, name, books: [] });
+      authors.get(key).books.push(post);
+    }
+    const lastName = (name) => name.split(/\s+/).pop().toLowerCase();
+    return [...authors.values()].sort(
+      (a, b) => lastName(a.name).localeCompare(lastName(b.name)) || a.name.localeCompare(b.name)
+    );
+  });
   eleventyConfig.addCollection("portfolioPosts", function (collectionApi) {
     return collectionApi.getFilteredByTag("posts").filter((post) => {
       const inputPath = post.inputPath || "";
