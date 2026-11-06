@@ -2240,3 +2240,198 @@ header:has(~ main .micro-post) {
 .author-book__rating {
   color: #b8860b;
 }
+
+/* Reading: activity page (/reading/activity/) */
+.read-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9em, 1fr));
+  gap: 0.8em;
+  margin: 1.2em 0 1.5em;
+}
+
+.read-stat {
+  padding: 0.8em 1em;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.5em;
+}
+
+.read-stat__value {
+  display: block;
+  font-size: 1.8em;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--primary);
+}
+
+.read-stat__label {
+  display: block;
+  margin-top: 0.2em;
+  font-size: 0.8em;
+  color: #666;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.read-key {
+  font-size: 0.85em;
+  color: #666;
+}
+
+.read-key__swatch {
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin: 0 0.3em 0 0.8em;
+  border-radius: 0.15em;
+}
+
+.read-key__swatch:first-child {
+  margin-left: 0;
+}
+
+.read-key__swatch--finished,
+.read-year__part--finished {
+  background: var(--primary);
+}
+
+.read-key__swatch--started,
+.read-year__part--started {
+  background: var(--primary-dark);
+}
+
+.read-years {
+  padding: 0;
+  margin: 0 0 1em;
+  list-style: none;
+}
+
+.read-year {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  margin: 0.35em 0;
+}
+
+.read-year__label {
+  flex: none;
+  width: 3em;
+  font-variant-numeric: tabular-nums;
+}
+
+.read-year__bar {
+  flex: 1;
+  height: 1.4em;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 0.2em;
+  overflow: hidden;
+}
+
+.read-year__fill {
+  display: flex;
+  height: 100%;
+}
+
+.read-year__total {
+  flex: none;
+  width: 2em;
+  font-weight: 700;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.read-heatmap-wrap {
+  overflow-x: auto;
+  margin: 1em 0 1.5em;
+}
+
+.read-heatmap {
+  border-collapse: separate;
+  border-spacing: 3px;
+  width: 100%;
+  min-width: 32em;
+  font-variant-numeric: tabular-nums;
+}
+
+.read-heatmap th,
+.read-heatmap td {
+  padding: 0.35em 0;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 400;
+  border: 0;
+}
+
+.read-heatmap thead th {
+  color: #666;
+}
+
+.read-heatmap tbody th {
+  text-align: left;
+  font-weight: 700;
+}
+
+.read-heatmap__total {
+  font-weight: 700;
+}
+
+.read-cell {
+  border-radius: 0.25em;
+  background: rgba(160, 82, 45, 0.06);
+  color: #222;
+}
+
+.read-cell--na {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.read-cell--1 { background: rgba(160, 82, 45, 0.25); }
+.read-cell--2 { background: rgba(160, 82, 45, 0.5); }
+.read-cell--3 { background: rgba(160, 82, 45, 0.75); color: #fff; }
+.read-cell--4 { background: rgb(160, 82, 45); color: #fff; }
+
+.read-seasons {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0.4em;
+  padding: 0;
+  margin: 1em 0 1.5em;
+  list-style: none;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.read-season__bar {
+  display: flex;
+  align-items: flex-end;
+  height: 7em;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 0.2em;
+  overflow: hidden;
+}
+
+.read-season__fill {
+  display: block;
+  width: 100%;
+  background: var(--primary);
+}
+
+.read-season__total {
+  display: block;
+  margin-top: 0.3em;
+  font-weight: 700;
+}
+
+.read-season__label {
+  display: block;
+  color: #666;
+}

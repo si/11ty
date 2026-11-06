@@ -13,7 +13,7 @@ eleventyNavigation:
 <p>From late 2020 to early 2023 these were captured automatically by a Zapier connection to Goodreads, so each one was logged when I <em>started</em> it. From December 2022 I moved to <a href="https://ramblingreaders.org/user/si" rel="noopener">Rambling Readers</a>, an open source BookWyrm instance, which is where the finish dates, ratings and reviews come from. Books I only logged through Goodreads have a finish date and rating only where I marked them as read at the time. Everything here is read unless it's marked as to-read or currently reading.</p>
 
 {% set books = collections.readingPosts | reverse %}
-<p><strong>{{ books | length }} books logged.</strong> Browse <a href="{{ '/reading/authors/' | url }}">by author</a> or <a href="{{ '/reading/series/' | url }}">by series</a> to see books from the same writer or saga in order.</p>
+<p><strong>{{ books | length }} books logged.</strong> Browse <a href="{{ '/reading/authors/' | url }}">by author</a> or <a href="{{ '/reading/series/' | url }}">by series</a> or see <a href="{{ '/reading/activity/' | url }}">reading activity</a> by month and year to see books from the same writer or saga in order.</p>
 
 {% set currentYear = "" %}
 {% for book in books %}
