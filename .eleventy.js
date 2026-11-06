@@ -352,6 +352,32 @@ module.exports = async function (eleventyConfig) {
       (a, b) => lastName(a.name).localeCompare(lastName(b.name)) || a.name.localeCompare(b.name)
     );
   });
+  // Books grouped by series, for /reading/series/. In series order where a
+  // seriesNumber is set, then any unnumbered books in reading order.
+  eleventyConfig.addCollection("readingSeries", function (collectionApi) {
+    const series = new Map();
+    const posts = collectionApi
+      .getFilteredByTag("posts")
+      .filter((post) => /^[.\\/]*posts[\\/]reading[\\/]/.test(post.inputPath || ""))
+      .sort((a, b) => a.date - b.date);
+    for (const post of posts) {
+      const name = ((post.data.book || {}).series || "").trim();
+      const key = name.toLowerCase().normalize("NFD").replace(/[^a-z0-9]+/g, "");
+      if (!key) continue;
+      if (!series.has(key)) series.set(key, { key, name, books: [] });
+      series.get(key).books.push(post);
+    }
+    const num = (post) => {
+      const n = parseFloat((post.data.book || {}).seriesNumber);
+      return Number.isNaN(n) ? Infinity : n;
+    };
+    for (const entry of series.values()) {
+      entry.books.sort((a, b) => num(a) - num(b) || a.date - b.date);
+    }
+    return [...series.values()].sort(
+      (a, b) => b.books.length - a.books.length || a.name.localeCompare(b.name)
+    );
+  });
   eleventyConfig.addCollection("portfolioPosts", function (collectionApi) {
     return collectionApi.getFilteredByTag("posts").filter((post) => {
       const inputPath = post.inputPath || "";
