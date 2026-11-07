@@ -1,0 +1,28 @@
+---
+title: "Reading by author"
+description: "Every author I've read, with how many of their books and the order I read them in."
+date: 2026-11-06
+---
+
+<p><a href="{{ '/reading/' | url }}">← Reading</a></p>
+
+<p>{{ description }}</p>
+
+{% set multi = [] %}
+{% for author in collections.readingAuthors %}{% if author.books | length > 1 %}{% set multi = (multi.push(author), multi) %}{% endif %}{% endfor %}
+
+<p><strong>{{ collections.readingAuthors | length }} authors</strong>, {{ multi | length }} of them read more than once. Sorted by surname, with the most-read first below.</p>
+
+<h2>Read more than once</h2>
+<ul class="author-list">
+  {% for author in multi | sort(true, false, "books.length") %}
+    <li><a href="{{ ('/reading/authors/' + author.key + '/') | url }}">{{ author.name }}</a> <span class="author-list__count">{{ author.books | length }}</span></li>
+  {% endfor %}
+</ul>
+
+<h2>Everyone</h2>
+<ul class="author-list">
+  {% for author in collections.readingAuthors %}
+    <li><a href="{{ ('/reading/authors/' + author.key + '/') | url }}">{{ author.name }}</a> <span class="author-list__count">{{ author.books | length }}</span></li>
+  {% endfor %}
+</ul>
