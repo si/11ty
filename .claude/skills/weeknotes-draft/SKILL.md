@@ -43,3 +43,4 @@ Si wants a lasting record of his work, so every update mentioned in a post needs
 - Don't fabricate. If a value was read from a screenshot, flag it.
 - Keep the "How this is made" section at the bottom up to date with any change to this process.
 - PR description: list sources used, what was skipped and why, and any data gaps.
+- When asked for the todos (or when finishing a draft), list every `TODO(Si)` left in the post as a **numbered list** in chat, one line each, so Si can answer them item by item. Re-grep the post for `TODO(Si)` rather than working from memory, and give the line a short description of what is needed.

@@ -36,6 +36,7 @@ The main content area organized by content type:
 - **`/posts/aside/`** - Shorter thoughts/notes organized by year
 - **`/posts/portfolio/`** - Portfolio/project showcase items
 - **`/posts/weeknotes/`** - Weekly update posts (numbered 1-N)
+  - Drafts use `TODO(Si)` markers. When asked for the todos, grep the post and report them as a numbered list in chat (see `.claude/skills/weeknotes-draft/SKILL.md`).
 - **`/posts/reading/`** - Books I've read, one post per book (see "Reading, Music and Habits" below)
 
 Each directory has a `posts.11tydata.js` file that sets default frontmatter for that section.
