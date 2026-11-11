@@ -9,6 +9,8 @@
 /fathom https://usefathom.com/ref/SZMMNP 301
 /feed /feed/feed.xml 301
 /feed.xml /feed/feed.xml 301
+/micro/feed /micro/feed/feed.xml 301
+/micro/feed/ /micro/feed/feed.xml 301
 /feed/ /feed/feed.xml 301
 /feedback https://forms.office.com/e/0fZyejrGdd 301
 /freetrade https://magic.freetrade.io/join/simon/7190a0fa 301
