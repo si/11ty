@@ -1,0 +1,29 @@
+---
+permalink: micro/feed/feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>{{ metadata.title }} - Micro</title>
+	<subtitle>Short posts from {{ metadata.author.name }}</subtitle>
+	{% set absoluteUrl %}{{ "/micro/feed/feed.xml" | url | absoluteUrl(metadata.url) }}{% endset %}
+	<link href="{{ absoluteUrl }}" rel="self"/>
+	<link href="{{ '/micro/' | url | absoluteUrl(metadata.url) }}"/>
+	<updated>{{ collections.microPosts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+	<id>{{ '/micro/' | url | absoluteUrl(metadata.url) }}</id>
+	<author>
+		<name>{{ metadata.author.name }}</name>
+	</author>
+	{%- for post in collections.microPosts | reverse %}
+	{% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+	<entry>
+		<title>{{ post.data.title }}</title>
+		<link href="{{ absolutePostUrl }}"/>
+		<updated>{{ post.date | dateToRfc3339 }}</updated>
+		<id>{{ absolutePostUrl }}</id>
+		<content type="html">
+		  {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+		</content>
+	</entry>
+	{%- endfor %}
+</feed>
