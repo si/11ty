@@ -1,7 +1,6 @@
 ---
 title: "aRSS app: an eight-year-old idea, built in a day"
 date: 2026-11-11
-draft: true
 description: "Back in 2018 I wrote a README for a social-style RSS reader with a cheeky name and never built it. This week, with a nudge from Tim Berners-Lee, some help from Claude and a £1 domain, it went from that README to a working app with its own site in under 24 hours."
 categories:
   - "blog"
