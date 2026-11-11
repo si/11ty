@@ -2170,6 +2170,21 @@ header:has(~ main .micro-post) {
   text-decoration: underline;
 }
 
+.micro-post .micro-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5em 0 0;
+  font-size: 0.9rem;
+}
+
+.micro-post .micro-nav .micro-nav-newer {
+  margin-left: auto;
+}
+
+.micro-post .micro-index-link {
+  margin-top: 0.75em;
+}
+
 @media (min-width: 600px) {
   .micro-post .micro-body,
   .micro-post .micro-body p,
