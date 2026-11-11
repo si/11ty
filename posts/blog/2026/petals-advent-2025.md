@@ -10,7 +10,7 @@ tags:
   - "video"
 ---
 
-Last month I ran a **PETALS Advent**: a daily video drop with short, practical prompts to help teams build healthier habits. Think of it as a 24-day nudge for psychological safety, feedback loops, and better ways of working. Each day delivered one micro-lesson.
+Last month I ran a [PETALS Advent](https://youtube.com/playlist?list=PLKbU77Ew5WTFEUBne9NhknObjdP-YLI-Z&si=sVVzILdhkKKuxs5W): a daily video drop with short, practical prompts to help teams build healthier habits. Think of it as a 24-day nudge for psychological safety, feedback loops, and better ways of working. Each day delivered one micro-lesson.
 
 I wanted the series to feel light and doable. Each episode was designed to be under a couple of minutes, with just one idea per day. It was also a small personal experiment: could I outline, record, edit, publish, and promote a video *every day* without burning out?
 
@@ -23,18 +23,6 @@ PETALS already covers a broad range of team health topics, so I used the Advent 
 A few things made the daily cadence possible. I sketched the full 24-day outline early so I wasn’t scrambling for topics. Each video kept the same arc; context, a single prompt, and one action to try. I recorded quickly, used Descript for edits, and scheduled via Buffer.
 
 Even with that rhythm, some days still felt like a sprint. But the process held up better than expected and taught me a lot about shipping fast without losing quality.
-
-### Popular posts (by view count)
-
-Below is a starting list of the best-performing Advent videos from the playlist. I’ll update the numbers once the view counts are pulled directly from YouTube analytics.
-
-| Rank | Episode (topic) | Views | Link |
-| --- | --- | --- | --- |
-| 1 | _TBD_ | _TBD_ | [Playlist](https://youtube.com/playlist?list=PLKbU77Ew5WTFEUBne9NhknObjdP-YLI-Z&si=sVVzILdhkKKuxs5W) |
-| 2 | _TBD_ | _TBD_ | [Playlist](https://youtube.com/playlist?list=PLKbU77Ew5WTFEUBne9NhknObjdP-YLI-Z&si=sVVzILdhkKKuxs5W) |
-| 3 | _TBD_ | _TBD_ | [Playlist](https://youtube.com/playlist?list=PLKbU77Ew5WTFEUBne9NhknObjdP-YLI-Z&si=sVVzILdhkKKuxs5W) |
-| 4 | _TBD_ | _TBD_ | [Playlist](https://youtube.com/playlist?list=PLKbU77Ew5WTFEUBne9NhknObjdP-YLI-Z&si=sVVzILdhkKKuxs5W) |
-| 5 | _TBD_ | _TBD_ | [Playlist](https://youtube.com/playlist?list=PLKbU77Ew5WTFEUBne9NhknObjdP-YLI-Z&si=sVVzILdhkKKuxs5W) |
 
 ### What I learned
 
