@@ -1,0 +1,17 @@
+---
+title: "Reading by series"
+description: "Book series I've dipped into, with how far through each I am."
+date: 2026-11-06
+---
+
+<p><a href="{{ '/reading/' | url }}">← Reading</a></p>
+
+<p>{{ description }}</p>
+
+<p><strong>{{ collections.readingSeries | length }} series</strong> logged so far. Series details are only filled in for some books, so this list is not complete yet.</p>
+
+<ul class="author-list">
+  {% for s in collections.readingSeries %}
+    <li><a href="{{ ('/reading/series/' + s.key + '/') | url }}">{{ s.name }}</a> <span class="author-list__count">{{ s.books | length }}</span></li>
+  {% endfor %}
+</ul>
