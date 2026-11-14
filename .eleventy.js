@@ -190,6 +190,40 @@ module.exports = async function (eleventyConfig) {
     );
   });
 
+  // Featured image for a post (see _11ty/featured-image.js).
+  eleventyConfig.addFilter(
+    "featuredImage",
+    require("./_11ty/featured-image.js").featuredImage
+  );
+
+  // Plain-text summary of a post for feeds: the `description` front matter, or
+  // the start of the body with tags stripped.
+  eleventyConfig.addFilter("feedSummary", (post, length = 200) => {
+    if (!post) return "";
+    const data = post.data || {};
+    if (data.description) return String(data.description).trim();
+    const text = String(post.templateContent || "")
+      .replace(/<(script|style)\b[\s\S]*?<\/\1>/gi, " ")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/&nbsp;/g, " ")
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;|&apos;/g, "'")
+      .replace(/&lt;/g, "<")
+      .replace(/&gt;/g, ">")
+      .replace(/&amp;/g, "&")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (text.length <= length) return text;
+    return text.slice(0, length).replace(/\s+\S*$/, "") + "...";
+  });
+
+  // A post's own tags for feeds, without the internal collection tags.
+  eleventyConfig.addFilter("feedTags", (tags) =>
+    (Array.isArray(tags) ? tags : tags ? [tags] : []).filter(
+      (tag) => !["posts", "all", "nav"].includes(tag)
+    )
+  );
+
   // Date and time for micro posts, in UK local time (BST included). Posts with
   // a date but no time (midnight UTC, e.g. the YouTube sync) have no meaningful
   // time, so the time is left blank and the date stays in UTC.

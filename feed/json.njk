@@ -4,24 +4,36 @@ permalink: "{{ metadata.jsonfeed.path | url }}"
 eleventyExcludeFromCollections: true
 ---
 {
-  "version": "https://jsonfeed.org/version/1",
-  "title": "{{ metadata.title }}",
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": {{ metadata.title | dump | safe }},
   "home_page_url": "{{ metadata.url }}",
   "feed_url": "{{ metadata.jsonfeed.url }}",
-  "description": "{{ metadata.description }}",
-  "author": {
-    "name": "{{ metadata.author.name }}",
-    "url": "{{ metadata.author.url }}"
-  },
+  "description": {{ metadata.description | dump | safe }},
+  "language": "{{ metadata.language }}",
+  "icon": "{{ '/img/favicon/favicon-512x512.png' | url | absoluteUrl(metadata.url) }}",
+  "favicon": "{{ '/img/favicon/favicon-192x192.png' | url | absoluteUrl(metadata.url) }}",
+  "authors": [
+    {
+      "name": {{ metadata.author.name | dump | safe }},
+      "url": "{{ metadata.author.url }}"
+    }
+  ],
   "items": [
-    {%- for post in collections.feedPosts | reverse %}
+    {#- Only the newest posts are published (metadata.feed.limit); the full archive is on the site. #}
+    {%- for post in collections.feedPosts | reverse | head(metadata.feed.limit) %}
     {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset -%}
+    {%- set featured = post | featuredImage %}
     {
       "id": "{{ absolutePostUrl }}",
       "url": "{{ absolutePostUrl }}",
-      "title": "{{ post.data.title }}",
-      "content_html": {% if post.templateContent %}{{ post.templateContent | dump | safe }}{% else %}""{% endif %},
-      "date_published": "{{ post.date | dateToRfc3339 }}"
+      "title": {{ post.data.title | dump | safe }},
+      "summary": {{ post | feedSummary | dump | safe }},
+      {%- if featured %}
+      "image": {{ featured.url | url | absoluteUrl(metadata.url) | dump | safe }},
+      {%- endif %}
+      "content_html": {% if post.templateContent %}{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | dump | safe }}{% else %}""{% endif %},
+      "date_published": "{{ post.date | dateToRfc3339 }}",
+      "tags": {{ post.data.tags | feedTags | dump | safe }}
     }
     {%- if not loop.last -%}
     ,

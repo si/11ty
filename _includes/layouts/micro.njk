@@ -53,7 +53,7 @@ templateClass: tmpl-micro
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "{{ title }} • {{ metadata.title }}",
-  "image": [],
+  "image": ["{{ socialImageUrl }}"],
   "author": "{{ metadata.author.name }}",
   "genre": "{{ metadata.genre }}",
   "publisher": {
