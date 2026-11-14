@@ -64,6 +64,7 @@ Custom Eleventy plugins and HTML transformations:
 - **`apply-csp.js`** - Applies Content Security Policy headers
 - **`blurry-placeholder.js`** - Generates blurred image placeholders
 - **`figure-row.js`** - `{% figureRow %}` / `{% rowFigure %}` shortcodes for side-by-side images (see Reusable Content Components)
+- **`featured-image.js`** - Picks a post's featured image for feeds, Open Graph and JSON-LD
 - **`getTagList.js`** - Extracts and manages post tags
 - **`stat-cards.js`** - `{% statCards %}` / `{% statCard %}` shortcodes for metric cards
 - **`img-dim.js`** - Adds image dimensions to img tags
@@ -90,7 +91,8 @@ Image storage organized by category:
 #### `/feed/` - RSS/Atom Feeds
 Templates for various feed formats:
 
-- **`feed.njk`** - Main RSS feed
+- **`feed.njk`** - Main Atom feed
+- **`micro.njk`** - Micro posts Atom feed
 - **`json.njk`** - JSON feed
 - **`podcast.njk`** - Podcast feed
 - **`htaccess.njk`** - .htaccess file for Apache servers
@@ -254,8 +256,16 @@ Short social-style posts, one file per post at `posts/micro/YYYY/YYYY-MM-DD-HHMM
 - **Front matter**: `title`, `date` (full ISO datetime with offset), `permalink` (`/micro/YYYY-MM-DD-HHMM/`) and `categories: ["micro"]`. Always set `permalink`: Eleventy strips the date from file names, so `2026-10-31-0934.md` would otherwise publish at `/micro/0934/`.
 - **Time**: the `microStamp` filter in `.eleventy.js` formats the date and time in UK time (BST included). Posts dated with no time (midnight UTC, such as the YouTube sync) show the date only.
 - **Images**: put them in `img/assets/YYYY/MM/` and reference them as a Markdown image with alt text.
-- **Feed**: `feed/micro.njk` publishes `/micro/feed/feed.xml`. Each entry's featured image (the `image` front matter if set, otherwise the first image in the body, via the `featuredImage` filter in `.eleventy.js`) is added as an enclosure link plus `media:content` and `media:thumbnail`. Posts with no image get none.
-- **Social card**: `_includes/layouts/base.njk` uses the same fallback for `og:image` on micro posts, so a post with an image in the body needs no `image` front matter.
+- **Feed**: `feed/micro.njk` publishes `/micro/feed/feed.xml` (see "Feeds and social cards" below).
+
+## Feeds and social cards
+
+- **Featured image**: `_11ty/featured-image.js` (the `featuredImage` filter) picks one image per post: the `image` front matter, then a book's `book.cover`, then the first usable image in the body. SVGs, placeholders, relative paths, missing files and local images under 200px a side (such as the old 75px book thumbnails) are skipped. It returns the URL, MIME type, alt text (`imageAlt` front matter, the image's own alt, or the title) and, for local files, the width and height. Posts with no image return nothing.
+- **Open Graph** (`_includes/layouts/base.njk`): every page gets `og:url`, `og:type` (`article` for anything under `posts/`, otherwise `website`), `og:site_name`, `og:locale` and `og:image` with its alt and size. Posts use their featured image; other pages only use `image` front matter. Anything with no image falls back to `metadata.defaultImage` (`img/social-default.png`, 1200x630). Posts also get `article:published_time`, `article:author` and one `article:tag` per tag. The same image is used in the JSON-LD.
+- **Twitter/X**: `metadata.author.twitterHandle` is stored without the `@`; the template adds it.
+- **Feeds**: `feed/feed.njk` (Atom, all posts except reading), `feed/micro.njk` (Atom, micro posts) and `feed/json.njk` (JSON Feed 1.1). All three are capped at the newest `metadata.feed.limit` posts (50), so the full archive is only on the site. Each entry has a published date, a plain-text summary (`description` front matter or the start of the body, via `feedSummary`), its tags (`feedTags` drops the internal `posts` tag) and its featured image: an enclosure link plus `media:content` and `media:thumbnail` in Atom, `image` in JSON.
+- **Discovery**: the page head links all three feeds with `rel="alternate"`. Titles and paths come from `feed`, `jsonfeed` and `microfeed` in `_data/metadata.json`.
+- **Tests**: `test/test-feeds-and-social.js` checks the feeds parse, stay under the cap and that a post has the Open Graph tags.
 
 ## Reusable Content Components
 
