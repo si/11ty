@@ -3,7 +3,7 @@ permalink: micro/feed/feed.xml
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
 	<title>{{ metadata.title }} - Micro</title>
 	<subtitle>Short posts from {{ metadata.author.name }}</subtitle>
 	{% set absoluteUrl %}{{ "/micro/feed/feed.xml" | url | absoluteUrl(metadata.url) }}{% endset %}
@@ -21,6 +21,13 @@ eleventyExcludeFromCollections: true
 		<link href="{{ absolutePostUrl }}"/>
 		<updated>{{ post.date | dateToRfc3339 }}</updated>
 		<id>{{ absolutePostUrl }}</id>
+		{%- set featured = post | featuredImage %}
+		{%- if featured %}
+		{% set featuredUrl %}{{ featured.url | url | absoluteUrl(metadata.url) }}{% endset %}
+		<link rel="enclosure" type="{{ featured.type }}" href="{{ featuredUrl }}"/>
+		<media:content url="{{ featuredUrl }}" medium="image" type="{{ featured.type }}"/>
+		<media:thumbnail url="{{ featuredUrl }}"/>
+		{%- endif %}
 		<content type="html">
 		  {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
 		</content>

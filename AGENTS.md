@@ -254,6 +254,7 @@ Short social-style posts, one file per post at `posts/micro/YYYY/YYYY-MM-DD-HHMM
 - **Front matter**: `title`, `date` (full ISO datetime with offset), `permalink` (`/micro/YYYY-MM-DD-HHMM/`) and `categories: ["micro"]`. Always set `permalink`: Eleventy strips the date from file names, so `2026-10-31-0934.md` would otherwise publish at `/micro/0934/`.
 - **Time**: the `microStamp` filter in `.eleventy.js` formats the date and time in UK time (BST included). Posts dated with no time (midnight UTC, such as the YouTube sync) show the date only.
 - **Images**: put them in `img/assets/YYYY/MM/` and reference them as a Markdown image with alt text.
+- **Feed**: `feed/micro.njk` publishes `/micro/feed/feed.xml`. Each entry's featured image (the `image` front matter if set, otherwise the first image in the body, via the `featuredImage` filter in `.eleventy.js`) is added as an enclosure link plus `media:content` and `media:thumbnail`. Posts with no image get none.
 
 ## Reusable Content Components
 

@@ -190,6 +190,32 @@ module.exports = async function (eleventyConfig) {
     );
   });
 
+  // Featured image for a post, used by the micro feed: the `image` front matter
+  // if set, otherwise the first image in the post body. Returns { url, type }
+  // (url relative to the site unless the image is remote) or null.
+  eleventyConfig.addFilter("featuredImage", (post) => {
+    if (!post) return null;
+    let url = post.data && post.data.image;
+    if (!url) {
+      const match = /<img\b[^>]*?\ssrc=["']([^"']+)["']/i.exec(
+        post.templateContent || ""
+      );
+      url = match && match[1].replace(/&amp;/g, "&");
+    }
+    if (!url || url.startsWith("data:")) return null;
+    const ext = (/\.([a-z0-9]+)(?:[?#]|$)/i.exec(url) || [])[1] || "";
+    const types = {
+      jpg: "image/jpeg",
+      jpeg: "image/jpeg",
+      png: "image/png",
+      gif: "image/gif",
+      webp: "image/webp",
+      avif: "image/avif",
+      svg: "image/svg+xml",
+    };
+    return { url, type: types[ext.toLowerCase()] || "image/jpeg" };
+  });
+
   // Date and time for micro posts, in UK local time (BST included). Posts with
   // a date but no time (midnight UTC, e.g. the YouTube sync) have no meaningful
   // time, so the time is left blank and the date stays in UTC.
