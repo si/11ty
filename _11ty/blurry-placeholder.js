@@ -24,7 +24,7 @@
 
 const { promisify } = require("util");
 const sharp = require("sharp");
-const sizeOf = promisify(require("image-size"));
+const { imageSizeFromFile: sizeOf } = require("image-size/fromFile");
 const DatauriParser = require("datauri/parser");
 const parser = new DatauriParser();
 const readFile = promisify(require("fs").readFile);

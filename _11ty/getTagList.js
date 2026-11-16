@@ -6,11 +6,20 @@ module.exports = function(collection) {
 
       tags = tags.filter(function(item) {
         switch(item) {
-          // this list should match the `filter` list in tags.njk
+          // Internal collection names (see .eleventy.js addCollection calls)
+          // that must never be mistaken for a real tag.
           case "all":
           case "nav":
           case "post":
           case "posts":
+          case "tagList":
+          case "postDirectories":
+          case "homeRecentPosts":
+          case "blogPosts":
+          case "asidePosts":
+          case "readingPosts":
+          case "portfolioPosts":
+          case "microPosts":
             return false;
         }
 

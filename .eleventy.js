@@ -44,13 +44,12 @@ const { DateTime } = require("luxon");
 const { promisify } = require("util");
 const fs = require("fs");
 const path = require("path");
-const hasha = require("hasha");
+const crypto = require("crypto");
 const touch = require("touch");
 const readFile = promisify(fs.readFile);
 const readdir = promisify(fs.readdir);
 const stat = promisify(fs.stat);
 const execFile = promisify(require("child_process").execFile);
-const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
@@ -60,7 +59,22 @@ const CleanCSS = require("clean-css");
 const GA_ID = require("./_data/metadata.json").googleAnalyticsId;
 const youtubeEmbed = require("./_11ty/youtube-embed.js");
 
-module.exports = function (eleventyConfig) {
+// /tags/* pages (one per tag, ~900 of them) are only needed on the deployed
+// site. Building them locally is most of what pushes a small content-only
+// build past 2 minutes, so we skip generating them outside of CI. Cloudflare Pages
+// and GitHub Actions both set CI=true automatically, so production builds are
+// unaffected. Force them locally with `ELEVENTY_BUILD_TAGS=true` if you need
+// to check a tag page before pushing.
+const BUILD_TAG_PAGES =
+  Boolean(process.env.CI) || process.env.ELEVENTY_BUILD_TAGS === "true";
+
+module.exports = async function (eleventyConfig) {
+  // eleventy-plugin-rss is ESM-only as of 3.x. On Node 18/20, require()-ing
+  // an ES module throws ERR_REQUIRE_ESM - only Node 22+'s newer require(esm)
+  // support papers over this, which this repo can't rely on since it's
+  // pinned to Node 18.x (.nvmrc, engines.node). A dynamic import() works on
+  // every supported Node version, so use that instead of require().
+  const pluginRss = (await import("@11ty/eleventy-plugin-rss")).default;
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
@@ -78,6 +92,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(require("./_11ty/youtube-html-transform.js"));
   eleventyConfig.addPlugin(require("./_11ty/optimize-html.js"));
   eleventyConfig.addPlugin(require("./_11ty/apply-csp.js"));
+  eleventyConfig.addPlugin(require("./_11ty/habits.js"));
+  eleventyConfig.addPlugin(require("./_11ty/stat-cards.js"));
+  eleventyConfig.addPlugin(require("./_11ty/figure-row.js"));
+  eleventyConfig.addFilter("readingActivity", require("./_11ty/reading-activity.js"));
+  eleventyConfig.addPlugin(require("./_11ty/cta-buttons.js"));
+  eleventyConfig.addPlugin(require("./_11ty/device-frame.js"));
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
   eleventyConfig.addNunjucksAsyncFilter(
@@ -93,7 +113,7 @@ module.exports = function (eleventyConfig) {
         encoding: "utf-8",
       })
         .then((content) => {
-          return hasha.async(content);
+          return crypto.createHash("sha256").update(content).digest("hex");
         })
         .then((hash) => {
           callback(null, `${absolutePath}?hash=${hash.substr(0, 10)}`);
@@ -150,6 +170,14 @@ module.exports = function (eleventyConfig) {
     return new CleanCSS({}).minify(code).styles;
   });
 
+  eleventyConfig.addFilter("initials", function (name) {
+    return name
+      .split(" ")
+      .filter(Boolean)
+      .map((part) => part[0].toUpperCase())
+      .join("");
+  });
+
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
       "dd LLL yyyy"
@@ -160,6 +188,59 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
       "dd LLLL yyyy"
     );
+  });
+
+  // Featured image for a post (see _11ty/featured-image.js).
+  eleventyConfig.addFilter(
+    "featuredImage",
+    require("./_11ty/featured-image.js").featuredImage
+  );
+
+  // Plain-text summary of a post for feeds: the `description` front matter, or
+  // the start of the body with tags stripped.
+  eleventyConfig.addFilter("feedSummary", (post, length = 200) => {
+    if (!post) return "";
+    const data = post.data || {};
+    if (data.description) return String(data.description).trim();
+    const text = String(post.templateContent || "")
+      .replace(/<(script|style)\b[\s\S]*?<\/\1>/gi, " ")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/&nbsp;/g, " ")
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;|&apos;/g, "'")
+      .replace(/&lt;/g, "<")
+      .replace(/&gt;/g, ">")
+      .replace(/&amp;/g, "&")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (text.length <= length) return text;
+    return text.slice(0, length).replace(/\s+\S*$/, "") + "...";
+  });
+
+  // A post's own tags for feeds, without the internal collection tags.
+  eleventyConfig.addFilter("feedTags", (tags) =>
+    (Array.isArray(tags) ? tags : tags ? [tags] : []).filter(
+      (tag) => !["posts", "all", "nav"].includes(tag)
+    )
+  );
+
+  // Date and time for micro posts, in UK local time (BST included). Posts with
+  // a date but no time (midnight UTC, e.g. the YouTube sync) have no meaningful
+  // time, so the time is left blank and the date stays in UTC.
+  eleventyConfig.addFilter("microStamp", (dateObj) => {
+    const utc = DateTime.fromJSDate(dateObj, { zone: "utc" });
+    if (!utc.isValid) {
+      return { iso: "", date: "", time: "" };
+    }
+    const hasTime = utc.hour !== 0 || utc.minute !== 0;
+    const dt = hasTime ? utc.setZone("Europe/London") : utc;
+    return {
+      iso: hasTime
+        ? dt.toISO({ suppressMilliseconds: true })
+        : dt.toFormat("yyyy-LL-dd"),
+      date: dt.toFormat("dd LLLL yyyy"),
+      time: hasTime ? dt.toFormat("HH:mm") : "",
+    };
   });
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
@@ -178,6 +259,32 @@ module.exports = function (eleventyConfig) {
       return "";
     }
     return dt.toISO();
+  });
+
+  eleventyConfig.addFilter("toRoman", (num) => {
+    const numerals = [
+      [1000, "M"],
+      [900, "CM"],
+      [500, "D"],
+      [400, "CD"],
+      [100, "C"],
+      [90, "XC"],
+      [50, "L"],
+      [40, "XL"],
+      [10, "X"],
+      [9, "IX"],
+      [5, "V"],
+      [4, "IV"],
+      [1, "I"],
+    ];
+    let result = "";
+    for (const [value, numeral] of numerals) {
+      while (num >= value) {
+        result += numeral;
+        num -= value;
+      }
+    }
+    return result;
   });
 
   // Get the first `n` elements of a collection.
@@ -250,6 +357,69 @@ module.exports = function (eleventyConfig) {
       return directory === "aside";
     });
   });
+  // Feeds skip the reading log so moving the Goodreads posts to /reading/
+  // doesn't re-announce 100+ old books to subscribers under new URLs.
+  eleventyConfig.addCollection("feedPosts", function (collectionApi) {
+    return collectionApi.getFilteredByTag("posts").filter((post) => {
+      const inputPath = post.inputPath || "";
+      return !/^[.\\/]*posts[\\/]reading[\\/]/.test(inputPath);
+    });
+  });
+  eleventyConfig.addCollection("readingPosts", function (collectionApi) {
+    return collectionApi.getFilteredByTag("posts").filter((post) => {
+      const inputPath = post.inputPath || "";
+      const normalized = inputPath.replace(/^[.\\/]*posts[\\/]/, "");
+      const directory = normalized.split(/[/\\]/)[0];
+      return directory === "reading";
+    });
+  });
+  // Books grouped by author, for /reading/authors/. Names are matched on
+  // letters and numbers only so "A.G. Riddle" and "A. G. Riddle" are one
+  // author. Books are in reading order (post date is the started date).
+  eleventyConfig.addCollection("readingAuthors", function (collectionApi) {
+    const authors = new Map();
+    const posts = collectionApi
+      .getFilteredByTag("posts")
+      .filter((post) => /^[.\\/]*posts[\\/]reading[\\/]/.test(post.inputPath || ""))
+      .sort((a, b) => a.date - b.date);
+    for (const post of posts) {
+      const name = ((post.data.book || {}).author || "").trim();
+      const key = name.toLowerCase().normalize("NFD").replace(/[^a-z0-9]+/g, "");
+      if (!key) continue;
+      if (!authors.has(key)) authors.set(key, { key, name, books: [] });
+      authors.get(key).books.push(post);
+    }
+    const lastName = (name) => name.split(/\s+/).pop().toLowerCase();
+    return [...authors.values()].sort(
+      (a, b) => lastName(a.name).localeCompare(lastName(b.name)) || a.name.localeCompare(b.name)
+    );
+  });
+  // Books grouped by series, for /reading/series/. In series order where a
+  // seriesNumber is set, then any unnumbered books in reading order.
+  eleventyConfig.addCollection("readingSeries", function (collectionApi) {
+    const series = new Map();
+    const posts = collectionApi
+      .getFilteredByTag("posts")
+      .filter((post) => /^[.\\/]*posts[\\/]reading[\\/]/.test(post.inputPath || ""))
+      .sort((a, b) => a.date - b.date);
+    for (const post of posts) {
+      const name = ((post.data.book || {}).series || "").trim();
+      const key = name.toLowerCase().normalize("NFD").replace(/[^a-z0-9]+/g, "");
+      if (!key) continue;
+      if (!series.has(key)) series.set(key, { key, name, books: [] });
+      series.get(key).books.push(post);
+    }
+    const num = (post) => {
+      const n = parseFloat((post.data.book || {}).seriesNumber);
+      return Number.isNaN(n) ? Infinity : n;
+    };
+    for (const entry of series.values()) {
+      entry.books.sort((a, b) => num(a) - num(b) || a.date - b.date);
+    }
+    return [...series.values()].sort(
+      (a, b) => b.books.length - a.books.length || a.name.localeCompare(b.name)
+    );
+  });
   eleventyConfig.addCollection("portfolioPosts", function (collectionApi) {
     return collectionApi.getFilteredByTag("posts").filter((post) => {
       const inputPath = post.inputPath || "";
@@ -266,7 +436,14 @@ module.exports = function (eleventyConfig) {
       return directory === "micro";
     });
   });
-  eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
+  eleventyConfig.addCollection("tagList", function (collectionApi) {
+    if (!BUILD_TAG_PAGES) {
+      return [];
+    }
+    return require("./_11ty/getTagList")(collectionApi);
+  });
+  eleventyConfig.addGlobalData("buildTagPages", BUILD_TAG_PAGES);
+  eleventyConfig.addGlobalData("buildYear", () => new Date().getFullYear());
   // Copy migrated assets from src/assets to /assets in the built site.
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy("img");
@@ -300,20 +477,11 @@ module.exports = function (eleventyConfig) {
     .use(youtubeEmbed); // Automatically converts YouTube URLs to accessible embeds in all posts
   eleventyConfig.setLibrary("md", markdownLibrary);
 
-  // Browsersync Overrides
-  eleventyConfig.setBrowserSyncConfig({
-    callbacks: {
-      ready: function (err, browserSync) {
-        browserSync.addMiddleware("*", (req, res) => {
-          // Provides the 404 content without redirect.
-          res.write(fs.readFileSync("_site/404.html"));
-          res.end();
-        });
-      },
-    },
-    ui: false,
-    ghostMode: false,
-  });
+  // Dev server: eleventy-dev-server (replaces Browser Sync as of Eleventy 2.0)
+  // already serves _site/404.html without a redirect for any unmatched path
+  // by default (see its eleventyProjectMiddleware), so no custom
+  // setServerOptions/middleware is needed here to reproduce the old
+  // Browser Sync setBrowserSyncConfig behavior.
 
   // After the build touch any file in the test directory to do a test run.
   eleventyConfig.on("afterBuild", async () => {

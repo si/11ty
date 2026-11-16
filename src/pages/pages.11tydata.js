@@ -4,7 +4,9 @@ module.exports = {
   eleventyComputed: {
     permalink: (data) => {
       // Flatten any /src/pages prefix so pages publish at the root.
-      const stem = data.page.filePathStem.replace(/^\/?src\/pages/, "");
+      let stem = data.page.filePathStem.replace(/^\/?src\/pages/, "");
+      // index.njk publishes at its directory root instead of /foo/index/.
+      stem = stem.replace(/\/index$/, "") || "/";
       return `${stem}/`;
     },
   },

@@ -175,21 +175,27 @@ function isOnlyLinkInParagraph(children) {
   // Check if the paragraph contains only a single link (possibly with whitespace)
   let linkCount = 0;
   let hasOtherContent = false;
+  let inLink = false;
 
   for (const child of children) {
     if (child.type === "link_open") {
       linkCount++;
+      inLink = true;
     } else if (child.type === "link_close") {
-      // Link close is fine
+      inLink = false;
     } else if (child.type === "text") {
+      // A link's own visible text (e.g. the URL itself) lives between its
+      // link_open/link_close tokens and isn't "other content" - only text
+      // outside the link counts.
       const text = child.content.trim();
-      // Whitespace is fine, but other text means there's content outside the link
-      if (text) {
+      if (text && !inLink) {
         hasOtherContent = true;
       }
     } else if (child.type !== "softbreak" && child.type !== "hardbreak") {
-      // Any other token type means there's other content
-      hasOtherContent = true;
+      // Any other token type outside the link means there's other content
+      if (!inLink) {
+        hasOtherContent = true;
+      }
     }
   }
 

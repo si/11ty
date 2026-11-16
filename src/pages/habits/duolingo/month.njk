@@ -1,0 +1,64 @@
+---
+pagination:
+  data: duolingoMonths
+  size: 1
+  alias: month
+eleventyComputed:
+  title: "{{ month.label }} — Duolingo"
+  description: "Day-by-day Duolingo log for {{ month.label }}."
+---
+
+<p><a href="{{ '/habits/duolingo/' | url }}">← Duolingo</a></p>
+
+<p class="habit-month-pagination">
+  {% if month.prev %}<a href="{{ month.prev.url | url }}">← {{ month.prev.label }}</a>{% endif %}
+  {% if month.prev and month.next %} · {% endif %}
+  {% if month.next %}<a href="{{ month.next.url | url }}">{{ month.next.label }} →</a>{% endif %}
+</p>
+
+<h2>{{ month.label }}</h2>
+
+{% set dayHabit = {
+  name: "Duolingo",
+  primaryMetric: { key: "totalDurationSeconds", label: "Duration", unit: "duration", goal: "higher" },
+  secondaryMetric: { key: "bestCombo", label: "Combo", unit: "count", goal: "higher" },
+  entries: month.days
+} %}
+{% set chart = habitTrendChart(dayHabit) %}
+{% if chart %}
+  <figure class="habit-chart-figure">
+    {{ chart | safe }}
+    <figcaption>Total duration per day. Marker colour shows whether a combo streak was recorded that day.</figcaption>
+  </figure>
+{% endif %}
+
+<div class="habit-table-wrap">
+  <table class="habit-table">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Total duration</th>
+        <th scope="col">Accuracy (range)</th>
+        <th scope="col">Accuracy (avg)</th>
+        <th scope="col">Highest combo</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for day in month.days %}
+        <tr>
+          <td>{{ day.date | readableIsoDate }}</td>
+          <td>{{ day.totalDurationSeconds | formatDuration }}</td>
+          <td>{% if day.accuracyMin != null %}{{ day.accuracyMin }}–{{ day.accuracyMax }}%{% else %}-{% endif %}</td>
+          <td>{% if day.accuracyAvg != null %}{{ day.accuracyAvg }}%{% else %}-{% endif %}</td>
+          <td>{{ day.bestCombo or "-" }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<p class="habit-month-pagination">
+  {% if month.prev %}<a href="{{ month.prev.url | url }}">← {{ month.prev.label }}</a>{% endif %}
+  {% if month.prev and month.next %} · {% endif %}
+  {% if month.next %}<a href="{{ month.next.url | url }}">{{ month.next.label }} →</a>{% endif %}
+</p>

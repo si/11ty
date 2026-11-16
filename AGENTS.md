@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This is **Si Jobling's personal website** built with [Eleventy (11ty)](https://www.11ty.dev/), a static site generator. The site is based on the [eleventy-high-performance-blog](https://github.com/11ty/eleventy-base-blog) starter and is deployed on Netlify.
+This is **Si Jobling's personal website** built with [Eleventy (11ty)](https://www.11ty.dev/), a static site generator. The site is based on the [eleventy-high-performance-blog](https://github.com/11ty/eleventy-base-blog) starter and is deployed on Cloudflare Pages.
 
 **Site URL**: https://sijobling.com  
 **Primary Technologies**: Eleventy 1.0, Node.js 18.x, Nunjucks templating, Markdown
@@ -36,6 +36,8 @@ The main content area organized by content type:
 - **`/posts/aside/`** - Shorter thoughts/notes organized by year
 - **`/posts/portfolio/`** - Portfolio/project showcase items
 - **`/posts/weeknotes/`** - Weekly update posts (numbered 1-N)
+  - Drafts use `TODO(Si)` markers. When asked for the todos, grep the post and report them as a numbered list in chat (see `.claude/skills/weeknotes-draft/SKILL.md`).
+- **`/posts/reading/`** - Books I've read, one post per book (see "Reading, Music and Habits" below)
 
 Each directory has a `posts.11tydata.js` file that sets default frontmatter for that section.
 
@@ -62,7 +64,10 @@ Custom Eleventy plugins and HTML transformations:
 
 - **`apply-csp.js`** - Applies Content Security Policy headers
 - **`blurry-placeholder.js`** - Generates blurred image placeholders
+- **`figure-row.js`** - `{% figureRow %}` / `{% rowFigure %}` shortcodes for side-by-side images (see Reusable Content Components)
+- **`featured-image.js`** - Picks a post's featured image for feeds, Open Graph and JSON-LD
 - **`getTagList.js`** - Extracts and manages post tags
+- **`stat-cards.js`** - `{% statCards %}` / `{% statCard %}` shortcodes for metric cards
 - **`img-dim.js`** - Adds image dimensions to img tags
 - **`json-ld.js`** - Adds JSON-LD structured data
 - **`optimize-html.js`** - Minifies and optimizes HTML output
@@ -87,7 +92,8 @@ Image storage organized by category:
 #### `/feed/` - RSS/Atom Feeds
 Templates for various feed formats:
 
-- **`feed.njk`** - Main RSS feed
+- **`feed.njk`** - Main Atom feed
+- **`micro.njk`** - Micro posts Atom feed
 - **`json.njk`** - JSON feed
 - **`podcast.njk`** - Podcast feed
 - **`htaccess.njk`** - .htaccess file for Apache servers
@@ -166,9 +172,10 @@ All generated files go to `/_site/` directory (not tracked in repo).
 
 ## Deployment
 
-The site is deployed on **Netlify** (based on the Netlify badge in README).
+The site is deployed on **Cloudflare Pages**.
 
 Configuration files:
+- **`wrangler.toml`** - Cloudflare Pages project config
 - **`_headers`** - HTTP headers configuration
 - **`_redirects`** - URL redirect rules
 
@@ -206,6 +213,88 @@ tags:
 
 ---
 
+## Reading, Music and Habits
+
+Three related sections sit together under **Habits** in the navigation. Music and Reading are children of Habits (`parent: Habits` in their `eleventyNavigation`), shown as a smaller row under it in the nav overlay (`_includes/layouts/base.njk`), and each has a card on `/habits/` (`src/pages/habits/index.njk`).
+
+### Habits (`/habits/`)
+
+- Data-driven session logs in `_data/habits/*.json` (duolingo, maptap, solitaire, sudoku), loaded by `_11ty/habits-data.js` and exposed as `habitsIndex`.
+- Each habit has its own page under `src/pages/habits/`. Use the `*-habit-log` skills to append new sessions.
+
+### Reading (`/reading/`)
+
+A book log of 121 books, built at build time from frontmatter (no client-side fetching). It has two sources:
+
+- **Goodreads (late 2020 to early 2023)**: captured by a Zapier connection, so these only have a started date, and a finish date and rating where the book was marked as read at the time.
+- **Rambling Readers (December 2022 onwards)**: an open source BookWyrm instance at https://ramblingreaders.org/user/si. Its CSV export is the source of truth for dates, ratings and reviews of anything read from December 2022. Its ActivityPub endpoints are behind a Cloudflare challenge and cannot be fetched from cloud sessions; only the `/user/si/rss*` feeds can, and they return just the last 10 items. Use the CSV export (Settings > Export) instead.
+
+- **Posts**: `posts/reading/YYYY/<slug>.md`, published at `/reading/<slug>/` (the permalink comes from `categories: ["reading"]`). The directory data file is `posts/reading/reading.11tydata.js` (it must be named after the directory) and sets `layouts/book.njk`.
+- **Frontmatter**: `title` is the short title; `book.subtitle` holds anything after the first colon, dash or bracket. `book` also holds `author`, `goodreadsId`, `goodreadsUrl`, `series`, `seriesNumber`, `published`, `averageRating` and `cover`. Books imported from Rambling Readers have `bookwyrmUrl`, plus `isbn` and `openLibraryKey` where known (used to find covers) and no Goodreads fields. `reading` holds `status` (`read`, `reading` or `to-read`), `started`, `finished` and `rating`. Post `date` is the started date, or the finished date where there is no start. Where a book has a review, the headline (bold) and text are the post body.
+- **Status rules**: books are treated as read unless `status` says otherwise. `reading` (currently reading) has `started` only and shows a "Currently reading" label; finished books have `finished` and a rating; the one `to-read` book has neither. A missing rating means unrated, not zero.
+- **Covers**: stored locally in `img/reading/` and referenced by `book.cover` (never hot-linked). Both scripts are throttled and resumable, and should be run on a normal machine (Goodreads and Open Library are blocked in cloud sessions). See the header of each script for flags.
+  - `node scripts/fetch-book-covers.js` replaces the original 75px thumbnails with `<goodreadsId>.jpg`, for posts with a Goodreads ID.
+  - `node scripts/fetch-book-covers-openlibrary.js` finds covers for posts with no cover (the Rambling Readers imports) by ISBN, Open Library ID, then a title and author search on Open Library and Google Books, and saves `<slug>.jpg`. It lists any it cannot find so they can be added by hand.
+- **Series**: `node scripts/fetch-book-series.js` fills in missing `book.series` and `book.seriesNumber` from Open Library (edition `series` field by ISBN or ID, then a title and author search, then a `series:` subject). It only adds missing fields unless `--force`, and lists books with no series found (mostly standalones). Run it on a normal machine, with `--dry-run` or `--limit 5` first.
+- **Authors and series pages**: `collections.readingAuthors` and `collections.readingSeries` (in `.eleventy.js`) group books by author and series. `src/pages/reading/authors.njk` and `series.njk` are the indexes; `author.njk` and `series-page.njk` are the paginated per-author (`/reading/authors/<key>/`) and per-series (`/reading/series/<key>/`) pages. Keys are the name lowercased with everything except letters and numbers removed, so "A.G. Riddle" and "A. G. Riddle" merge. Book pages link to both using the same rule.
+- **Activity**: `src/pages/reading/activity.njk` charts books per year, per month (heatmap) and per calendar month, with stat tiles. The counts come from the `readingActivity` filter (`_11ty/reading-activity.js`). A book counts in the month it was finished, or the month it was started where there is no finish date (shown separately in the year bars). To-read books are ignored. Styles are the `.read-*` classes in `css/main.css`.
+- **Pages**: `src/pages/reading/index.njk` is the cover shelf grouped by year; `_includes/layouts/book.njk` is the book post layout. Styles are `.book-shelf`, `.book-spine` and `.book-card` in `css/main.css`.
+- **Feeds**: reading posts are deliberately excluded from the RSS and JSON feeds via `collections.feedPosts`, so subscribers are not re-notified about old books.
+- **Redirects**: the old `/aside/<slug>/` URLs redirect to `/reading/<slug>/` (301, with and without a trailing slash) in `_redirects`. Keep these if renaming slugs.
+- **Adding books**: export the CSV from Rambling Readers and run `node scripts/import-bookwyrm-export.js export.csv` (add `--dry-run` first). It is safe to re-run. It updates matching posts (matched by `bookwyrmUrl`, else author plus a fuzzy title match) and creates new ones in `posts/reading/<year started>/`. For existing posts it keeps the earliest started and finished dates, takes the export's rating, sets `date` to the started date (moving the file to that year's folder) and only adds a review if the post has no body. It never touches covers or series, so add `series` and `seriesNumber` by hand, then run the Open Library cover script. A single book can also be added by copying an existing post.
+
+### Music (`/music/`)
+
+- `src/pages/music/index.njk` is a hub page listing sections as cards (currently one: Liked Music).
+- `src/pages/music/liked.njk` plus `js/music-liked.js` render every Spotify liked track as a shelf of record sleeves. An IFTTT recipe adds a row to a public Google Sheet on each like, and the page reads that sheet in the browser on load, so new likes appear without a rebuild. Cover art is fetched per track from Spotify oEmbed and cached in `localStorage`. Styles are the `.record-*` classes in `css/main.css`.
+- Reading is static and build-time (updated by importing a Rambling Readers export); Music is live and client-side, because likes keep arriving.
+### Micro posts (`/micro/`)
+
+Short social-style posts, one file per post at `posts/micro/YYYY/YYYY-MM-DD-HHMM.md` (UK local time).
+
+- **Layout**: `_includes/layouts/micro.njk`, applied by `posts/micro/micro.11tydata.js`. It shows no heading and no read time: just the body (larger than normal text) and a date and time linked to the canonical URL. A `title` is still needed for `<title>`, social cards and the feeds. Styles are `.micro-post`, `.micro-body` and `.micro-meta` in `css/main.css`. The base layout exposes a `pageHeading` block so a layout can drop the `<h1>`.
+- **Directory data files must be named after their directory** (`micro.11tydata.js`). A file called `posts.11tydata.js` inside `posts/micro/` is ignored by Eleventy.
+- **Front matter**: `title`, `date` (full ISO datetime with offset), `permalink` (`/micro/YYYY-MM-DD-HHMM/`) and `categories: ["micro"]`. Always set `permalink`: Eleventy strips the date from file names, so `2026-10-31-0934.md` would otherwise publish at `/micro/0934/`.
+- **Time**: the `microStamp` filter in `.eleventy.js` formats the date and time in UK time (BST included). Posts dated with no time (midnight UTC, such as the YouTube sync) show the date only.
+- **Images**: put them in `img/assets/YYYY/MM/` and reference them as a Markdown image with alt text.
+- **Feed**: `feed/micro.njk` publishes `/micro/feed/feed.xml` (see "Feeds and social cards" below).
+
+## Feeds and social cards
+
+- **Featured image**: `_11ty/featured-image.js` (the `featuredImage` filter) picks one image per post: the `image` front matter, then a book's `book.cover`, then the first usable image in the body. SVGs, placeholders, relative paths, missing files and local images under 200px a side (such as the old 75px book thumbnails) are skipped. It returns the URL, MIME type, alt text (`imageAlt` front matter, the image's own alt, or the title) and, for local files, the width and height. Posts with no image return nothing.
+- **Open Graph** (`_includes/layouts/base.njk`): every page gets `og:url`, `og:type` (`article` for anything under `posts/`, otherwise `website`), `og:site_name`, `og:locale` and `og:image` with its alt and size. Posts use their featured image; other pages only use `image` front matter. Anything with no image falls back to `metadata.defaultImage` (`img/social-default.png`, 1200x630). Posts also get `article:published_time`, `article:author` and one `article:tag` per tag. The same image is used in the JSON-LD.
+- **Twitter/X**: `metadata.author.twitterHandle` is stored without the `@`; the template adds it.
+- **Feeds**: `feed/feed.njk` (Atom, all posts except reading), `feed/micro.njk` (Atom, micro posts) and `feed/json.njk` (JSON Feed 1.1). All three are capped at the newest `metadata.feed.limit` posts (50), so the full archive is only on the site. Each entry has a published date, a plain-text summary (`description` front matter or the start of the body, via `feedSummary`), its tags (`feedTags` drops the internal `posts` tag) and its featured image: an enclosure link plus `media:content` and `media:thumbnail` in Atom, `image` in JSON.
+- **Discovery**: the page head links all three feeds with `rel="alternate"`. Titles and paths come from `feed`, `jsonfeed` and `microfeed` in `_data/metadata.json`.
+- **Tests**: `test/test-feeds-and-social.js` checks the feeds parse, stay under the cap and that a post has the Open Graph tags.
+
+## Reusable Content Components
+
+Posts are rendered through Liquid, so shortcodes can be used directly in Markdown. Styles live in `/css/main.css`.
+
+### Figure row (side-by-side images)
+
+Use for two or more images that belong together (e.g. phone screenshots, before/after). Images sit **side by side from 768px up** and **stack on mobile** (each capped at 22rem wide and centred, so tall phone screenshots don't fill the screen).
+
+```liquid
+{% figureRow %}
+{% rowFigure "/img/assets/2026/10/one.png", "Alt text describing the image", "Optional caption" %}
+{% rowFigure "/img/assets/2026/10/two.png", "Alt text describing the image", "Optional caption" %}
+{% endfigureRow %}
+```
+
+- `rowFigure` arguments: image path, alt text, optional caption (all comma separated, in quotes).
+- Always provide meaningful alt text.
+- Put no blank lines inside the block, or Markdown will break the HTML.
+- Prefer this over stacked `<figure>` blocks whenever a post has a pair or set of screenshots.
+- Source: `/_11ty/figure-row.js`, styles under `.figure-row` in `/css/main.css`.
+
+### Stat cards
+
+`{% statCards %}` wrapping `{% statCard "emoji", "Label", "Value", "up|down|flat", "delta text" %}` renders a grid of metric cards (used in weeknotes). Source: `/_11ty/stat-cards.js`.
+
+---
+
 ## Navigation & Collections
 
 Eleventy automatically creates collections:
@@ -213,6 +302,8 @@ Eleventy automatically creates collections:
 - **`collections.aside`** - All aside posts
 - **`collections.portfolio`** - All portfolio items
 - **`collections.weeknotes`** - All weeknotes
+- **`collections.readingPosts`** - All book posts in `posts/reading/`
+- **`collections.feedPosts`** - All posts except the reading log; used by the RSS and JSON feeds
 - **`collections.tagList`** - All unique tags across the site
 
 These collections are used in:
@@ -310,4 +401,4 @@ MIT License (see LICENSE file)
 
 ---
 
-**Last Updated**: January 2026
+**Last Updated**: October 2026

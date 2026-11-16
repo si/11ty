@@ -1,0 +1,70 @@
+---
+title: "Reading activity"
+description: "How many books I've read each year and month, to spot the peaks and the dry spells."
+date: 2026-11-06
+---
+
+<p><a href="{{ '/reading/' | url }}">← Reading</a></p>
+
+<p>{{ description }}</p>
+
+{% set a = collections.readingPosts | readingActivity %}
+
+<div class="read-stats">
+  <div class="read-stat"><span class="read-stat__value">{{ a.total }}</span><span class="read-stat__label">books since {{ a.firstLabel }}</span></div>
+  <div class="read-stat"><span class="read-stat__value">{{ a.perMonth }}</span><span class="read-stat__label">books a month on average</span></div>
+  <div class="read-stat"><span class="read-stat__value">{{ a.bestYear.total }}</span><span class="read-stat__label">in my best year, {{ a.bestYear.year }}</span></div>
+  <div class="read-stat"><span class="read-stat__value">{{ a.bestMonth.total }}</span><span class="read-stat__label">in my best month, {{ a.bestMonth.label }} {{ a.bestMonth.year }}</span></div>
+  <div class="read-stat"><span class="read-stat__value">{{ a.emptyMonths }}</span><span class="read-stat__label">of {{ a.elapsedMonths }} months with no book</span></div>
+</div>
+
+<h2>By year</h2>
+<p class="read-key"><span class="read-key__swatch read-key__swatch--finished"></span> Finished <span class="read-key__swatch read-key__swatch--started"></span> Counted when started (no finish date logged)</p>
+<ul class="read-years">
+  {% for y in a.years %}
+    <li class="read-year">
+      <span class="read-year__label">{{ y.year }}</span>
+      <span class="read-year__bar" role="img" aria-label="{{ y.total }} books in {{ y.year }}: {{ y.finished }} finished, {{ y.startedOnly }} counted when started">
+        {% if y.total %}<span class="read-year__fill" style="width: {{ y.barPct }}%">
+          <span class="read-year__part read-year__part--finished" style="flex: {{ y.finished }}"></span><span class="read-year__part read-year__part--started" style="flex: {{ y.startedOnly }}"></span>
+        </span>{% endif %}
+      </span>
+      <span class="read-year__total">{{ y.total }}</span>
+    </li>
+  {% endfor %}
+</ul>
+<p>{{ a.nowYear }} is still in progress.</p>
+
+<h2>By month</h2>
+<p>Darker means more books. Blank grey is a month that hasn't happened yet or was before I started logging.</p>
+<div class="read-heatmap-wrap">
+<table class="read-heatmap">
+  <thead>
+    <tr><th scope="col"><span class="visually-hidden">Year</span></th>{% for m in a.seasons %}<th scope="col" abbr="{{ m.long }}">{{ m.label }}</th>{% endfor %}<th scope="col">Total</th></tr>
+  </thead>
+  <tbody>
+    {% for y in a.years %}
+      <tr>
+        <th scope="row">{{ y.year }}</th>
+        {% for m in y.months %}
+          {% if m.future or m.before %}<td class="read-cell read-cell--na"><span class="visually-hidden">{{ m.long }} {{ y.year }}: n/a</span></td>
+          {% else %}<td class="read-cell read-cell--{{ m.level }}" title="{{ m.long }} {{ y.year }}: {{ m.total }}">{{ m.total if m.total else "" }}<span class="visually-hidden"> {{ m.long }} {{ y.year }}: {{ m.total }}</span></td>{% endif %}
+        {% endfor %}
+        <td class="read-heatmap__total">{{ y.total }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+
+<h2>Which months are best</h2>
+<p>Books per calendar month across every year, so the busy and quiet seasons show up.</p>
+<ul class="read-seasons">
+  {% for m in a.seasons %}
+    <li class="read-season">
+      <span class="read-season__bar" role="img" aria-label="{{ m.long }}: {{ m.total }} books"><span class="read-season__fill" style="height: {{ m.pct }}%"></span></span>
+      <span class="read-season__total">{{ m.total }}</span>
+      <span class="read-season__label">{{ m.label }}</span>
+    </li>
+  {% endfor %}
+</ul>

@@ -8,6 +8,6 @@ tags:
 youtubeId: "WUJrduWiUqw"
 ---
 
-https://www.youtube.com/watch?v=WUJrduWiUqw
+https://m.youtube.com/watch?v=WUJrduWiUqw&list=PLKbU77Ew5WTHYXz8pqeVGf_nSp8Ysydaq&index=4&t=48s&pp=iAQBsAgC&ra=m
 
 Episode 4 where I talk about wellbeing with work, some of the key issues I've come across and how I've tried to find a healthier balance.

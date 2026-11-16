@@ -1,7 +1,9 @@
 /* Color customization */
 :root {
-  --primary: #3D8A5E;
-  --primary-dark: #85C9A0;
+  --primary: #A0522D;
+  --primary-dark: #D89474;
+  --habit-flag: #B45309;
+  --habit-compare: #6B7280;
   --nav-height: 68px;
   --font-family-base: "Inter", "Inter UI", -apple-system, sans-serif;
   --font-family-heading: "Playfair Display", serif,
@@ -817,7 +819,7 @@ video {
 }
 body {
   font-family: var(--font-family-base);
-  background: #F0FAF4;
+  background: #FBF3E4;
   color: #111111;
 }
 section {
@@ -945,7 +947,10 @@ header nav a {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: center;
+  justify-content: flex-start;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0.5rem 0 1.5rem;
   z-index: 500;
   transform: translateY(-100%);
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -958,8 +963,9 @@ header nav a {
 #nav-menu a {
   display: block;
   text-align: center;
-  padding: 1.25em 2em;
-  font-size: 1.5rem;
+  padding: 0.55em 1.5em;
+  font-size: 1.1rem;
+  line-height: 1.25;
   font-weight: 700;
   color: #181818;
   margin-left: 0;
@@ -971,7 +977,27 @@ header nav a {
 }
 #nav-menu a:hover {
   color: var(--primary);
-  background: rgba(61, 138, 94, 0.05);
+  background: rgba(160, 82, 45, 0.05);
+}
+/* Child items (e.g. Music, Reading under Habits) sit on one row, indented under their parent */
+#nav-menu .nav-menu-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+#nav-menu .nav-menu-group a {
+  flex: 0 1 auto;
+  padding: 0.4em 1em;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-top: 0;
+  border-bottom: 0;
+  color: #555;
+}
+/* The group row replaces its parent's bottom border */
+#nav-menu a:has(+ .nav-menu-group) {
+  border-bottom: 0;
 }
 
 header nav label {
@@ -1159,11 +1185,13 @@ input[type="submit"],
 button[type="submit"],
 button:not([disabled]) {
   background: var(--primary);
+  color: #fff;
 }
 input[type="submit"]:hover,
 button[type="submit"]:hover,
 button:not([disabled]):hover {
   background: var(--primary-dark);
+  color: #181818;
 }
 
 dd + dt {
@@ -1176,6 +1204,7 @@ blockquote {
 
 mark {
   background: var(--primary);
+  color: #fff;
 }
 
 a {
@@ -1184,6 +1213,57 @@ a {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
+}
+
+/* Sitemap styling */
+.sitemap-jump {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+
+.sitemap-jump a {
+  display: inline-block;
+  padding: 0.4em 0.8em;
+  border-radius: 0.4em;
+  background: rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.sitemap-jump a:hover,
+.sitemap-jump a:focus-visible {
+  background: rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.sitemap-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2em;
+}
+
+.sitemap-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1em;
+  padding: 0.5em 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.sitemap-list li:last-child {
+  border-bottom: none;
+}
+
+.sitemap-list li code {
+  font-size: 0.8em;
+  color: #666;
+  background: rgba(0, 0, 0, 0.04);
+  padding: 0.15em 0.4em;
+  border-radius: 0.25em;
+  white-space: nowrap;
 }
 
 /* Latest posts list on homepage */
@@ -1239,9 +1319,224 @@ a {
 .category-blog      { background: #2a2a2a; color: #fff; }
 .category-micro     { background: #555555; color: #fff; }
 .category-aside     { background: #888888; color: #fff; }
-.category-weeknotes { background: #b8b8b8; color: #111; }
 
-/* ── Weeknote layout ────────────────────────────────────────── */
+/* /habits/ section: habit cards, stat tiles, table and trend chart */
+.habit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 1em;
+  margin: 1.5em 0;
+  padding: 0;
+  list-style: none;
+}
+
+.habit-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  padding: 1.1em 1.2em;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.6em;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+
+.habit-card:hover,
+.habit-card:focus-visible {
+  border-color: var(--primary);
+  text-decoration: none;
+}
+
+.habit-card__icon {
+  font-size: 1.6em;
+  line-height: 1;
+}
+
+.habit-card__name {
+  font-weight: 700;
+}
+
+.habit-card__meta,
+.habit-card__latest {
+  font-size: 0.85em;
+  color: #666;
+}
+
+.habit-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin: 1.5em 0;
+}
+
+.habit-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  padding: 0.8em 1.1em;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.6em;
+  min-width: 8em;
+}
+
+.habit-stat__label {
+  font-size: 0.75em;
+  color: #666;
+}
+
+.habit-stat__value {
+  font-size: 1.4em;
+  font-weight: 700;
+  font-variant-numeric: proportional-nums;
+}
+
+.habit-h2h {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1em;
+  margin: 2em 0 0.3em;
+  text-align: center;
+}
+
+.habit-h2h__side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 4em;
+}
+
+.habit-h2h__name {
+  font-size: 1em;
+  color: #666;
+}
+
+.habit-h2h__score,
+.habit-h2h__divider {
+  font-size: 3.5em;
+  font-weight: 700;
+  line-height: 1.1;
+  font-variant-numeric: proportional-nums;
+}
+
+.habit-h2h__rounds {
+  text-align: center;
+  font-size: 0.85em;
+  color: #666;
+  margin: 0 0 2em;
+}
+
+.habit-table-wrap {
+  overflow-x: auto;
+}
+
+.habit-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.habit-table td,
+.habit-table th {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.habit-table--maptap tbody {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.habit-table--maptap tbody tr:last-child td:not([rowspan]),
+.habit-table--maptap tbody tr:last-child th {
+  color: #666;
+}
+
+.habit-chart-figure {
+  margin: 1.5em 0;
+}
+
+.habit-chart {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.habit-chart__area {
+  fill: var(--primary);
+  opacity: 0.1;
+  stroke: none;
+}
+
+.habit-chart__line {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.habit-chart__gridline {
+  stroke: rgba(0, 0, 0, 0.1);
+  stroke-width: 1;
+}
+
+.habit-chart__axis-label {
+  fill: #666;
+  font-size: 11px;
+  font-family: var(--font-family-base);
+}
+
+.habit-chart__end-label {
+  fill: #222;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--font-family-base);
+}
+
+.habit-chart__marker {
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+.habit-chart__marker--clean {
+  fill: var(--primary);
+}
+
+.habit-chart__marker--flagged {
+  fill: var(--habit-flag);
+}
+
+.habit-chart__line--compare {
+  stroke: var(--habit-compare);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 4;
+}
+
+.habit-chart__marker--compare {
+  fill: var(--habit-compare);
+  stroke-width: 1.5;
+}
+
+.habit-chart__legend-swatch {
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.habit-chart__legend-swatch--primary {
+  stroke: var(--primary);
+}
+
+.habit-chart__legend-swatch--compare {
+  stroke: var(--habit-compare);
+  stroke-dasharray: 5 4;
+}
+
+.habit-chart__legend-label {
+  fill: #666;
+  font-size: 11px;
+  font-family: var(--font-family-base);
+}
+.category-weeknotes { background: #b8b8b8; color: #111; }
 
 .wn-section {
   margin-bottom: 2.5rem;
@@ -1517,4 +1812,915 @@ a {
     flex: 1;
     padding: 0.65rem;
   }
+}
+
+.figure-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  margin: 1.5em 0;
+}
+
+.figure-row__item {
+  margin: 0;
+  width: 100%;
+  max-width: 22rem;
+}
+
+.figure-row__item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .figure-row {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .figure-row__item {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+
+/* {% statCard %} / {% statCards %} shortcodes: quick metric cards for
+   dropping habit and fitness week-on-week numbers into post content. */
+.stat-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: 1em;
+  margin: 1.5em 0;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  padding: 1.1em 1.2em;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.6em;
+}
+
+.stat-card__emoji {
+  font-size: 1.6em;
+  line-height: 1;
+}
+
+.stat-card__label {
+  margin: 0;
+  font-size: 0.85em;
+  color: #666;
+}
+
+.stat-card__value {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+.stat-card__delta {
+  margin: 0;
+  font-size: 0.85em;
+  color: #666;
+}
+
+.stat-card__delta--up {
+  color: #2f7a3e;
+}
+
+.stat-card__delta--down {
+  color: #b34a3c;
+}
+
+.stat-card__delta--flat {
+  color: #666;
+}
+
+/* {% ctaButton %} / {% ctaButtons %} shortcodes: simple subscribe/follow
+   button links for post content. */
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7em;
+  margin: 1.5em 0;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  border-radius: 2em;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.cta-button:hover,
+.cta-button:focus-visible {
+  background: var(--primary-dark);
+  text-decoration: none;
+}
+
+/* {% deviceFrame %} / {% deviceFrameScroll %} / {% deviceFrames %}
+   shortcodes: phone-shaped frames for app screenshots. The scroll variant
+   pans a taller source image up and down inside the fixed-height frame,
+   like a slow screen-recording of someone scrolling. */
+.device-frames {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(9rem, 1fr));
+  gap: 1em;
+  max-width: 24em;
+  margin: 1.5em auto;
+}
+
+.device-frame {
+  overflow: hidden;
+  border-radius: 1.2em;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  position: relative;
+}
+
+.device-frame__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.device-frame__img--scroll {
+  animation: device-frame-scroll 14s ease-in-out infinite alternate;
+}
+
+@keyframes device-frame-scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(var(--device-scroll-distance));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .device-frame__img--scroll {
+    animation: none;
+  }
+}
+
+/* /records/ page: Spotify liked-tracks carousel styled as a record shelf */
+.record-collection {
+  margin: 2em 0;
+}
+
+.record-collection__status {
+  margin: 0 0 1em;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.record-shelf {
+  display: flex;
+  gap: 1.6em;
+  padding: 0.5em 0.5em 1.5em;
+  margin: 0;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+}
+
+.record-shelf:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+}
+
+.record-sleeve {
+  flex: 0 0 auto;
+  width: 11em;
+  scroll-snap-align: start;
+}
+
+.record-sleeve__link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.record-sleeve__frame {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+}
+
+.record-sleeve__vinyl {
+  position: absolute;
+  top: 5%;
+  right: -1.1em;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, #2b2b2b 0%, #2b2b2b 32%, #050505 33%, #050505 100%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  z-index: 0;
+  transition: transform 0.2s ease;
+}
+
+.record-sleeve__link:hover .record-sleeve__vinyl,
+.record-sleeve__link:focus-visible .record-sleeve__vinyl {
+  transform: translateX(0.6em);
+}
+
+.record-sleeve__art {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  border-radius: 0.3em;
+  overflow: hidden;
+  background: #e6e6e6;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.record-sleeve__art--loading {
+  background: linear-gradient(100deg, #e6e6e6 30%, #f2f2f2 50%, #e6e6e6 70%);
+  background-size: 200% 100%;
+  animation: record-shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes record-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.record-sleeve__art--fallback {
+  background-color: #2a2a2a;
+  animation: none;
+}
+
+.record-sleeve__art-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.record-sleeve__art-image[src] {
+  opacity: 1;
+}
+
+.record-sleeve__meta {
+  display: block;
+  margin-top: 0.6em;
+}
+
+.record-sleeve__title {
+  display: block;
+  font-weight: 700;
+  font-size: 0.95em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.record-sleeve__artist {
+  display: block;
+  font-size: 0.82em;
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.record-sleeve__date {
+  display: block;
+  margin-top: 0.15em;
+  font-size: 0.75em;
+  color: #999;
+  font-variant-numeric: tabular-nums;
+}
+
+.record-collection__controls {
+  display: flex;
+  gap: 0.6em;
+}
+
+.record-nav {
+  border-radius: 50%;
+  width: 2.4em;
+  height: 2.4em;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+.record-collection__player {
+  max-width: 30em;
+  margin: 1.5em 0 0;
+}
+
+.record-collection__now-playing {
+  margin: 0 0 0.5em;
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+.record-collection__player-frame {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0.6em;
+}
+
+/* /music/ section: skeleton grid of music sub-sections (liked tracks, and
+   whatever else joins it later) */
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 1em;
+  margin: 1.5em 0;
+}
+
+.music-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  padding: 1.1em 1.2em;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.6em;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+
+.music-card:hover,
+.music-card:focus-visible {
+  border-color: var(--primary);
+  text-decoration: none;
+}
+
+.music-card__icon {
+  font-size: 1.6em;
+  line-height: 1;
+}
+
+.music-card__name {
+  font-weight: 700;
+}
+
+.music-card__meta {
+  font-size: 0.85em;
+  color: #666;
+}
+
+/* /friends/ section: grid of people I regularly talk to */
+.friend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: 1em;
+  margin: 1.5em 0;
+}
+
+.friend-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  padding: 1.2em 1em;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.6em;
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+  transition: border-color 0.15s ease;
+}
+
+.friend-card:hover,
+.friend-card:focus-visible {
+  border-color: var(--primary);
+  text-decoration: none;
+}
+
+.friend-card__avatar {
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.friend-card__avatar--initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2a2a2a;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.4em;
+}
+
+.friend-card__name {
+  font-weight: 700;
+}
+
+.friend-card__domain {
+  font-size: 0.85em;
+  color: #666;
+}
+
+/* Reading: books shelf (/reading/) and book card on individual book posts */
+.book-shelf {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1.4em 1.2em;
+  padding: 0;
+  margin: 0 0 1.5em;
+  list-style: none;
+}
+
+.book-spine__link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.book-spine__cover {
+  display: block;
+  width: 100%;
+  max-width: 7em;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 0.2em 0.4em 0.4em 0.2em;
+  background: #e6e6e6;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.book-spine__link:hover .book-spine__cover,
+.book-spine__link:focus-visible .book-spine__cover {
+  transform: translateY(-0.3em);
+}
+
+.book-spine__title,
+.book-spine__author,
+.book-spine__rating {
+  display: block;
+}
+
+.book-spine__title {
+  margin-top: 0.6em;
+  font-weight: 700;
+  font-size: 0.9em;
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.book-spine__author {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.book-spine__rating {
+  font-size: 0.8em;
+  color: #b8860b;
+}
+
+.book-card {
+  display: flex;
+  gap: 1em;
+  align-items: flex-start;
+  margin: 0.5em 0 1em;
+}
+
+.book-card__cover {
+  flex: 0 0 auto;
+  width: 7.5em;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 0.2em 0.4em 0.4em 0.2em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.book-card__subtitle {
+  margin: 0 0 0.5em;
+  font-size: 1.05em;
+  line-height: 1.3;
+  color: #555;
+}
+
+.book-card__meta {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9em;
+}
+
+/* /countdown/: facade players (thumbnail first, iframe on click) and the
+   episode list, recorded order */
+.countdown-player {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 0.6em;
+  overflow: hidden;
+}
+
+.countdown-player--featured {
+  margin: 0.5em 0 1em;
+}
+
+.countdown-facade {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-decoration: none;
+}
+
+.countdown-facade img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.countdown-facade__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 4em;
+  height: 2.8em;
+  transform: translate(-50%, -50%);
+  background: var(--primary);
+  border-radius: 0.7em;
+  font-size: 1.2em;
+  transition: background 0.15s ease;
+}
+
+.countdown-facade:hover .countdown-facade__play,
+.countdown-facade:focus-visible .countdown-facade__play {
+  background: var(--primary-dark);
+}
+
+.countdown-facade:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Visually hidden, but read out by screen readers as the link name. */
+.countdown-facade__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.countdown-frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.countdown-list {
+  display: grid;
+  gap: 2em;
+  margin: 1.5em 0;
+  padding: 0;
+  list-style: none;
+}
+
+.countdown-list__title {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.countdown-list__meta {
+  margin: 0.2em 0 0.6em;
+  font-size: 0.85em;
+  color: #666;
+}
+
+/* Micro posts: no heading or read time, just the body and a timestamp.
+   Body text sits between normal text (1rem, 1.1rem from 600px) and the
+   headings (h3 is 1.4rem, 2.2rem from 600px). */
+header:has(~ main .micro-post) {
+  padding-bottom: 0;
+}
+
+.micro-post .micro-body,
+.micro-post .micro-body p,
+.micro-post .micro-body ul,
+.micro-post .micro-body ol {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.micro-post .micro-meta {
+  margin: 1.5em 0 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.micro-post .micro-meta a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.micro-post .micro-meta a:hover,
+.micro-post .micro-meta a:focus {
+  text-decoration: underline;
+}
+
+.micro-post .micro-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5em 0 0;
+  font-size: 0.9rem;
+}
+
+.micro-post .micro-nav .micro-nav-newer {
+  margin-left: auto;
+}
+
+.micro-post .micro-index-link {
+  margin-top: 0.75em;
+}
+
+@media (min-width: 600px) {
+  .micro-post .micro-body,
+  .micro-post .micro-body p,
+  .micro-post .micro-body ul,
+  .micro-post .micro-body ol {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+}
+
+/* Reading: authors index (/reading/authors/) and per-author pages */
+.author-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em 1.2em;
+  padding: 0;
+  margin: 0 0 1.5em;
+  list-style: none;
+}
+
+.author-list__count {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.author-books {
+  padding: 0;
+  margin: 0 0 1.5em;
+  list-style: none;
+}
+
+.author-book + .author-book {
+  margin-top: 1em;
+}
+
+.author-book__link {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+.author-book__cover {
+  flex: none;
+  width: 3.75em;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 0.15em 0.3em 0.3em 0.15em;
+  background: #e6e6e6;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.author-book__title,
+.author-book__meta {
+  display: block;
+}
+
+.author-book__title {
+  font-weight: 700;
+}
+
+.author-book__meta {
+  font-size: 0.85em;
+  color: #666;
+}
+
+.author-book__rating {
+  color: #b8860b;
+}
+
+/* Reading: activity page (/reading/activity/) */
+.read-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9em, 1fr));
+  gap: 0.8em;
+  margin: 1.2em 0 1.5em;
+}
+
+.read-stat {
+  padding: 0.8em 1em;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.5em;
+}
+
+.read-stat__value {
+  display: block;
+  font-size: 1.8em;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--primary);
+}
+
+.read-stat__label {
+  display: block;
+  margin-top: 0.2em;
+  font-size: 0.8em;
+  color: #666;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.read-key {
+  font-size: 0.85em;
+  color: #666;
+}
+
+.read-key__swatch {
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin: 0 0.3em 0 0.8em;
+  border-radius: 0.15em;
+}
+
+.read-key__swatch:first-child {
+  margin-left: 0;
+}
+
+.read-key__swatch--finished,
+.read-year__part--finished {
+  background: var(--primary);
+}
+
+.read-key__swatch--started,
+.read-year__part--started {
+  background: var(--primary-dark);
+}
+
+.read-years {
+  padding: 0;
+  margin: 0 0 1em;
+  list-style: none;
+}
+
+.read-year {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  margin: 0.35em 0;
+}
+
+.read-year__label {
+  flex: none;
+  width: 3em;
+  font-variant-numeric: tabular-nums;
+}
+
+.read-year__bar {
+  flex: 1;
+  height: 1.4em;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 0.2em;
+  overflow: hidden;
+}
+
+.read-year__fill {
+  display: flex;
+  height: 100%;
+}
+
+.read-year__total {
+  flex: none;
+  width: 2em;
+  font-weight: 700;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.read-heatmap-wrap {
+  overflow-x: auto;
+  margin: 1em 0 1.5em;
+}
+
+.read-heatmap {
+  border-collapse: separate;
+  border-spacing: 3px;
+  width: 100%;
+  min-width: 32em;
+  font-variant-numeric: tabular-nums;
+}
+
+.read-heatmap th,
+.read-heatmap td {
+  padding: 0.35em 0;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 400;
+  border: 0;
+}
+
+.read-heatmap thead th {
+  color: #666;
+}
+
+.read-heatmap tbody th {
+  text-align: left;
+  font-weight: 700;
+}
+
+.read-heatmap__total {
+  font-weight: 700;
+}
+
+.read-cell {
+  border-radius: 0.25em;
+  background: rgba(160, 82, 45, 0.06);
+  color: #222;
+}
+
+.read-cell--na {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.read-cell--1 { background: rgba(160, 82, 45, 0.25); }
+.read-cell--2 { background: rgba(160, 82, 45, 0.5); }
+.read-cell--3 { background: rgba(160, 82, 45, 0.75); color: #fff; }
+.read-cell--4 { background: rgb(160, 82, 45); color: #fff; }
+
+.read-seasons {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0.4em;
+  padding: 0;
+  margin: 1em 0 1.5em;
+  list-style: none;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.read-season__bar {
+  display: flex;
+  align-items: flex-end;
+  height: 7em;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 0.2em;
+  overflow: hidden;
+}
+
+.read-season__fill {
+  display: block;
+  width: 100%;
+  background: var(--primary);
+}
+
+.read-season__total {
+  display: block;
+  margin-top: 0.3em;
+  font-weight: 700;
+}
+
+.read-season__label {
+  display: block;
+  color: #666;
 }

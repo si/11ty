@@ -1,0 +1,64 @@
+name: PR Merged IFTTT Notification
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  notify-ifttt:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify IFTTT webhook
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+          PR_HTML_URL: ${{ github.event.pull_request.html_url }}
+          PR_CREATED_AT: ${{ github.event.pull_request.created_at }}
+          PR_MERGED_AT: ${{ github.event.pull_request.merged_at }}
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
+          REPO_FULL_NAME: ${{ github.repository }}
+          IFTTT_KEY: ${{ secrets.IFTTT_KEY }}
+        run: |
+          set -euo pipefail
+
+          # Flatten multi-line fields so they don't collide with our own \n separators
+          title_flat=$(printf '%s' "$PR_TITLE" | tr '\n' ' ' | tr -s ' ')
+          body_flat=$(printf '%s' "${PR_BODY:-}" | tr '\n' ' ' | tr -s ' ')
+
+          # Find closing keywords ("fixes #12", "closes #34", ...) case-insensitively
+          mapfile -t issue_matches < <(
+            printf '%s' "${PR_BODY:-}" \
+              | grep -oiP '\b(fixes|closes|resolves|fix|close|resolve)\s+#[0-9]+\b' \
+              | grep -oP '#[0-9]+' || true
+          )
+          if [ "${#issue_matches[@]}" -eq 0 ]; then
+            linked_issues="none"
+          else
+            linked_issues=$(IFS=,; echo "${issue_matches[*]}")
+          fi
+
+          # Truncate the description to 300 chars without cutting mid-word
+          if [ "${#body_flat}" -gt 300 ]; then
+            desc="${body_flat:0:300}"
+            desc="${desc% *}"
+            desc="${desc}..."
+          else
+            desc="$body_flat"
+          fi
+
+          value1="${REPO_FULL_NAME} #${PR_NUMBER} (branch: ${HEAD_REF})"
+          value2=$(printf 'Title: %s\nDescription: %s\nLinked issues: %s' "$title_flat" "$desc" "$linked_issues")
+          value3=$(printf 'Created: %s\nMerged: %s\nURL: %s' "$PR_CREATED_AT" "$PR_MERGED_AT" "$PR_HTML_URL")
+
+          payload=$(jq -n \
+            --arg v1 "$value1" \
+            --arg v2 "$value2" \
+            --arg v3 "$value3" \
+            '{value1: $v1, value2: $v2, value3: $v3}')
+
+          curl -sS --fail-with-body -X POST \
+            -H "Content-Type: application/json" \
+            -d "$payload" \
+            "https://maker.ifttt.com/trigger/pr_merged/with/key/${IFTTT_KEY}"

@@ -1,0 +1,55 @@
+name: Sync countdown videos
+
+on:
+  schedule:
+    # Weekdays at 18:00 UTC: 19:00 in summer (BST), 18:00 in winter (GMT).
+    - cron: "0 18 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+env:
+  BRANCH: automation/countdown-sync
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.x
+
+      - name: Fetch channel feed and merge
+        run: node scripts/countdown-sync.js
+
+      - name: Open or update pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- _data/countdownVideos.json; then
+            echo "No changes, nothing to do."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # The branch is rebuilt from main on every run (the script re-derives
+          # the full result), so overwriting it is safe and keeps one PR open.
+          git checkout -B "$BRANCH"
+          git add _data/countdownVideos.json
+          git commit -m "chore: sync countdown videos"
+          git push --force origin "$BRANCH"
+
+          if [ -z "$(gh pr list --head "$BRANCH" --base main --state open --json number --jq '.[0].number')" ]; then
+            gh pr create --base main --head "$BRANCH" \
+              --title "Countdown: sync new episodes" \
+              --body "Automated update of \`_data/countdownVideos.json\` from the YouTube channel feed. Merge to publish on /countdown/."
+          else
+            echo "Existing PR updated by the force-push."
+          fi

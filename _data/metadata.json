@@ -2,19 +2,21 @@
   "title": "Si Jobling",
   "url": "https://sijobling.com",
   "domain": "sijobling.com",
-  "description": "Description of the website. Update me.",
-  "genre": "Insert a schema.org genre",
+  "description": "The personal website of Si Jobling: tech leader, community builder.",
+  "genre": "Technology",
   "googleAnalyticsId": "GA ID. Update me. Note, that this is not compatible with the not-yet-commonly used version 4 of Google Analytics",
   "sendWebVitals": false,
   "feed": {
     "subtitle": "Tech leader, community builder",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "id": "https://sijobling.com"
+    "id": "https://sijobling.com",
+    "limit": 50
   },
   "jsonfeed": {
     "path": "/feed/feed.json",
-    "url": "https://sijobling.com/feed/feed.json"
+    "url": "https://sijobling.com/feed/feed.json",
+    "title": "Si Jobling (JSON Feed)"
   },
   "podcast": {
     "title": "Si Jobling Podcast",
@@ -24,9 +26,22 @@
   },
   "author": {
     "name": "Si Jobling",
-    "twitterHandle": "@Si"
+    "twitterHandle": "sijobling",
+    "url": "https://sijobling.com"
   },
   "publisher": {
-    "name": "Netlify"
+    "name": "Si Jobling"
+  },
+  "language": "en-GB",
+  "locale": "en_GB",
+  "defaultImage": {
+    "url": "/img/social-default.png",
+    "alt": "Si Jobling logo on a yellow background",
+    "width": 1200,
+    "height": 630
+  },
+  "microfeed": {
+    "title": "Si Jobling - Micro",
+    "path": "/micro/feed/feed.xml"
   }
 }

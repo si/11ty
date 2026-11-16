@@ -4,6 +4,10 @@ layout: layouts/home.njk
 ---
 <h1>Tags</h1>
 
+{% if not buildTagPages %}
+<p><em>Tag pages are skipped in local builds to keep rebuilds fast. They're generated for the deployed site — run with <code>ELEVENTY_BUILD_TAGS=true</code> if you need to check one locally.</em></p>
+{% endif %}
+
 {% for tag in collections.tagList %}
   {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
   <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>

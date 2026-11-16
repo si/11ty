@@ -43,9 +43,10 @@ const quality = {
 
 const optionalFormats = new Set(["avif", "webp"]);
 
-// On Netlify deploy-previews and branch-deploys, skip AVIF (slowest format,
-// not needed for correctness). Locally (no CONTEXT env var) treat as production.
-const isProduction = !process.env.CONTEXT || process.env.CONTEXT === "production";
+// On Cloudflare Pages preview deployments (non-main branches), skip AVIF
+// (slowest format, not needed for correctness). Locally (no CF_PAGES_BRANCH
+// env var) treat as production.
+const isProduction = !process.env.CF_PAGES_BRANCH || process.env.CF_PAGES_BRANCH === "main";
 
 function supportsOutputFormat(format) {
   const info = sharp.format[format];

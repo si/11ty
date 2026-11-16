@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: collections.readingAuthors
+  size: 1
+  alias: author
+eleventyComputed:
+  title: "Books by {{ author.name }}"
+  description: "{{ author.books | length }} {% if author.books | length == 1 %}book{% else %}books{% endif %} by {{ author.name }}, in the order I read them."
+  permalink: "/reading/authors/{{ author.key }}/"
+eleventyExcludeFromCollections: true
+---
+
+<p><a href="{{ '/reading/authors/' | url }}">← All authors</a></p>
+
+{% set read = 0 %}
+{% for book in author.books %}{% if book.data.reading.status != "reading" and book.data.reading.status != "to-read" %}{% set read = read + 1 %}{% endif %}{% endfor %}
+<p><strong>{{ author.books | length }} {% if author.books | length == 1 %}book{% else %}books{% endif %} logged, {{ read }} read.</strong> In the order I started them.</p>
+
+<ol class="author-books">
+  {% for book in author.books %}
+    <li class="author-book">
+      <a class="author-book__link" href="{{ book.url | url }}">
+        {% if book.data.book.cover %}
+          <img class="author-book__cover" src="{{ ('/img/reading/' + book.data.book.cover) | url }}" alt="" width="60" height="90" loading="lazy">
+        {% else %}
+          <span class="author-book__cover author-book__cover--blank" aria-hidden="true"></span>
+        {% endif %}
+        <span class="author-book__text">
+          <span class="author-book__title">{{ book.data.title }}</span>
+          <span class="author-book__meta">
+            {% if book.data.book.series %}{{ book.data.book.series }}{% if book.data.book.seriesNumber %} #{{ book.data.book.seriesNumber }}{% endif %} · {% endif %}
+            {% if book.data.reading.status == "to-read" %}To read{% elif book.data.reading.status == "reading" %}Reading since {{ book.data.reading.started | longPublishedDate }}{% elif book.data.reading.finished %}Finished {{ book.data.reading.finished | longPublishedDate }}{% else %}Started {{ book.date | longPublishedDate }}{% endif %}
+            {% if book.data.reading.rating %} · <span class="author-book__rating" aria-label="Rated {{ book.data.reading.rating }} out of 5">{{ "★".repeat(book.data.reading.rating) }}</span>{% endif %}
+          </span>
+        </span>
+      </a>
+    </li>
+  {% endfor %}
+</ol>
