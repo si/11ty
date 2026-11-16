@@ -7,6 +7,21 @@ templateClass: tmpl-post
 <p>{{ description }}</p>
 {% endif %}
 
+{%- set postIndexes = [
+  { title: "All posts", url: "/posts/" },
+  { title: "Blog", url: "/blog/" },
+  { title: "Asides", url: "/asides/" },
+  { title: "Micro", url: "/micro/" },
+  { title: "Weeknotes", url: "/weeknotes/" },
+  { title: "Portfolio", url: "/portfolio/" },
+  { title: "Reading", url: "/reading/" }
+] %}
+<nav class="post-index-nav" aria-label="Post categories">
+{%- for item in postIndexes %}
+  <a href="{{ item.url | url }}"{% if item.url == page.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+{%- endfor %}
+</nav>
+
 <ul class="page-index">
 {%- for post in collections[collectionName] | reverse %}
   <li>

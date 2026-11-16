@@ -258,6 +258,12 @@ Short social-style posts, one file per post at `posts/micro/YYYY/YYYY-MM-DD-HHMM
 - **Images**: put them in `img/assets/YYYY/MM/` and reference them as a Markdown image with alt text.
 - **Feed**: `feed/micro.njk` publishes `/micro/feed/feed.xml` (see "Feeds and social cards" below).
 
+## Post indexes
+
+- **Blog menu item**: `archive.njk` publishes `/posts/` (titled "Blog", `eleventyNavigation` key `Blog`), listing every post from every category, newest first.
+- **Category indexes**: `/blog/`, `/asides/`, `/micro/`, `/weeknotes/` and `/portfolio/` are one-file pages (`blog/index.njk`, `weeknotes/index.njk` and so on) that set `collectionName` and use `_includes/layouts/post-index.njk`. `collections.weeknotesPosts` filters by the `weeknotes` category; the others filter by directory.
+- **Category links**: the layout shows a row of links to every index (plus `/reading/`) above the list, from the `postIndexes` array in `post-index.njk`. Add new categories there. Styles are `.post-index-nav` in `css/main.css`.
+
 ## Feeds and social cards
 
 - **Featured image**: `_11ty/featured-image.js` (the `featuredImage` filter) picks one image per post: the `image` front matter, then a book's `book.cover`, then the first usable image in the body. SVGs, placeholders, relative paths, missing files and local images under 200px a side (such as the old 75px book thumbnails) are skipped. It returns the URL, MIME type, alt text (`imageAlt` front matter, the image's own alt, or the title) and, for local files, the width and height. Posts with no image return nothing.

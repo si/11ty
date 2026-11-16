@@ -1,9 +1,10 @@
 ---
-layout: layouts/home.njk
+title: Blog
+layout: layouts/post-index.njk
 permalink: /posts/
+collectionName: posts
+description: Everything I've posted across every category, newest first.
+eleventyNavigation:
+  key: Blog
+  order: 6
 ---
-
-<h1>Archive</h1>
-
-{% set postslist = collections.posts %}
-{% include "postslist.njk" %}
