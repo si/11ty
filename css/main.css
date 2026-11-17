@@ -1238,6 +1238,35 @@ a {
   text-decoration: none;
 }
 
+/* Category links at the top of the post index pages */
+.post-index-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+.post-index-nav a {
+  display: inline-block;
+  padding: 0.4em 0.8em;
+  border-radius: 0.4em;
+  background: rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.post-index-nav a:hover,
+.post-index-nav a:focus-visible {
+  background: rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.post-index-nav a[aria-current="page"] {
+  background: var(--primary);
+  color: #fff;
+}
+
 .sitemap-list {
   list-style: none;
   padding: 0;

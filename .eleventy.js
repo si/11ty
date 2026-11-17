@@ -421,6 +421,12 @@ module.exports = async function (eleventyConfig) {
       return directory === "portfolio";
     });
   });
+  eleventyConfig.addCollection("weeknotesPosts", function (collectionApi) {
+    return collectionApi.getFilteredByTag("posts").filter((post) => {
+      const categories = post.data.categories;
+      return Array.isArray(categories) && categories.includes("weeknotes");
+    });
+  });
   eleventyConfig.addCollection("microPosts", function (collectionApi) {
     return collectionApi.getFilteredByTag("posts").filter((post) => {
       const inputPath = post.inputPath || "";
