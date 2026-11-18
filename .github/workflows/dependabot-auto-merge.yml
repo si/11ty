@@ -1,0 +1,21 @@
+# Enables auto-merge on Dependabot's grouped minor/patch PRs. GitHub only
+# merges once the required checks (CI) pass. Major-update PRs are left alone.
+name: Dependabot auto-merge
+
+on: pull_request
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    steps:
+      - name: Enable auto-merge for minor/patch groups
+        if: contains(github.head_ref, 'minor-patch')
+        run: gh pr merge --auto --squash "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

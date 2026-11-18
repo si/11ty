@@ -1,0 +1,27 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "06:00"
+      timezone: Europe/London
+    open-pull-requests-limit: 5
+    groups:
+      # One weekly PR with every minor and patch update; auto-merged once CI passes.
+      npm-minor-patch:
+        update-types: [minor, patch]
+      # Major bumps arrive in their own PR and need a manual review and merge.
+      npm-major:
+        update-types: [major]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "06:00"
+      timezone: Europe/London
+    groups:
+      actions-minor-patch:
+        update-types: [minor, patch]
