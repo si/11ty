@@ -1267,6 +1267,71 @@ a {
   color: #fff;
 }
 
+/* Post timeline: a thin line down the left with a date circle per post. */
+.post-timeline {
+  --timeline-circle: 3.25rem;
+  position: relative;
+  list-style: none;
+  margin: 0 0 2em;
+  padding: 0;
+}
+
+.post-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--timeline-circle) / 2 - 1px);
+  width: 2px;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.post-timeline-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
+  margin: 0;
+  padding: 0 0 1.75em;
+}
+
+.post-timeline-date {
+  position: relative;
+  flex: 0 0 var(--timeline-circle);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: var(--timeline-circle);
+  height: var(--timeline-circle);
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.post-timeline-body {
+  flex: 1;
+  min-width: 0;
+  padding-top: 0.35em;
+}
+
+.post-timeline-title {
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.post-timeline-summary {
+  margin: 0.35em 0 0;
+  font-size: 0.95em;
+  opacity: 0.8;
+}
+
 .sitemap-list {
   list-style: none;
   padding: 0;
