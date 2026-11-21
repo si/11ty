@@ -1,0 +1,21 @@
+{#- Post timeline. Set `timelinePosts` (oldest first) before including. -#}
+<ol class="post-timeline">
+{%- for post in timelinePosts | reverse %}
+  {%- set td = post.date | timelineDate %}
+  {%- set summary = post | feedSummary(160) %}
+  <li class="post-timeline-item">
+    <time class="post-timeline-date" datetime="{{ post.date | htmlDateString }}">
+      <span class="visually-hidden">{{ post.date | readableDate }}</span>
+      <span aria-hidden="true">{{ td.day }}</span>
+      <span aria-hidden="true">{{ td.month }}</span>
+      <span aria-hidden="true">{{ td.year }}</span>
+    </time>
+    <div class="post-timeline-body">
+      <a class="post-timeline-title" href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+      {%- if summary %}
+      <p class="post-timeline-summary">{{ summary }}</p>
+      {%- endif %}
+    </div>
+  </li>
+{%- endfor %}
+</ol>

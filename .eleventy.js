@@ -244,6 +244,16 @@ module.exports = async function (eleventyConfig) {
   });
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+  // Short date for the post timeline circles: day, month and two-digit year.
+  eleventyConfig.addFilter("timelineDate", (dateObj) => {
+    const dt = DateTime.fromJSDate(dateObj, { zone: "utc" });
+    return {
+      day: dt.toFormat("dd"),
+      month: dt.toFormat("LLL").toUpperCase(),
+      year: dt.toFormat("yy"),
+    };
+  });
+
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
   });
